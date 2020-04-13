@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Duty_Title.owl" uri="Duty_Title.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Event.owl" uri="Event.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Relics.owl" uri="Relics.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Individual.owl" uri="Individual.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Individual.owl" uri="Individual.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Individual.owl" uri="Individual.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Duty_Title.owl" uri="Duty_Title.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Duty_Title.owl" uri="Duty_Title.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Event.owl" uri="Event.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/GuangZhouRevolutionOnto.owl" uri="GuangZhouRevolutionOnto.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Individual.owl" uri="Individual.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Location.owl" uri="Location.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Organization.owl" uri="Organization.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Relation.owl" uri="Relation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Relics.owl" uri="Relics.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1583855188931" name="http://www.owl-ontologies.com/Time.owl" uri="Time.owl"/>
+    </group>
+</catalog>

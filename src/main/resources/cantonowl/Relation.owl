@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:人物="http://www.owl-ontologies.com/Individual.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:组织机构="http://www.owl-ontologies.com/Organization.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:历史事件="http://www.owl-ontologies.com/Event.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/Relation.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Relation.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/Event.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="职业">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="事物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="朋友">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="人物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="同乡">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#人物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="上下属">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#人物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="政党">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#事物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="父子">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#人物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#人物关系">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="兄弟">
+    <rdfs:subClassOf rdf:resource="#人物关系"/>
+  </owl:Class>
+  <owl:Class rdf:about="#关系">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="结束年份"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#结束年份"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="开始年份"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#开始年份"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="父女">
+    <rdfs:subClassOf rdf:resource="#人物关系"/>
+  </owl:Class>
+  <owl:Class rdf:ID="事件">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#事物关系"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#事物关系">
+    <rdfs:subClassOf rdf:resource="#关系"/>
+  </owl:Class>
+  <owl:Class rdf:ID="夫妻">
+    <rdfs:subClassOf rdf:resource="#人物关系"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#结束年份">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#开始年份">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <政党 rdf:ID="政党_孙中山与兴中会">
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#檀香山"/>
+    <组织机构:政党 rdf:resource="http://www.owl-ontologies.com/Organization.owl#兴中会"/>
+    <组织机构:相关人物>
+      <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#孙中山">
+        <人物:老乡>
+          <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#杨心如">
+            <人物:老乡>
+              <同乡 rdf:ID="同乡_孙中山与杨心如">
+                <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1868</开始年份>
+                <人物:老乡 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨心如"/>
+                <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1925</结束年份>
+                <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香山县"/>
+              </同乡>
+            </人物:老乡>
+          </rdf:Description>
+        </人物:老乡>
+        <人物:老乡>
+          <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#杨鹤龄">
+            <人物:老乡>
+              <同乡 rdf:ID="同乡_孙中山与杨鹤龄">
+                <人物:老乡 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨鹤龄"/>
+                <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1924</结束年份>
+                <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1868</开始年份>
+                <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香山县"/>
+              </同乡>
+            </人物:老乡>
+          </rdf:Description>
+        </人物:老乡>
+        <人物:老乡>
+          <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#程璧光">
+            <人物:老乡>
+              <同乡 rdf:ID="同乡_孙中山与程璧光">
+                <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香山县"/>
+                <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1866</开始年份>
+                <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1918</结束年份>
+                <人物:老乡 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+              </同乡>
+            </人物:老乡>
+          </rdf:Description>
+        </人物:老乡>
+      </rdf:Description>
+    </组织机构:相关人物>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1894</开始年份>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</结束年份>
+  </政党>
+  <事件 rdf:ID="事件_孙中山成立香港兴中会">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1895</结束年份>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1895</开始年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#成立香港兴中会"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山卸大总统职">
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1912</结束年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#卸大总统职"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1912</开始年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#南京市"/>
+  </事件>
+  <夫妻 rdf:ID="夫妻_孙中山与大月薰">
+    <人物:丈夫 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <人物:妻子 rdf:resource="http://www.owl-ontologies.com/Individual.owl#大月薰"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1903</开始年份>
+  </夫妻>
+  <事件 rdf:ID="事件_孙中山组成同盟会檀香山支部秘密团">
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1910</开始年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#组成同盟会檀香山支部秘密团"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#檀香山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1910</结束年份>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山在日本组织成立中华革命党">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1914</结束年份>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1914</开始年份>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#在日本组织成立中华革命党"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山比较系统地接受了西方式的近代教育">
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#比较系统地接收了西方式的近代教育"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#檀香山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1879</开始年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1879</结束年份>
+  </事件>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#相关事件">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+          <owl:Class rdf:about="#事件"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </rdf:Description>
+  <夫妻 rdf:ID="夫妻_孙中山与卢慕贞">
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#翠亨村"/>
+    <人物:丈夫 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1915</结束年份>
+    <人物:妻子 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢慕贞"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1885</开始年份>
+  </夫妻>
+  <父女 rdf:ID="父女_孙中山与孙娫">
+    <人物:父亲 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:女儿 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙娫"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#翠亨村"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1894</开始年份>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1913</结束年份>
+  </父女>
+  <事件 rdf:ID="事件_孙中山因肝癌不治逝世于北京">
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#因肝癌不治逝世于北京"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</开始年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#北京市"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山在南京就任中华民国临时大总统">
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#在南京就任中华民国临时大总统"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1912</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#南京市"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1912</开始年份>
+  </事件>
+  <事件 rdf:ID="事件_孙中山改组中华革命党为中国国民党">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1919</结束年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#改组中华革命党为中国国民党"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1919</开始年份>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山就任非常大总统">
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1921</开始年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1921</结束年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#就任非常大总统"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山反对桂系军阀">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1920</结束年份>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1920</开始年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#反对桂系军阀"/>
+  </事件>
+  <上下属 rdf:ID="上下属_孙中山与汪精卫">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <人物:上司 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</开始年份>
+    <人物:部下 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </上下属>
+  <事件 rdf:ID="事件_孙中山结伴到教堂接受洗礼">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1883</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1883</开始年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#结伴到教堂接收洗礼"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐雄"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山成立陆海军大元帅大本营">
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#成立陆海军大元帅大本营"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1923</结束年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1923</开始年份>
+  </事件>
+  <政党 rdf:ID="政党_孙中山与中国国民党">
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1919</开始年份>
+    <组织机构:政党 rdf:resource="http://www.owl-ontologies.com/Organization.owl#中国国民党"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <组织机构:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+  </政党>
+  <事件 rdf:ID="事件_孙中山提出三民主义">
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#提出三民主义"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</结束年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</开始年份>
+  </事件>
+  <事件 rdf:ID="事件_孙中山决定国共两党实行合作">
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1923</开始年份>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1923</结束年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#决定国共两党实行合作"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+  </事件>
+  <父子 rdf:ID="父子_孙中山与孙科">
+    <人物:父亲 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1891</开始年份>
+    <人物:儿子 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#翠亨村"/>
+  </父子>
+  <夫妻 rdf:ID="夫妻_孙中山与陈粹芬">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#澳门特别行政区"/>
+    <人物:丈夫 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:妻子 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈粹芬"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1892</开始年份>
+  </夫妻>
+  <政党 rdf:ID="政党_孙中山与同盟会">
+    <组织机构:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1912</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <组织机构:政党 rdf:resource="http://www.owl-ontologies.com/Organization.owl#同盟会"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</开始年份>
+  </政党>
+  <事件 rdf:ID="事件_孙中山提出宇宙进化理论">
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#提出宇宙进化理论"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1918</开始年份>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1918</结束年份>
+  </事件>
+  <事件 rdf:ID="事件_孙中山在檀香山建立兴中会">
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1894</开始年份>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1894</结束年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#在檀香山建立兴中会"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#檀香山"/>
+  </事件>
+  <职业 rdf:ID="职业_孙中山与革命家">
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1895</开始年份>
+    <人物:职业 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#革命家"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+  </职业>
+  <事件 rdf:ID="事件_孙中山提出生元说">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1918</结束年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1918</开始年份>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#提出生元说"/>
+  </事件>
+  <夫妻 rdf:ID="夫妻_孙中山与宋庆龄">
+    <人物:丈夫 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1915</开始年份>
+    <人物:妻子 rdf:resource="http://www.owl-ontologies.com/Individual.owl#宋庆龄"/>
+  </夫妻>
+  <事件 rdf:ID="事件_孙中山组织中华民国正式政府">
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#组织中华民国正式政府"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1921</结束年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1921</开始年份>
+  </事件>
+  <事件 rdf:ID="事件_孙中山成立中国同盟会">
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#成立中国同盟会"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</结束年份>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1905</开始年份>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+  </事件>
+  <事件 rdf:ID="事件_孙中山与护法战争">
+    <人物:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#护法战争"/>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1917</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#湖南省"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#湖北省"/>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#四川省"/>
+    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <历史事件:事件相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1917</开始年份>
+  </事件>
+  <朋友 rdf:ID="朋友_孙中山与谢缵泰">
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1925</结束年份>
+    <人物:朋友>
+      <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#谢缵泰">
+        <人物:朋友 rdf:resource="#朋友_孙中山与谢缵泰"/>
+      </rdf:Description>
+    </人物:朋友>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1895</开始年份>
+  </朋友>
+  <朋友 rdf:ID="朋友_孙中山与容闳">
+    <开始年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1900</开始年份>
+    <结束年份 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1912</结束年份>
+    <人物:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#日本"/>
+    <人物:朋友>
+      <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#容闳">
+        <人物:朋友 rdf:resource="#朋友_孙中山与容闳"/>
+      </rdf:Description>
+    </人物:朋友>
+  </朋友>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

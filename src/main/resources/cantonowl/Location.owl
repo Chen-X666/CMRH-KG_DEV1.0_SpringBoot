@@ -1,0 +1,1266 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:地点="http://www.owl-ontologies.com/Location.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Location.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="管理区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >管理区</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="村级行政区"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="县级行政区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >县级行政区</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="地点"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="国家">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地点"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >国家</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="社区">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#村级行政区"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >社区</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="县">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >县</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#县级行政区"/>
+  </owl:Class>
+  <owl:Class rdf:ID="自治县">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >自治县</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#县级行政区"/>
+  </owl:Class>
+  <owl:Class rdf:ID="乡级行政区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >乡级行政区</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地点"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="其他区域">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >其他区域</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地点"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="省级行政区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >省级行政区</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地点"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="特区">
+    <rdfs:subClassOf rdf:resource="#县级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >特区</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="自治区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >自治区</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#省级行政区"/>
+  </owl:Class>
+  <owl:Class rdf:ID="村">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#村级行政区"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >村</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="直辖市">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >直辖市</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#省级行政区"/>
+  </owl:Class>
+  <owl:Class rdf:ID="街道">
+    <rdfs:subClassOf rdf:resource="#乡级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >街道</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#村级行政区">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地点"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >村级行政区</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="省">
+    <rdfs:subClassOf rdf:resource="#省级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >省</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="镇">
+    <rdfs:subClassOf rdf:resource="#乡级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >镇</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="自治州">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >自治州</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="地级行政区"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="地区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >地区</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地级行政区"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="乡">
+    <rdfs:subClassOf rdf:resource="#乡级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >乡</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="县级市">
+    <rdfs:subClassOf rdf:resource="#县级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >县级市</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="区">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >区</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#县级行政区"/>
+  </owl:Class>
+  <owl:Class rdf:ID="特别行政区">
+    <rdfs:subClassOf rdf:resource="#省级行政区"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >特别行政区</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="地级市">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地级行政区"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >地级市</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#地级行政区">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#地点"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >地级行政区</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#地点">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >地点</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="华人称之">
+    <rdfs:range rdf:resource="#地点"/>
+    <rdfs:domain rdf:resource="#其他区域"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="合并为">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >两个地点（包括市、县、镇等）合并为一个地点</rdfs:comment>
+    <rdfs:range rdf:resource="#地点"/>
+    <rdfs:domain rdf:resource="#地点"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="相同指代">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="#地点"/>
+    <owl:inverseOf rdf:resource="#相同指代"/>
+    <rdfs:range rdf:resource="#地点"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="别名关系">
+    <rdfs:range rdf:resource="#地点"/>
+    <rdfs:domain rdf:resource="#地点"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="所属市">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#县级行政区"/>
+          <owl:Class rdf:about="#省级行政区"/>
+          <owl:Class rdf:about="#地级行政区"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#乡级行政区"/>
+          <owl:Class rdf:about="#村级行政区"/>
+          <owl:Class rdf:about="#其他区域"/>
+          <owl:Class rdf:about="#县级行政区"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="分出为">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >一个地点分为两个地点（包括市、县、镇等）</rdfs:comment>
+    <rdfs:domain rdf:resource="#地点"/>
+    <rdfs:range rdf:resource="#地点"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="所属县">
+    <rdfs:domain rdf:resource="#地点"/>
+    <rdfs:range rdf:resource="#地点"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="所属地区">
+    <rdfs:domain rdf:resource="#地点"/>
+    <rdfs:range rdf:resource="#地点"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="中文名称">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#地点"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="别名">
+    <rdfs:domain rdf:resource="#地点"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="英文名称">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#地点"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="消失时间">
+    <rdfs:domain rdf:resource="#地点"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="面积">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#地点"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="建立时间">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#地点"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="人口">
+    <rdfs:domain rdf:resource="#地点"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <地点:县级市 rdf:ID="四会市"/>
+  <地点:镇 rdf:ID="横琴镇"/>
+  <地点:村 rdf:ID="南屏村">
+    <地点:面积 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >60.7平方公里</地点:面积>
+    <地点:所属市>
+      <地点:地级市 rdf:ID="珠海市"/>
+    </地点:所属市>
+    <地点:中文名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >南屏村</地点:中文名称>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >南屏村(今珠海市南屏镇)位于珠海市主城区的西南部，隶属于珠海市香洲区，全镇总面积60.7平方公里，下辖9个社区，现有常住人口20555人，外来流动人口73593人。南屏镇背倚青葱翠绿的将军山麓，面向高速发展的珠海市区，与澳门一水之隔，东距九洲港十二公里，西距珠海港和珠海机场三十公里，是市区通往珠海机场、珠海港、湾仔、横琴口岸的必经之地。</rdfs:comment>
+    <地点:英文名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nanping Town</地点:英文名称>
+    <地点:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >南屏镇</地点:别名>
+    <地点:人口 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >73593人</地点:人口>
+  </地点:村>
+  <地点:其他区域 rdf:ID="黄杨山"/>
+  <地点:社区 rdf:ID="城东社区"/>
+  <地点:村 rdf:ID="港头村"/>
+  <地点:区 rdf:ID="圣方济各堂区"/>
+  <地点:社区 rdf:ID="前进社区"/>
+  <地点:县级市 rdf:ID="罗定市"/>
+  <地点:村 rdf:ID="横山村"/>
+  <地点:其他区域 rdf:ID="旧金山"/>
+  <地点:社区 rdf:ID="北园社区"/>
+  <地点:村 rdf:ID="幸福村"/>
+  <地点:县 rdf:ID="番禺县"/>
+  <地点:村 rdf:ID="溪角村"/>
+  <地点:街道 rdf:ID="南区街道"/>
+  <地点:社区 rdf:ID="海虹社区"/>
+  <地点:街道 rdf:ID="情侣中路"/>
+  <地点:村 rdf:ID="岐亨村"/>
+  <地点:社区 rdf:ID="新伟社区"/>
+  <地点:街道 rdf:ID="先烈中路"/>
+  <地点:村 rdf:ID="平岚村"/>
+  <地点:社区 rdf:ID="将军山社区"/>
+  <地点:村 rdf:ID="粉洲村"/>
+  <地点:村 rdf:ID="新沙村"/>
+  <地点:村 rdf:ID="白石村"/>
+  <地点:社区 rdf:ID="东坑社区"/>
+  <地点:县级市 rdf:ID="连州市"/>
+  <地点:社区 rdf:ID="翠东社区"/>
+  <地点:其他区域 rdf:ID="阿美尼亚"/>
+  <地点:县级市 rdf:ID="恩平市"/>
+  <地点:社区 rdf:ID="华平社区"/>
+  <地点:村 rdf:ID="田边村"/>
+  <地点:村 rdf:ID="淇澳村"/>
+  <地点:村 rdf:ID="官塘村"/>
+  <地点:村 rdf:ID="新村村"/>
+  <地点:乡 rdf:ID="南溪乡"/>
+  <地点:村 rdf:ID="小濠冲村"/>
+  <地点:社区 rdf:ID="莲花社区"/>
+  <地点:县级市 rdf:ID="廉江市"/>
+  <地点:其他区域 rdf:ID="三灶岛">
+    <地点:合并为>
+      <地点:县 rdf:ID="珠海县"/>
+    </地点:合并为>
+  </地点:其他区域>
+  <地点:街道 rdf:ID="梅华街道"/>
+  <地点:区 rdf:ID="高新区"/>
+  <地点:街道 rdf:ID="安仁街"/>
+  <地点:社区 rdf:ID="金钟社区"/>
+  <地点:社区 rdf:ID="南沙湾社区"/>
+  <地点:社区 rdf:ID="南虹社区"/>
+  <地点:村 rdf:ID="新青村"/>
+  <地点:村 rdf:ID="谭州村"/>
+  <地点:社区 rdf:ID="群兴社区"/>
+  <地点:其他区域 rdf:ID="温哥华"/>
+  <地点:村 rdf:ID="八甲村"/>
+  <地点:县级市 rdf:ID="高州市"/>
+  <地点:村 rdf:ID="南环村"/>
+  <地点:村 rdf:ID="龙田村"/>
+  <地点:街道 rdf:ID="长水街"/>
+  <地点:村 rdf:ID="新堂村"/>
+  <地点:省 rdf:ID="吉林省"/>
+  <地点:社区 rdf:ID="金龙社区"/>
+  <地点:国家 rdf:ID="日本"/>
+  <地点:村 rdf:ID="斗门村"/>
+  <地点:社区 rdf:ID="金海岸社区"/>
+  <地点:其他区域 rdf:ID="香炉湾畔"/>
+  <地点:社区 rdf:ID="北岭社区"/>
+  <地点:省 rdf:ID="福建省"/>
+  <地点:社区 rdf:ID="胡湾社区"/>
+  <地点:县 rdf:ID="新会县"/>
+  <地点:乡 rdf:ID="海洲乡"/>
+  <地点:镇 rdf:ID="黄圃镇"/>
+  <地点:社区 rdf:ID="官塘社区"/>
+  <地点:区 rdf:ID="越秀区"/>
+  <地点:村 rdf:ID="龙瑞村"/>
+  <地点:村 rdf:ID="东湾村"/>
+  <地点:社区 rdf:ID="怡景社区"/>
+  <地点:地级市 rdf:ID="揭阳市"/>
+  <地点:社区 rdf:ID="红卫社区"/>
+  <地点:村 rdf:ID="库充村"/>
+  <地点:地级市 rdf:ID="江门市"/>
+  <地点:社区 rdf:ID="作物社区"/>
+  <地点:社区 rdf:ID="迎宾社区"/>
+  <地点:街道 rdf:ID="兴中街道"/>
+  <地点:镇 rdf:ID="北口镇"/>
+  <地点:镇 rdf:ID="珠玑镇"/>
+  <地点:地级市 rdf:ID="云浮市"/>
+  <地点:乡 rdf:ID="东岸乡"/>
+  <地点:区 rdf:ID="第四区">
+    <地点:所属县>
+      <地点:县 rdf:ID="香山县">
+        <地点:中文名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >香山县</地点:中文名称>
+        <地点:建立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1152-01-01</地点:建立时间>
+        <地点:消失时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1925-01-01</地点:消失时间>
+        <地点:英文名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Xiang Shan City</地点:英文名称>
+        <地点:面积 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >约2800平方公里</地点:面积>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >香山县，古时县名，主要地域涵括现广东省中山市、珠海市、澳门特别行政区及今广州市番禺区部分地区。香山县自古人才辈出，特别是我国伟大的革命先行者孙中山，就是香山人（今中山市翠亨村人）。
+香山县又是著名的侨乡。由于香山人的务实、拼搏、进取的精神，从而形成了香山地区独特的“香山文化” 。香山县名来源于香山镇，该镇地处五桂山分支凤凰山山麓。史志记载，五桂山盛产“异花神仙茶”，此茶是一种野生茶叶，“异花”乃指“王者之香”的兰花，香闻十里，人们称它“隔山香”，所以五桂山也叫“香山”，香山镇由此而名。香山场（今珠海市山场村），为香山镇前身，是当时香山地区经济、政治、文化中心。南宋1152年，香山镇提升为香山县，县址仍在今珠海山场村。到南宋1154年，香山县县址搬迁至石岐（今中山市石岐区）。 1925年，为了纪念逝世的孙中山，从而将“香山县”更名为“中山县”。 1849年，葡萄牙侵略香山县澳门地区作为殖民地，直到1999年12月20日，澳门作为特别行政区回归中国。 1952年和1965年，从“中山县”划分出去的部分成为现今的珠海市，剩下的地区（除了澳门外），就是现在的中山市。</rdfs:comment>
+      </地点:县>
+    </地点:所属县>
+  </地点:区>
+  <地点:村 rdf:ID="南潮村"/>
+  <地点:镇 rdf:ID="南水镇">
+    <地点:合并为 rdf:resource="#珠海县"/>
+  </地点:镇>
+  <地点:镇 rdf:ID="南头镇"/>
+  <地点:村 rdf:ID="梅花村"/>
+  <地点:街道 rdf:ID="浙江路口"/>
+  <地点:省 rdf:ID="广东省"/>
+  <地点:其他区域 rdf:ID="西湖南山"/>
+  <地点:社区 rdf:ID="联安社区"/>
+  <地点:省 rdf:ID="安徽省"/>
+  <地点:社区 rdf:ID="银桦社区"/>
+  <地点:社区 rdf:ID="南坑社区"/>
+  <地点:其他区域 rdf:ID="伦敦"/>
+  <地点:社区 rdf:ID="连屏社区"/>
+  <地点:村 rdf:ID="竹秀园村"/>
+  <地点:街道 rdf:ID="环溪南街"/>
+  <地点:村 rdf:ID="大环村"/>
+  <地点:区 rdf:ID="中西区"/>
+  <地点:社区 rdf:ID="三灶社区"/>
+  <地点:街道 rdf:ID="正熏街"/>
+  <地点:社区 rdf:ID="团结社区"/>
+  <地点:区 rdf:ID="石岐区"/>
+  <地点:村 rdf:ID="王垦村"/>
+  <地点:社区 rdf:ID="银星社区"/>
+  <地点:村 rdf:ID="东岸村"/>
+  <地点:县级市 rdf:ID="吴川市"/>
+  <地点:村 rdf:ID="杨梅斜村"/>
+  <地点:村 rdf:ID="北台村"/>
+  <地点:村 rdf:ID="兰埔村"/>
+  <地点:国家 rdf:ID="韩国"/>
+  <地点:乡 rdf:ID="北台乡"/>
+  <地点:其他区域 rdf:ID="果阿"/>
+  <地点:区 rdf:ID="番禺区"/>
+  <地点:镇 rdf:ID="红旗镇"/>
+  <地点:村 rdf:ID="背蟹村"/>
+  <地点:社区 rdf:ID="南湾社区"/>
+  <地点:街道 rdf:ID="共和街"/>
+  <地点:社区 rdf:ID="北山社区"/>
+  <地点:村 rdf:ID="黄金村"/>
+  <地点:村 rdf:ID="乾东村"/>
+  <地点:社区 rdf:ID="草堂湾社区"/>
+  <地点:村 rdf:ID="奚角村"/>
+  <地点:村 rdf:ID="东滘村"/>
+  <地点:社区 rdf:ID="香凤社区"/>
+  <地点:村 rdf:ID="东安村"/>
+  <地点:社区 rdf:ID="新村社区"/>
+  <地点:街道 rdf:ID="越华路"/>
+  <地点:社区 rdf:ID="下栅社区"/>
+  <地点:社区 rdf:ID="春晖社区"/>
+  <地点:乡 rdf:ID="东溪坊"/>
+  <地点:社区 rdf:ID="景山社区"/>
+  <地点:村 rdf:ID="榕益村"/>
+  <地点:街道 rdf:ID="五桂山街道"/>
+  <地点:街道 rdf:ID="大经路"/>
+  <地点:社区 rdf:ID="前锋社区"/>
+  <地点:其他区域 rdf:ID="西印度群岛"/>
+  <地点:镇 rdf:ID="陈江镇"/>
+  <地点:村 rdf:ID="小托村"/>
+  <地点:其他区域 rdf:ID="内华达州"/>
+  <地点:街道 rdf:ID="山房路"/>
+  <地点:其他区域 rdf:ID="莫斯科"/>
+  <地点:镇 rdf:ID="雁洋镇"/>
+  <地点:直辖市 rdf:ID="重庆市"/>
+  <地点:省 rdf:ID="山西省"/>
+  <地点:镇 rdf:ID="香山镇"/>
+  <地点:村 rdf:ID="广丰村"/>
+  <地点:社区 rdf:ID="造贝社区"/>
+  <地点:区 rdf:ID="火炬高技术产业开发区">
+    <地点:别名关系>
+      <地点:街道 rdf:ID="中山港街道"/>
+    </地点:别名关系>
+  </地点:区>
+  <地点:村 rdf:ID="石狗村"/>
+  <地点:村 rdf:ID="三龙村"/>
+  <地点:街道 rdf:ID="香湾街道"/>
+  <地点:社区 rdf:ID="红东社区"/>
+  <地点:村 rdf:ID="南龙村"/>
+  <地点:国家 rdf:ID="英国"/>
+  <地点:社区 rdf:ID="上冲社区"/>
+  <地点:村 rdf:ID="泥湾村"/>
+  <地点:社区 rdf:ID="乾南社区"/>
+  <地点:省 rdf:ID="四川省"/>
+  <地点:社区 rdf:ID="上横社区"/>
+  <地点:县级市 rdf:ID="英德市"/>
+  <地点:区 rdf:ID="大堂区"/>
+  <地点:其他区域 rdf:ID="巴黎"/>
+  <地点:镇 rdf:ID="五山镇"/>
+  <地点:村 rdf:ID="华前村"/>
+  <地点:其他区域 rdf:ID="蚊尾洲岛">
+    <地点:所属地区>
+      <地点:其他区域 rdf:ID="万山群岛">
+        <地点:所属县>
+          <地点:县 rdf:ID="中山县">
+            <地点:分出为>
+              <地点:村 rdf:ID="鸡头角村">
+                <地点:所属县 rdf:resource="#中山县"/>
+              </地点:村>
+            </地点:分出为>
+            <地点:分出为>
+              <地点:其他区域 rdf:ID="淇澳岛">
+                <地点:所属县 rdf:resource="#中山县"/>
+                <地点:合并为 rdf:resource="#珠海县"/>
+              </地点:其他区域>
+            </地点:分出为>
+            <地点:分出为 rdf:resource="#万山群岛"/>
+            <地点:分出为>
+              <地点:其他区域 rdf:ID="大横琴岛">
+                <地点:合并为 rdf:resource="#珠海县"/>
+                <地点:所属县 rdf:resource="#中山县"/>
+              </地点:其他区域>
+            </地点:分出为>
+            <地点:分出为>
+              <地点:其他区域 rdf:ID="小横琴岛">
+                <地点:所属县 rdf:resource="#中山县"/>
+                <地点:合并为 rdf:resource="#珠海县"/>
+              </地点:其他区域>
+            </地点:分出为>
+          </地点:县>
+        </地点:所属县>
+        <地点:合并为 rdf:resource="#珠海县"/>
+      </地点:其他区域>
+    </地点:所属地区>
+  </地点:其他区域>
+  <地点:其他区域 rdf:ID="马六甲"/>
+  <地点:其他区域 rdf:ID="东澳岛"/>
+  <地点:村 rdf:ID="上栅村"/>
+  <地点:社区 rdf:ID="青春社区"/>
+  <地点:其他区域 rdf:ID="金钟山"/>
+  <地点:省 rdf:ID="河北省"/>
+  <地点:村 rdf:ID="新环村"/>
+  <地点:地级市 rdf:ID="阳江市"/>
+  <地点:镇 rdf:ID="白蕉镇"/>
+  <地点:社区 rdf:ID="官村社区"/>
+  <地点:其他区域 rdf:ID="西雅图"/>
+  <地点:街道 rdf:ID="翠亨大道"/>
+  <地点:县级市 rdf:ID="台山市"/>
+  <地点:社区 rdf:ID="竹苑社区"/>
+  <地点:村 rdf:ID="西埔村"/>
+  <地点:县 rdf:ID="南海县"/>
+  <地点:村 rdf:ID="下陂头村"/>
+  <地点:村 rdf:ID="南澳村"/>
+  <地点:镇 rdf:ID="石岐镇"/>
+  <地点:自治县 rdf:ID="乳源瑶族自治县">
+    <地点:所属市>
+      <地点:地级市 rdf:ID="韶关市"/>
+    </地点:所属市>
+  </地点:自治县>
+  <地点:区 rdf:ID="西城区"/>
+  <地点:村 rdf:ID="草朗村"/>
+  <地点:街道 rdf:ID="古镇山房路"/>
+  <地点:镇 rdf:ID="古镇"/>
+  <地点:村 rdf:ID="盖山村"/>
+  <地点:村 rdf:ID="西湾村"/>
+  <地点:村 rdf:ID="小隐村"/>
+  <地点:其他区域 rdf:ID="伶仃洋"/>
+  <地点:社区 rdf:ID="环山社区"/>
+  <地点:街道 rdf:ID="沥溪村西街"/>
+  <地点:村 rdf:ID="下栅村"/>
+  <地点:村 rdf:ID="菏塘良村"/>
+  <地点:国家 rdf:ID="新西兰"/>
+  <地点:社区 rdf:ID="前西社区"/>
+  <地点:村 rdf:ID="南门村"/>
+  <地点:村 rdf:ID="康乐村"/>
+  <地点:县级市 rdf:ID="增城市"/>
+  <地点:自治区 rdf:ID="西藏自治区"/>
+  <地点:村 rdf:ID="沥溪村"/>
+  <地点:社区 rdf:ID="朝阳社区"/>
+  <地点:镇 rdf:ID="北水镇">
+    <地点:所属县 rdf:resource="#珠海县"/>
+  </地点:镇>
+  <地点:社区 rdf:ID="金洲社区"/>
+  <地点:社区 rdf:ID="翠景社区"/>
+  <地点:村 rdf:ID="桅夹村"/>
+  <地点:村 rdf:ID="延福里村"/>
+  <地点:街道 rdf:ID="白藤街道"/>
+  <地点:社区 rdf:ID="南山社区"/>
+  <地点:街道 rdf:ID="斯华路"/>
+  <地点:自治区 rdf:ID="广西壮族自治区"/>
+  <地点:社区 rdf:ID="吉莲社区"/>
+  <地点:街道 rdf:ID="香山路"/>
+  <地点:其他区域 rdf:ID="苏格兰"/>
+  <地点:村 rdf:ID="大赤坎村"/>
+  <地点:县级市 rdf:ID="阳春市"/>
+  <地点:村 rdf:ID="文锋村"/>
+  <地点:其他区域 rdf:ID="思南威尔斯州"/>
+  <地点:村 rdf:ID="雁上村"/>
+  <地点:村 rdf:ID="大岭村"/>
+  <地点:村 rdf:ID="小榄村"/>
+  <地点:镇 rdf:ID="西大街"/>
+  <地点:村 rdf:ID="海洲村"/>
+  <地点:镇 rdf:ID="担杆镇"/>
+  <地点:社区 rdf:ID="广昌社区"/>
+  <地点:其他区域 rdf:ID="爪哇"/>
+  <地点:镇 rdf:ID="仁良都镇"/>
+  <地点:村 rdf:ID="龙头环村"/>
+  <地点:镇 rdf:ID="树林镇"/>
+  <地点:村 rdf:ID="西滘村"/>
+  <地点:社区 rdf:ID="鸡山社区"/>
+  <地点:国家 rdf:ID="新加坡"/>
+  <地点:村 rdf:ID="乾北村"/>
+  <地点:区 rdf:ID="金湾区"/>
+  <地点:街道 rdf:ID="西头坊"/>
+  <地点:村 rdf:ID="东围村会"/>
+  <地点:地级市 rdf:ID="汕尾市"/>
+  <地点:社区 rdf:ID="富祥湾社区"/>
+  <地点:社区 rdf:ID="九洲社区"/>
+  <地点:街道 rdf:ID="拱北街道"/>
+  <地点:村 rdf:ID="三里村"/>
+  <地点:社区 rdf:ID="桂园社区"/>
+  <地点:村 rdf:ID="新乡村"/>
+  <地点:区 rdf:ID="张家边区"/>
+  <地点:社区 rdf:ID="南村社区"/>
+  <地点:省 rdf:ID="贵州省"/>
+  <地点:村 rdf:ID="新洲村"/>
+  <地点:区 rdf:ID="秦淮区"/>
+  <地点:村 rdf:ID="外容莹村"/>
+  <地点:县级市 rdf:ID="鹤山市"/>
+  <地点:社区 rdf:ID="广生社区"/>
+  <地点:社区 rdf:ID="北堤社区"/>
+  <地点:社区 rdf:ID="新香社区"/>
+  <地点:省 rdf:ID="甘肃省"/>
+  <地点:县级市 rdf:ID="乐昌市"/>
+  <地点:社区 rdf:ID="会同社区"/>
+  <地点:社区 rdf:ID="海湾社区"/>
+  <地点:社区 rdf:ID="鸿运社区"/>
+  <地点:村 rdf:ID="望厦村"/>
+  <地点:村 rdf:ID="大布平湖村"/>
+  <地点:村 rdf:ID="鸟石沙尾坊"/>
+  <地点:村 rdf:ID="翠微村"/>
+  <地点:镇 rdf:ID="港口镇"/>
+  <地点:村 rdf:ID="五福村"/>
+  <地点:村 rdf:ID="唐家湾村"/>
+  <地点:社区 rdf:ID="兴业社区"/>
+  <地点:村 rdf:ID="网山村"/>
+  <地点:村 rdf:ID="赤坎村"/>
+  <地点:社区 rdf:ID="十二村社区"/>
+  <地点:社区 rdf:ID="唐家社区"/>
+  <地点:村 rdf:ID="会同村"/>
+  <地点:国家 rdf:ID="菲律宾"/>
+  <地点:村 rdf:ID="象角村"/>
+  <地点:区 rdf:ID="圣安多尼堂区"/>
+  <地点:街道 rdf:ID="仁厚里"/>
+  <地点:村 rdf:ID="沙石村"/>
+  <地点:其他区域 rdf:ID="石牌坊"/>
+  <地点:地级市 rdf:ID="茂名市"/>
+  <地点:社区 rdf:ID="东桥社区"/>
+  <地点:村 rdf:ID="黄家村"/>
+  <地点:县 rdf:ID="始兴县"/>
+  <地点:社区 rdf:ID="白藤社区"/>
+  <地点:村 rdf:ID="濠潭村"/>
+  <地点:乡 rdf:ID="大都"/>
+  <地点:社区 rdf:ID="岱山社区"/>
+  <地点:街道 rdf:ID="西区街道"/>
+  <地点:村 rdf:ID="排山村"/>
+  <地点:镇 rdf:ID="坦洲镇"/>
+  <地点:镇 rdf:ID="桂山镇"/>
+  <地点:社区 rdf:ID="湾仔社区"/>
+  <地点:村 rdf:ID="沙涌村"/>
+  <地点:村 rdf:ID="月坑村"/>
+  <地点:社区 rdf:ID="大虎社区"/>
+  <地点:省 rdf:ID="江西省"/>
+  <地点:其他区域 rdf:ID="火炬开发区"/>
+  <地点:地级市 rdf:ID="深圳市"/>
+  <地点:社区 rdf:ID="六乡社区"/>
+  <地点:社区 rdf:ID="南香社区"/>
+  <地点:村 rdf:ID="涌口门村">
+    <地点:所属县 rdf:resource="#中山县"/>
+  </地点:村>
+  <地点:区 rdf:ID="斯会区"/>
+  <地点:村 rdf:ID="岚田村"/>
+  <地点:街道 rdf:ID="金海岸大道"/>
+  <地点:镇 rdf:ID="嘉定镇"/>
+  <地点:街道 rdf:ID="宝源路"/>
+  <地点:国家 rdf:ID="中国"/>
+  <地点:村 rdf:ID="窈窕村"/>
+  <地点:村 rdf:ID="那洲村"/>
+  <地点:社区 rdf:ID="富兴社区"/>
+  <地点:村 rdf:ID="南山村"/>
+  <地点:社区 rdf:ID="美湾社区"/>
+  <地点:村 rdf:ID="下洲村"/>
+  <地点:村 rdf:ID="青岗村"/>
+  <地点:区 rdf:ID="高栏港经济区">
+    <地点:合并为 rdf:resource="#珠海县"/>
+  </地点:区>
+  <地点:村 rdf:ID="黄坡村"/>
+  <地点:社区 rdf:ID="神前社区"/>
+  <地点:村 rdf:ID="狮群村"/>
+  <地点:社区 rdf:ID="桃园社区"/>
+  <地点:地级市 rdf:ID="潮州市"/>
+  <地点:省 rdf:ID="台湾省"/>
+  <地点:直辖市 rdf:ID="天津市"/>
+  <地点:省 rdf:ID="海南省"/>
+  <地点:街道 rdf:ID="思南路"/>
+  <地点:村 rdf:ID="北澳村"/>
+  <地点:特别行政区 rdf:ID="香港特别行政区"/>
+  <地点:县 rdf:ID="斗门县"/>
+  <地点:村 rdf:ID="环斯村"/>
+  <地点:村 rdf:ID="莲江村"/>
+  <地点:村 rdf:ID="大濠涌"/>
+  <地点:社区 rdf:ID="小林社区"/>
+  <地点:地级市 rdf:ID="汕头市"/>
+  <地点:街道 rdf:ID="麻州街"/>
+  <地点:街道 rdf:ID="石岐街道"/>
+  <地点:地级市 rdf:ID="惠州市"/>
+  <地点:区 rdf:ID="江海区"/>
+  <地点:村 rdf:ID="隆墟村"/>
+  <地点:区 rdf:ID="嘉模堂区"/>
+  <地点:镇 rdf:ID="前山镇"/>
+  <地点:区 rdf:ID="第五区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:镇 rdf:ID="汉口镇"/>
+  <地点:村 rdf:ID="东澳村"/>
+  <地点:国家 rdf:ID="美国"/>
+  <地点:镇 rdf:ID="三灶镇"/>
+  <地点:村 rdf:ID="崖口村"/>
+  <地点:其他区域 rdf:ID="五桂山"/>
+  <地点:其他区域 rdf:ID="南澳岛"/>
+  <地点:社区 rdf:ID="南屏社区"/>
+  <地点:社区 rdf:ID="海大社区"/>
+  <地点:直辖市 rdf:ID="上海市"/>
+  <地点:村 rdf:ID="下栏村"/>
+  <地点:乡 rdf:ID="外容茔乡"/>
+  <地点:区 rdf:ID="望德堂区"/>
+  <地点:区 rdf:ID="第二区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:社区 rdf:ID="淇澳社区"/>
+  <地点:镇 rdf:ID="古镇镇"/>
+  <地点:社区 rdf:ID="蕉社区"/>
+  <地点:村 rdf:ID="外沙村"/>
+  <地点:村 rdf:ID="红星村"/>
+  <地点:社区 rdf:ID="金峰社区"/>
+  <地点:街道 rdf:ID="九洲大道"/>
+  <地点:社区 rdf:ID="兰埔社区"/>
+  <地点:省 rdf:ID="浙江省"/>
+  <地点:村 rdf:ID="虎山村"/>
+  <地点:镇 rdf:ID="崖南镇"/>
+  <地点:社区 rdf:ID="南水社区"/>
+  <地点:其他区域 rdf:ID="特立尼达"/>
+  <地点:村 rdf:ID="湾口村"/>
+  <地点:镇 rdf:ID="沙溪镇"/>
+  <地点:村 rdf:ID="三冲村"/>
+  <地点:村 rdf:ID="龙西村"/>
+  <地点:村 rdf:ID="三角村"/>
+  <地点:村 rdf:ID="大濠冲村"/>
+  <地点:社区 rdf:ID="平塘社区"/>
+  <地点:社区 rdf:ID="逸仙社区"/>
+  <地点:街道 rdf:ID="麒麟中心大街"/>
+  <地点:街道 rdf:ID="著昆街"/>
+  <地点:社区 rdf:ID="为农社区"/>
+  <地点:社区 rdf:ID="濂泉社区"/>
+  <地点:其他区域 rdf:ID="好望角"/>
+  <地点:其他区域 rdf:ID="火奴鲁鲁">
+    <地点:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >檀香山</地点:别名>
+    <地点:华人称之>
+      <地点:其他区域 rdf:ID="檀香山"/>
+    </地点:华人称之>
+  </地点:其他区域>
+  <地点:镇 rdf:ID="三乡镇"/>
+  <地点:村 rdf:ID="张家边三村"/>
+  <地点:街道 rdf:ID="吉大街道"/>
+  <地点:社区 rdf:ID="夏村社区"/>
+  <地点:村 rdf:ID="櫴山村"/>
+  <地点:区 rdf:ID="花地玛堂区"/>
+  <地点:村 rdf:ID="大庞头村"/>
+  <地点:镇 rdf:ID="小榄镇"/>
+  <地点:其他区域 rdf:ID="浅水湾"/>
+  <地点:社区 rdf:ID="荷塘社区"/>
+  <地点:村 rdf:ID="赖家村会"/>
+  <地点:街道 rdf:ID="马龙舟巷"/>
+  <地点:村 rdf:ID="新丰村"/>
+  <地点:省 rdf:ID="山东省"/>
+  <地点:社区 rdf:ID="长沙社区"/>
+  <地点:社区 rdf:ID="康宁社区"/>
+  <地点:地级市 rdf:ID="湛江市"/>
+  <地点:直辖市 rdf:ID="北京市"/>
+  <地点:镇 rdf:ID="阜沙镇"/>
+  <地点:村 rdf:ID="大海环村"/>
+  <地点:社区 rdf:ID="大林社区"/>
+  <地点:社区 rdf:ID="红旗社区"/>
+  <地点:村 rdf:ID="平岚忠堡"/>
+  <地点:镇 rdf:ID="东镇"/>
+  <地点:其他区域 rdf:ID="金斗湾"/>
+  <地点:社区 rdf:ID="前山社区"/>
+  <地点:村 rdf:ID="成裕村"/>
+  <地点:其他区域 rdf:ID="长洲岛"/>
+  <地点:社区 rdf:ID="粤华社区"/>
+  <地点:街道 rdf:ID="京沪路"/>
+  <地点:社区 rdf:ID="银坑社区"/>
+  <地点:街道 rdf:ID="南京路"/>
+  <地点:社区 rdf:ID="水拥社区"/>
+  <地点:其他区域 rdf:ID="昆士兰州"/>
+  <地点:县级市 rdf:ID="陆丰市"/>
+  <地点:地级市 rdf:ID="佛山市"/>
+  <地点:国家 rdf:ID="瑞典"/>
+  <地点:村 rdf:ID="神湾村"/>
+  <地点:社区 rdf:ID="兴发社区"/>
+  <地点:乡 rdf:ID="文顺乡"/>
+  <地点:社区 rdf:ID="福宁社区"/>
+  <地点:村 rdf:ID="新益村"/>
+  <地点:村 rdf:ID="乾雾乡湾口村"/>
+  <地点:镇 rdf:ID="横栏镇"/>
+  <地点:社区 rdf:ID="莲溪社区"/>
+  <地点:其他区域 rdf:ID="洛杉矶"/>
+  <地点:村 rdf:ID="冲口村"/>
+  <地点:街道 rdf:ID="大三巴牌坊"/>
+  <地点:区 rdf:ID="第六区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:其他区域 rdf:ID="阿罗哈州">
+    <地点:别名关系>
+      <地点:其他区域 rdf:ID="夏威夷州">
+        <地点:英文名称 xml:lang="en">Hawaii State</地点:英文名称>
+      </地点:其他区域>
+    </地点:别名关系>
+    <地点:英文名称 xml:lang="en">Hawaii State</地点:英文名称>
+    <地点:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >夏威夷州</地点:别名>
+  </地点:其他区域>
+  <地点:街道 rdf:ID="妈阁街"/>
+  <地点:社区 rdf:ID="那洲社区"/>
+  <地点:县级市 rdf:ID="雷州市"/>
+  <地点:村 rdf:ID="上洲村"/>
+  <地点:社区 rdf:ID="唐乐社区"/>
+  <地点:村 rdf:ID="南溪村"/>
+  <地点:村 rdf:ID="北山村"/>
+  <地点:社区 rdf:ID="南新社区"/>
+  <地点:国家 rdf:ID="朝鲜"/>
+  <地点:社区 rdf:ID="后环社区"/>
+  <地点:村 rdf:ID="乾务村"/>
+  <地点:区 rdf:ID="黄埔区"/>
+  <地点:区 rdf:ID="风顺堂区"/>
+  <地点:镇 rdf:ID="东凤镇"/>
+  <地点:镇 rdf:ID="南朗镇"/>
+  <地点:镇 rdf:ID="大涌镇"/>
+  <地点:村 rdf:ID="荔山村"/>
+  <地点:镇 rdf:ID="港头镇"/>
+  <地点:县级市 rdf:ID="开平市"/>
+  <地点:村 rdf:ID="丰洲村"/>
+  <地点:镇 rdf:ID="斗门镇"/>
+  <地点:街道 rdf:ID="皇后大道"/>
+  <地点:其他区域 rdf:ID="南洋"/>
+  <地点:街道 rdf:ID="东区街道"/>
+  <地点:村 rdf:ID="桂海村"/>
+  <地点:村 rdf:ID="草蓢村"/>
+  <地点:其他区域 rdf:ID="担杆列岛">
+    <地点:合并为 rdf:resource="#珠海县"/>
+  </地点:其他区域>
+  <地点:国家 rdf:ID="澳大利亚"/>
+  <地点:地级市 rdf:ID="河源市"/>
+  <地点:村 rdf:ID="唐家村"/>
+  <地点:村 rdf:ID="湴冲村"/>
+  <地点:村 rdf:ID="古鹤村"/>
+  <地点:地级市 rdf:ID="广州市"/>
+  <地点:社区 rdf:ID="沙美社区"/>
+  <地点:其他区域 rdf:ID="平岚平原"/>
+  <地点:街道 rdf:ID="福州路"/>
+  <地点:镇 rdf:ID="金鼎镇"/>
+  <地点:镇 rdf:ID="唐家湾镇"/>
+  <地点:其他区域 rdf:ID="炮台山"/>
+  <地点:乡 rdf:ID="马山乡"/>
+  <地点:村 rdf:ID="大胜村"/>
+  <地点:社区 rdf:ID="东风社区"/>
+  <地点:社区 rdf:ID="新城社区"/>
+  <地点:村 rdf:ID="西门村"/>
+  <地点:社区 rdf:ID="幸福社区"/>
+  <地点:村 rdf:ID="八顷村"/>
+  <地点:县级市 rdf:ID="信宜市"/>
+  <地点:社区 rdf:ID="关闸社区"/>
+  <地点:村 rdf:ID="新二村"/>
+  <地点:村 rdf:ID="南青村"/>
+  <地点:村 rdf:ID="虾山村"/>
+  <地点:其他区域 rdf:ID="波斯"/>
+  <地点:村 rdf:ID="泗喜村"/>
+  <地点:县级市 rdf:ID="南雄市"/>
+  <地点:社区 rdf:ID="婆石社区"/>
+  <地点:区 rdf:ID="三水区"/>
+  <地点:村 rdf:ID="西哑村"/>
+  <地点:街道 rdf:ID="御道街"/>
+  <地点:社区 rdf:ID="新竹社区"/>
+  <地点:县级市 rdf:ID="普宁市"/>
+  <地点:乡 rdf:ID="台北乡"/>
+  <地点:县级市 rdf:ID="南京市"/>
+  <地点:区 rdf:ID="第七区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:县 rdf:ID="青浦县"/>
+  <地点:村 rdf:ID="雍陌村"/>
+  <地点:村 rdf:ID="鳘鱼沙村"/>
+  <地点:镇 rdf:ID="镇_191"/>
+  <地点:村 rdf:ID="正坑村"/>
+  <地点:街道 rdf:ID="长江路"/>
+  <地点:其他区域 rdf:ID="黄花岗公园"/>
+  <地点:社区 rdf:ID="梅溪社区"/>
+  <地点:社区 rdf:ID="富华社区"/>
+  <地点:村 rdf:ID="光明村"/>
+  <地点:社区 rdf:ID="碧涛社区"/>
+  <地点:社区 rdf:ID="山场社区"/>
+  <地点:镇 rdf:ID="翠亨镇"/>
+  <地点:社区 rdf:ID="好景社区"/>
+  <地点:镇 rdf:ID="东升镇"/>
+  <地点:村 rdf:ID="西桠村"/>
+  <地点:社区 rdf:ID="红山社区"/>
+  <地点:村 rdf:ID="圣狮村"/>
+  <地点:村 rdf:ID="灯三村"/>
+  <地点:村 rdf:ID="鸡咀村"/>
+  <地点:省 rdf:ID="江苏省"/>
+  <地点:社区 rdf:ID="小横琴社区"/>
+  <地点:街道 rdf:ID="前山街道"/>
+  <地点:村 rdf:ID="洪涣村"/>
+  <地点:社区 rdf:ID="东岸社区"/>
+  <地点:村 rdf:ID="耕管村"/>
+  <地点:村 rdf:ID="郑州村"/>
+  <地点:镇 rdf:ID="虎门镇"/>
+  <地点:其他区域 rdf:ID="华盛顿"/>
+  <地点:区 rdf:ID="第八区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:社区 rdf:ID="昌盛社区"/>
+  <地点:社区 rdf:ID="侨光社区"/>
+  <地点:区 rdf:ID="香洲区"/>
+  <地点:社区 rdf:ID="大沙社区"/>
+  <地点:社区 rdf:ID="飞龙社区"/>
+  <地点:街道 rdf:ID="大沽路"/>
+  <地点:区 rdf:ID="南区"/>
+  <地点:社区 rdf:ID="白石社区"/>
+  <地点:村 rdf:ID="福安村"/>
+  <地点:区 rdf:ID="第三区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:社区 rdf:ID="青竹社区"/>
+  <地点:镇 rdf:ID="莲洲镇"/>
+  <地点:镇 rdf:ID="神湾镇"/>
+  <地点:社区 rdf:ID="华发社区"/>
+  <地点:街道 rdf:ID="湾仔街道"/>
+  <地点:其他区域 rdf:ID="康州"/>
+  <地点:县级市 rdf:ID="高要市"/>
+  <地点:其他区域 rdf:ID="荔湾区"/>
+  <地点:社区 rdf:ID="八一社区"/>
+  <地点:其他区域 rdf:ID="珠海前山"/>
+  <地点:乡 rdf:ID="仁良都"/>
+  <地点:镇 rdf:ID="井岸镇"/>
+  <地点:村 rdf:ID="大托村"/>
+  <地点:村 rdf:ID="灯一村"/>
+  <地点:村 rdf:ID="乾西村"/>
+  <地点:社区 rdf:ID="教育社区"/>
+  <地点:村 rdf:ID="灯笼村"/>
+  <地点:社区 rdf:ID="界冲社区"/>
+  <地点:社区 rdf:ID="立新社区"/>
+  <地点:其他区域 rdf:ID="悉尼"/>
+  <地点:村 rdf:ID="牛起湾村"/>
+  <地点:村 rdf:ID="麒麟村"/>
+  <地点:自治县 rdf:ID="连南瑶族自治县">
+    <地点:所属市>
+      <地点:地级市 rdf:ID="清远市"/>
+    </地点:所属市>
+  </地点:自治县>
+  <地点:村 rdf:ID="上栏村"/>
+  <地点:村 rdf:ID="莲塘村"/>
+  <地点:村 rdf:ID="白蕉村"/>
+  <地点:村 rdf:ID="万山村"/>
+  <地点:街道 rdf:ID="河北路"/>
+  <地点:地级市 rdf:ID="梅州市"/>
+  <地点:镇 rdf:ID="石泉镇"/>
+  <地点:村 rdf:ID="村_128"/>
+  <地点:区 rdf:ID="第一区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:社区 rdf:ID="矿山社区"/>
+  <地点:自治县 rdf:ID="连山壮族瑶族自治县">
+    <地点:所属市 rdf:resource="#清远市"/>
+  </地点:自治县>
+  <地点:乡 rdf:ID="员峰乡"/>
+  <地点:省 rdf:ID="湖北省"/>
+  <地点:街道 rdf:ID="翠香街道"/>
+  <地点:村 rdf:ID="昭信村"/>
+  <地点:社区 rdf:ID="白莲社区"/>
+  <地点:村 rdf:ID="黄杨村"/>
+  <地点:社区 rdf:ID="长亨社区"/>
+  <地点:社区 rdf:ID="斗门社区"/>
+  <地点:自治区 rdf:ID="宁夏回族自治区"/>
+  <地点:村 rdf:ID="东湖村"/>
+  <地点:社区 rdf:ID="中山亭社区"/>
+  <地点:社区 rdf:ID="沿河社区"/>
+  <地点:社区 rdf:ID="海霞社区"/>
+  <地点:社区 rdf:ID="统建社区"/>
+  <地点:省 rdf:ID="黑龙江省"/>
+  <地点:社区 rdf:ID="湖东社区"/>
+  <地点:村 rdf:ID="新新村"/>
+  <地点:镇 rdf:ID="乾务镇"/>
+  <地点:镇 rdf:ID="民众镇"/>
+  <地点:国家 rdf:ID="葡萄牙"/>
+  <地点:村 rdf:ID="左埗头村"/>
+  <地点:村 rdf:ID="夏村村"/>
+  <地点:村 rdf:ID="桂山村"/>
+  <地点:社区 rdf:ID="夏湾社区"/>
+  <地点:社区 rdf:ID="翠香社区"/>
+  <地点:街道 rdf:ID="湖北路"/>
+  <地点:省 rdf:ID="河南省"/>
+  <地点:村 rdf:ID="濠涌村"/>
+  <地点:街道 rdf:ID="旭秀街"/>
+  <地点:县级市 rdf:ID="从化市"/>
+  <地点:村 rdf:ID="担杆村"/>
+  <地点:地级市 rdf:ID="东莞市"/>
+  <地点:村 rdf:ID="尖峰村"/>
+  <地点:村 rdf:ID="造贝村"/>
+  <地点:其他区域 rdf:ID="马鞍山"/>
+  <地点:县 rdf:ID="大浦县"/>
+  <地点:村 rdf:ID="大浦村"/>
+  <地点:社区 rdf:ID="连湾社区"/>
+  <地点:社区 rdf:ID="翠微社区"/>
+  <地点:县 rdf:ID="惠阳县"/>
+  <地点:国家 rdf:ID="墨西哥"/>
+  <地点:镇 rdf:ID="平沙镇"/>
+  <地点:街道 rdf:ID="唐家山房路"/>
+  <地点:社区 rdf:ID="广安社区"/>
+  <地点:镇 rdf:ID="板芙镇"/>
+  <地点:省 rdf:ID="辽宁省"/>
+  <地点:社区 rdf:ID="洪湾社区"/>
+  <地点:社区 rdf:ID="上栅社区"/>
+  <地点:其他区域 rdf:ID="汤士威路"/>
+  <地点:地级市 rdf:ID="中山市"/>
+  <地点:特别行政区 rdf:ID="澳门特别行政区"/>
+  <地点:村 rdf:ID="小赤坎村"/>
+  <地点:村 rdf:ID="村_125"/>
+  <地点:村 rdf:ID="梅溪村"/>
+  <地点:其他区域 rdf:ID="纽约"/>
+  <地点:村 rdf:ID="西洋田村"/>
+  <地点:社区 rdf:ID="永丰社区"/>
+  <地点:社区 rdf:ID="连合社区"/>
+  <地点:省 rdf:ID="青海省"/>
+  <地点:乡 rdf:ID="西山乡"/>
+  <地点:乡 rdf:ID="南山乡"/>
+  <地点:社区 rdf:ID="北沙社区"/>
+  <地点:区 rdf:ID="东南南节区"/>
+  <地点:地级市 rdf:ID="肇庆市"/>
+  <地点:其他区域 rdf:ID="南极洲"/>
+  <地点:社区 rdf:ID="沙龙社区"/>
+  <地点:其他区域 rdf:ID="三门列岛">
+    <地点:合并为 rdf:resource="#珠海县"/>
+  </地点:其他区域>
+  <地点:村 rdf:ID="翠亨村">
+    <地点:人口 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3786人（2004年）</地点:人口>
+    <地点:面积 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >7580亩</地点:面积>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >翠亨村位于中国广东省中山市东南南节区南蓢镇，原名蔡坑村，后因附近山林青翠，故改名翠亨村。是民主革命先行者孙中山的故乡（1866年诞生于此）。
+孙氏祖先常德公，在元朝末期（约公元一三五零年）受到张士诚、朱元璋等民族革命思想的影响，因而与东莞的何真交往很好，所以也就由汉族广府民系南迁广东中转站——南雄珠玑巷迁来上沙村（即今东莞市长安镇上沙村）定居，到了第五世房礼赞公搬迁至香山，也就是现在的中山市南朗镇翠亨村；根据孙中山故居"孙氏家谱"所载的"始祖、二世、三、四世祖，都在东莞上沙乡居住，五世礼赞公才从上沙迁走，先辈的族谱仍以上沙作为故乡"。</rdfs:comment>
+    <地点:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >翠坑村</地点:别名>
+    <地点:中文名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >翠亨村</地点:中文名称>
+  </地点:村>
+  <地点:省 rdf:ID="陕西省"/>
+  <地点:街道 rdf:ID="后海北沿"/>
+  <地点:社区 rdf:ID="宁堂社区"/>
+  <地点:社区 rdf:ID="岭南社区"/>
+  <地点:省 rdf:ID="湖南省"/>
+  <地点:村 rdf:ID="伶仃村"/>
+  <地点:村 rdf:ID="鸿山村"/>
+  <地点:其他区域 rdf:ID="石岐平原"/>
+  <地点:社区 rdf:ID="大海环社区"/>
+  <地点:其他区域 rdf:ID="加州"/>
+  <地点:县 rdf:ID="丰顺县"/>
+  <地点:村 rdf:ID="南文村"/>
+  <地点:国家 rdf:ID="加拿大"/>
+  <地点:村 rdf:ID="龙坛村"/>
+  <地点:省 rdf:ID="云南省"/>
+  <地点:社区 rdf:ID="紫荆社区"/>
+  <地点:社区 rdf:ID="藤山社区"/>
+  <地点:村 rdf:ID="孖湾村"/>
+  <地点:社区 rdf:ID="三板社区"/>
+  <地点:村 rdf:ID="濠头村"/>
+  <地点:村 rdf:ID="下泽村"/>
+  <地点:村 rdf:ID="石龙村"/>
+  <地点:镇 rdf:ID="三角镇"/>
+  <地点:镇 rdf:ID="万山镇"/>
+  <地点:村 rdf:ID="三家村"/>
+  <地点:县级市 rdf:ID="化州市"/>
+  <地点:区 rdf:ID="梅县区"/>
+  <地点:社区 rdf:ID="柠溪社区"/>
+  <地点:村 rdf:ID="福涌村"/>
+  <地点:社区 rdf:ID="南溪社区"/>
+  <地点:社区 rdf:ID="莲塘社区"/>
+  <地点:村 rdf:ID="山场村"/>
+  <地点:村 rdf:ID="东风村"/>
+  <地点:区 rdf:ID="第九区">
+    <地点:所属县 rdf:resource="#香山县"/>
+  </地点:区>
+  <地点:其他区域 rdf:ID="青洲岛"/>
+  <地点:其他区域 rdf:ID="茂宜岛"/>
+  <地点:区 rdf:ID="惠城区"/>
+  <地点:社区 rdf:ID="圆明社区"/>
+  <地点:街道 rdf:ID="狮山街道"/>
+  <地点:村 rdf:ID="马山村"/>
+  <地点:社区 rdf:ID="福石社区"/>
+  <地点:其他区域 rdf:ID="沙京街离所"/>
+  <地点:其他区域 rdf:ID="东坑凤凰山风景区"/>
+  <地点:其他区域 rdf:ID="上溪区"/>
+  <地点:社区 rdf:ID="茂盛社区"/>
+  <地点:自治区 rdf:ID="新疆维吾尔自治区"/>
+  <地点:区 rdf:ID="和平区"/>
+  <地点:村 rdf:ID="中禾村"/>
+  <地点:自治区 rdf:ID="内蒙古自治区"/>
+  <地点:村 rdf:ID="庞头村"/>
+  <地点:街道 rdf:ID="两围城长巷"/>
+  <地点:镇 rdf:ID="南屏镇"/>
+  <地点:县级市 rdf:ID="兴宁市"/>
+  <地点:社区 rdf:ID="美平社区"/>
+  <地点:县 rdf:ID="东莞县">
+    <地点:分出为>
+      <地点:镇 rdf:ID="万顷沙镇">
+        <地点:合并为 rdf:resource="#珠海县"/>
+        <地点:所属县 rdf:resource="#东莞县"/>
+      </地点:镇>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:其他区域 rdf:ID="龙穴岛">
+        <地点:合并为 rdf:resource="#珠海县"/>
+      </地点:其他区域>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:村 rdf:ID="一涌村">
+        <地点:所属县 rdf:resource="#东莞县"/>
+      </地点:村>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:村 rdf:ID="五涌村">
+        <地点:所属县 rdf:resource="#东莞县"/>
+      </地点:村>
+    </地点:分出为>
+  </地点:县>
+  <地点:县 rdf:ID="宝安县">
+    <地点:分出为>
+      <地点:区 rdf:ID="盐田区">
+        <地点:所属县 rdf:resource="#宝安县"/>
+      </地点:区>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:区 rdf:ID="固戍区">
+        <地点:所属县 rdf:resource="#宝安县"/>
+      </地点:区>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:区 rdf:ID="蛇口区">
+        <地点:所属县 rdf:resource="#宝安县"/>
+      </地点:区>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:其他区域 rdf:ID="外伶仃岛">
+        <地点:合并为 rdf:resource="#珠海县"/>
+        <地点:所属县 rdf:resource="#宝安县"/>
+      </地点:其他区域>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:其他区域 rdf:ID="佳蓬列岛">
+        <地点:合并为 rdf:resource="#珠海县"/>
+        <地点:所属县 rdf:resource="#宝安县"/>
+      </地点:其他区域>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:其他区域 rdf:ID="内伶仃岛">
+        <地点:合并为 rdf:resource="#珠海县"/>
+        <地点:所属县 rdf:resource="#宝安县"/>
+      </地点:其他区域>
+    </地点:分出为>
+  </地点:县>
+  <地点:乡 rdf:ID="黄梁都">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="潮居乡">
+        <地点:相同指代 rdf:resource="#黄梁都"/>
+      </地点:乡>
+    </地点:相同指代>
+    <地点:相同指代>
+      <地点:镇 rdf:ID="黄梁镇">
+        <地点:相同指代 rdf:resource="#黄梁都"/>
+      </地点:镇>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="仁厚坊">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="仁厚乡">
+        <地点:分出为 rdf:resource="#仁厚坊"/>
+        <地点:分出为>
+          <地点:乡 rdf:ID="良字都"/>
+        </地点:分出为>
+        <地点:相同指代 rdf:resource="#仁厚坊"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="宁安乡">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="大榄都">
+        <地点:相同指代 rdf:resource="#宁安乡"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="恭常都">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="长安乡">
+        <地点:相同指代 rdf:resource="#恭常都"/>
+      </地点:乡>
+    </地点:相同指代>
+    <地点:分出为>
+      <地点:镇 rdf:ID="下恭镇"/>
+    </地点:分出为>
+    <地点:分出为>
+      <地点:镇 rdf:ID="上恭镇"/>
+    </地点:分出为>
+  </地点:乡>
+  <地点:乡 rdf:ID="永乐乡">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="得能都">
+        <地点:相同指代 rdf:resource="#永乐乡"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="德庆乡">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="龙眼都">
+        <地点:相同指代 rdf:resource="#德庆乡"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="榄都">
+    <地点:相同指代>
+      <地点:镇 rdf:ID="榄镇">
+        <地点:相同指代 rdf:resource="#榄都"/>
+      </地点:镇>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:镇 rdf:ID="隆镇">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="隆都">
+        <地点:相同指代 rdf:resource="#隆镇"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:镇>
+  <地点:村 rdf:ID="徐荣村">
+    <地点:相同指代>
+      <地点:村 rdf:ID="北岭村">
+        <地点:相同指代 rdf:resource="#徐荣村"/>
+      </地点:村>
+    </地点:相同指代>
+  </地点:村>
+  <地点:乡 rdf:ID="谷字都">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="丰乐乡">
+        <地点:相同指代 rdf:resource="#谷字都"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="黄旗都">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="古海乡">
+        <地点:相同指代 rdf:resource="#黄旗都"/>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="谷都">
+    <地点:相同指代>
+      <地点:镇 rdf:ID="谷镇">
+        <地点:相同指代 rdf:resource="#谷都"/>
+      </地点:镇>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="长乐乡">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="四字都">
+        <地点:相同指代 rdf:resource="#长乐乡"/>
+        <地点:合并为>
+          <地点:乡 rdf:ID="四大都"/>
+        </地点:合并为>
+      </地点:乡>
+    </地点:相同指代>
+  </地点:乡>
+  <地点:乡 rdf:ID="大字都">
+    <地点:相同指代>
+      <地点:乡 rdf:ID="永宁乡">
+        <地点:相同指代 rdf:resource="#大字都"/>
+      </地点:乡>
+    </地点:相同指代>
+    <地点:合并为 rdf:resource="#四大都"/>
+  </地点:乡>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

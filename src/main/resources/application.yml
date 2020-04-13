@@ -1,0 +1,20 @@
+#服务器
+server:
+  port: 8888
+
+
+spring:
+
+    #数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/canton??useUnicode=true&amp;characterEncoding=UTF-8
+    username: root
+    password: 990407
+    driver-class-name: com.mysql.jdbc.Driver
+
+#mybatis配置
+mybatis:
+  typeAliasesPackage: com.canton.dao.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

@@ -1,0 +1,2396 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:组织机构="http://www.owl-ontologies.com/Organization.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://www.owl-ontologies.com/Organization.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/Individual.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="其他组织机构群体">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >其他组织机构群体</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="组织机构"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#组织机构">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >组织机构</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="政府机构">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >政府机构</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+  </owl:Class>
+  <owl:Class rdf:ID="社会组织">
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >社会组织</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="宗教组织">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="文化教育科技单位"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >宗教组织</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="公司企业">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >公司企业</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="经济组织"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="社会群体">
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >社会群体</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="个体商店">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#经济组织"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >个体商店</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="军事组织">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >军事组织</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+  </owl:Class>
+  <owl:Class rdf:ID="工商机构">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >工商机构</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+  </owl:Class>
+  <owl:Class rdf:about="#文化教育科技单位">
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >文化教育科技单位</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#经济组织">
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >经济组织</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="政治党派">
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >政治党派</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="国际组织">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >国际组织</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#组织机构"/>
+  </owl:Class>
+  <owl:Class rdf:ID="教育单位">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >教育单位</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#文化教育科技单位"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="所属行政区">
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Location.owl#地点"/>
+    <rdfs:domain rdf:resource="#组织机构"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="担任领导">
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
+    <rdfs:range rdf:resource="#组织机构"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="创办人">
+    <rdfs:domain rdf:resource="#组织机构"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="相关人物">
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relation.owl#政党"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="领导人">
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
+    <rdfs:domain rdf:resource="#组织机构"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="政党">
+    <rdfs:range rdf:resource="#政治党派"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
+          <rdf:Description rdf:about="http://www.owl-ontologies.com/Relation.owl#政党"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="相同指代">
+    <owl:inverseOf rdf:resource="#相同指代"/>
+    <rdfs:range rdf:resource="#组织机构"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="#组织机构"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="成立背景">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#组织机构"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="外文名">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#组织机构"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="中文名">
+    <rdfs:domain rdf:resource="#组织机构"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="成立时间">
+    <rdfs:domain rdf:resource="#组织机构"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="别称">
+    <rdfs:domain rdf:resource="#组织机构"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="成立地点">
+    <rdfs:domain rdf:resource="#组织机构"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="口号">
+    <rdfs:domain rdf:resource="#组织机构"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <组织机构:军事组织 rdf:ID="广东军政府航空局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#朱卓文"/>
+  </组织机构:军事组织>
+  <组织机构:工商机构 rdf:ID="烟台采矿公司"/>
+  <组织机构:社会组织 rdf:ID="普育堂"/>
+  <组织机构:公司企业 rdf:ID="马玉山饼干公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="中国教育会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#伍光建"/>
+  </组织机构:社会组织>
+  <组织机构:个体商店 rdf:ID="润立生茶号"/>
+  <组织机构:教育单位 rdf:ID="樱美林大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可强"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="辅元堂"/>
+  <组织机构:社会组织 rdf:ID="广州商务总会"/>
+  <组织机构:政治党派 rdf:ID="华兴会"/>
+  <组织机构:教育单位 rdf:ID="崇基学院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容启东"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="非常国会参议院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="中山大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="中国美术家协会主">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何香凝"/>
+  </组织机构:社会组织>
+  <组织机构:国际组织 rdf:ID="中国驻爪哇总领事馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳庚"/>
+  </组织机构:国际组织>
+  <组织机构:教育单位 rdf:ID="朝阳大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:教育单位>
+  <组织机构:个体商店 rdf:ID="谦慎安茶栈"/>
+  <组织机构:政府机构 rdf:ID="广东水上警察厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="哈尔滨置业公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:其他组织机构群体 rdf:ID="华字日报">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:社会组织 rdf:ID="中华总会馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="广益房产公司"/>
+  <组织机构:公司企业 rdf:ID="西南航空公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴势"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="陈纳德飞虎队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可宏"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="武峰阅报社"/>
+  <组织机构:教育单位 rdf:ID="广东政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="飞机管理股">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容兆明"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="总统府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
+  </组织机构:政府机构>
+  <组织机构:政治党派 rdf:ID="清政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:政治党派>
+  <组织机构:政府机构 rdf:ID="南林农场党委">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容尚谦"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="琼记洋行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐隆茂"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="法学院学务委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="国民党中央组织部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="中华全国总工会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林伟民"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="广东实业集团">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="天津北洋大学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡绍基"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="志愿军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#邓华高"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="天津海关道">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁敦彦"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="永泰和烟行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑伯昭"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="航空工程学会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢维清"/>
+  </组织机构:教育单位>
+  <组织机构:教育单位 rdf:ID="中华航空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="革命筹款委员">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="闭黎开办">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#鲍鹏"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="汪伪社会部行动指导委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="上海市政协">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭琳爽"/>
+  </组织机构:政府机构>
+  <组织机构:社会群体 rdf:ID="张慧冲舞台艺术整理小组">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
+  </组织机构:社会群体>
+  <组织机构:政府机构 rdf:ID="开平矿务局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴仰曾"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="全国政协">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭琳爽"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="九龙塘民生书院"/>
+  <组织机构:教育单位 rdf:ID="香山城世光女子高等小学">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="北洋政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="暨南大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+  </组织机构:教育单位>
+  <组织机构:个体商店 rdf:ID="永茂茶号"/>
+  <组织机构:公司企业 rdf:ID="亚洲再保险集团">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴幼林"/>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="福德泉茶号"/>
+  <组织机构:个体商店 rdf:ID="永生果行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭标"/>
+  </组织机构:个体商店>
+  <组织机构:军事组织 rdf:ID="讨贼联军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="上海招商局">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷植"/>
+  </组织机构:政府机构>
+  <组织机构:宗教组织 rdf:ID="烟台基督教青年会"/>
+  <组织机构:社会组织 rdf:ID="上海商业会议公所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐榴"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="北伐军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容启恩"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="永泰栈">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >一个推销雪茄烟的合伙组织，股东都是广东人。</rdfs:comment>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑伯昭"/>
+  </组织机构:社会组织>
+  <组织机构:其他组织机构群体 rdf:ID="上海皇后大戏院">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锡基"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:政府机构 rdf:ID="唐山开栾煤矿">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#邝荣光"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="华美银行"/>
+  <组织机构:教育单位 rdf:ID="吉林省委党校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="鸡鸣山煤矿">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴仰曾"/>
+  </组织机构:政府机构>
+  <组织机构:工商机构 rdf:ID="三姓金矿公司"/>
+  <组织机构:军事组织 rdf:ID="南京航空署">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何泾渭"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈兆新"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘薇馨"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑厚邦"/>
+  </组织机构:军事组织>
+  <组织机构:个体商店 rdf:ID="宝源祥茶栈"/>
+  <组织机构:社会群体 rdf:ID="上海精武体育会音乐部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
+  </组织机构:社会群体>
+  <组织机构:政府机构 rdf:ID="大元帅府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >大元帅府旧址坐落在广东省广州市海珠区纺织路东沙街18号，是以全国重点文物保护单位大元帅府旧址为依托建立的遗址性纪念馆。
+1917——1925年间孙中山先生曾两次在这里建立大元帅府，领导中国民主革命。纪念馆总占地面积为8020平方米，由南北两座主体大楼、东、西广场和门楼等组成；两座主体大楼为三层劵拱的西式建筑，南楼设“帅府百年”复原陈列，北楼有“孙中山在广州三次建立革命政权”的基本史料陈列和专题陈列。</rdfs:comment>
+    <组织机构:成立地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >广州市海珠区</组织机构:成立地点>
+    <组织机构:创办人>
+      <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#孙中山">
+        <组织机构:政党>
+          <组织机构:政治党派 rdf:ID="同盟会">
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+            <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+            <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >中国同盟会</组织机构:中文名>
+            <组织机构:口号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >现在中国要由我们四万万国民兴起</组织机构:口号>
+            <组织机构:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Chinese Alliance</组织机构:外文名>
+            <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何香凝"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈永安"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈自觉"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+            <组织机构:成立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >1905-07-20</组织机构:成立时间>
+            <组织机构:别称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >中国革命同盟会</组织机构:别称>
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >中国同盟会，亦为中国革命同盟会。是中国清朝末年，由孙中山领导和组织的一个统一的全国性资产阶级革命政党。
+中国同盟会在推翻清政府、结束中国两千多年封建帝制的辛亥革命中起到重要作用，成立了中国历史上第一个资产阶级共和国——中华民国。</rdfs:comment>
+            <组织机构:成立地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >日本东京赤坂区</组织机构:成立地点>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+            <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+          </组织机构:政治党派>
+        </组织机构:政党>
+        <组织机构:政党>
+          <组织机构:政治党派 rdf:ID="兴中会">
+            <组织机构:口号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >驱除鞑虏、恢复中国</组织机构:口号>
+            <组织机构:成立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >1894-11-24</组织机构:成立时间>
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >兴中会是中国国民党最早的前身，是孙中山于1894年11月24日在美国檀香山创建的中国近代第一个民主革命团体。宗旨是驱除鞑虏，恢复中国，创立合众政府。
+1894年，孙中山前往美国檀香山在华侨中宣传革命，创建了中国第一个民主革命团体兴中会，孙中山起草的《兴中会章程》被通过。这里，第一次提出了推翻满清封建君主专制政府、建立民主共和国的革命纲领。</rdfs:comment>
+            <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨心如"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨著昆"/>
+            <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >兴中会</组织机构:中文名>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+          </组织机构:政治党派>
+        </组织机构:政党>
+        <组织机构:政党>
+          <组织机构:政治党派 rdf:ID="中国国民党">
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+            <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >中国国民党</组织机构:中文名>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+            <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+            <组织机构:成立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >1894-11-24</组织机构:成立时间>
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >中国国民党（Kuomintang of China，缩写KMT；亦可直译作“Chinese Nationalist Party”），是孙中山先生所创建的一个中国政党。中国国民党是中国历史上第一个资产阶级政党，亦是中华民国与亚洲历史最悠久的政党之一。其前身最早为成立于1894年11月24日的兴中会，而后依次被改组为中国同盟会、中国国民党及中华革命党，1919年10月10日经孙中山改组后改为现名。中国国民党从1928年北伐成功、国民政府统一全国起，至1948年改组中华民国政府。于1949年国共内战中失利，从中国大陆撤守至台湾岛。现为中国台湾地区政党。</rdfs:comment>
+            <组织机构:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Kuomintang</组织机构:外文名>
+          </组织机构:政治党派>
+        </组织机构:政党>
+      </rdf:Description>
+    </组织机构:创办人>
+    <组织机构:成立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >1917-01-01</组织机构:成立时间>
+    <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >大元帅府</组织机构:中文名>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="广播电视厅干部处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容尚谦"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="中国强学会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="天津招商局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#天津市"/>
+  </组织机构:政府机构>
+  <组织机构:政治党派 rdf:ID="台湾兴中分会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨心如"/>
+  </组织机构:政治党派>
+  <组织机构:军事组织 rdf:ID="韶关航空站">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄广英"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="保险招商局"/>
+  <组织机构:公司企业 rdf:ID="柯化威洋行"/>
+  <组织机构:政府机构 rdf:ID="国防最高会议">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="中山县警察局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李泽平"/>
+  </组织机构:政府机构>
+  <组织机构:个体商店 rdf:ID="修华号棉花行"/>
+  <组织机构:社会组织 rdf:ID="北京中国画研究会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:社会组织>
+  <组织机构:社会群体 rdf:ID="海员工会筹备组">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林伟民"/>
+  </组织机构:社会群体>
+  <组织机构:社会群体 rdf:ID="安阳殷墟甲骨文史研究会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可亮"/>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="汪伪清乡委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="中山港工商炼油公司">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >陈庆云兴建</rdfs:comment>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="顺兴货号"/>
+  <组织机构:公司企业 rdf:ID="先施人寿保险公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="广东军政府财政部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="中央人民政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何香凝"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="清华大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
+  </组织机构:教育单位>
+  <组织机构:教育单位 rdf:ID="圣士提反书院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+  </组织机构:教育单位>
+  <组织机构:个体商店 rdf:ID="宝源丝茶土号"/>
+  <组织机构:其他组织机构群体 rdf:ID="中国日报">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:公司企业 rdf:ID="英美烟公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑伯昭"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="沽塘耕植畜牧公司"/>
+  <组织机构:公司企业 rdf:ID="泰记烟厂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑伯昭"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >菲律宾</rdfs:comment>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="中华海员工业联合总会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林伟民"/>
+  </组织机构:社会组织>
+  <组织机构:宗教组织 rdf:ID="南公理会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容揆"/>
+  </组织机构:宗教组织>
+  <组织机构:政治党派 rdf:ID="中国共产党">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫应溎"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林伟民"/>
+  </组织机构:政治党派>
+  <组织机构:政府机构 rdf:ID="烟台纩丝局"/>
+  <组织机构:教育单位 rdf:ID="华北联合大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:教育单位>
+  <组织机构:社会群体 rdf:ID="和风中学复员筹备委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张有名"/>
+  </组织机构:社会群体>
+  <组织机构:教育单位 rdf:ID="北洋水师学堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="大北电报局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡绍基"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="香港保护儿童会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="济和水火保险公司"/>
+  <组织机构:政府机构 rdf:ID="洋药局"/>
+  <组织机构:工商机构 rdf:ID="全国工商联">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭琳爽"/>
+  </组织机构:工商机构>
+  <组织机构:军事组织 rdf:ID="南京空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何泾渭"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡志昌"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="中华民国内阁">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="广州市公安局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="广州市越秀区政协委员">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="国民政府立法院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="华南汽车工程学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁守一"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="汉冶萍公司"/>
+  <组织机构:军事组织 rdf:ID="北洋海军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="旗昌洋行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴健彰"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="辽宁省委">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="寿屏堂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙眉"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="广州卫戍">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="长兼独立营">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#叶剑英"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香山县"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="安徽省人大常委会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="空军航运大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘保生"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="盐务稽核所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#伍光建"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="轰炸总队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#谭达光"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#薛揖周"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="南京农民部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="立法会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陆恭蕙"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="汉口空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑梓湘"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="太古轮船公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨桂轩"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="弼德院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁敦彦"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="保良局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="英华书馆"/>
+  <组织机构:军事组织 rdf:ID="国民革命第一集团空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨添森"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="香港华民各界协议会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="工兵集中训练办公厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="迁安铁厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="永安公司银业部">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香山县"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:国际组织 rdf:ID="国际联盟国际常设法院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:国际组织>
+  <组织机构:教育单位 rdf:ID="法政大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:教育单位>
+  <组织机构:工商机构 rdf:ID="中国玻璃工业"/>
+  <组织机构:教育单位 rdf:ID="南洋公学">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#盛宣怀"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="中华民国立法委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:政府机构>
+  <组织机构:其他组织机构群体 rdf:ID="华东医院">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:政府机构 rdf:ID="国民政府交通部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁敦彦"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="上海商业储蓄银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="台湾国防部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘炯光"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="太平军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="中央执行委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="广东航空航务处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何泾渭"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="太古洋行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑伯昭"/>
+  </组织机构:公司企业>
+  <组织机构:社会群体 rdf:ID="香港仔儿童工艺院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+  </组织机构:社会群体>
+  <组织机构:社会群体 rdf:ID="天地会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘丽川"/>
+  </组织机构:社会群体>
+  <组织机构:国际组织 rdf:ID="中国驻美国纽约总领事馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴幼林"/>
+  </组织机构:国际组织>
+  <组织机构:政府机构 rdf:ID="中央文史馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="联泰保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:宗教组织 rdf:ID="沙涌礼拜堂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:宗教组织>
+  <组织机构:政府机构 rdf:ID="南京国民政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+  </组织机构:政府机构>
+  <组织机构:个体商店 rdf:ID="同顺行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴健彰"/>
+  </组织机构:个体商店>
+  <组织机构:公司企业 rdf:ID="唐山士敏土厂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="芳植记">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#夏威夷州"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
+  </组织机构:个体商店>
+  <组织机构:公司企业 rdf:ID="康年保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="云南航空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈神护"/>
+  </组织机构:教育单位>
+  <组织机构:教育单位 rdf:ID="女子教育院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="广州邮局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林均能"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="皇仁书院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+  </组织机构:教育单位>
+  <组织机构:工商机构 rdf:ID="人民美术出版社"/>
+  <组织机构:政治党派 rdf:ID="太平天囯">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#洪仁玕"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#洪秀全"/>
+  </组织机构:政治党派>
+  <组织机构:教育单位 rdf:ID="复旦大学">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="东亚银行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="广东警察厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+  </组织机构:政府机构>
+  <组织机构:个体商店 rdf:ID="永安果栏">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:个体商店>
+  <组织机构:军事组织 rdf:ID="中共中央军委办公室">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="永安金山庄">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="欧亮学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="中央航空公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="华民政务司署">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="衡阳防空司令训">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑梓湘"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="檀香山中华总商会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐雄"/>
+  </组织机构:社会组织>
+  <组织机构:社会组织 rdf:ID="太平洋劳动会议秘书处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+  </组织机构:社会组织>
+  <组织机构:社会群体 rdf:ID="中山民从抗敌后援会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东华"/>
+  </组织机构:社会群体>
+  <组织机构:工商机构 rdf:ID="广东会馆">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑翼之"/>
+  </组织机构:工商机构>
+  <组织机构:国际组织 rdf:ID="广州美国公使馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+  </组织机构:国际组织>
+  <组织机构:教育单位 rdf:ID="隽德女学">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香山县"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="广东飞机制造厂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="粤舰队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="汪伪经理总监部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:政府机构>
+  <组织机构:社会群体 rdf:ID="小刀会">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘丽川"/>
+  </组织机构:社会群体>
+  <组织机构:政府机构 rdf:ID="汪伪时局策进委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="春秋学院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可亮"/>
+  </组织机构:教育单位>
+  <组织机构:国际组织 rdf:ID="世界卫生组织">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容启荣"/>
+  </组织机构:国际组织>
+  <组织机构:公司企业 rdf:ID="台湾糖业公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可佑"/>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="协记钱庄"/>
+  <组织机构:政府机构 rdf:ID="上海市人民政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="拓殖大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可亮"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可强"/>
+  </组织机构:教育单位>
+  <组织机构:工商机构 rdf:ID="吉林矿务公司"/>
+  <组织机构:政府机构 rdf:ID="中央信托局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴幼林"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="北京大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="香港慈善机构保良局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="华商总会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="广东银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="上海茶叶公所"/>
+  <组织机构:军事组织 rdf:ID="援闽奥军飞机队">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#福建省"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东华"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="广州国民政府">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="上海市工商业联合会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭琳爽"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="国民党海外部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="上海地丰公司"/>
+  <组织机构:教育单位 rdf:ID="东吴大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="大东酒店">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="清廷汉阳海关道">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁敦彦"/>
+  </组织机构:政府机构>
+  <组织机构:国际组织 rdf:ID="美国驻檀香山总领事馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐榴"/>
+  </组织机构:国际组织>
+  <组织机构:其他组织机构群体 rdf:ID="岐光医院">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:社会组织 rdf:ID="广州市参事室参事">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑厚邦"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="陕西南郑印刷厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄德明"/>
+  </组织机构:公司企业>
+  <组织机构:社会群体 rdf:ID="社会群体_37"/>
+  <组织机构:社会组织 rdf:ID="南京中央航委会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="安徽省人民政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="国民商业储蓄银行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锡基"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="生安泰公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="接收威海卫委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="广东省政府委员建设厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="中共华南分局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="维新织造厂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="中共安徽省委">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="中央第五中级党校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="广东国际信托投资公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="上海申光公司"/>
+  <组织机构:公司企业 rdf:ID="醒仁航务公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曹醒仁"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="至德三德总公所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:社会组织>
+  <组织机构:社会组织 rdf:ID="秉公总堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="西陵铁路">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="道格拉斯轮船公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈席儒"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="天津税务衙门">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#天津市"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:政府机构>
+  <组织机构:社会群体 rdf:ID="华民协议会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="上海市侨联">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:社会组织 rdf:ID="中美文化教育基金董事会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="广西航空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏世英"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭良弼"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘炯光"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑祖植"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭良弼"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="广州农民部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="预备学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="香山南澳镇右营">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="公正轮船公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="福建水师">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="湘潭煤矿">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#邝荣光"/>
+  </组织机构:政府机构>
+  <组织机构:国际组织 rdf:ID="联合国">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾菊珍"/>
+  </组织机构:国际组织>
+  <组织机构:政府机构 rdf:ID="中华民国政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="天津水师学堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#伍光建"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#天津市"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="寰球中国学生会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
+  </组织机构:社会组织>
+  <组织机构:国际组织 rdf:ID="香港华人户籍司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷植"/>
+  </组织机构:国际组织>
+  <组织机构:公司企业 rdf:ID="马立司洋行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="第一集团军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="华侨协会总会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="广智国民学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="国民银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="中共华南分局宣传部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="中山县守备总队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="中国资源委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="兴华制面厂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:工商机构 rdf:ID="汇报"/>
+  <组织机构:社会组织 rdf:ID="圣公会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李敏周"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >上海第一民用粤语布道，为信徒提供了良好的宣教的场所。</rdfs:comment>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="江西省委">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#江西省"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="上海市环球货品商业同业公会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭琳爽"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="广西航空处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑梓湘"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="广东省财政厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+  </组织机构:政府机构>
+  <组织机构:国际组织 rdf:ID="中美空军混合队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳焕文"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳图强"/>
+  </组织机构:国际组织>
+  <组织机构:公司企业 rdf:ID="羊城保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="韦宝珊洋行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="广东督练公所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="香山县警察局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈自觉"/>
+  </组织机构:政府机构>
+  <组织机构:其他组织机构群体 rdf:ID="民报">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:政府机构 rdf:ID="上海电报局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周万鹏"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="全国漫画作家协会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="先施公司">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马景华"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马景煊"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="云南省占益航空站">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈兆新"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="中日银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈席儒"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="中山训政委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="中西书院"/>
+  <组织机构:教育单位 rdf:ID="爱国女学"/>
+  <组织机构:教育单位 rdf:ID="阳和学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="香山协左营">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="国民党政府卫生部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容启荣"/>
+  </组织机构:政府机构>
+  <组织机构:其他组织机构群体 rdf:ID="军国民教育会">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >清末中国留日学生组织的革命团体。1903年（光绪二十九年）拒俄义勇队被日本政府解放后，中国留日学生秦毓*，叶澜等在东京组成。会员共计二百余人。以“养成尚武精神，实行民族主义”为宗旨鼓吹，起义，暗杀三种方式进行革命活动。是年上海爱国学社组织军国民教育会。</rdfs:comment>
+  </组织机构:其他组织机构群体>
+  <组织机构:政府机构 rdf:ID="团防局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="中国空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章浩"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李宝诚"/>
+  </组织机构:军事组织>
+  <组织机构:国际组织 rdf:ID="旧金山总领事馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳庚"/>
+  </组织机构:国际组织>
+  <组织机构:国际组织 rdf:ID="中国驻美使馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾德昌"/>
+  </组织机构:国际组织>
+  <组织机构:政治党派 rdf:ID="广州苏维埃政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+  </组织机构:政治党派>
+  <组织机构:政府机构 rdf:ID="国税厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="安徽纺织一厂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="华东军政委员">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="北洋政府司法部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="平民学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="广播电影电视局社会管理处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容尚谦"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="侨务委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="南京空军总书刊号令部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林毓桓"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="广东天华银矿">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="美国旗昌轮船公司"/>
+  <组织机构:政府机构 rdf:ID="中国银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="开滦矿务局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="旅美中华航空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:教育单位>
+  <组织机构:教育单位 rdf:ID="文渊阁">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曾国藩"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="美商旗记铁厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#丁日昌"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="福建人民政府航空大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘啸天"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="上海梵王渡约翰书院">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="前山寨">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨云骧"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >前山寨是明清时期设于香山县境内南距离澳门20里处，用以防范葡萄牙人的重要军事城寨。</rdfs:comment>
+  </组织机构:军事组织>
+  <组织机构:其他组织机构群体 rdf:ID="循环日报">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:个体商店 rdf:ID="生祥茶栈"/>
+  <组织机构:社会组织 rdf:ID="国际法权委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="津浦铁路局">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >陈永善任局长</rdfs:comment>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="中国航空公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭良弼"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="护国军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="中央航空运输公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+  </组织机构:军事组织>
+  <组织机构:宗教组织 rdf:ID="大光堂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:宗教组织>
+  <组织机构:政府机构 rdf:ID="湖北铁厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="业广房产公司"/>
+  <组织机构:教育单位 rdf:ID="广州航空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈兆新"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="真光公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄在仁"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="南京国民政府行政院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:政府机构>
+  <组织机构:工商机构 rdf:ID="汉阳铁厂"/>
+  <组织机构:教育单位 rdf:ID="培根幼稚园">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="太古洋行天津分行">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#天津市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑翼之"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="洛阳航空分校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈兆新"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="国务院商标局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="慈善福寿帛金会">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+  </组织机构:社会组织>
+  <组织机构:国际组织 rdf:ID="中华会馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑藻如"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#夏威夷州"/>
+  </组织机构:国际组织>
+  <组织机构:教育单位 rdf:ID="清华学堂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳庚"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容揆"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳庚"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="国民政府委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="国际法学会航空法委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="宝顺洋行">
+    <组织机构:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dent &amp; Company</组织机构:外文名>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴健彰"/>
+    <组织机构:别称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >宝顺洋行</组织机构:别称>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
+    <组织机构:成立地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >广州</组织机构:成立地点>
+    <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >颠地洋行</组织机构:中文名>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曾寄圃"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >颠地洋行（Dent &amp; Company），又称宝顺洋行，由英国人约翰·颠地（John Dent）在广州所创立，于十九世纪的香港、上海、天津、台湾等也设有商行。颠地洋行在十九世纪四五十年代，曾经是香港首屈一指的洋行，主要从事鸦片输入和转口交易，也有输出茶叶和生丝至外洋的业务。其时在香港，颠地洋行的主要竞争对手是渣甸洋行（即今日怡和洋行）。两者的鸦片进口量和货船数目都不相伯仲。据称，颠地洋行拥有当时最大的快艇「水妖」号。</rdfs:comment>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="广肇公所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐榴"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="香港高等审判厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="山海关">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡绍基"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="国民革命军陆军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:军事组织>
+  <组织机构:其他组织机构群体 rdf:ID="尚贤堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐榴"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >慈善机构</rdfs:comment>
+  </组织机构:其他组织机构群体>
+  <组织机构:教育单位 rdf:ID="晦鸣学社">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="中央运输大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章浩"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="上海市归国华侨联合会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:社会组织 rdf:ID="中山侨商会所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="广西民航">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑祖植"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="广东军事飞行学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="中国国会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="上海联合影片公司">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="建平金矿">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="永信泰金山庄">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄开基"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:个体商店>
+  <组织机构:军事组织 rdf:ID="广东航空局飞机修理厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="广东海军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容尚谦"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="中央第三飞机厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章炳"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+  </组织机构:军事组织>
+  <组织机构:宗教组织 rdf:ID="受福堂">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:宗教组织>
+  <组织机构:教育单位 rdf:ID="圣保罗男校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="汉口穗丰纺织公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="清政府海军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容尚谦"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="中央航空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="香山协">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="广东省交通司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+  </组织机构:政府机构>
+  <组织机构:工商机构 rdf:ID="大众出版社"/>
+  <组织机构:教育单位 rdf:ID="五城学堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:教育单位>
+  <组织机构:教育单位 rdf:ID="伦敦大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:教育单位>
+  <组织机构:工商机构 rdf:ID="景纶袜衫厂"/>
+  <组织机构:其他组织机构群体 rdf:ID="京报">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:政府机构 rdf:ID="广州护法军政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="武汉国民政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="中央非常委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="先施粤行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="黄埔军校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="火奴鲁鲁果业公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="欧亚航空公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何守荣"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="燕堂军校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="香山碣石镇右营">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="空军军士学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘炯光"/>
+  </组织机构:教育单位>
+  <组织机构:工商机构 rdf:ID="缫丝公司"/>
+  <组织机构:政府机构 rdf:ID="船政工程处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨廉臣"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="顺天学堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="大岗分驻所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李泽平"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="怡和洋行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴健彰"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷植"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="先农房产公司"/>
+  <组织机构:社会组织 rdf:ID="全国归国华侨联合会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="平泉铜矿">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:其他组织机构群体 rdf:ID="中外新报">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:社会组织 rdf:ID="华侨事务委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何香凝"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="民建上海市委">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="俊英工商总会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="中华民国行政院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="中国国民党中央军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="中国通商银行"/>
+  <组织机构:其他组织机构群体 rdf:ID="建设杂志">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:社会组织 rdf:ID="农村工会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="清江电报局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周万鹏"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="宝源祥房产公司"/>
+  <组织机构:政府机构 rdf:ID="国民政府司法行政部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="中华全国工商业联合会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:社会群体 rdf:ID="望夏乡民知守义团"/>
+  <组织机构:社会组织 rdf:ID="华东财经委员">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="津沪电报局"/>
+  <组织机构:政府机构 rdf:ID="福建人民政府">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#福建省"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="中南局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:工商机构 rdf:ID="唐山细棉土厂"/>
+  <组织机构:其他组织机构群体 rdf:ID="数家医院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:个体商店 rdf:ID="绍祥字号"/>
+  <组织机构:教育单位 rdf:ID="大涌镇任卓山学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李泽平"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="大元帅府航空处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="交通银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="鸿发公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐雄"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="永安银行">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="中共中央组织部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="上海荣泰驳船行"/>
+  <组织机构:社会群体 rdf:ID="辅仁文社">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >辅仁文社，又称辅仁书报社，英文名直译为中华爱国互助改进会。清末爱国进步团体。1890年（光绪十六年）开始发起，1892年3月13日正式设总部于香港百子里一号二楼。由杨衢云、谢缵泰领导，共有成员17人，有姓名可考者除杨衢云、谢缵泰外，还有周超岳、黄永商、陈芬、黄国瑜、罗文玉、刘燕宾、温宗尧、胡干芝、陆敬科等。其宗旨为“进行中国大众的革新”，“驱除满族鞑虏”（一说为“尽忠报国”），提倡学习西方，爱国维新，秘密进行革命活动。1895年与兴中会合并，并在香港成立兴中会总会。</rdfs:comment>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="法权调查委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:社会组织>
+  <组织机构:社会组织 rdf:ID="湘乡会馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曾国藩"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="甄贤学校">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#南屏村"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="北洋政府交通部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁敦彦"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="兵工学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曾国藩"/>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="国民政府军政部航空署">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="爱国学社">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >爱国学社，是中国清朝末年中国教育会设立于上海的一所近代学校。</rdfs:comment>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="北清轮船公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="广东省警察厅">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="联保保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="上海自来水公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐杰臣"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="丝叶公所"/>
+  <组织机构:政府机构 rdf:ID="内阁邮传部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="广东水师">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="中澳轮船公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭标"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="世光女子高等学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="开平煤矿">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="厦门海军航空处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈兆新"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="船政司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#程璧光"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="中央宣传部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="中华民国立法院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="直隶咨议局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="广东空军司令训任军需处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑守一"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="清节堂"/>
+  <组织机构:公司企业 rdf:ID="永生公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:其他组织机构群体 rdf:ID="东亚大酒店">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:军事组织 rdf:ID="空军第八大队第十九轰炸中队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#薛炳坤"/>
+  </组织机构:军事组织>
+  <组织机构:个体商店 rdf:ID="合祥记茶号"/>
+  <组织机构:公司企业 rdf:ID="中华糖厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="华海轮船公司"/>
+  <组织机构:社会组织 rdf:ID="全国总工会执行委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+  </组织机构:社会组织>
+  <组织机构:国际组织 rdf:ID="国际联盟">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:国际组织>
+  <组织机构:其他组织机构群体 rdf:ID="东华三院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:教育单位 rdf:ID="航样空中摄影">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="白蚬壳维修船厂">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢维清"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="中国工商经济开发公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:公司企业>
+  <组织机构:社会群体 rdf:ID="上海神州国光社">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:社会群体>
+  <组织机构:政府机构 rdf:ID="广州工农民主政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="汽车动力技术委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁守一"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="关内铁路运输处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="美记洋行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="石井兵工厂">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >陈永善任厂长</rdfs:comment>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="西南政务委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="航政局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张有名"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="新民启智会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭标"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="广东省政协">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:政府机构>
+  <组织机构:其他组织机构群体 rdf:ID="仁济医院"/>
+  <组织机构:教育单位 rdf:ID="直隶学务公所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="民众实业公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="中澳航业公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="香港特别行政区基本法起草委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="中兴公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周崧"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="上海市工商业联合会监察委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="中共中央军委干部队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:军事组织>
+  <组织机构:社会群体 rdf:ID="善后会议">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="南京总理陵管理委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="南京第四航空队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="东乡总局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑藻如"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="广东省警务处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="中华飞船公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨著昆"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="地面攻击飞机第三九大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章炳"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="空中运输大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章炳"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张君正"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="香港国民银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="大理院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑天锡"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="安泰公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="西德拜耳大药厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可佑"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="军垦处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="肇兴公司"/>
+  <组织机构:军事组织 rdf:ID="西南航空署少将军需处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁守一"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="空军募款委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:社会组织>
+  <组织机构:其他组织机构群体 rdf:ID="中山市平民医院">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:教育单位 rdf:ID="威海水师学堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="中国民主建国会中央委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="香山协右营">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="广东航空处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑守一"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="仁和水险公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:社会群体 rdf:ID="无政府共产主义同志社"/>
+  <组织机构:社会组织 rdf:ID="南京运输大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴势"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="民建广东省委">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:政府机构>
+  <组织机构:社会群体 rdf:ID="太阳社">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="中山县训政实施委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#中山县"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="广东省教育会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="广东都督府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="宝安县西乡共乐音响电子厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑祖名"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="香安燕梳公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="中华民国考试院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="岐关车路">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈永安"/>
+  </组织机构:公司企业>
+  <组织机构:国际组织 rdf:ID="国际联盟清理委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
+  </组织机构:国际组织>
+  <组织机构:政府机构 rdf:ID="九江军政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="元济堂"/>
+  <组织机构:国际组织 rdf:ID="中国国民党驻美国总支部">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:国际组织>
+  <组织机构:军事组织 rdf:ID="国民革命军总指挥部航空处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁守一"/>
+  </组织机构:军事组织>
+  <组织机构:社会组织 rdf:ID="国难会议">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:社会组织>
+  <组织机构:社会群体 rdf:ID="广东旅沪同乡会"/>
+  <组织机构:军事组织 rdf:ID="空军轰炸机队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#谭达光"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="周崧学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周崧"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="广东省航政总局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="北宁铁路">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="阳和总会馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东垣"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="防空学校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林均能"/>
+  </组织机构:军事组织>
+  <组织机构:其他组织机构群体 rdf:ID="南方报">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:军事组织 rdf:ID="中央空军驱逐大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何泾渭"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+  </组织机构:军事组织>
+  <组织机构:军事组织 rdf:ID="滇桂联军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="广东讲武堂">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >由广东陆军速成学堂改办，主要是为现任军官研究军事学而开设。</rdfs:comment>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="联益保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="华南汽车驾驶学校中山分校">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁守一"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="上海机器织布局"/>
+  <组织机构:政府机构 rdf:ID="广东革命政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#汪精卫"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="广东省工商业联合会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="流涛光学仪器厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="泰和钱庄"/>
+  <组织机构:个体商店 rdf:ID="精益钱庄"/>
+  <组织机构:政府机构 rdf:ID="汪伪中央政治委员会最高国防会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="汇丰洋行"/>
+  <组织机构:个体商店 rdf:ID="泰兴钱庄"/>
+  <组织机构:社会组织 rdf:ID="文献委员会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑彼岸"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="永安水火保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:个体商店 rdf:ID="川汉货号"/>
+  <组织机构:军事组织 rdf:ID="南洋海军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容尚谦"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="北洋军阀政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈友仁"/>
+  </组织机构:政府机构>
+  <组织机构:社会组织 rdf:ID="中央财政委员会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="中央空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘敬光"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="格致书院"/>
+  <组织机构:军事组织 rdf:ID="澄海营">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="永安货仓">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="公中国邮船公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="汪伪赈务委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#岑德广"/>
+  </组织机构:社会组织>
+  <组织机构:军事组织 rdf:ID="援闽粤军飞机队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="华洋织造厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="中山县民众实业公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="礼和小学">
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#外沙村"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="台湾国民外交协会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:社会组织>
+  <组织机构:社会组织 rdf:ID="国画研究会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="吉林省委">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李凡夫"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="台湾总统府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙科"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#台湾省"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="天津县议事会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#天津市"/>
+  </组织机构:政府机构>
+  <组织机构:政府机构 rdf:ID="空中照相测理所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="实地美路板厂有限公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="美洲航空学校">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴东华"/>
+  </组织机构:教育单位>
+  <组织机构:社会群体 rdf:ID="罢工委员会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="上海商务总会"/>
+  <组织机构:个体商店 rdf:ID="敦茂钱庄"/>
+  <组织机构:其他组织机构群体 rdf:ID="陈纳德空运大队">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:军事组织 rdf:ID="广东空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何泾渭"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢誉衡"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章炳"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张君正"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曹醒仁"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴势"/>
+  </组织机构:军事组织>
+  <组织机构:其他组织机构群体 rdf:ID="岭南大学及肇医院">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:军事组织 rdf:ID="龙门崖州协">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨镇海"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="华南文艺学院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+  </组织机构:教育单位>
+  <组织机构:社会组织 rdf:ID="广州世界语学会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
+  </组织机构:社会组织>
+  <组织机构:公司企业 rdf:ID="广州光学仪器厂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="图强飞机公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨著昆"/>
+  </组织机构:公司企业>
+  <组织机构:社会群体 rdf:ID="女子义学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈永安"/>
+  </组织机构:社会群体>
+  <组织机构:工商机构 rdf:ID="同文书局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:工商机构>
+  <组织机构:其他组织机构群体 rdf:ID="南京航委会空中照相器材保管修理所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:教育单位 rdf:ID="中山纪念图书馆">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑彼岸"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="太记烟厂"/>
+  <组织机构:社会群体 rdf:ID="香港中山海外同乡济难总会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:社会群体>
+  <组织机构:社会组织 rdf:ID="华洋义赈会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+  </组织机构:社会组织>
+  <组织机构:政府机构 rdf:ID="广东省政府">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄居素"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="建盈化工公司">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧阳可佑"/>
+  </组织机构:公司企业>
+  <组织机构:政治党派 rdf:ID="拜上帝会">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#洪秀全"/>
+  </组织机构:政治党派>
+  <组织机构:国际组织 rdf:ID="美国陈纳德空军志愿队中国人员管理处">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+  </组织机构:国际组织>
+  <组织机构:政府机构 rdf:ID="环境局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陆恭蕙"/>
+  </组织机构:政府机构>
+  <组织机构:社会群体 rdf:ID="天道会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐榴"/>
+  </组织机构:社会群体>
+  <组织机构:其他组织机构群体 rdf:ID="东华医院">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:其他组织机构群体 rdf:ID="广西民航柳州站">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑祖植"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:公司企业 rdf:ID="运河轮船运输">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐榴"/>
+  </组织机构:公司企业>
+  <组织机构:社会组织 rdf:ID="上海市棉纺织工业同业公会">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+  </组织机构:社会组织>
+  <组织机构:教育单位 rdf:ID="莲峰山麓建学宫">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈天觉"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="永安企业集团">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:公司企业 rdf:ID="永安人寿保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="粤军第三师">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="电报总局"/>
+  <组织机构:军事组织 rdf:ID="革命空军">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
+  </组织机构:军事组织>
+  <组织机构:公司企业 rdf:ID="仁济和保险公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:公司企业>
+  <组织机构:政府机构 rdf:ID="轮船招商局">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
+  </组织机构:政府机构>
+  <组织机构:公司企业 rdf:ID="新华银行">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="香港中文大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容启东"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="广州市公安局局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
+  </组织机构:政府机构>
+  <组织机构:军事组织 rdf:ID="十九路军航空队">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何守荣"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴势"/>
+    <组织机构:相同指代>
+      <组织机构:军事组织 rdf:ID="福建空军飞机队">
+        <组织机构:相同指代>
+          <组织机构:军事组织 rdf:ID="福建政府航空大队">
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章浩"/>
+            <组织机构:相同指代 rdf:resource="#福建空军飞机队"/>
+            <组织机构:相同指代 rdf:resource="#十九路军航空队"/>
+          </组织机构:军事组织>
+        </组织机构:相同指代>
+        <组织机构:相同指代 rdf:resource="#十九路军航空队"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+      </组织机构:军事组织>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈兆新"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄炳登"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘炯光"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章浩"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张有名"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑厚邦"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李泽平"/>
+    <组织机构:相同指代 rdf:resource="#福建政府航空大队"/>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="江南制造局">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#丁日昌"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+    <组织机构:相同指代>
+      <组织机构:政府机构 rdf:ID="上海机器局">
+        <组织机构:相同指代>
+          <组织机构:政府机构 rdf:ID="上海江南制造总局">
+            <组织机构:相同指代 rdf:resource="#上海机器局"/>
+            <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >江南机器制造总局</组织机构:中文名>
+            <组织机构:别称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >上海机器局</组织机构:别称>
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >江南机器制造总局简称江南制造局或江南制造总局，又称作上海机器局，是清朝洋务运动中成立的近代军事工业生产机构，为晚清中国最重要的军工厂，是清政府洋务派开设的规模最大的近代军事企业，也是江南机器制造总局早期厂房，近代最早的新式工厂之一。为江南造船厂的前身，同时也是近代中国最大的军火工厂。</rdfs:comment>
+            <组织机构:成立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >1865-09-20</组织机构:成立时间>
+            <组织机构:相同指代>
+              <组织机构:政府机构 rdf:ID="上海制造局">
+                <组织机构:相同指代 rdf:resource="#上海江南制造总局"/>
+                <组织机构:相同指代 rdf:resource="#上海机器局"/>
+                <组织机构:相同指代 rdf:resource="#江南制造局"/>
+                <组织机构:相同指代 rdf:resource="#上海制造局"/>
+                <组织机构:相同指代>
+                  <组织机构:政府机构 rdf:ID="江南机器制造总局">
+                    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+                    <组织机构:相同指代 rdf:resource="#上海江南制造总局"/>
+                    <组织机构:相同指代 rdf:resource="#上海机器局"/>
+                    <组织机构:相同指代 rdf:resource="#江南制造局"/>
+                    <组织机构:相同指代 rdf:resource="#上海制造局"/>
+                    <组织机构:相同指代>
+                      <组织机构:政府机构 rdf:ID="江南制造总局">
+                        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+                        <组织机构:相同指代 rdf:resource="#江南机器制造总局"/>
+                        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑藻如"/>
+                      </组织机构:政府机构>
+                    </组织机构:相同指代>
+                  </组织机构:政府机构>
+                </组织机构:相同指代>
+              </组织机构:政府机构>
+            </组织机构:相同指代>
+            <组织机构:相同指代 rdf:resource="#江南机器制造总局"/>
+            <组织机构:成立背景 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >晚清洋务运动</组织机构:成立背景>
+            <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李鸿章"/>
+          </组织机构:政府机构>
+        </组织机构:相同指代>
+        <组织机构:相同指代 rdf:resource="#江南制造局"/>
+        <组织机构:相同指代 rdf:resource="#上海机器局"/>
+        <组织机构:相同指代 rdf:resource="#上海制造局"/>
+        <组织机构:相同指代 rdf:resource="#江南机器制造总局"/>
+      </组织机构:政府机构>
+    </组织机构:相同指代>
+    <组织机构:相同指代 rdf:resource="#上海制造局"/>
+    <组织机构:相同指代 rdf:resource="#江南机器制造总局"/>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="西南交通大学">
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="唐山路矿学堂">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+        <组织机构:相同指代 rdf:resource="#西南交通大学"/>
+        <组织机构:相同指代>
+          <组织机构:教育单位 rdf:ID="唐山交通大学">
+            <组织机构:相同指代 rdf:resource="#唐山路矿学堂"/>
+            <组织机构:相同指代 rdf:resource="#西南交通大学"/>
+            <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁如浩"/>
+          </组织机构:教育单位>
+        </组织机构:相同指代>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+    <组织机构:相同指代 rdf:resource="#唐山交通大学"/>
+  </组织机构:教育单位>
+  <组织机构:其他组织机构群体 rdf:ID="百兰山馆">
+    <组织机构:相同指代>
+      <组织机构:其他组织机构群体 rdf:ID="藏书楼">
+        <组织机构:相同指代 rdf:resource="#百兰山馆"/>
+        <组织机构:相同指代>
+          <组织机构:其他组织机构群体 rdf:ID="持静斋">
+            <组织机构:相同指代 rdf:resource="#藏书楼"/>
+            <组织机构:相同指代 rdf:resource="#百兰山馆"/>
+          </组织机构:其他组织机构群体>
+        </组织机构:相同指代>
+      </组织机构:其他组织机构群体>
+    </组织机构:相同指代>
+    <组织机构:相同指代 rdf:resource="#持静斋"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:教育单位 rdf:ID="空军军官学校">
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="广东航空学校">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡铁钳"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘炯光"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#曹醒仁"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴势"/>
+        <组织机构:相同指代 rdf:resource="#空军军官学校"/>
+        <组织机构:相同指代>
+          <组织机构:教育单位 rdf:ID="中央航空学校广州分校">
+            <组织机构:相同指代 rdf:resource="#广东航空学校"/>
+            <组织机构:相同指代 rdf:resource="#空军军官学校"/>
+          </组织机构:教育单位>
+        </组织机构:相同指代>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+    <组织机构:相同指代 rdf:resource="#中央航空学校广州分校"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="永安公司">
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="华联商厦">
+        <组织机构:相同指代 rdf:resource="#永安公司"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="上海第十百货公司">
+        <组织机构:相同指代 rdf:resource="#永安公司"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="永安百货">
+        <组织机构:相同指代 rdf:resource="#永安公司"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭葵"/>
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="中国永安公司">
+        <组织机构:相同指代 rdf:resource="#永安公司"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭标"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >创办者：郭乐昆仲</rdfs:comment>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭琳爽"/>
+  </组织机构:公司企业>
+  <组织机构:教育单位 rdf:ID="广智学校">
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="高家基小学">
+        <组织机构:相同指代 rdf:resource="#广智学校"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="世光小学">
+        <组织机构:相同指代 rdf:resource="#广智学校"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+  </组织机构:教育单位>
+  <组织机构:教育单位 rdf:ID="北洋大学堂">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王劭廉"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#盛宣怀"/>
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="北洋西学学堂">
+        <组织机构:相同指代 rdf:resource="#北洋大学堂"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+  </组织机构:教育单位>
+  <组织机构:军事组织 rdf:ID="航空处">
+    <组织机构:相同指代>
+      <组织机构:军事组织 rdf:ID="航空局">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
+        <组织机构:相同指代 rdf:resource="#航空处"/>
+      </组织机构:军事组织>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴势"/>
+  </组织机构:军事组织>
+  <组织机构:教育单位 rdf:ID="山东大学">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="山东大学堂">
+        <组织机构:相同指代 rdf:resource="#山东大学"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+  </组织机构:教育单位>
+  <组织机构:其他组织机构群体 rdf:ID="美南日报">
+    <组织机构:相同指代>
+      <组织机构:其他组织机构群体 rdf:ID="湄南日报">
+        <组织机构:相同指代 rdf:resource="#美南日报"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+      </组织机构:其他组织机构群体>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:公司企业 rdf:ID="新新公司">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锡基"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李敏周"/>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="上海新新百货公司">
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李煜堂"/>
+        <组织机构:相同指代 rdf:resource="#新新公司"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="广东省制造局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容奴槐"/>
+    <组织机构:相同指代>
+      <组织机构:军事组织 rdf:ID="广东省兵工厂">
+        <组织机构:相同指代 rdf:resource="#广东省制造局"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容奴槐"/>
+      </组织机构:军事组织>
+    </组织机构:相同指代>
+  </组织机构:军事组织>
+  <组织机构:政府机构 rdf:ID="江海关">
+    <组织机构:相同指代>
+      <组织机构:政府机构 rdf:ID="上海海关">
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+        <组织机构:成立时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1685-01-01</组织机构:成立时间>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷植"/>
+        <组织机构:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Shanghai Customs</组织机构:外文名>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡绍基"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴健彰"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
+        <组织机构:相同指代 rdf:resource="#江海关"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >上海海关是我国历史最悠久的海关之一。自1685 年（清朝康熙 24 年）清政府在上海设置江海关开始计算，至今已有324年的历史。1950年2月政务院发布命令，江海关更名为中华人民共和国上海海关。上海海关现设各类机构49个，包括办公室、法规处、监管通关处、审单处、行邮处、加贸处、关税处等20个内设职能处室（含缉私局），现场业务一处、二处、三处、驻邮局、车站办事处等8个派驻机构，浦东、机场、吴淞、浦江、外高桥港区、洋山、外高桥保税区等14个隶属海关，以及全国海关进出口商品归类中心上海分中心、海关总署上海商品价格信息处、中国电子口岸数据中心上海分中心等6个其他机构和驻上海世博会园区监管服务中心1个临时机构，设立监管点共计275个。</rdfs:comment>
+        <组织机构:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >上海海关</组织机构:中文名>
+      </组织机构:政府机构>
+    </组织机构:相同指代>
+  </组织机构:政府机构>
+  <组织机构:个体商店 rdf:ID="中山大学港澳珠江三角洲研究中心用房">
+    <组织机构:相同指代>
+      <组织机构:个体商店 rdf:ID="马应彪招待所">
+        <组织机构:相同指代 rdf:resource="#中山大学港澳珠江三角洲研究中心用房"/>
+      </组织机构:个体商店>
+    </组织机构:相同指代>
+  </组织机构:个体商店>
+  <组织机构:军事组织 rdf:ID="中央航空委员会">
+    <组织机构:相同指代>
+      <组织机构:军事组织 rdf:ID="空军总司令部">
+        <组织机构:相同指代 rdf:resource="#中央航空委员会"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧秉翰"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘植炎"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘烔光"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄德明"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容章浩"/>
+      </组织机构:军事组织>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘炽徽"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林均能"/>
+  </组织机构:军事组织>
+  <组织机构:国际组织 rdf:ID="中国留学生事务所">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#Eeward_Kellogg"/>
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="Mr.Browns_School_for_boys">
+        <组织机构:相同指代 rdf:resource="#中国留学生事务所"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#Eeward_Kellogg"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+  </组织机构:国际组织>
+  <组织机构:其他组织机构群体 rdf:ID="华暹新报">
+    <组织机构:相同指代>
+      <组织机构:其他组织机构群体 rdf:ID="华暹日报">
+        <组织机构:相同指代 rdf:resource="#华暹新报"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+      </组织机构:其他组织机构群体>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈景华"/>
+  </组织机构:其他组织机构群体>
+  <组织机构:教育单位 rdf:ID="香港西医书院">
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="香港大学">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+        <组织机构:相同指代 rdf:resource="#香港西医书院"/>
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+  </组织机构:教育单位>
+  <组织机构:政府机构 rdf:ID="立法局">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陆恭蕙"/>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+    <组织机构:相同指代>
+      <组织机构:政府机构 rdf:ID="香港定例局">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周寿臣"/>
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
+        <组织机构:相同指代 rdf:resource="#立法局"/>
+      </组织机构:政府机构>
+    </组织机构:相同指代>
+  </组织机构:政府机构>
+  <组织机构:教育单位 rdf:ID="天津大学">
+    <组织机构:相同指代>
+      <组织机构:教育单位 rdf:ID="北洋大学">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+        <组织机构:相同指代 rdf:resource="#天津大学"/>
+      </组织机构:教育单位>
+    </组织机构:相同指代>
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
+  </组织机构:教育单位>
+  <组织机构:公司企业 rdf:ID="南方大厦">
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="大新公司">
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡兴"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
+        <组织机构:相同指代 rdf:resource="#南方大厦"/>
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+  </组织机构:公司企业>
+  <组织机构:宗教组织 rdf:ID="中山市基督教会太平堂">
+    <组织机构:相同指代>
+      <组织机构:宗教组织 rdf:ID="香山长老自理会">
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧亮"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马永灿"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧昭"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#欧彬"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭泉"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+        <组织机构:相同指代 rdf:resource="#中山市基督教会太平堂"/>
+      </组织机构:宗教组织>
+    </组织机构:相同指代>
+  </组织机构:宗教组织>
+  <组织机构:公司企业 rdf:ID="上海永安纱厂">
+    <组织机构:相同指代>
+      <组织机构:公司企业 rdf:ID="上海永安纺织公司">
+        <组织机构:相同指代 rdf:resource="#上海永安纱厂"/>
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+        <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭乐"/>
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郭棣活"/>
+      </组织机构:公司企业>
+    </组织机构:相同指代>
+    <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+  </组织机构:公司企业>
+  <组织机构:军事组织 rdf:ID="广东航空总站">
+    <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#何泾渭"/>
+    <组织机构:相同指代>
+      <组织机构:军事组织 rdf:ID="广州航空总站">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林均能"/>
+        <组织机构:所属行政区 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+        <组织机构:相同指代 rdf:resource="#广东航空总站"/>
+      </组织机构:军事组织>
+    </组织机构:相同指代>
+  </组织机构:军事组织>
+  <组织机构:其他组织机构群体 rdf:ID="马应彪夫人护养院">
+    <组织机构:创办人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
+    <组织机构:相同指代>
+      <组织机构:其他组织机构群体 rdf:ID="中山大学校医院">
+        <组织机构:相同指代 rdf:resource="#马应彪夫人护养院"/>
+      </组织机构:其他组织机构群体>
+    </组织机构:相同指代>
+  </组织机构:其他组织机构群体>
+  <组织机构:政府机构 rdf:ID="市政局">
+    <组织机构:相同指代>
+      <组织机构:政府机构 rdf:ID="洁净局">
+        <组织机构:领导人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
+        <组织机构:相同指代 rdf:resource="#市政局"/>
+      </组织机构:政府机构>
+    </组织机构:相同指代>
+  </组织机构:政府机构>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

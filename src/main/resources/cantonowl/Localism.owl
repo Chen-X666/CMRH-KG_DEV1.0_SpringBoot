@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:方言="http://www.owl-ontologies.com/Localism.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Localism.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/Relics.owl"/>
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/Organization.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="闽语系">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="方言"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >闽语系</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="粤语系">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#方言"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >粤语系</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="客家语系">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >客家语系</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#方言"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#方言">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >方言</rdfs:label>
+  </owl:Class>
+  <方言:粤语系 rdf:ID="广府话"/>
+  <方言:粤语系 rdf:ID="新会话"/>
+  <方言:粤语系 rdf:ID="水上话"/>
+  <方言:粤语系 rdf:ID="三角话_近东莞话"/>
+  <方言:粤语系 rdf:ID="石歧话"/>
+  <方言:粤语系 rdf:ID="海洲话_三角镇"/>
+  <方言:粤语系 rdf:ID="古镇话_近新会话"/>
+  <方言:闽语系 rdf:ID="隆都话"/>
+  <方言:客家语系 rdf:ID="客家话"/>
+  <方言:粤语系 rdf:ID="白话"/>
+  <方言:粤语系 rdf:ID="沙田话_近顺德话"/>
+  <方言:粤语系 rdf:ID="小榄话"/>
+  <方言:粤语系 rdf:ID="疍家话"/>
+  <方言:闽语系 rdf:ID="南蓢话"/>
+  <方言:闽语系 rdf:ID="三乡话"/>
+  <方言:粤语系 rdf:ID="三灶话"/>
+  <方言:闽语系 rdf:ID="潮州话"/>
+  <方言:粤语系 rdf:ID="曹步话_三角镇"/>
+  <方言:闽语系 rdf:ID="张家边话"/>
+  <方言:粤语系 rdf:ID="黄圃话"/>
+  <方言:粤语系 rdf:ID="斗门话"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
