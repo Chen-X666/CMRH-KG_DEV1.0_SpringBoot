@@ -2,6 +2,8 @@ package com.canton.dao.util;
 
 import org.dom4j.Element;
 
+import java.util.Iterator;
+
 /**
  * @Auther ChenX
  * @Date 2020.4.3
@@ -9,20 +11,24 @@ import org.dom4j.Element;
  * 用于Timeline检索
  **/
 public class PrefixUtil {
-    public String setPrefix(String keyword)
+
+
+    public String setPrefix(String url,String keyword)
 
     {
         Element root = ConfigurationUtil.getConfigurationRootElement("ontology-properties.xml");
 
-        String rootURI = root.elementText("Root_Ontology_URI");
+        String URL = root.elementText(url);
 
-        String prefix = "<" + rootURI + "#" + keyword + ">" ;
-
+        String prefix = "<" + URL + "#" + keyword + ">" ;
         return  prefix;
 
+
     }
+
     public void getPrefix()
     {
+
 
     }
 

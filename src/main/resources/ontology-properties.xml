@@ -20,21 +20,16 @@
 	</Named_Graph>
 
 	<!-- 配置本体根文件的URI -->
-	<Root_Ontology_URI>http://www.owl-ontologies.com/XiangshanOnto.owl</Root_Ontology_URI>
+	<Root_Ontology_URI>http://www.owl-ontologies.com/GuangZhouRevolutionOnto.owl</Root_Ontology_URI>
 
 	<!-- 配置本体文件的URI和文件的路径 -->
 	<Ontology_Files>
 
 		<Ontology_File>
 			<CLASS>所有类</CLASS>
-			<URI>http://www.owl-ontologies.com/XiangshanOnto.owl</URI>
-			<File_Path>cantonowl/XiangshanOnto.owl</File_Path>
-		</Ontology_File>
+			<URI>http://www.owl-ontologies.com/GuangZhouRevolutionOnto.owl</URI>
+			<File_Path>cantonowl/GuangZhouRevolutionOnto.owl</File_Path>
 
-		<Ontology_File>
-			<CLASS>艺术</CLASS>
-			<URI>http://www.owl-ontologies.com/Art.owl</URI>
-			<File_Path>cantonowl/Art.owl</File_Path>
 		</Ontology_File>
 
 		<Ontology_File>
@@ -50,21 +45,9 @@
 		</Ontology_File>
 
 		<Ontology_File>
-			<CLASS>民俗</CLASS>
-			<URI>http://www.owl-ontologies.com/Folk.owl</URI>
-			<File_Path>cantonowl/Folk.owl</File_Path>
-		</Ontology_File>
-
-		<Ontology_File>
-			<CLASS>香山人物</CLASS>
+			<CLASS>广州人物</CLASS>
 			<URI>http://www.owl-ontologies.com/Individual.owl</URI>
 			<File_Path>cantonowl/Individual.owl</File_Path>
-		</Ontology_File>
-
-		<Ontology_File>
-			<CLASS>方言</CLASS>
-			<URI>http://www.owl-ontologies.com/Localism.owl</URI>
-			<File_Path>cantonowl/Localism.owl</File_Path>
 		</Ontology_File>
 
 		<Ontology_File>
@@ -86,23 +69,20 @@
 		</Ontology_File>
 
 		<Ontology_File>
-			<CLASS>思想精神文化</CLASS>
-			<URI>http://www.owl-ontologies.com/Think.owl</URI>
-			<File_Path>cantonowl/Think.owl</File_Path>
-		</Ontology_File>
-
-		<Ontology_File>
 			<CLASS>时间</CLASS>
 			<URI>http://www.owl-ontologies.com/Time.owl</URI>
 			<File_Path>cantonowl/Time.owl</File_Path>
 		</Ontology_File>
 
-		<Ontology_File>
-			<CLASS>事物关系</CLASS>
-			<URI>http://www.owl-ontologies.com/Relation.owl</URI>
-			<File_Path>cantonowl/Relation.owl</File_Path>
-		</Ontology_File>
 
 	</Ontology_Files>
+
+	<Duty_Title>http://www.owl-ontologies.com/Duty_Title.owl</Duty_Title>
+	<Event>http://www.owl-ontologies.com/Event.owl</Event>
+	<Individual>http://www.owl-ontologies.com/Individual.owl</Individual>
+	<Location>http://www.owl-ontologies.com/Location.owl</Location>
+	<Organization>http://www.owl-ontologies.com/Organization.owl</Organization>
+	<Relics>http://www.owl-ontologies.com/Relics.owl</Relics>
+	<Time>http://www.owl-ontologies.com/Time.owl</Time>
 
 </Ontology_Properties>

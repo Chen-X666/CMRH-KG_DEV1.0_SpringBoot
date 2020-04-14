@@ -22,16 +22,5 @@ public class TimelineController {
         return timelineService.getAll();
     }
 
-    @RequestMapping(value = "/timeline-getwar")
-    @ResponseBody
-    public String getWar() {
-        return timelineService.getWar();
-    }
-
-    @RequestMapping(value = "/timeline-getmeeting")
-    @ResponseBody
-    public String getMeeting() {
-        return timelineService.getMeeting();
-    }
 }
 

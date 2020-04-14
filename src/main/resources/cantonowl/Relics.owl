@@ -1,736 +1,317 @@
-<?xml version="1.0"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:文化遗存="http://www.owl-ontologies.com/Relics.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://www.owl-ontologies.com/Relics.owl">
-  <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.owl-ontologies.com/Individual.owl"/>
-  </owl:Ontology>
-  <owl:Class rdf:ID="建筑建造">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >建筑建造</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="人造遗存"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#人造遗存">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="文化遗存"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >人造遗存</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="相关遗物">
-    <rdfs:subClassOf rdf:resource="#人造遗存"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >相关遗物</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="#文化遗存">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >文化遗存</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="相关遗址">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >相关遗址</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#人造遗存"/>
-  </owl:Class>
-  <owl:Class rdf:ID="自然遗存">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >自然遗存</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#文化遗存"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:ID="所在地">
-    <rdfs:domain rdf:resource="#文化遗存"/>
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Location.owl#地点"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="相关人物">
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-    <rdfs:domain rdf:resource="#文化遗存"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="被包含">
-    <rdfs:domain rdf:resource="#文化遗存"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="获得荣誉">
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#荣誉"/>
-    <rdfs:domain rdf:resource="#相关遗物"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="历史事件">
-    <rdfs:domain rdf:resource="#文化遗存"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="曾居住在">
-    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-    <rdfs:range rdf:resource="#相关遗址"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="建立时间">
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Time.owl#时间"/>
-    <rdfs:domain rdf:resource="#人造遗存"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:ID="地址">
-    <rdfs:domain rdf:resource="#文化遗存"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="面积">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#文化遗存"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="别名">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#文化遗存"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="始建时间">
-    <rdfs:domain rdf:resource="#文化遗存"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="中文名">
-    <rdfs:domain rdf:resource="#文化遗存"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="外文名">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#文化遗存"/>
-  </owl:DatatypeProperty>
-  <文化遗存:相关遗物 rdf:ID="书记游街">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1979"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="小刀会起义总部">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘丽川"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#黄埔区"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >上海市黄浦区安仁街豫园</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="蔡廷干故居">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡廷干"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#上栅村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市上栅村两围城长巷9号</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="一束洁白的花">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1986"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#佛山市文学创作诗歌一等奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="圆明新园">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市九洲大道兰埔</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1997"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="和睦家庭">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1900"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="南京航空署">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#秦淮区"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >江苏省南京市秦淮区御道街29号</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锦涛"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="宋庆龄故居">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1961"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >北京市西城区后海北沿46号</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="马应彪纪念公园">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#沙涌村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市南区沙涌村</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="会同古村">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市金鼎镇</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#金鼎镇"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="又是菊花盛开时">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#好新闻乙等奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="铳城">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1729"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市东澳岛</文化遗存:地址>
-    <文化遗存:被包含>
-      <文化遗存:自然遗存 rdf:ID="东澳岛">
-        <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-        <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >珠海市香洲区</文化遗存:地址>
-      </文化遗存:自然遗存>
-    </文化遗存:被包含>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="唐家共乐园">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区唐家山房路234号</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
-    <文化遗存:被包含>
-      <文化遗存:相关遗址 rdf:ID="唐家古镇">
-        <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >珠海市唐家湾镇</文化遗存:地址>
-        <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-      </文化遗存:相关遗址>
-    </文化遗存:被包含>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1900"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="孙中山故居">
-    <文化遗存:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市民俗博物馆</文化遗存:别名>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙中山故居纪念馆位于广东省中山市翠亨村，南、北、西三面环山，东临珠江口，距中山市城区20公里，距广州城区90公里，距澳门30公里，隔珠江口与深圳、香港相望。本馆成立于1956年，目前管理范围20万平方米，从业人员135人，现为国家一级博物馆、国家AAAAA级旅游景区。</rdfs:comment>
-    <文化遗存:始建时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >1956-01-01</文化遗存:始建时间>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#翠亨村"/>
-    <文化遗存:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The former residence of Sun Yat-sen</文化遗存:外文名>
-    <文化遗存:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙中山故居纪念馆</文化遗存:中文名>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙眉"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1956"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市翠亨大道93号</文化遗存:地址>
-    <文化遗存:面积 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >2002余平方米</文化遗存:面积>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="那洲梁氏大宅">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市唐家湾镇那洲村</文化遗存:地址>
-    <文化遗存:被包含>
-      <文化遗存:相关遗址 rdf:ID="那洲村">
-        <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-        <文化遗存:被包含 rdf:resource="#唐家古镇"/>
-        <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >珠海市高新区唐家湾镇</文化遗存:地址>
-      </文化遗存:相关遗址>
-    </文化遗存:被包含>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="蜜月阁">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市东澳岛</文化遗存:地址>
-    <文化遗存:被包含 rdf:resource="#东澳岛"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="杨官宇故居">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >南区北台村著昆街28号</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#著昆街"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="那条静不了的小河">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="荼薇仙子">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1983"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#省首届鲁迅文艺三等奖"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#省舞剧创作一等奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="三回头">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1989"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="白石街">
-    <文化遗存:被包含>
-      <文化遗存:自然遗存 rdf:ID="淇澳岛">
-        <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
-        <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >珠海市珠江口</文化遗存:地址>
-      </文化遗存:自然遗存>
-    </文化遗存:被包含>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1833"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市淇澳岛</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="杨仙逸墓">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >广州市越秀区先烈中路79号广州市黄花岗公园</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#黄花岗公园"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="徐润故居">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市拱北北岭村</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#北岭村"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="吴铁城故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#大布平湖村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市三乡镇大布平湖村</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴铁城"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="伏狐记">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1982"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="孙文公园">
-    <文化遗存:面积 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >26.6公顷</文化遗存:面积>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙文纪念公园位于中山市中心城区南面，兴中道与城桂路的连接处，坐落在中山新十景“兴中缀锦”上。占地26.6公顷，1996年11月孙中山先生诞辰之日全面竣工开放。这个公园的牌匾还是由台湾著名书法家、岭南派国画大师欧豪年教授书写。与其他旅游景点不同，该公园不设门票，游人可以免费进园自由参观游览。</rdfs:comment>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市南区兴中道</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <文化遗存:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙文公园</文化遗存:中文名>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1996"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#南区"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="寻回那失落了的">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#新绿文学一等奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="陈芳故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#梅溪村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区前山镇梅溪村</文化遗存:地址>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1896"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="卢慕贞故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区北沙外沙村193号</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢慕贞"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#外沙村"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="书生开店">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:自然遗存 rdf:ID="金海滩">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市西区</文化遗存:地址>
-  </文化遗存:自然遗存>
-  <文化遗存:相关遗址 rdf:ID="中央航空学校">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >杭州笕桥蚕校</文化遗存:地址>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1928"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="不是误会">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1981"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="一次婚宴">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1989"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="小花猫">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1982"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="拉塔石炮台">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1795"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#北岭村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市拱北炮台山</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="杨匏安故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#越华路"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >广州市越华路116号</文化遗存:地址>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1918"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="杨氏大宗祠">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#北山村"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1828"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市南屏镇北山村</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="蔡氏大宗祠">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >广州番禺麻沙镇水南村</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="奀叔上镜">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1986"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="四只肥鸡">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1959"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="顾维钧故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >上海市嘉定镇西大街94-96号</文化遗存:地址>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >天津市和平区河北路267号</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#河北路"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#嘉定镇"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#顾维钧"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="苏曼殊故居">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1884"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#前山街道"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区前山街道办沥溪村西街27号</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="珠海普陀寺">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区前山东坑凤凰山风景区内</文化遗存:地址>
-    <文化遗存:被包含>
-      <文化遗存:自然遗存 rdf:ID="珠海凤凰山">
-        <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >珠海市香洲区</文化遗存:地址>
-        <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-      </文化遗存:自然遗存>
-    </文化遗存:被包含>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="唐家古围墙">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1662"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海高新区主园区唐家湾镇唐家古镇</文化遗存:地址>
-    <文化遗存:被包含 rdf:resource="#唐家古镇"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="郑观应故居">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1903"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑观应"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市三乡镇雍陌村</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#雍陌村"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="缘蚁青琴皆妙手">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#首届广东欢乐节演出纪念奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="下次该是什么时候">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1900"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="惊蛰雷鸣">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1979"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="先施公司">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1917"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >香港南京路浙江路口</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香港特别行政区"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="无雷的仲夏">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="唐绍仪故居">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市唐家古镇山房路99号</文化遗存:地址>
-    <文化遗存:被包含 rdf:resource="#唐家古镇"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1929"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="南风吹拂着古榕">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="桃花">
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#佛山地区文学作品评选三等奖"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1981"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="骆驼队长与三寡妇">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1980"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="迷人的光">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1984"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1989"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#中国首届微型文学作品一等奖"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#花地佳作奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="龙泉村的棋王">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1986"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="唐国安故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <文化遗存:被包含 rdf:resource="#唐家古镇"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="吴健彰旧宅">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吴健彰"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区长水街63-69号</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="杨仙逸故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#共和街"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山105国道旁北台村共和街39号</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="珠海中山亭">
-    <文化遗存:始建时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >1921-01-01</文化遗存:始建时间>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#梅花村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区前山梅花村后山</文化遗存:地址>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海中山亭位于珠海市前山镇东北梅花村后山坡上、广珠公路旁，始建于1921年。前山中山亭是中国唯一的由孙中山先生亲自持锄奠基的纪念孙中山先生的建筑物。现为珠海市重点文物保护单位。
-孙中山先生于1912年4月辞去临时大总统职务后，致力于社会革命，赴南方各省考察，经由南京取道香港、澳门返回故乡——香山县翠亨村，5月27日上午在前山出席了这一带万余人举行的欢迎会，并即席发表演讲。会上，乡民们商议建一座凉亭，以志录此事，孙中山先生欣然同意，并为之奠基。十多天后即建成一座砖木结构的四柱亭。翌年秋，该亭为台风毁，1923年重建，1925年为纪念孙中山先生逝世，正式命名为“中山纪念亭”，1986年，珠海市人民政府在纪念孙中山先生诞辰之际，对中山亭进行了修葺。</rdfs:comment>
-    <文化遗存:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海中山亭</文化遗存:中文名>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1921"/>
-  </文化遗存:相关遗址>
-  <文化遗存:自然遗存 rdf:ID="珠海三叠泉">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市横琴岛中心沟</文化遗存:地址>
-  </文化遗存:自然遗存>
-  <文化遗存:相关遗址 rdf:ID="诚斋谭公祠">
-    <文化遗存:被包含 rdf:resource="#那洲村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市唐家湾镇那洲村</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1806"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="老猫烧须">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1990"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="廖仲恺故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >惠州市惠城区陈江镇幸福村</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#廖仲恺"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#幸福村"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="陈天觉夫妇墓">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈天觉"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市东区库充村金钟山</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#金钟山"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1183"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="摩崖石刻">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#东澳岛"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1989"/>
-    <文化遗存:被包含 rdf:resource="#东澳岛"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市东澳岛</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="张惠长故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >广东省中山市火炬开发区城东社区大环小区环溪南街33号</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#火炬开发区"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </文化遗存:相关遗址>
-  <文化遗存:自然遗存 rdf:ID="九洲岛石景石洞">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市珠江口</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
-  </文化遗存:自然遗存>
-  <文化遗存:相关遗物 rdf:ID="文武生续亲">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1990"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="杨文广出阁">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-  </文化遗存:相关遗物>
-  <文化遗存:自然遗存 rdf:ID="燕喜山铁城亭"/>
-  <文化遗存:相关遗址 rdf:ID="苏兆征故居">
-    <文化遗存:被包含 rdf:resource="#淇澳岛"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏兆征"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市淇澳岛淇澳村东溪坊</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="农村现代化必由之路">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1989"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="詹园">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1998"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#北台村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市南区北台村105国道旁</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="马鞍山烈士陵园">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1957"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#马鞍山"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市前山镇马鞍山</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="悟空出世慌了玉帝">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1982"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#佛山地区五县市优秀灯谜三等奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="男阿姨">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="左右逢源">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1982"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="雨巷">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="威力的凝聚">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1989"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#首届全国报纸副刊好作品评选三等奖"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="郑藻如旧居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#马龙舟巷"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市石岐区马龙舟巷2号</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑藻如"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="我和苏维埃">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1983"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="孙中山的传说">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="清晓古公祠">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市高新区唐家湾镇那洲村</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-    <文化遗存:被包含 rdf:resource="#那洲村"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="金台寺">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市斗门区黄杨山</文化遗存:地址>
-    <文化遗存:被包含>
-      <文化遗存:自然遗存 rdf:ID="黄杨山">
-        <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
-        <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        ></文化遗存:地址>
-      </文化遗存:自然遗存>
-    </文化遗存:被包含>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="清气澄余滓">
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#环境文学鼓励奖"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="有这么个上帝">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1985"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="传声筒">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1982"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="节奏">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="功建铁城梁公祠">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市南区福涌村</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#福涌村"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁杞"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="空间的艺术与艺术的空间">
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#全国第二届报纸副刊好作品评选二等奖"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1990"/>
-  </文化遗存:相关遗物>
-  <文化遗存:自然遗存 rdf:ID="飞沙滩">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#珠海市"/>
-  </文化遗存:自然遗存>
-  <文化遗存:相关遗物 rdf:ID="好事多磨">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="魏邦平故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#海洲村"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1933"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#魏邦平"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中山市古镇镇海洲村麒麟中心大街6号、7号</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="容星桥故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市南屏镇</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#南屏镇"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容星桥"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="岐江晚望">
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#佛山地区散文一等奖"/>
-    <文化遗存:获得荣誉 rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#省业余作品一等奖"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="林伟民故居">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市金湾区三灶镇金海岸大道西路</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#金海岸大道"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#林伟民"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="南岗山下两村人">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:自然遗存 rdf:ID="珠海石景山">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-  </文化遗存:自然遗存>
-  <文化遗存:相关遗址 rdf:ID="杨云骧故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#北山村"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市南屏镇北山村下街</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨云骧"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="新楼慢慢在这儿崛起">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1988"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="沙湾古遗址">
-    <文化遗存:被包含 rdf:resource="#淇澳岛"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1984"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市淇澳岛东部</文化遗存:地址>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="郑家大屋">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >澳门妈阁街</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#澳门特别行政区"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑观应"/>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1881"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="鞭炮">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1986"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="珠海烈士陵园">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区</文化遗存:地址>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#叶剑英"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="狮子采青">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1953"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="珠海渔女">
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海香洲区吉大情侣中路香炉湾畔</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#香洲区"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="叶剑英故居">
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#雁上村"/>
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#叶剑英"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >梅州市梅县区雁洋镇雁上村</文化遗存:地址>
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1986"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="蔡昌故居">
-    <文化遗存:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市香洲区唐家湾镇北沙社区外沙村91号</文化遗存:地址>
-    <文化遗存:被包含 rdf:resource="#唐家古镇"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#外沙村"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗物 rdf:ID="童年">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1987"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗物 rdf:ID="老实人">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1979"/>
-  </文化遗存:相关遗物>
-  <文化遗存:相关遗址 rdf:ID="容闳故居">
-    <文化遗存:相关人物>
-      <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#容闳">
-        <文化遗存:曾居住在 rdf:resource="#容闳故居"/>
-      </rdf:Description>
-    </文化遗存:相关人物>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市南屏镇南屏村西大街三巷1号</文化遗存:地址>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#南屏镇"/>
-  </文化遗存:相关遗址>
-  <文化遗存:相关遗址 rdf:ID="古元故居">
-    <文化遗存:建立时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1912"/>
-    <文化遗存:相关人物>
-      <rdf:Description rdf:about="http://www.owl-ontologies.com/Individual.owl#古元">
-        <文化遗存:曾居住在 rdf:resource="#古元故居"/>
-      </rdf:Description>
-    </文化遗存:相关人物>
-    <文化遗存:地址 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >珠海市唐家湾镇那洲村</文化遗存:地址>
-    <文化遗存:被包含 rdf:resource="#那洲村"/>
-    <文化遗存:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#唐家湾镇"/>
-  </文化遗存:相关遗址>
+﻿<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Relics.owl"
+     xml:base="http://www.owl-ontologies.com/Relics.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Event="http://www.owl-ontologies.com/Event.owl#"
+     xmlns:Relics="http://www.owl-ontologies.com/Relics.owl#"
+     >
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Relics.owl">
+        <owl:imports rdf:resource="http://www.owl-ontologies.com/Individual.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#历史事件 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#历史事件">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#建立时间 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#建立时间">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#人造遗存"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#所在地 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#所在地">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Location.owl#地点"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#中文名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#中文名">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#别名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#别名">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#地址 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#地址">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#外文名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#外文名">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#始建信息 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#始建信息">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#面积 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Relics.owl#面积">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#荣誉 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#荣誉"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Individual.owl#广州革命历史人物 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Individual.owl#广州革命历史人物"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Location.owl#地点 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Location.owl#地点"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#人造遗存 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Relics.owl#人造遗存">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#建筑建造 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Relics.owl#建筑建造">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Relics.owl#人造遗存"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#文化遗存 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Relics.owl#文化遗存">
+        <rdfs:label>文化遗存</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#相关遗址 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Relics.owl#相关遗址">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Relics.owl#人造遗存"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#相关遗物 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Relics.owl#相关遗物">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Relics.owl#人造遗存"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#自然遗存 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Relics.owl#自然遗存">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Relics.owl#文化遗存"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#三元里人民抗英斗争纪念馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#三元里人民抗英斗争纪念馆">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#建筑建造"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#三元里抗英"/>
+        <Relics:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+        <Relics:地址>广州市广园中路34号</Relics:地址>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#三星旗 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#三星旗">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#相关遗物"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#三元里抗英"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1841年5月29日，三元里村民击退来犯小股英军，三元里民众料到英军必会报复，所以在三元古庙集合，相约以庙中“三星旗”作为指挥战斗的令旗，宣誓“旗进人进，旗退人退，打死无怨”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#广州苏维埃政府旧址 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#广州苏维埃政府旧址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#相关遗址"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#广州起义"/>
+        <Relics:地址>广东省广州市起义路广州市公安局大院内</Relics:地址>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#广州起义纪念馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#广州起义纪念馆">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#建筑建造"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#广州起义"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#永康台 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#永康台">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#建筑建造"/>
+        <Relics:所在地 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+        <Relics:别名>四方台</Relics:别名>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">永康台土名四方台，距广州城仅一里，大炮可直轰城内。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#海员罢工路 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#海员罢工路">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#建筑建造"/>
+        <Event:来源 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">邓炳权编写. 广州革命胜迹史话[M]. 广州：广东人民出版社, 1984:37</Event:来源>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#申谕英夷告示 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#申谕英夷告示">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#相关遗物"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#三元里抗英"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">英军撤出虎门时发出告示，恫吓中国人民”后勿再犯”。人民群众当即发出《申谕英夷告示》，警告英军，若敢再来，“不用官兵，不用国帑，自己出力，杀尽尔等猪狗，方消我各乡惨毒之害也！”</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#祭黄花岗七十二烈士文 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#祭黄花岗七十二烈士文">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#相关遗物"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#黄花岗起义"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1912年5月15日孙发表《祭黄花岗七十二烈士文》，说“寂寂黄花，离离宿草，出师未捷，埋恨千古”。1914年又说“第一次革命，虽由武昌起义，而实广东三月廿九之役为之先”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relics.owl#黄花岗烈士事略 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relics.owl#黄花岗烈士事略">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relics.owl#相关遗物"/>
+        <Relics:历史事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#黄花岗起义"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">孙中山在《黄花岗烈士事略》序文中高度评价了黄花岗起义：“是役也，碧血横飞，浩气四塞，草木为之含悲，风云因而变色，全国久蛰之人心，乃大兴奋。怨愤所积，如怒涛排壑，不可遏抑，不半载而武昌之大革命以成。则斯役之价值，直可惊天地、泣鬼神，与武昌革命之役并寿。”</rdfs:comment>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

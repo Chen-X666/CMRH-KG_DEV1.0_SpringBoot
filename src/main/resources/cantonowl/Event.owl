@@ -1,3306 +1,507 @@
-<?xml version="1.0"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:历史事件="http://www.owl-ontologies.com/Event.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://www.owl-ontologies.com/Event.owl">
-  <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.owl-ontologies.com/Relics.owl"/>
-    <owl:imports rdf:resource="http://www.owl-ontologies.com/Organization.owl"/>
-  </owl:Ontology>
-  <rdfs:Class rdf:about="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-  <owl:Class rdf:ID="社会事件">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="历史事件"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >社会事件</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="自然事件">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >自然事件</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="政治事件">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >政治事件</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="军事事件">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >军事事件</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="文化事件">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >文化事件</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="教育事件">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >教育事件</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="经济事件">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >经济事件</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="科技事件">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >科技事件</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#历史事件"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#历史事件">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >历史事件</rdfs:label>
-  </owl:Class>
-  <owl:ObjectProperty rdf:ID="领导人">
-    <rdfs:domain rdf:resource="#历史事件"/>
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="被协助方">
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-    <rdfs:domain rdf:resource="#历史事件"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="起始年份">
-    <rdfs:domain rdf:resource="#历史事件"/>
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Time.owl#时间"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="结束年份">
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Time.owl#时间"/>
-    <rdfs:domain rdf:resource="#历史事件"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="发生地点">
-    <rdfs:domain rdf:resource="#历史事件"/>
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Location.owl#地点"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="协助方">
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-    <rdfs:domain rdf:resource="#历史事件"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="相关人物">
-    <rdfs:domain>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#历史事件"/>
-          <rdf:Description rdf:about="http://www.owl-ontologies.com/Relation.owl#事件"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:ID="结束时间">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:domain rdf:resource="#历史事件"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="别名">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#历史事件"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="起始时间">
-    <rdfs:domain rdf:resource="#历史事件"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-  </owl:DatatypeProperty>
-  <历史事件:文化事件 rdf:ID="任全国政协委员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="携饷入黄埔慰劳卫士队"/>
-  <历史事件:文化事件 rdf:ID="被称为_二胡王_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >青年时期，吕文成有“二胡王”之称。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任_新民报_美术编辑">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年，方成回北京，次年任《新民报》美术编辑，</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="创办先施公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1899年，马应彪筹集资金港币2.5万元，在香港开设先施公司并于1900年正式开业。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="创办了_上海周报_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >抗战爆发后，韦悫创办了《上海周报》，任总编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="与人合开_广生和_杂货店">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1885年，黄焕南艰苦奋斗，积累资金，与人合开一家名为“广生和”的杂货店。由于经营得法，“广生和”渐成规模，发展成百货商店，他也成为知名侨商。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="支援十九路军抗日">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932年，张惠长组织了一支混合机队前往杭州，支援十九路军抗日。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="代表工联会参加全港兵乓球锦标赛">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1957年2月，容国团代表工联会参加香港举行的全港兵乓球锦标赛，一举夺得男子团体、男子双打、男子单打三项冠军，从此声名大振。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="建立_芳植记_商号"/>
-  <历史事件:政治事件 rdf:ID="开创中华民国"/>
-  <历史事件:教育事件 rdf:ID="兴办周崧学校">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周崧"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，在乡兴办完全小学，命名为周崧学校。1931年至1949年，共办19届，毕业生514人。该校一向免收学杂各费，一切费用由周崧支付。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="投资轮船招商总局">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1884年，唐廷植代唐廷枢暂时管理轮船招商总局，投资轮船招商总局，任局董</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="考入日本绘画专门学院">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年，郑锦考入日本美术最高学府——日本绘画专门学院。同年，创作了《娉婷》（被台北故宫博物院收藏）一帧。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="兼任北京大学_国立北京高等师范大学和国立女子师范学校教师">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1914年，郑锦应国民政府教育部的邀请回到北京。同时，兼任北京大学、国立北京高等师范大学、国立女子师范学校的教师。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="赴日本留学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1899年，苏曼殊赴日本，在横滨考入华侨办的大同学校，后考入早稻田大学高等预科。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="被国民党反动派逮捕">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年7月，杨匏安被国民党反动派逮捕，壮烈牺牲。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="去美国留学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1847年，黄胜与容闳等一起去美国读书。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="创办_图强飞机公司_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，杨仙逸在夏威夷创办“图强飞机公司”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="任_人民日报_高级编辑">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1951年，方成任《人民日报》高级编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="被聘为广州先施公司司理">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1913年，同乡马应彪（已在香港广州创办了当地称雄的先施百货公司）素知黄焕南是商业奇才，邀请他出任先施公司董事，再聘为广州先施公司司理，负责上海先施公司的筹建事宜。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="获得全国九城市兵乓球单打冠军">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1958年4月，容国团代表广州参加了全国九城市兵乓球，获得单打冠军。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="前往澳洲谋生">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年，黄焕南前往澳洲谋生。
-1891年，蔡昌赴前往澳洲谋生。
-1892年，郭乐前往澳洲谋生。
-1899年，李敏周前往澳洲谋生。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="中法之战"/>
-  <历史事件:经济事件 rdf:ID="合开_成号布庄_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >徐润与人合开“成号布庄”。业务从上海到浙赣山区，从长江内河到沿海各埠，甚至伸至日本长崎。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="接任太古洋行第三任买办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，莫干生接任父亲当上太古洋行第三任买办。洋行华人买办，在历史上，没有一个像太古洋行那样，祖孙三代连续充任的。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="就读两广方言学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1903年，郑道实到广州就读于两广方言学校英语科，不久因病辍学返乡。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="开展农民运动">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年，韦悫与毛泽东相识于广州农民运动讲习所。两人初次见面，畅谈了一个多小时，受毛启发，在当时任国民党中央农民部长的廖仲恺的帮助下，回到故乡香山县开展农民运动。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="集资筹建_中华飞船公司_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年，杨著昆响应孙中山“航空救国”号召，以大股东身份与当地华侨集资筹建“中华飞船公司”，准备生产战斗机供革命使用。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="建立清华学堂"/>
-  <历史事件:经济事件 rdf:ID="修建大新大厦">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，在广州西堤珠江边，修建规模宏大、拥有12层楼高的大新大厦（今天的南方大厦）。大厦布局新颖，设备齐全，其独特设计为国内罕见，成为当时华南最宏伟最华丽的百货商店。外地游客言称：“不到大新，等于没来广州”。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="任华东大学校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1948年夏，韦悫办华东大学（济南解放后迁入 济南），并任校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="曾任中国电影工作者协会理事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="接任太古洋行第二任买办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >莫仕扬去世后，莫藻泉接任太古洋行第二任买办。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="积极参加音乐活动">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年，吕文成担任该会沪乐科干事，同时兼上海精武体育会音乐部教员，参加了由上海铁路职工组织的“俭德储蓄会”粤乐队的活动，并担任指导。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="在加州帕沙迪纳大学学习演技"/>
-  <历史事件:社会事件 rdf:ID="回到家乡">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922-1927年，方成回到家乡生活、读书。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="捐助兴中会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙眉"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="创办中兴公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >周崧长大后前往美国经商，创办中兴公司，因经营有方，成为巨富，是当时旅美华侨中知名的企业家。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="开设有开平煤栈及山海关锦州煤栈">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑翼之开设有开平煤栈及山海关锦州煤栈。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="获得博士学位">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1857年，黄宽获得博士学位。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="成立中华海员工会联合总会"/>
-  <历史事件:教育事件 rdf:ID="选择航空专业学习">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909年，杨仙逸在美国读大学期间，因十分赞同孙中山的“航空救国”主张，专门选择了航空专业学习。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="出席太平洋教育会议">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1921年6月，孙中山委派他作为革命政府代表，韦悫出席在檀香山举行的太平洋教育会议，并在大会上发表了演说。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="创作童话诗_小姑娘与乌猿婆_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1982年，阮章竞写了童话诗《小姑娘与乌猿婆》。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="协助各省派遣留美学生">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909-1911年，唐国安协助各省直接派遣了3批留美学生。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="驾驶广州号飞机单机环飞全国">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，为了宣传“航空救国”，张惠长曾驾“广州”号飞机单机环飞全国，在全国引起一股航空热。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="被任命为教育部副部长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年11月，韦悫被任命为教育部副部长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="应聘担任格致书院汉文总教习">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1898年，钟荣光以名举人身份，应聘担任美国教会势力在广州开办的教会学校——格致书院（岭南大学前身）的汉文总教习。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="被任为特派专员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年，陈庆云被任为特派专员，处理广东空军北并中央的遗留问题和策动广西空军归并中央。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="大中华百合影业公司改名联华影业公司"/>
-  <历史事件:科技事件 rdf:ID="施行国内第一例胚胎截开手术">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1860年，黄宽施行国内第一例胚胎截开手术。</rdfs:comment>
-  </历史事件:科技事件>
-  <历史事件:社会事件 rdf:ID="在上海病逝">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1940年12月31日，萧友梅在上海病逝。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="被誉为_善翁钟工宇_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >钟工宇笃信基督教，乐善好施，对美国、港澳、广州等国家和地区基督教会附设的慈善机构，如广州芳村孤儿院、盲人院、万善中学和小学，以及对他的家乡的西山学校，桥梁道路的修建，均有捐助，故被誉为“善翁钟工宇”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="到美国接受完全之教育">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1846年9月，黄宽与容闳等人一起，到美国接受完全之教育。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="随父上海谋生">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >吕文成幼年随父上海谋生。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="入读私塾">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1895年，郑道实入读私塾，爱好读书，天资聪颖，记忆力强。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="被任为中国驻夏威夷第一任领事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1881年，“华董”升格为中国驻夏威夷领事馆，光绪皇帝钦命陈芳为中国驻夏威夷第一任领事，官居二品。在华商和领事任内，他致力于议订一些保障华人权利的规章，在华人中产生了很大的影响。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="被梅兰芳认为义女">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，卢燕随母到上海，寄寓在京剧大师梅兰芳家，被梅认为义女。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="开办_润立生茶号_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1860年，徐润独资在温州开办“润立生茶号”。业务从上海到浙赣山区，从长江内河到沿海各埠，甚至伸至日本长崎。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="担任国大代表">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年以后，陈庆云担任过国大代表。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="担任中国作家协会党总支书记_党组成员_中国作协青年作家工作委员会主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1955年4月，阮章竞担任中国作家协会党总支书记、党组成员、中国作协青年作家工作委员会主任。这是他的童话诗歌创作高峰。《金色的海螺》，获全国儿童文学首次评奖的一等奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="提出创建国家银行计划及建议组建全国铁路公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="任北京作家协会主席_名誉主席">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，阮章竞任北京作家协会主席、名誉主席。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="遭通缉追捕">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年，韦悫因参加刺杀广州将军凤山的行动，遭到清廷两广总督张鸣岐的通缉追捕。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="不赞成关于粤都督的提议"/>
-  <历史事件:文化事件 rdf:ID="世界兵乓球锦标赛冠军"/>
-  <历史事件:经济事件 rdf:ID="成为茂宜岛首富"/>
-  <历史事件:文化事件 rdf:ID="被选为全国文联委员_美协常务理事">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年7月，古元出席全国第一届文代会，被选为全国文联委员、美协常务理事。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="组织广州早期音乐社团_中华音乐会_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑志声组织广州早期的音乐社团“中华音乐会”，结识了岭南乐队的领导人冼星海。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="主演_最佳国产无声片__人生_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1934年，阮玲玉主演了《人生》一片，阮在片中扮演了一名“路柳墙花”的角色，从少女到老妪。该片当年被评为“最佳国产无声片”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮玲玉"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="赴香港经商">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1860年，莫仕扬赴香港经商。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="书法作品获选日本特选奖状">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生的书法作品获选日本书艺院第51回国际文化交流书道展的特选奖状。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="参加中国艺术社">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1943年，郑君里参加中国艺术社，从演员转当导演。导演过《一江春水向东流》、《乌鸦与麻雀》等著名影片。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="被聘为太古洋行帮买办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，莫应溎被聘为太古洋行的帮买办（副买办），主管糖厂。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="参与飞行全国活动">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年冬，杨官宇参与了飞行全国活动。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="任孙中山秘书">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1921年5月5日，孙中山在广州就任非常大总统，韦兼任孙中山秘书。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="任大元帅上校"/>
-  <历史事件:文化事件 rdf:ID="结识共产党人和越南领袖">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年1月，韦悫认识了共产党人张太雷、恽代英和越南领袖胡志明。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="在东京帝国大学与东京音乐学院毕业">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909年，萧友梅从东京帝国大学与东京音乐学院毕业。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="北伐战争"/>
-  <历史事件:政治事件 rdf:ID="被迫辞去中央组织部长一职">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年春，蒋介石压迫共产党和左派，时任中央组织部长的杨匏安被迫辞职，后仍在广州做统战工作。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="培英中学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。</rdfs:comment>
-    <历史事件:协助方 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="创办永生公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1884年，马应彪在澳洲悉尼，创办永生公司</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="因精神分裂症不治去世">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >70年代初，梁白波因精神分裂症不治去世。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="成立华美银行">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年，钟工宇同唐雄等人集资20万元成立华美银行，担任董事兼司库。至1935年易名中美银行，继续营业。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="作为共产党秘密党员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1943年，韦悫重新入党，长期为秘密党员。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="任董事兼首任司理">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年10月20日，国内第一家中资百货大楼先施公司在上海正式开张。黄焕南任董事兼首任司理。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="格致书院更名为岭南学堂">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1900年，格致书院更名为岭南学堂。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="组织_阳和会馆_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷植"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1849年，唐廷植赴美国旧金山，在美国排华事件中与当地官员交涉，维护华人利益，成为知名人士，被当地华工、华商选为旧金山华商公所的总董。他热心为侨胞办事，组织“阳和会馆”，团结侨胞，被公认为早期旅美的华侨领袖。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="创办永安公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年，郭乐在香港创办永安百货公司。营业额迅速上升，不但获得了巨额利润，而且积累了丰富的经营管理经验。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="广州起义失败"/>
-  <历史事件:经济事件 rdf:ID="改组招商总局">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1872年，徐润受李鸿章委派改组招商总局，短期内将资产从不足20万两扩至100万两。后来又一手筹划以220万两收购美国旗昌轮船公司全部家产，使招商总局由开办时的4艘轮船增加至26艘，码头、栈房遍及长江沿岸和沿海各口岸共21处。这是招商总局的发展史，也是中国航运发展史上的一个重要转折。中国轮船吨位由此猛增至400万吨，占进出口中外船只总数的36.7%，从而奠定了中国航运事业的基础。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="重组巨型魔术团">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1951年，张慧冲重组张慧冲巨型魔术团，任团长兼演员。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="参加开国大典">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年10月，韦悫参加开国大典。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="创办广东飞机制造厂">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，杨仙逸担任航空局局长，接着他又创办广东飞机制造厂，并任厂长，数月后制成一架飞机，孙中山为表彰他的卓越功勋，亲笔书写“志在冲天”的横额送给他。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:教育事件 rdf:ID="在上海学习英文">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1897年，苏曼殊到上海，学习英文。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="成为岭南大学校董">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >原来设立在纽约的董事局则改为岭南大学美国基金委员会。钟荣光成为岭南大学校董。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="协助容闳挑选120名幼童赴美国留学">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1872年起，徐润受清廷委托，协助容闳挑选120名幼童赴美国留学。其中94人学成回国。且均担任要职。如近代中国铁路之父詹天佑，清代爱国将领邓世昌，民国第一任内阁总理唐绍仪，清华学校（清华大学前身）首任校长唐国安等。</rdfs:comment>
-    <历史事件:被协助方 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-    <历史事件:协助方 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="开办_绍祥字号_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1859年起，徐润先后与他人合作，开办“绍祥字号”</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#徐润"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="捐资兴建马应彪招待所">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。马应彪招待所（现为中山大学港澳珠江三角洲研究中心用房）</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="赴上海美术专门学校深造">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐涤生曾赴上海美术专门学校深造</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐涤生"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="提出三民主义">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="在利马创办_通惠局_"/>
-  <历史事件:教育事件 rdf:ID="岭南大学增办农科">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，岭南大学增办农科。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="_四一二_反革命政变"/>
-  <历史事件:教育事件 rdf:ID="岭南学堂迁往广州康乐村">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1904年，岭南学堂迁往广州康乐村。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="任推广普通话工作委员会委员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1956年，韦悫任推广普通话工作委员会委员</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="被委任为万国禁烟会议中国代表">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909年，唐国安被委任为上海召开的万国禁烟会议的中国代表。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="开辟国货商场">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1934年秋天，郭乐在永安商场4楼开辟了国货商场，代办国货寄售业务。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="修完哲学博士全部课程">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年，韦卓民修完哲学博士的全部课程。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任职国立歌剧院和中华交响乐团">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >抗战爆发后，郑志声毅然回国效力。到重庆任职于国立歌剧院和中华交响乐团，是当年名望最高的指挥家。其创作的《满江红》、歌剧《郑成功》等，堪称传世佳作。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="被撤销中央监察委员职务">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年春，杨匏安到武汉参加中共五大，当选为中央监察委员。同年11月，因谭平山将其列为“第三党”成员，被撤销中央监察委员职务，并给留党察看处分。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="移民美国纽约">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1966年，陈庆云退休后移民美国纽约。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="到省体校集训">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1979年，江嘉良成为广东队主力，后成为国家队队员。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="任中华会馆主席和慈善公益委员会委员长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >钟工宇热心华侨及国内公益事业，任中华会馆主席多年。1912年中华商会成立，内设慈善公益委员会，钟任委员长。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="于英国毕业">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1855年，黄宽毕业。获金牌等奖状及医学学士学位。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="被扣于香港追索赔款"/>
-  <历史事件:经济事件 rdf:ID="_芳植记商号_成为檀香山最著名华人商号">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1870年，“芳植记商号”成为檀香山最著名的华人商号，成为檀香山八大企业之一。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="组成先施股份有限公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909年，马应彪组成先施股份有限公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="聆听革命演讲">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1903年，杨仙逸聆听孙中山先生在檀香山向华侨作宣传革命的演讲，心中点燃了为中国民主革命而战斗的火焰。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="先施广州分行营业停顿">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1941年，香港沦陷，先施总行、广州分行营业停顿。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="被提升为上海怡和洋行总买办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1863年，唐廷枢被提升为上海怡和洋行总买办。对于英商怡和洋行来说，“唐廷枢简直成了它能获得华商支持的保证”。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="导演并主演_水落石出_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年,张慧冲导演并主演的《水落石出》，是第一部打入外国人控制的电影院的中国影片。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="兼任文华书院中学部校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦卓民倾心于西方哲学与中国古代哲学的研究，并兼任中学部校长，同时修读研究生课程。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="创办太古轮船公司"/>
-  <历史事件:教育事件 rdf:ID="提议将北大音乐研究会改组为北京大学附设音乐传习所">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年8月，经萧友梅提议，北大音乐研究会改组为北京大学附设音乐传习所。校长蔡元培兼任所长，萧友梅作教务主任负责实际工作。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="随父在上海谋生">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >幼年吕文成随父上海谋生。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="任中央新闻摄影局美术研究室副主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1950年，古元到北京任中央新闻摄影局美术研究室副主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="任苏皖边区政府副主席">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1945年10月，至1946年12月，韦悫任苏皖边区政府副主席。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="病逝纽约">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1981年，陈庆云病逝纽约。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="到俄了解十月革命胜利情况"/>
-  <历史事件:经济事件 rdf:ID="代表当时积极民族主义经济思潮">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑观应"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑观应代表当时积极的民族主义的经济思潮。认为中国应该像西方各国一样大办商业，“中西可共之利，思何以筹之；中国自有之利，思何以扩之；西人独擅之利，思何以分之”。
-其商业思想可分为商战论、商道论、营销论、成本论、管理论。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="组织_香港华人救伤队_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932年1月28日，日本侵略军攻占上海时，莫应溎义愤填膺，曾组织一支由75人组成的“香港华人救伤队”，自任队长，捐献了一部救护车，携带药品及医疗器械亲赴上海抢救抗日部队。还募捐几万港元转送19路军上海办事处，支援残疾军人教养院。“</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任中共包头钢铁公司党委委员_宣传部长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1956年11月至1959年12月，阮章竞任中共包头钢铁公司党委委员、宣传部长。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="被推选中国版画家协会名誉主席">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1995年，古元被推选为中国版画家协会名誉主席。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="帮助革命部队脱险">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年，莫应溎帮助叶剑英率领的革命部队脱险。受地下党员之托，向香港警务处长交涉，使被扣香港长洲的革命部队脱险。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="参加上海职业界革命活动">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年，阮章竞参加上海职业界革命活动，这时期创作了小说《林肯少年时候的故事》并创作了第一首自由体诗《故乡》，发表在上海《青春》上。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="因心脏病病逝于香港">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1942年1月，钟荣光因心脏病病逝于香港。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="创办图强飞机公司"/>
-  <历史事件:政治事件 rdf:ID="广州起义">
-    <历史事件:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >黄花岗起义</历史事件:别名>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年4月27日，广州黄花岗之役，因缺乏群众基础，组织不够严密而失败，但革命党人前赴后继，英勇战斗，给清政府以沉重打击，给全国人民以极大鼓舞，在全国引起了巨大震动。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="创办新民启智会"/>
-  <历史事件:教育事件 rdf:ID="翻译_判断力批判___康德哲学原著选读_等文献">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦卓民的主要译著有：康德的《判断力批判》、华特生的《康德哲学原著选读》等，译文严密可信，通俗流畅，独具风格，在翻译界甚有影响。他的关于康德哲学译著，一直是我国研究康德哲学的学者必读的文献资料。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="离职休养">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1986年，方成离职休养。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="到太湖一带进行抗日宣传"/>
-  <历史事件:政治事件 rdf:ID="任南京航空署署长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，张惠长任南京航空署署长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="担任国立音乐专科学校校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年8月19日，萧友梅担任国立音乐专科学校校长。经过数年坚持不懈的努力，终于使国立音专成为具有相当规模与国际水准的中国最高音乐学府。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="在香港开设信息庄">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1894年，马应彪在香港开设信息庄及永昌金山庄，开办侨汇兼经销进出口生意。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="被任为国立北平美术专科学校第一任校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年4月15日，中国第一所正式立案的“国立北平美术专科学校”成立，郑锦被任命为第一任校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="广东国画座谈会负责人">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方人定"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方人定</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="荣获捐资兴学一等奖">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1934年，国民政府教育部鉴于周崧个人捐出巨款建校，颁发捐资兴学一等奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周崧"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="毕业于武汉大学化学系">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1942年，方成毕业于武汉大学化学系。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="贩烟为业"/>
-  <历史事件:文化事件 rdf:ID="参加商务印书馆活动影戏部">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，张慧冲跻身影坛，参加商务印书馆活动影戏部。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="返回家乡担任中山县长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年10月，张惠长回到家乡担任中山县长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="先施总行营业停顿">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1941年，香港沦陷，先施总行、广州分行营业停顿。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="在武汉参加中共五大"/>
-  <历史事件:政治事件 rdf:ID="担任海外部长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1948年，陈庆云到台湾，仍担任海外部长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="以画漫画为生">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1946年，方成辞去科研任务去上海，以画漫画为生。
-1948年去香港，仍以漫画为生。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="赴延安参加抗日队伍">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1938年9月，古元赴延安参加抗日队伍。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="创办大新公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，蔡昌兄弟集资400万港元在香港繁华的德辅道开设自己的公司，即大新百货公司。由蔡昌担任经理，开始了他在中国商界的独立经营。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="任广东航空学校校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，张惠长任广东航空学校校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="连续导演多部影片">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >解放后，郑君里连续导演了《林则徐》、《聂耳》、《枯木逢春》等多部优秀影片。在中国电影史上占有一席重要地位。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="卸大总统职">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年4月，孙中山卸大总统职，致力于经济建设的宣传。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="中副榜">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1890年，钟荣光中副榜。在广州设“大馆”授徒。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="_先施_合并为统一股份公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1919年，上海、香港、广东的“先施”合并为统一股份公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="太平洋教育会议"/>
-  <历史事件:教育事件 rdf:ID="进入芝加哥大学研究院">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年6月，韦悫在奥伯林学院毕业，获文学博士学位。随后，进入芝加哥大学研究院研究政治和社会哲学。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="于广肇义学开始音乐生活">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1908年，吕文成免费就读于广肇义学，利用课余时间，开始他的音乐生活。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="赞助孙中山入学读书"/>
-  <历史事件:政治事件 rdf:ID="发动和领导上海海员工人举行罢工"/>
-  <历史事件:政治事件 rdf:ID="任北伐军飞机队副队长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，孙中山出兵北伐，重新改组飞机队，陈庆云任北伐军飞机队副队长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="被称为_东方范朋克_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >张慧冲擅长武技，是我国早期的武侠片影星，有“东方范朋克”之称。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="宣传社会变革">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1901年，刘师复研读谭嗣同的《仁学》，设立演说社，宣传社会变革。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="创办_晦鸣录_杂志">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1913年，刘师复创办《晦鸣录》杂志，同时印发《无政府主义粹言》等书，鼓吹绝对平均的无政府主义，提倡绝对自由，反对一切强权，反对一切政治和法律，对此后的无政府主义者产生过很大影响。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="反抗_六一_事变"/>
-  <历史事件:政治事件 rdf:ID="夏威夷政变">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1887年夏威夷发生政变，不准华人参与政治。陈芳失去了政治靠山，在政治经济上陷入困境。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任中共华南分局宣传部干事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生任中共华南分局宣传部干事。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="扬名电影界">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#胡蝶影"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >胡蝶影主演香港第一部有声电影《歌侣情潮》后，又扬名电影界，先后演出过《姊妹花》等数十部电影。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="比较系统地接收了西方式的近代教育">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1879年前后，比较系统地接收了西方式的近代教育。
-随母赴檀香山，在长兄孙眉资助下，先后在檀香山、广州、香港等地学习。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="修筑京汉铁路支线"/>
-  <历史事件:经济事件 rdf:ID="倡议和主持建立开平铁路">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >在唐廷枢的倡议和主持下，建立中国自营的第一条铁路——开平铁路</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="任中国戏剧学家协会理事">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="兼任教区理事会教育部长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，韦卓民兼任教区理事会教育部长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="随陆德神父赴罗马深造">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑玛诺"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1645年，郑玛诺随陆德神父赴罗马深造。入读耶稣会主办的圣安德勒学院。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="提出_师夷制夷_和_教育救国_大胆设想">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳第一个提出“师夷制夷”、“教育救国”的大胆设想，开官派留学生之先河，掀开了中国近代教育史上光辉的一页。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="成立_中华印务总局_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1871年，伦敦会决定解散该会的印刷局。黄胜、王韬组织几名中国人，以一万墨西哥鹰洋的代价买下了该出版局的设备和活字，另立“中华印务总局”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="接办轮船招商总局任总办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年，唐廷枢结束买办生涯，接办轮船招商总局任总办。标志着唐廷枢由洋行买办，转变成为洋务运动有力的推动者与近代实业的开创者。总办3年，提出“以西法营之”，广招具有洋行经验的中国买办参加管理。推出股份转让，向社会公开发行股票，使招商总局的股值一年之内翻了一倍半，开中国国内股市之先河。经过他的努力，招商总局不仅拥有了长江和沿海大部分市场，还在菲律宾泰国设立分局，拓展了南洋运输业务，同时远航英国日本新加坡夏威夷和美国本土，招商总局成为中国当时最大的轮船企业。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="去日本学习音乐">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1901年，萧友梅在广州时敏学堂毕业后，自费去日本留学学习音乐。在东京高等师范附属中学学习之余，又在东京帝国音乐学院选修钢琴和声乐，实现了他童年时代学习音乐的愿望。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任_华字日报_主编">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1872年创刊的《华字日报》，黄胜是主笔之一。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="毕业于上海新华艺专">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >梁白波毕业于上海新华艺专。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="宣布息演">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#胡蝶影"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1939年，当红的胡蝶影突然宣布息演，从此退出梨园、影坛。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="就读于意奥兰尼学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1879年，钟工宇前往檀香山，就读于意奥兰尼学校，同学中有孙中山和唐雄等同乡，彼此十分投契。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任_南方日报_检查组组长和副刊部副主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生担任《南方日报》检查组组长和副刊部副主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="受聘为教育部编审员并兼任北京高等师范学校附设实验小学主任">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年，萧友梅受聘为教育部编审员，兼任北京高等师范学校（北师大前身）附设实验小学主任。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="回广东定居">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1957年11月，容国团回广东定居。开始在广州体育学院学习和接受训练。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="遭遇杀害">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李敏周"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1935年2月1日晚，李敏周不幸惨遭杀害。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="担任_永安果栏_司理">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1897年，郭乐与同乡欧阳庆民等人筹集澳币1400元，盘进一家果栏，改名为“永安果栏”，担任司理，从此开始经商生涯。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="就读于上海圣约翰大学_上海交通大学">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >卢燕先后就读于上海圣约翰大学、上海交通大学。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="港行增资">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1972年，港行增资至港币一亿元。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="五卅惨案"/>
-  <历史事件:经济事件 rdf:ID="合开_顺兴川货号_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >徐润与人合开“顺兴川货号”。业务从上海到浙赣山区，从长江内河到沿海各埠，甚至伸至日本长崎。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="在华商总会升五星红旗">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1950年9月30日，担任香港华商总会董事的莫应溎，力主在华商总会升五星红旗，经过其大律师的雄辩口才，法律观点及在大陆所见事实，侃侃而谈，消除了顾虑，赢得了多数。终于在10月1日上午8时，五星红旗在华商总会冉冉升起。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="服毒自杀">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮玲玉"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1935年3月7日，阮玲玉带着遗恨服毒自杀。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="拍摄纪录片_上海抗日血战史_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932年，张慧冲亲赴十九路军抗日前线拍摄了纪录片《上海抗日血战史》（又名《中华光荣史》）。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="担任国民党第五_六届中央执行委员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年以后，陈庆云担任过国民党第五、六届中央执行委员。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="开办_敦茂钱庄_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1859年起，徐润先后与他人合作，开办“敦茂钱庄”。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="被授予文学学士学位">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年，韦卓民毕业时被授予文学学士学位。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="从加拿大回国">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1921年，韦悫从加拿大回国。在广州岭南大学和广州高等师范大学教授政治学、哲学和心理学等课程。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="学习制造炸弹技术">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1904年，刘师复赴日本留学，投身革命浪潮。受无政府主义思想影响，学习制造炸弹技术。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="在南京就任中华民国临时大总统">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年元旦，在南京就任中华民国临时大总统。创立了中国历史上第一个共和政体。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="修建上海大新大厦">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1934年，蔡昌筹齐600万港币，来到上海南京路上建商场。
-1936年1月10日，上海大新大厦落成，楼高10层，1.7万平方米的营业面积，使它超越先施、永安、新新，成为上海四大百货公司之冠。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="组建抗日救亡群众团体_抗日先锋队_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年10月，张惠长回到家乡担任中山县长。出于民族大义，接受中共提出的联合抗日主张，组织建立抗日救亡群众团体“抗日先锋队”，担任总队长（副总队长是中共党员孙康）。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="组织巴黎中国留法音乐家学会"/>
-  <历史事件:教育事件 rdf:ID="参与创办格致书院">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1874年，唐廷枢参与创办格致书院，并担任董事。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="集资创办上海永安纱厂">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，郭乐集资创办了上海永安纱厂，经营良好，生成不断发展，陆续增设了二三四等纱厂，共计纱锭24万枚、布机1500台，资本总额达到3600多万元，成为仅次于申新纺织品公司的上海第二大纺织企业。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="被选为第三届全国人民代表大会代表">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1964年1月，韦悫被选为第三届全国人民代表大会代表。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="为_千字文_画插图">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中国第一本专为农民而编写的识字课本《千字文》中有4000多张插图，就出自郑锦之手。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="收回教育主权运动">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年起，全国掀起收回教育主权运动。11月，国民政府颁布私立学校立案规程，规定大学必须由中国人办理，外国人不得在中国设办大学。岭南大学董事局为此决定在中国设立校董会，校董19人，其中15人为中国人（钟荣光是其中之一），4人为美国人。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="_博闻报_被广东当局查禁">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1900年，钟荣光所办的《博闻报》以登载义和团获胜，外国联军败绩事，被广东当局查禁。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="创办校刊_嘤求集_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦悫</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="参加镇南关起义">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年12月，孙中山亲自参加镇南关起义。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="任苏鲁皖解总华中分会主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1946年1月至1947年9月，韦悫任苏鲁皖解总华中分会主任，为根据地做了大量工作。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="被史家誉为中国改良主张创始人">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳被史家誉为中国改良主张的创始人。其思想主张主要有：1.关于国体和政治上的主张；2.关于用新的历史改革旧文化的主张；3.关于以西方之学术，灌输于中国的教育思想；4.近代化思想。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="在日本专读拜伦诗">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1908年，苏曼殊在日本住清寿馆，专读拜伦诗，称拜伦和雪莱为“灵界诗翁”。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="应聘周刊漫画版主编及特约撰稿人">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方成应聘上海《观察》周刊漫画版主编及特约撰稿人。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="参加天地会"/>
-  <历史事件:经济事件 rdf:ID="倡议和主持建立唐山细棉土厂">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >在唐廷枢的倡议和主持下，建立中国第一家水泥厂——唐山细棉土厂</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="返回鲁艺从事美术创作和教学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1941年至1945年，古元返回鲁艺从事美术创作和教学。这期间有相当多优秀作品。被选为甲等文教模范，获延安青年文学甲等奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="广州西堤大新公司业务遂告停顿">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1938年10月，广州沦陷后，广州西堤大新公司业务遂告停顿。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="以军功升香山协左营中军守备">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄标"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1780年，黄标以军功升香山协左营中军守备。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="与同乡创办了_芳植记商号_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >60年代，陈芳与同乡创办了“芳植记商号”，专营中国货物，批零兼售。后投资航运业，主要经营香港与檀香山的货物与客运业务。同时，大举进入甘蔗种植和制糖业。大胆引进西方先进技术，采用当时最先进的榨糖机器，对工人实行“一条龙”管理，年产值达2500吨，成为当时生产效率最高的糖厂。他还广泛开辟连锁销售网络，获得了巨额利润。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="发动沙面洋务工人和香港工人联合举行反帝政治大罢工"/>
-  <历史事件:政治事件 rdf:ID="航空处处长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，张惠长任航空处处长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="甲午中日战争"/>
-  <历史事件:政治事件 rdf:ID="被推为_檀香山华侨国民外交协进会_会长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年，上海五卅惨案和广州沙基惨案发生后，檀香山华侨愤激异常，曾组织“檀香山华侨国民外交协进会”，钟工宇被推为会长；为了支援祖国的救国运动出版了三期名为《醒狮》的刊物。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="主张效法西方资产阶级政治">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑观应主张效法西方资产阶级政治，“立议院，达民情”，实行君主立宪制度。
-指出社会不断向前发展，一个国家的政治制度也必须发生变化。
-对洋务派思想也进行一定的批判。揭露顽固派官僚是一群自甘愚昧、祸国殃民的伪君子，“一事不为，而无恶不作”，并对他们出卖民族权益、垄断新式企业的种种倒行逆施，表示了极大愤慨。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑观应"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="考入上海明星公司">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮玲玉"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年，阮玲玉考入上海明星公司当演员</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="被推选为华中大学复校校长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年夏，华中大学复校，韦卓民被推选为校长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="建立_铁城_"/>
-  <历史事件:经济事件 rdf:ID="开设鸿发公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1902年，唐雄开设鸿发公司，专营国货及古董。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="赴苏联深造飞行技术">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年2月，杨官宇赴苏联深造飞行技术。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="参与土地改革"/>
-  <历史事件:政治事件 rdf:ID="镇南关起义"/>
-  <历史事件:文化事件 rdf:ID="复兴东方图书馆">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1933年，王云五复兴东方图书馆，编印《万有文库》续编、《小学生文库》，出版中小学教科书千万余册，各种字典数十万本，重要参考书数百种。影响深远。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="辛亥恩科第30名乡试举人"/>
-  <历史事件:文化事件 rdf:ID="参加电影拍摄和话剧演出">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932-1937年间，郑君里参加了《火山情血》《大路》《新女性》等近20部电影的拍摄，并参加了《娜拉》、《大雷雨》等话剧的演出，是当时著名的“小生”之一。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="任太古洋行天津分行买办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1886年，郑翼之任太古洋行天津分行买办。全力以赴开展业务，使天津太古洋行的轮运业务不几年就跃居天津外轮第一位。由于其精明能干，洋行各项业务迅速发展，郑因此也成为了巨富。被称为天津四大买办之一，人称“太古郑”。他也成为租界的大绅士、天津广东帮的中心人物之一。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑翼之"/>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="计划协助李济深组织抗日空军">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1933年，张惠长十分支持十九路军的抗日主张，发动空军第一、五中队长邓粤铭、刘植炎等人，取道香港前往福建，计划协助李济深组织抗日空军。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:军事事件>
-  <历史事件:教育事件 rdf:ID="任中山模范县训政委员兼财务组主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪任中山模范县训政委员兼财务组主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="复任中山县长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1945年7月，张惠长复任中山县长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="提出教会本地化的问题">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑玛诺"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1668年，郑玛诺返回澳门，曾上书耶稣会亚洲区总会长。第一个明确提出教会本地化的问题。对其后的中国基督教事业的开拓有着重大的影响。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="随戏班演出">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，胡蝶影随戏班到美国三藩市演粤剧。一时轰动唐人街。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#胡蝶影"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="被正式推举为校董会主席兼校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年1月，钟荣光被正式推举为校董会主席兼校长。这是首任华人校长</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="为受害者索要赔偿">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    ></rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="在广州法国天主教会圣心中学就读">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑志声幼时曾在广州法国天主教会的圣心中学就读，并任学生管乐队中的萨克斯管手。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="参加土改工作和从事美术工作">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1946年至1948年，古元先后到华北解放区和东北解放区参加土改工作和从事美术工作，期间主要作品有《农民踊跃交公粮》等</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="被聘为国民参政会第二届参政员和侨务委员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >周崧曾任旧金山美洲同盟会评议员，国民党驻美国总支部委员。抗日战争期间，周积极捐资支援抗日，被聘为国民参政会第二届参政员和侨务委员等职务。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#周崧"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="兴建_中山港工商炼油公司"/>
-  <历史事件:文化事件 rdf:ID="专著_唐诗小札_和_宋词小札_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生专著《唐诗小札》、《宋词小札》，以精到优美的文字，对唐诗宋词进行了独特的解读，影响了整整一代读者。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="开设售卖裁缝用品和成衣的商店">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1883年，钟工宇离开学校进入商场，开设售卖裁缝用品和成衣的商店。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="文化大革命"/>
-  <历史事件:文化事件 rdf:ID="任上海救亡演出队队长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >抗战爆发后，郑君里以戏剧为武器，宣传抗日救国，并任上海救亡演出队队长。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="上海_四大百货公司_出现">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，香港先施和上海先施发生利益冲突，黄焕南与司理刘锡基一起离开先施，与香山籍的澳大利亚侨商李敏周合作，创办新新公司，很快就与先施、永安鼎足而立，加上1935年由香山籍澳侨商菜昌创办的大新公司，合称上海“四大百货公司”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘锡基"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李敏周"/>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="任香港_好消息晚报_总编辑">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过香港《好消息晚报》总编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="潜心著书立说">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1963年，王云五辞去一切政务后，除台湾商务印书馆董事长外，潜心著书立说。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="辞去惠爱医馆之职">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1866年，黄宽辞去惠爱医馆之职，自设诊所，暇时协助博济医院从事诊务。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="召开中国国民党第一次全国代表大会">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年1月，召开中国国民党第一次全国代表大会，改组国民党，重新解释三民主义。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="被委任为教育长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，陈庆云被委任为教育长。接办航空学校，着手招考第三期学生。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="援救共产国际负责人">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年前后，韦悫帮助共产国际调查托派活动，并请蔡元培出面援救被捕的共产国际负责人纽伦。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任中国美术家协会常务理事_人民日报高级编辑_中国新闻漫画研究会会长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方成曾任中国美术家协会常务理事、人民日报高级编辑、中国新闻漫画研究会会长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="担任西南空军总司令">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年，张惠长当选为国民党第四届中央执委，并随孙科到广州，担任西南空军总司令。期间曾发出号召空军人员誓不参加内战的通电，得广东空军人员签名响应。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="创作_妇女自由歌_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年8月，阮章竞在参加布达佩斯举行的世界青年代表大会途中所写的《妇女自由歌》，获大会奖励。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:自然事件 rdf:ID="旧金山大地震"/>
-  <历史事件:军事事件 rdf:ID="创办北洋水师"/>
-  <历史事件:政治事件 rdf:ID="被提名作为粤都督"/>
-  <历史事件:经济事件 rdf:ID="到上海英商太古洋行工作">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1877年，郑翼之到上海进入英商太古洋行。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="创作长诗_圈套_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1947年，阮章竞创作了长诗《圈套》，获得晋冀鲁豫边区文学特等奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="编定刊行_易言_"/>
-  <历史事件:政治事件 rdf:ID="被调到福建华侨大学任代理校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1964年夏，韦悫被调到福建华侨大学任代理校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="前往台湾">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1938年，梁白波随夫去台湾。
-1949年后，张惠长前往台湾。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="夏威夷建立商业帝国"/>
-  <历史事件:文化事件 rdf:ID="当选第四届全国美协副主席">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1985年，古元当选为第四届全国美协副主席。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="出书_盛世危言_"/>
-  <历史事件:文化事件 rdf:ID="被推荐进入商务印书馆任职主持编译所工作">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >王云五被胡适推荐进入商务印书馆任职主持编译所工作。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="考入广州时敏学堂">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1899年，萧友梅考入广州时敏学堂，接受西式教育。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="考入里昂音乐学院">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，郑志声考入里昂音乐学院学习作曲。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="在檀香山建立兴中会">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1894年11月24日，在檀香山建立兴中会。
-提出“驱除鞑虏，恢复中国，创立合众政府”的主张。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="合开_元昌绸庄_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >徐润与人合开“元昌绸庄”。业务从上海到浙赣山区，从长江内河到沿海各埠，甚至伸至日本长崎。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="辛亥革命">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >辛亥革命，是指发生于中国农历辛亥年（清宣统三年），即公元1911年至1912年初，旨在推翻清朝专制帝制、建立共和政体的全国性革命。狭义的辛亥革命，指的是自1911年10月10日（农历八月十九）夜武昌起义爆发，至1912年元旦孙文就职中华民国临时大总统前后这一段时间中国所发生的革命事件。广义上辛亥革命指自19世纪末（一般从1894年兴中会成立开始，但也有学者认为从1905年同盟会成立算起）迄辛亥年成功推翻清朝统治在中国出现的连场革命运动。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="在日本组织成立中华革命党">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1914年，孙中山在日本组织成立中华革命党。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="发行债券">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙中山在檀香山发行债券</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="中秀才">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1883年，钟荣光中秀才。师从岭南国学名家吴道镕举人。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="在上海成立广东同乡会馆">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1872年上海成立广东同乡会馆，唐廷植任首董，热心捐资维持。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷植"/>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="考入爱丁堡大学医科">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1850年，黄宽转赴英国，考入爱丁堡大学医科，成为中国第一个留英学生。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="赴美国哈佛大学研究院进修深造">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，韦卓民得到资助和奖学金补贴，赴美国哈佛大学研究院进修深造。在著名哲学家霍金指导下研究西洋哲学史。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="广州西堤大新公司遭轰炸">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年，日本发动全面侵华战争，广州西堤大新公司遭轰炸，破坏严重。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="被任为大元帅府参军处副官">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年2月1日，张庆云被孙中山任命为大元帅府参军处副官。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="担任航空委员会首席参事">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年以后，陈庆云担任过航空委员会首席参事。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="计划创办国立音乐院">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年10月，经蔡元培努力争取，政府终于通过了萧友梅创办国立音乐院的计划。几经周折，在上海创办了中国第一所专业高等音乐学府——国立音乐院。萧友梅任教授兼教务主任。后为代院长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="创作_娉婷_画">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年，郑锦考入日本美术最高学府——日本绘画专门学院。同年，创作了《娉婷》（被台北故宫博物院收藏）一帧。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="重视学习西方先进军事技术">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑观应"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑观应重视学习西方长技，加强军事操练和改进武器装备。一再强调：“兵制阵法宜练也”，“枪炮器械宜精也”。
-在军民联防、筹建海军、海防方面，提出了自己的见解，分别著有《论民团》、《论水师》、《论练兵》。
-在武器采购上，应该要精，同时应该自行仿制，力求“标新立异，进而弥上”。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="在英国伦敦被清公使馆诱捕">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1896年10月，在英国伦敦被清公使馆诱捕，经英国友人营救脱险。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="参加延安文艺工作座谈会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1942年5月，古元参加毛泽东主持的延安文艺工作座谈会。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="担任_抗日先锋队_总队长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年10月，张惠长回到家乡担任中山县长。出于民族大义，接受中共提出的联合抗日主张，组织建立抗日救亡群众团体“抗日先锋队”，担任总队长（副总队长是中共党员孙康）。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="创办新新公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年，黄焕南与司理刘锡基一起离开先施，与香山籍的澳大利亚侨商李敏周合作，创办新新公司。公司综合了先施和永安二大公司的特点，其建筑更宏伟更实用更坚固，整座大厦可以说是集百货、餐饮、旅游业之大成，在当时上海也名噪一时。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="先施企业生意达到鼎盛">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1964年，香港繁荣，先施企业生意鼎盛，总行增资至港币2000万元。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="沙基惨案"/>
-  <历史事件:政治事件 rdf:ID="发表_讨袁宣言_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1914年，苏曼殊在中华革命机关报《民国杂志》上发表《讨袁宣言》，反对袁世凯倒行逆施、残杀革命党人。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="荣获亚太裔杰出女演员奖">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1988年，卢燕荣获美国罗安其市市长颁赠的亚太裔杰出女演员奖。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="出席华盛顿国际税务会议中国代表顾问"/>
-  <历史事件:教育事件 rdf:ID="任上海市副市长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年5月，上海解放后，韦悫任上海市副市长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="成立护法军政府"/>
-  <历史事件:政治事件 rdf:ID="任中央驻粤空军总指挥">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年，陈庆云任中央驻粤空军总指挥。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="成立_宝源祥茶栈_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1868年，徐润结束买办生涯，自立“宝源祥茶栈”。成为上海最大的经营出口茶叶的茶栈，还在上海茶叶公所等任董事。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="任中国文联全委_副主席">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，阮章竞任中国文联第四届全委、副主席。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="成为我国第一位女子空军飞行员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年，朱慕飞的父亲被孙中山委任为航空局长，朱慕飞学习飞行技术，学会独立驾机和特级飞行及修理飞机技术。嗣后被编入航空局，成为我国第一位女子空军飞行员。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#朱慕飞"/>
-  </历史事件:军事事件>
-  <历史事件:社会事件 rdf:ID="抵达广州">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年冬，杨官宇抵达广州。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="担任上海电光公司华人股东代表">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐廷植</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="国民政府教育行政委员会大会"/>
-  <历史事件:教育事件 rdf:ID="被聘为华中大学副校长兼校务长并继任代理校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年，武昌各教会学校合并成立华中大学，韦卓民被聘为副校长兼校务长，继任代理校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="任江淮大学校长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1942年1月，韦悫到苏北和皖东抗日民主根据地任江淮大学校长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任中央美术学院版画系教授_教研室主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1958年，古元任中央美术学院版画系教授、教研室主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="中央航空学校校长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，张惠长任中央航空学校校长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="成为枢密院议员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1857年，陈芳迎娶夏威夷贵族公主朱莉亚，从此跻身于夏威夷上流社会。成为枢密院（立法院）议员，成为皇亲国戚。借此政治势力，促使夏威夷王国通过一系列有利于华人发展的立法，成为著名的华侨领袖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="任商务印书馆编审部主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年1月至1938年7月，韦悫出任商务印书馆编审部主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="收购一家果栏并改名_永安果栏_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1897年，郭乐与同乡欧阳庆民等人筹集澳币1400元，盘进一家果栏，改名为“永安果栏”，担任司理，从此开始经商生涯。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="创作小说_非梦记_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，苏曼殊创作小说《非梦记》。从争取婚姻自由方面接触到反封建主题。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="离开先施公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，香港先施和上海先施发生利益冲突，黄焕南与司理刘锡基一起离开先施公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="发表译作_惨世界_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1903年，苏曼殊译作《惨世界》发表于上海出版的《国民日日报》上，发表至11回，因报馆被封中辍，后由苏主译，陈独秀润色加工，并续译至12至14回。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:about="#获得第八届“终身艺术成就奖”">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1999年6月19日，美国林肯中心和美华艺术协会颁赠卢燕第八届“终身艺术成就奖”。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="赴美定居">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年，卢燕赴美定居。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="岭南学堂改名为岭南学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，岭南学堂改名为岭南学校。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="开设同顺行"/>
-  <历史事件:文化事件 rdf:ID="为上海_南方报_开辟英文版">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1905年，唐国安与颜惠庆二人为上海《南方报》开辟英文版。影响颇大。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="参加第一届拥护世界和平大会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年3月，古元作为中国代表团成员赴捷克斯洛伐克参加第一届拥护世界和平大会。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="集资创办图强飞机公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1910年，杨著昆鼓励和支持儿子杨仙逸投身祖国的民主革命大业，并一起参加同盟会，于民国元年集资创办图强飞机公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="任参谋部上校参谋">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙乾</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:教育事件 rdf:ID="进入甄贤学校读书">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1943年，容国团进入甄贤学校读书。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="组织_中华救护会_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >“七七”事变后，莫应溎又组织了“中华救护会”，训练了数百名爱国侨胞回内地服务。随着抗战形势的发展，亲赴南洋开展宣传抗日活动。后在英国各属地募捐了数十万巨款。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="设立演说社"/>
-  <历史事件:军事事件 rdf:ID="率领_福龙号_参与黄海海战"/>
-  <历史事件:经济事件 rdf:ID="创办实地美路板厂有限公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1899年，集资6万元，发起创办实地美路板厂有限公司，专营板料铁器、建筑和碾米的综合性企业。到20世纪30年代，资本已达70万元，成为一间甚有规模的侨资企业。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="主张艺术创作大胆改革和创新">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >艺术创作上，方人定主张大胆改革和创新，早年他的画主要是山水、花鸟、走兽，后来，主张艺术应该反映人生、反映时代。因此，从绘画的社会功能和大众利益出发，突出人物画，《战后的悲哀》、《雪夜逃难》、《大旱》、《行行重行行》、《穷人之餐》、《祈祷》等作品都反映了他在艺术探索和追求中的谐趣，因而使他成为岭南画派中擅长人物画的著名画家。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方人定"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="抗日战争"/>
-  <历史事件:文化事件 rdf:ID="任商务印书馆总经理">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1930年春，王云五重返商务印书馆，任总经理。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任上海大众出版社编辑">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932年，黄苗子到上海，从事美术漫画活动，曾任上海大众出版社编辑，进行杂志设计、封面画及插图制作。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="被聘为客座教授">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦卓民被美国耶鲁大学聘为客座教授。他常在耶鲁讲课之余，“搭题”宣传抗战。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="学习日本画">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1901，郑锦考入京都（西京）美术学院，学习工精细腻的日本画。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="中举人">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1895年，钟荣光中举人。名驰文坛。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="广州的广东女子学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="掌管洋行的丝楼"/>
-  <历史事件:文化事件 rdf:ID="任_香港工商日报_记者">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过《香港工商日报》记者。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="创建济和水火险公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1878年，唐廷枢创建济和水火险公司</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="创办鸿发公司"/>
-  <历史事件:教育事件 rdf:ID="主持_清华学堂_开办事宜">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年，唐国安主持“清华学堂”开办事宜，兼任副监督。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="应邀担任北京大学中国文学系音乐讲师兼该校音乐研究会导师">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年后，萧友梅应邀担任北京大学中国文学系音乐讲师兼该校音乐研究会导师。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="潜往越南西贡_柬埔寨金边等地考察敌情"/>
-  <历史事件:文化事件 rdf:ID="设立_武峰阅报社_"/>
-  <历史事件:文化事件 rdf:ID="主演香港第一部有声电影_歌侣情潮_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >胡蝶影主演香港第一部有声电影《歌侣情潮》，轰动香港。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#胡蝶影"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="护法战争">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，召开非常国会，组织中华民国军政府，被推举为大元帅，开展护法运动。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="创办益顺盛报关行">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑翼之在上海创办了益顺盛报关行。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="师从廖飞廉">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#胡蝶影"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >胡蝶影十三四岁，师从廖飞廉潜心学戏，稍有名气。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="组织中华音乐协会"/>
-  <历史事件:经济事件 rdf:ID="被指派随同往天津分行工作">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1881年，郑翼之被指派随同往天津分行工作。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="任中央大学教育学院院长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年5月，韦悫到南京任中央大学教育学院院长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="移居澳门学习语言">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1889年，萧友梅随家移居澳门，从师学习英文和日文。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="创作歌剧_赤叶河_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >参加土改时，阮章竞创作了大型歌剧《赤叶河》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="黄花岗起义"/>
-  <历史事件:文化事件 rdf:ID="获得好莱坞终身成就奖">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >2006年9月17日，卢燕获得好莱坞颁发的终身成就奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="赴天津考察商务"/>
-  <历史事件:社会事件 rdf:ID="与秘鲁官方交涉"/>
-  <历史事件:文化事件 rdf:ID="出任国家女队主教练">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1964年，容国团出任国家女队主教练。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="到英国留学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1914年，韦悫到英国留学。受第一次世界大战影响，伦敦战云密布；后决定转往美国留学，其时，思想有所转变，认识到“实业救国”的道路未必走得通，而社会科学更为重要，遂改学哲学和政治学。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="上海先施公司开幕">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，上海先施公司开幕。公司附设的屋顶游乐场、东亚旅馆和豪华餐厅也纷纷开张，还有杂耍、魔术、绍兴戏、京戏等。公司开业第二年，营业额已相当于投资资本的两倍，先施开创了中国百货业的新时代。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="倡导废科举并兴新学">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑观应"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑观应是废科举、兴新学的首倡者。
-坚定站在改革派立场上，坚决支持改革科举，兼习中外之学。
-详细介绍了西方国家普及义务教育、女子教育及专科教育，提出在学校制度、办学规模、教学内容上采取更为大胆的方法。
-翻译西书可以使更多的人得以接触西学。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="被聘为中国社会科学院研究生院新闻系硕士生导师">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方成曾被聘为中国社会科学院研究生院新闻系硕士生导师。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="参加世界基督教代表大会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年6月，韦卓民参加英国牛津大学与爱丁堡召开的世界基督教代表大会。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="参加英皇加冕礼">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >奉命率海圻号前往英国伦敦参加英皇加冕礼_继赴美慰问华侨</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="加入中华革命党"/>
-  <历史事件:文化事件 rdf:ID="被看作优秀电影史家">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里是一位早期的优秀电影史家。著有《论抗战戏剧运动》、《画外音》等书。其中，《现代中国电影史略》一书就很有代表性。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="在南国艺术学院戏剧科学习">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里曾在南国艺术学院戏剧科学习。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任湖南实业学堂教员等职">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1904-1906年，苏曼殊先后任湖南实业学堂教员等职，并结识了一批有进步思想的革命同志和爱国人士，对他的思想的发展有一定的积极影响。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="迁往广州康乐村">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1904年，钟荣光迁往广州康乐村。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="担任大新公司经理">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，蔡昌兄弟集资400万港元在香港繁华的德辅道开设自己的公司，即大新百货公司。由蔡昌担任经理，开始了他在中国商界的独立经营。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="宣扬无政府主义">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909年冬，逢宣统大赦，被释放后赴香港，刘师复致力研究《新世纪》，宣扬无政府主义。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="创作我国第一首大提琴独奏曲">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1930年，萧友梅所作的《秋思》，是我国第一首大提琴独奏曲。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="改组中华革命党为中国国民党">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1919年，孙中山改组中华革命党为中国国民党，并担任总理。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="上海郇光和南洋商业高中等校">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="毕业于香港中国新闻学院">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生在香港中国新闻学院毕业。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="在水滨开铺">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1856年，陈芳买下水滨一个店铺，自立门户。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="任格致书院副监督">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，钟荣光当上格致书院的副监督，成为学校当中华人方面的最高负责人。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="辞去中央陆军大学工兵教官">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙乾</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="作品_妇女自由歌_在布达拉斯获奖"/>
-  <历史事件:文化事件 rdf:ID="历任中国作家协会理事及顾问">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，阮章竞历任中国作家协会第一二三四届理事，第五届顾问。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="投资烟台纩丝局">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐廷植投资烟台纩丝局任总董</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="创办了_晦鸣学社_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，刘师复在广州创建了中国第一个无政府主义组织“晦鸣学社”</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="组织东乡总局团练"/>
-  <历史事件:文化事件 rdf:ID="成立张慧冲舞台艺术整理小组">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1961年，上海黄浦区文化局成立张慧冲舞台艺术整理小组。他口讲手作，挖掘了许多传统节目，并创作了《鱼美人》、《八宝箱》等新节目。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="武昌起义">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年10月10日武昌起义，是为著名的辛亥革命。导致清朝专制统治的覆灭。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="任中山县长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙乾</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="策动李绮庵起义"/>
-  <历史事件:政治事件 rdf:ID="成立香港兴中会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1895年1月，成立香港兴中会。
-    准备在广州发动起义，因事泄而失败，被迫逃亡海外。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="建立生安泰果栏">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1902年，郭乐在斐济首都苏瓦埠建立生安泰果栏。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="_待旦_入选_大正美术展览会_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，郑锦的力作《待旦》（文天祥）入选“大正美术展览会”。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="参加上海明星影片公司">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年，张慧冲参加上海明星影片公司。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="北上镇江参加太平军"/>
-  <历史事件:教育事件 rdf:ID="武汉大学_郑州大学新闻系兼职教授">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方成曾被聘为武汉大学、郑州大学新闻系兼职教授。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="升任公司监督">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，黄焕南升任公司的监督。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="上海五卅惨案"/>
-  <历史事件:军事事件 rdf:ID="被任为东江飞机队队长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年4月29日，杨官宇被孙中山任命为东江飞机队队长。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="被选为第二届全国人民代表大会代表">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1959年，韦悫被选为第二届全国人民代表大会代表。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="参加旅行表演团"/>
-  <历史事件:文化事件 rdf:ID="创办的_中外新报_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中国人最早自办的一家报纸，是伍廷芳创办的《中外新报》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="考入广东省立第一中学">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932年，古元考入广东省立第一中学（广雅中学）。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="加入同盟会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1906年，在东京帝国大学攻读教育学的萧友梅加入了同盟会。
-1908年，郑道实参加同盟会。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="获奥斯卡金奖">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1988年，卢燕参加拍摄的《末代皇帝》获奥斯卡金奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="率军平定肇庆_梧州"/>
-  <历史事件:文化事件 rdf:ID="对京师西法印刷业创立时期作出技术援助">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年，北京开设西法印书局，向英华书院购买价值2000余金的大小铅字两副，黄胜遂携铅字，亲送京师，呈于总理衙门。这是黄胜对京师西法印刷业创立时期所做出的技术援助。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="在秘密党中央机关当编辑">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，杨匏安从南洋回上海，在秘密的党中央机关报当编辑。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="组成同盟会檀香山支部秘密团">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1910年，孙中山到檀香山成立兴中会檀香山支部，召集工商界会员在钟的寓所开会，组成同盟会檀香山支部秘密团，钟工宇是协理之一。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="带队获得女子团体冠军">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >在容国团严格地训练下，中国女队在1965年南斯拉夫举办的第第二十八届兵乓球锦标赛上，获得了女子团体冠军。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="当选中国版画家协会副主席">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >14980年，古元当选为中国版画家协会副主席。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="抵达美国纽约">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1847年4月12日，黄宽抵达美国纽约。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="筹办上海机器织布局"/>
-  <历史事件:文化事件 rdf:ID="任中央研究院社会科学研究所研究员兼法制组主任">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年秋，王云五曾经一度离开商务印书馆，出任中央研究院社会科学研究所研究员兼法制组主任。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="被选为第一届全国人民代表大会代表">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1954年，韦悫被选为第一届全国人民代表大会代表。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="在威海卫海战中受伤被俘"/>
-  <历史事件:经济事件 rdf:ID="开办仁济和水火保险公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1875年，徐润与唐廷枢等香山人开办中国第一家保险公司——仁济和水火保险公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="被任为全国漫画作家协会战时委员会委员">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >梁白波在武汉被任为全国漫画作家协会战时委员会委员，是15名委员之一。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="在香港参加_人间画会_"/>
-  <历史事件:经济事件 rdf:ID="经营农牧场和商业">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1876年，唐雄全家迁往檀香山，经营农牧场和商业，逐渐致富。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="经营中国土特产和传统家具">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1849年，陈芳随伯父来到檀香山，从学徒开始学习经商，他主要经营中国土特产和传统家具，盈利颇丰。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="上海永安公司正式开业">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年9月5日，上海永安公司正式开业。营业方针：“统办环球货品发售，输出中华诸生土产”。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="永安公司改名为上海第十百货公司"/>
-  <历史事件:教育事件 rdf:ID="岭南学堂更名为岭南学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，岭南学堂更名为岭南学校。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="被委任美国空军志愿队中国人员管理处副主任">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1943年秋，杨官宇被委任美国空军志愿队中国人员管理处副主任。协助陈纳德的美国十四航空队对日作战。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:军事事件 rdf:ID="奉旨进攻镇江_阻止太平军挥戈东进之势"/>
-  <历史事件:军事事件 rdf:ID="任航空学校校长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年春，杨官宇任航空学校校长。培训第五六期学生共135人。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="任立法院委员和国大代表">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1947年，张惠长任立法院委员、国大代表。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="被选为香港特别行政区基本法起草委员会委员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1985年，莫应溎被选为香港特别行政区基本法起草委员会委员。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任人民出版社创作室主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1952年，古元任人民出版社创作室主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="认购檀香山债券">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙眉认购孙中山在檀香山发行的债券</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="被调任为第三飞机制造厂厂长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1943年夏，杨官宇被调任为第三飞机制造厂厂长。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:经济事件 rdf:ID="在先施公司任职">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1900年，蔡昌返回香港，在先施公司任职，逐步积累了在百货行业经营的宝贵经验。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="担任中央海外部长兼中国航空建设协会总干事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年以后，陈庆云担任过中央海外部长兼中国航空建设协会总干事。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任影协上海分会常务理事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="任中央陆军大学工兵教官">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙乾</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="出版_拜伦诗选_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1909年，《拜伦诗选》出版。是辛亥革命时期的著名译作之一。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="在檀香山逝世">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1960年，钟工宇在檀香山逝世，享年96岁。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="成立先施保险置业公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年，马应彪成立了先施保险置业公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="获得男子团体冠军">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1961年，在北京举办的第二十六届世界兵乓球锦标赛上，容国团和队员们努力拼搏，打败日本队，首次获得男子团体冠军。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="辞去国立北平美术专科学校校长职务">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年，郑锦辞去国立北平美术专科学校校长职务。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="主张国共一致抗日">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1941年，皖南事变后，韦卓民拒绝进行反共宣言，坚决主张国共团结，一致抗日。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="民国政府成立"/>
-  <历史事件:政治事件 rdf:ID="被任为广东航空处第二飞机队队长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年11月回国，杨官宇被任命为广东航空处第二飞机队队长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="移居澳门">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1940年，郑锦为逃避战火，移居澳门。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="兼任西南施医局主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1875年，黄宽兼任西南施医局主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="洋务运动"/>
-  <历史事件:军事事件 rdf:ID="讨伐桂系军阀陆荣廷_平定广西全省"/>
-  <历史事件:教育事件 rdf:ID="被破格聘为文华大学教师">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦卓民毕业后留学任教，破格聘请为文华大学教师，教授英语、数学、形式逻辑、西洋哲学史等课程。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="决定国共两党实行合作">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，孙中山接受苏俄和中国共产党的建议，决定国共两党实行合作，以推进国民革命。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="开办在明幼儿园">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >马在明</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="成为中国近代第一个留学生">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="筹备广州新军起义失败"/>
-  <历史事件:文化事件 rdf:ID="任_香港正报_副总编辑">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过《香港正报》副总编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="创立_心社_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >与莫纪彭等创立_心社_</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="被颁发皇家MBE勋章">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#莫干生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1959年，香港政府特别颁发皇家MBE勋章予莫干生。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="创建黄埔军校"/>
-  <历史事件:政治事件 rdf:ID="参加中国人民政治协商会议">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年9月，韦悫参加在博济举行的中国人民政治协商会议。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="成功制成高胡乐器">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >在上海期间，吕文成常与小提琴家司徒梦岩合作演出，受司徒启发，成功地制成了高胡，并用于演奏。从而丰富了乐器的表现力，使高胡成了广东音乐和粤剧伴奏中独具一格的主奏乐的乐器，丰富了演奏形式，增加了表现手法，促进了广东民间音乐的发展。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="在香港病逝">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1953年，蔡昌在香港病逝。
-1981年8月22日，吕文成在香港病逝。
-1932年，朱慕飞在香港病逝。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#朱慕飞"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#蔡昌"/>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="岭南学校更名为岭南文理科大学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1914年，岭南学校更名为岭南文理科大学，这是岭南大学的升格。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="就任商务印书馆任职主持编译所所长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >王云五就任编译所所长后，雄心勃勃开展工作，引进人才，扩大业务，以“教育普及”、“学术独立”为出版方针，不仅编辑出版了《百科小丛书》专门介绍西方学术思想，主编了《万有文库》，统一版式排印出版世界名著和我国古籍，主编过《王云五大字典》、《王云五小字典》。发明了“四角号码检字法”，推介和完善了“中外图书统一分类法”。商务印书馆在他手上达到鼎盛时期，其规模和组织的庞大齐全，现在也没有多少出版社可与之相比。而商务印书馆出版的读物如《万有文库》，其规模和在出版史上的影响可谓空前未有。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="捐资兴建马应彪夫人护养院">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。马应彪夫人护养院（现为中山大学校医院的一部分）。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="任国立音乐院教授_教务主任和代院长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年10月，经蔡元培努力争取，政府终于通过了萧友梅创办国立音乐院的计划。几经周折，在上海创办了中国第一所专业高等音乐学府——国立音乐院。萧友梅任教授兼教务主任。后为代院长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="创办火奴鲁鲁果业公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，钟工宇集资创办了火奴鲁鲁果业公司，生产罐装菠萝，公司种植菠萝达1400英亩，钟工宇在公司占有60%的股份。此外，钟是华人联合进益有限公司、中华信托有限公司等侨资公司的董事。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="创办同文书局">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1868年，徐润结束买办生涯，创办同文书局——中国第一家机器印刷厂，引进外国先进印刷设备和技术，促进了中国印刷技术的进步和发展，在广东旅沪商人组织的广肇公所中，执掌财政大权，是粤商在上海的主要代表。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="被准建石牌坊嘉奖并赐_乐善好施_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >陈芳始终关心故土，造福乡里。1886年，得知故土遭受水灾，慷慨捐出3000两白银。光绪和慈禧得知后下令准建石牌坊嘉奖并赐“乐善好施”四个字。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="担任北京作协名誉主席">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1988年12月，阮章竞担任北京作协名誉主席。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任中央美术学院副院长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1979年，古元任中央美术学院副院长。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="驾驶水上飞机试飞失败">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，朱慕飞驾驶水上飞机试飞失败。航空局试飞一水上飞机，朱慕飞驾机到达虎门莲花山，遇空气涡流，强行降落在水上，受轻伤，往香港治疗。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#朱慕飞"/>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="被评为1960年八名最优秀电影演员之一">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >卢燕被美国颇有影响的电影刊物《银幕季刊》把她评为1960年八名最优秀的电影演员之一。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任上海市人大代表">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="出生于澳门">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑玛诺"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1633年，郑玛诺生于澳门。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="兼任_清华学堂_副监督">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年，唐国安主持“清华学堂”开办事宜，兼任副监督。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="在武汉就读文华书院备馆预备班">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1903年秋，韦卓民在武汉就读武昌美国基督教圣公会创办的文华书院备馆预备班。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="参加香港_东方报_编辑工作">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1905年，刘师复成为同盟会最早的成员之一。同年，参加香港《东方报》编辑工作。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="任教育部副部长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦悫</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="负责_中外新报_编辑印行工作">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >中国人最早自办的一家报纸，是伍廷芳创办的《中外新报》。黄胜负责其编辑印行工作。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="抗议交涉美国排华法案"/>
-  <历史事件:政治事件 rdf:ID="因肝癌不治逝世于北京">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年3月12日，孙中山因肝癌不治，逝世于北京。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="被誉为_世界魔术比赛冠军_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，张慧冲表演“腰斩活人”，其表演水平，可以与德国魔术家尼古拉媲美，而且，加演了“缸遁”、“水遁”，一时声名大振，被誉为“世界魔术比赛冠军”。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="起草中国第一份股份制资本主义企业章程">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任暨南大学新闻系_业余文艺大学教授">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生担任暨南大学新闻系、业余文艺大学教授。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="参与创办民国报"/>
-  <历史事件:政治事件 rdf:ID="创办或兼办_可报_等">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟荣光"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1896年，钟荣光参加孙中山领导的兴中会后，尽改过去所为。先后创办或兼办《可报》等，公开抨击时弊，大力鼓吹革命。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任上海电影制片导演">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="与英国草签_中英威海卫条约_"/>
-  <历史事件:文化事件 rdf:ID="任_龚自珍诗文选_编辑">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生担任《龚自珍诗文选》编辑。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="担任上海火烛保险公司首董">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐廷植</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="定居于梅溪故居和澳门公馆">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1890年，陈芳带次子陈席虞及部分家人回老家定居。晚年定居于梅溪故居和澳门公馆。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="加入_扶轮社_"/>
-  <历史事件:经济事件 rdf:ID="合并为十二济和保险公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1886年，唐廷枢将仁济和水火保险公司和济和水火险公司合并为十二济和保险公司，有力地推动了民族经济的发展，开创了中国保险业的先河。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="参加_抗日联盟会_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑志声参加了中国留法人士组织的“抗日联盟会”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="成为岭南大学第一任校董">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="任博济医院代理院长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1867年，黄宽任博济医院代理院长。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="参加中国左翼戏剧家联盟">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1930年，郑君里参加中国左翼戏剧家联盟，是“左联”行动纲领的起草人之一。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="在国民党中央任第二届中央委员_中央组织部秘书和代部长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，杨匏安受中共中央委派参加国民党的改组，此后三年间在国民党中央任第二届中央委员、中央组织部秘书和代部长，以此身份大力发展共产党的组织和工农运动。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨匏安"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="结束檀香山全部事业">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙眉将在檀香山数十年经营的事业全部结束，与母亲杨太夫人等举家回到香港居住。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="投资轮船"/>
-  <历史事件:教育事件 rdf:ID="赴国外大学研究院深造">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年5月，韦卓民到美国伦敦大学研究院深造。在著名哲学家霍布侯教授指导下研究哲学。先后到柏林大学、巴黎大学及牛津大学进修，历时两年，取得哲学博士学位。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="以官费赴德国留学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >袁世凯窃取革命果实后，萧友梅不愿与袁为伍，以官费赴德国留学。在德国莱比锡音乐学院攻读理论和作曲，同时在莱比锡国立大学攻读哲学与教育学。后又转到柏林大学选修哲学、教育学、音乐、美学等课程。写有《中西音乐的比较研究》、《古今中西音阶概说》等文章。同时，在施特恩音乐学院研究作曲配器、指挥及古谱读法。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="设立大新分店">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1916年，蔡昌在广州惠爱中路（今天的中山五路）设立大新分店。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="被调任广州市公安局局长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年，陈庆云被调任为广州市公安局局长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="任上海青年会中学校长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年5月，韦悫到南京任中央大学教育学院院长，南京中央实验小学校长。之后任上海青年会中学校长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="编写剧本_白杨红泪_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐涤生一生编写了100多部作品，奠定他的编剧地位的是《白杨红泪》。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐涤生"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任中央美术学院院长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1983年至1987年，古元任中央美术学院院长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="参加电影拍摄">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >曾参加_火山情血__大路_等电影拍摄</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="随家人返乡">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >香港沦陷时期，容国团随家人返乡。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="创建中华会馆"/>
-  <历史事件:社会事件 rdf:ID="出生于香港">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年8月10日，容国团出生于香港。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="先施公司结束全部大陆业务">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年，中华人民共和国成立，先施公司在大陆业务全部结束。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="_待旦_参展_万国博览会_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，郑锦 的力作《待旦》（文天祥）入选“大正美术展览会”。接着，《待旦》又代表中国，参展于“万国博览会”。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="取得了横门保卫战两次胜利">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1939年7月，张惠长在横门、叠石等地抗击入侵日军，取得了横门保卫战的两次胜利。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="任中共中央华北局宣传部副秘书长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1962年4月至1967年12月，阮章竞任中共中央华北局宣传部副秘书长。并开始动笔创作构思已久的长篇小说《山魂》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="病逝于澳门">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1906年9月，陈芳病逝于澳门，后葬于家乡梅溪陈氏墓园。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="任航空局副局长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，张惠长任航空局副局长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="任革命政府代表">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >韦悫</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="合开_宝源丝茶号_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >徐润与人合开“宝源丝茶号”。业务从上海到浙赣山区，从长江内河到沿海各埠，甚至伸至日本长崎。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="创作我国第一部弦乐四重奏">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >留德期间，萧友梅所作的《D大调弦乐四重奏》是我国第一部弦乐四重奏。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="二次革命">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1913年，发动“二次革命”，反对袁世凯窃据大总统职位后阴谋复辟帝制。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="协助容闳创办_汇报_">
-    <历史事件:被协助方 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-    <历史事件:协助方 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐廷枢协助容闳创办《汇报》</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="留学日本">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1896年，郑锦东渡日本，开始18年的留学生涯。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="参加左翼戏剧家联盟"/>
-  <历史事件:教育事件 rdf:ID="在芝加哥大学研究院毕业">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年冬，韦悫在研究院毕业，获政治和社会哲学博士学位。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="在飞行学校等受训后毕业回国">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，陈庆云在美国纽约寇狄斯的飞行学校等受训后毕业回国。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="病葬于西湖孤山北麓">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，苏曼殊病逝，葬于西湖孤山北麓。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="任北京市文联副主席_北京作家协会主席">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1980年7月，阮章竞任北京市文联副主席、北京作家协会主席。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="任大元帅府侍从武官">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年，张惠长学成回国，任孙中山大元帅府侍从武官。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="创作叙事诗_漳河水_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年3月，阮章竞创作长篇叙事诗《漳河水》，奠定了他在中国新诗史上的地位。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="托派活动"/>
-  <历史事件:政治事件 rdf:ID="反对桂系军阀">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >与孙中山联合在上海通电反对桂系军阀</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="参加国际运输工人代表大会"/>
-  <历史事件:经济事件 rdf:ID="先施化妆品上市">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，先施化妆品上市。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="在奥伯林学院毕业">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年6月，韦悫在奥伯林学院毕业，获文学博士学位。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="作为第二批留美幼童被选送出国">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年，唐国安作为第二批留美幼童被选送出国。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="成立澳门先施分行">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1935年，澳门先施分行成立。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="排华运动">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >19世纪80年代初，美国发生排华运动，事件波及美国势力范围的夏威夷。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="成为上海_中华音乐会_会员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1919年，上海成立的“中华音乐会”，吕文成是最早的会员之一。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="被任命为清华学堂正监督">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，唐国安被任命为清华学堂正监督。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="全港兵乓球锦标赛三项冠军"/>
-  <历史事件:政治事件 rdf:ID="到台湾从政">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年，王云五到台湾后继续从政。曾官至行政院长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="成立海员工会筹备组"/>
-  <历史事件:文化事件 rdf:ID="任_羊城晚报_副刊部副主任_编委及第二副刊部主任">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生担任《羊城晚报》副刊部副主任、编委及第二副刊部主任。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任中共中央华北局宣传部文艺处处长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年11月至1954年9月，阮章竞任中共中央华北局宣传部文艺处处长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="任南京中央实验小学校长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年5月，韦悫到南京任中央大学教育学院院长，南京中央实验小学校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="赴印度支那和东南亚演出">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1935年后，张慧冲两度赴印度支那和东南亚演出，均载誉归来。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="在香港英华书院印刷所做监督">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1849年，黄胜在香港英华书院所设的印刷所做监督，受聘于英国传教士里雅各，用铜模铸字，印刷《圣经》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="晋升军衔">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1797年，黄标升授广海卫游击，其后又以军功晋升海门营参将。
-1798年，黄标升补广东左翼镇总兵。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄标"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="在台北病故">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1980年7月17日，张惠长在台北病故。
-1979年8月，王云五在台北病逝。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="兴修陈氏宗祠">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >陈芳在家乡，兴修陈氏祠堂，捐资办学，筑路搭桥，整治村容，解决村民饮水问题等，出资修建了从梅溪直到澳门关闸的石板路，成为歧关公路的一部分。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="东渡日本">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年，苏曼殊东渡日本，结识章炳麟、刘师培、陈去病等人。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="创办_隽德女学_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1906年，刘师复在故乡石岐创办“隽德女学”，提倡女子教育，并设立“武峰阅报社”用以销售革命报刊及掩护革命活动。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任香港_华商报_编辑">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过香港《华商报》编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="加入共产党">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年，韦悫经苏兆征介绍加入中国共产党（未履行正式入党手续）。
-1938年11月，古元在陕北公学加入中国共产党。
-1939年1月1日，阮章竞加入中国共产党。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任_诗刊_副主编">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1960年2月至1962年4月，阮章竞任《诗刊》副主编。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="_娉婷_参选日本文部省美术展">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年，郑锦以优异成绩毕业。以《娉婷》参选日本级别最高的美术殿堂——文部省美术展。这是中国人有史以来第一次入选的作品。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="被调任驻古巴公使">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1935年，南京政府对日持消极态度，电令空军撤至安徽，最后把广东空军番号取消，把张惠长调任驻古巴公使。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="被推荐到法国巴黎音乐学院深造">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1933年，郑志声被推荐到法国最高音乐学府巴黎音乐学院深造，学习作曲和指挥。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任香港_大同日报___香港公论报_和_香港中兴报_校对">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过香港《大同日报》、《香港公论报》、《香港中兴报》校对。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="受雇于_德臣西报_任经理兼编辑">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1861年，黄胜受雇于《德臣西报》任经理兼编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="因病在澳门去世">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1959年3月28日，郑锦因病在澳门去世。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="出版著作_魔术_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1953年,张慧冲出版著作《魔术》（共2册）。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="与人共同创办北京女子高等师范学校音乐体育专修科">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年9月，萧友梅与杨仲子一起创办了北京女子高等师范学校音乐体育专修科。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="获美国哈佛大学研究院硕士学位">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1919年，韦卓民再获硕士学位。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="出任太古洋行第一任买办">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1870年，莫仕扬出任太古洋行第一任买办。利用与穗港工商界的渊源，迅速打开局面。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:科技事件 rdf:ID="提出宇宙进化理论">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >受西方进化论的影响，在《孙文学说》中明确提出宇宙进化的三个时期，并揭示了三个时期的具体内容。他认为，宇宙进化分为三个时期，即物质进化时期、物种进化时期和人类进化时期。该理论是孙中山的民族革命理论和民权主义思想的理论依据。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:科技事件>
-  <历史事件:教育事件 rdf:ID="获文华大学硕士学位">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年，韦卓民完成研究生全部学业，获文华大学硕士学位，硕士论文《孟子的政治思想》广为学术界所重视。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="捐助广州起义">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙眉"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="暗杀清水师提督李准">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年春，刘师复暗杀清水师提督李准，失败被拘捕。在狱期间，继续进行革命活动，为《香山旬报》撰写文章，鼓吹反对清廷和立宪派。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="死于狱中">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1969年4月23日，郑君里被“四人帮”迫害，死于狱中。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="上海第十百货公司改名为华联商厦">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >上海第十百货公司全面改建和装修后改为华联商厦</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="北伐军飞机队队长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，张惠长任北伐军飞机队队长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="随同港澳兵乓球代表团访问大陆">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1957年夏，容国团随同港澳兵乓球代表团回到大陆访问，受到贺龙等国家领导人的接见，他表达了想回大陆打球的愿望。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="建成南方大厦">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1956年，广州西堤大新公司修复整理后重新开张，成为南方大厦。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="担负抗日时重要运输任务">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年7月7日，抗日战争爆发，杨官宇一直担负着战时的重要运输任务。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="被任为中国驻夏威夷华商首董">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1879年，清准旨在夏威夷设立商董，经容闳推荐，任命陈芳为中国驻夏威夷华商首董。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="于香港伦敦会医院工作">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1857年，黄宽返回香港，服务于香港伦敦会医院。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="合开_协记钱庄_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >徐润与人合开“协记钱庄”。业务从上海到浙赣山区，从长江内河到沿海各埠，甚至伸至日本长崎。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="去世">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年8月24日，黄焕南去世。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="因身患严重肺病去世">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑玛诺"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1673年5月26日，郑玛诺因身患严重肺病去世。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="成为第一个法国交响乐团中国指挥">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1937年，郑志声在巴黎音乐学院指挥班以优异成绩——获两枚“贡固书”（Concours）竞赛金奖，成为指挥法国交响乐团的第一个中国人。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="被选为中华全国文艺界抗敌协会晋东南分会常务理事">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1939年，阮章竞被选为中华全国文艺界抗敌协会晋东南分会常务理事。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="广东惠州三洲田发动起义">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1900年10月，广东惠州（今惠阳）三洲田发动起义。
-    奋战半月，开始颇为顺利，后因饷械不继而败。
-1904年-1906年间，在日本、檀香山、越南、美国等地的华侨及留学生中宣传募集革命经费，在一些地方创立同盟会的支部，成为中国革命民主派的旗帜。
-1906-1911年间，同盟会在华南各地多次组织武装起义制定战略方针，并奔走海外，为起义筹集经费。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="先施公司在上海正式开张">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1917年10月20日，国内第一家中资百货大楼先施公司在上海正式开张。黄焕南为董事兼首任司理。先施设备为当时上海一流，面积达1万多平方米，有40多个商品部，经营1万多种环球百货，经营口号和宗旨“始创不二价，统办全球货”</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄焕南"/>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="被清廷革职">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1883年，法国侵略越南，进攻台湾、福建，并欲封锁长江口，进攻上海，局势混乱，人心惶惶，市价暴跌。此时，徐润因摊子铺得过大，损失惨重，又因挪用招商总局16万余两去经营物业之事暴露，被清廷革职，黯然离去。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="任中国文学艺术界联合会委员">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑君里"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >郑君里</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="曾被聘中国广播艺术团说唱团艺术顾问">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方成曾被聘为曾被聘中国广播艺术团说唱团艺术顾问。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="为诗集_孩子塔_画插图">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >梁白波曾为“左联五烈士”之一的诗人殷夫（白莽）的诗集《孩子塔》画插图。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="当选为国民党第四届中央执委">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年，张惠长当选为国民党第四届中央执委。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="支持中华印务总局改为_循环日报_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1874年，黄胜支持王韬将中华印务总局改为《循环日报》，它是中国近代进步人士鼓吹变法图强的第一家报纸，也是我国第一份政论性报纸，是中国人自办报纸以来最为成功的一例。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="接办_上海译报_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >抗战爆发后，韦悫接办了上海进步舆论界权威报纸《上海译报》，任总经理。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="捐款创办石岐世光女子学校和女子师范学校">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="被推为校董会副总理">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#钟工宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙中山提出在檀香山开办学校，为革命培养人才，钟工宇被推为校董会副总理。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="游说他人参加兴中会"/>
-  <历史事件:文化事件 rdf:ID="创办上海第一家华文报纸_汇报_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="与兵乓球结缘">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1942年，容国团得到爱好兵乓球运动的舅舅文恩的启发，从此，与兵乓球结缘。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="合作撰写_火器略论_一卷">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1862年，黄胜与王韬合作撰写《火器略论》一卷，主要内容是论述枪炮制造之法及其原理。对中国军事近代化起了开路作用。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="在亚洲电影节中获最佳女演员奖">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1975年，卢燕在亚洲电影节中获最佳女演员奖。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="考入文华书院正馆">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年，韦卓民考上文华书院正馆（大学部）。成绩优良。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="加入_拒俄义勇队_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1903年，苏曼殊激于爱国义愤，加入“拒俄义勇队”。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="创作_落霞孤鹜_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐涤生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐涤生的成名作是《落霞孤鹜》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="获台湾金马奖最佳女配角奖">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1973年，卢燕获台湾金马奖最佳女配角奖。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="成为兵坛明星">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1957年2月，容国团代表工联会参加香港举行的全港兵乓球锦标赛，一举夺得男子团体、男子双打、男子单打三项冠军，从此声名大振。不久，击败来港访问、曾两次获得男子世界冠军的荻村伊智郎，成为香港家喻户晓的兵坛明星。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="倡导幼童留学运动">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容闳"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳倡导的幼童留学运动，为香山培养不少人才，也带来荣誉。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="任_梧州言报___桂平言报_和_广州晨报_编辑和主任">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过《梧州言报》、《桂平言报》、《广州晨报》编辑、主任。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="加入兴中会"/>
-  <历史事件:政治事件 rdf:ID="上书请求在夏威夷设立官方机构">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1878年，陈芳联名上书中国第一任驻美国公使陈兰彬，请求在夏威夷设立官方机构，以保障华人利益。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈芳"/>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="赴澳门就读教会学校马礼逊学堂">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1841年，黄宽赴澳门就读于教会学校马礼逊学堂。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="到上海实地调查选址">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1914年，黄焕南两次到上海实地调查选址。回来后向董事会提交了可行性报告。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="被加州帕沙迪纳戏剧学校院长推荐入好莱坞">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1958年，卢燕在加州帕沙迪纳戏剧学校学习演技，毕业后被院长推荐入好莱坞，之后一直在美国从事电影、电视和戏剧工作。40年来，先后在200多部电影电视中扮演重要角色。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="广东中华诗词学会名誉会长_中华诗词学会理事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生担任广东中华诗词学会名誉会长，中华诗词学会理事。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="参与创办中澳轮船公司"/>
-  <历史事件:教育事件 rdf:ID="被选送延安鲁迅艺术学院美术系学习">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1939年，古元被选送延安鲁迅艺术学院美术系学习，期间作《运草》、《羊群》等木刻作品。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="随父为孙中山护柩">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#朱慕飞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年，孙中山逝世后，朱慕飞随父为孙中山护柩，站灵柩之右。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="被委任为兼职教官">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年6月，广东军事飞行学校开办，杨官宇被委任为兼职教官。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="戊戌变法">
-    <历史事件:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >维新变法</历史事件:别名>
-    <历史事件:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >百日维新</历史事件:别名>
-    <历史事件:起始时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >1898-06-11</历史事件:起始时间>
-    <历史事件:结束时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >1898-09-21</历史事件:结束时间>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任_辞源_主编">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，刘逸生担任《辞源》主编.</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="用广东方言编写了一本_英语集全_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1862年，唐廷枢用广东方言编写了一本《英语集全》，帮助国人学习英语，使其不因不晓英语而受人欺辱。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="任广东画院副院长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方人定"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方人定</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:社会事件 rdf:ID="中华人民共和国成立"/>
-  <历史事件:社会事件 rdf:ID="因项疽病逝">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1878年10月12日，黄宽因项疽剧发，与世长辞</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="创作专辑_今乐初集_和_新歌初集_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年和1923年,萧友梅先后出版了创作专辑《今乐初集》和《新歌初集》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="从事近代报刊书籍印刷方面工作">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1848年，黄胜因为健康原因回国。一直从事近代报刊书籍印刷方面的工作。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="开设广州先施分行">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1910年，马应彪开设广州先施分行，成为当时广州最大的百货公司，并附设东亚大酒店。后来还附设汽水厂、化妆品厂、皮鞋厂、饼干厂、玻璃厂、人寿保险公司、信托银行等企业，成为国内最早的较有影响的华侨资本百货集团公司。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="带领第二批中国学生到美国留学">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年，黄胜带领第二批中国学生到美国留学。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:经济事件 rdf:ID="上海大新公司被日方派监督官管制">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1941年，太平洋战争爆发后，日军占领了租界，上海大新公司被日方派监督官管制。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="在上海发起成立_无政府共产主义同志社_"/>
-  <历史事件:经济事件 rdf:ID="香港大新公司受日本军方管制">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1941年，太平洋战争爆发后，日军占领了租界，上海大新公司被日方派监督官管制。接着，日军占领香港，香港大新公司亦受日本军方管制，经营困难。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="主持开采开平煤矿">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1876年，唐廷枢主持开采开平煤矿（今开滦矿务局）。亲自主持了从勘察选址、拟定计划、招集资本到正式开采的工作。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐廷枢"/>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="与人合资兴办上海联合影片公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年，张慧冲与人合资兴办上海联合影片公司。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="加入大中华百合影业公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年，阮玲玉脱离“明星”，加入了“大中华百合”，此后又并入联华影业公司，拍摄了《自杀合同》、《故都春梦》、《野草闲花》等片。
-1930年8月，大中华百合影业与华北电影有限公司、民新影片公司等并入联华影业制片印刷有限公司，后改名“联华影业公司”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮玲玉"/>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="壮烈牺牲">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年9月，军阀陈炯明在惠州发动叛乱。孙中山派大军讨伐，杨仙逸参与作战，在博罗梅湖白沙堆前线，在检查水雷改装炸弹时，水雷突然爆炸，杨仙逸壮烈牺牲。（平息叛乱中）</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="在东京学习油画">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1897年，郑锦在东京读书并开始学习油画。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑锦"/>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="先施公司附属工厂营业额暴涨">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，先施公司附属工厂的营业额已是初创时的5倍。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="在美国加入图强飞机公司飞机组">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1921年，杨官宇在美国加入图强飞机公司飞机组。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-  </历史事件:军事事件>
-  <历史事件:文化事件 rdf:ID="当选_电影明星选举_第一名">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1930年5月，《影戏杂志》举办“电影明星选举”，阮玲玉以6179票当选第一名。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮玲玉"/>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="率领船队迎击外敌">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1790年，黄标率领船队出击，打败海盗及勾结的外敌。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄标"/>
-  </历史事件:军事事件>
-  <历史事件:教育事件 rdf:ID="赴法国留学">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，郑志声赴法留学。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="前往朝廷供职">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑玛诺"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1671年，郑玛诺奉康熙圣谕进京，前往朝廷供职。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="参加旅行表演团进行巡回演出">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#吕文成"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年，吕文成参加了精武体育会组织的旅行表演团到北京、天津、武汉等地巡回演出。期间，他还擅长用粤曲“子喉”唱腔自弹自唱《燕子楼》、《潇湘琴怨》等曲。在演出中独创一派。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="对魔术产生兴趣">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年开始，张慧冲对魔术产生兴趣，于是靠自学钻研，制作节目，并在主演影片防御的幕间表演。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:军事事件 rdf:ID="在航空学校学习飞行技术">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年，张惠长在设于寇狄斯的航空学校学习飞行技术，是该校首批20名学员之一。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:军事事件>
-  <历史事件:经济事件 rdf:ID="在香港开设永昌金山庄">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1894年，马应彪在香港开设信息庄及永昌金山庄，开办侨汇兼经销进出口生意。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="成为檀香山糖业巨子和商界知名人士">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年赴檀香山，杨著昆初为蔗糖工人，继而开设粮庄和田馆，后又经营蔗园，开设糖厂，兼营房地产，成为檀香山的糖业巨子、商界的知名人士。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:政治事件 rdf:ID="就任非常大总统">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >孙中山于1921年春，在广州就任非常大总统，决心以武力赶走北洋军阀，重新统一中国。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:教育事件 rdf:ID="教授英语并从事翻译工作">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1907年起，王云五先后在中国公学、北京大学、国民大学、中国公学大学等校教授英语，并从事翻译工作。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="被驻华盛顿中国公使馆任命为翻译官">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1873年后，黄胜被驻华盛顿的中国公使馆任命为翻译官。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄胜"/>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="公开身份参加组织生活">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1960年，韦悫公开党员身份，参加组织生活。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="成立先施人寿保险公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，先施人寿保险公司成立。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="历任校长_委员_主席_教授_政协委员_副会长等职务">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >新中国成立后，韦卓民历任公立华中大学校长，政治委员会副主任委员、湖北省基督教联合会主席，华中师大外语系、政治系教授，武汉市政协委员，湖北省对外文化协会副会长等职。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦卓民"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="在里昂音乐学院以优异成绩获奖毕业">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1932年，郑志声以优异成绩获奖毕业。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="夏威夷王加刺鸠亲自颁奖"/>
-  <历史事件:社会事件 rdf:ID="与孙中山往来">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1892年，孙中山在澳门行医时，萧友梅与孙中山两家相邻，过从甚密。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:社会事件 rdf:ID="成为小刀会首领"/>
-  <历史事件:文化事件 rdf:ID="加入漫画宣传队">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >抗日战争爆发，梁白波加入漫画宣传队。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#梁白波"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="任影片导演和编剧">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张慧冲"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年，张慧冲自己组建慧冲影片公司，后又参加上海天一影片公司、中国联合影片公司。主演过《莲花落》、《水落石出》、《无敌英雄》等19部电影，并任其中9部影片的导演、编剧。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="边行医边进行救国政治运动">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1883-1886年期间，边行医边进行救国政治运动。
-继续求学于香港拔萃书室、域多利书院；毕业后，先进广州博济医院附属南华医学堂学习，后转入香港西医书院（后并入香港大学）学医。毕业后，在澳门广州行医，并致力于救国的政治活动。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="成立中华音乐会"/>
-  <历史事件:文化事件 rdf:ID="加盟剧团">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐涤生先后加盟新时代、义擎天等剧团，为名伶红线女、任剑辉、白雪仙等主演的粤剧编写剧本，成为经典的有《牡丹亭惊梦》、《紫钗记》、《帝女花》等。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐涤生"/>
-  </历史事件:文化事件>
-  <历史事件:社会事件 rdf:ID="随父从檀香山回国">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#朱慕飞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，朱慕飞随父从檀香山回国。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="任大元帅府参军副官">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，张惠长任大元帅府参军副官。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="五四运动"/>
-  <历史事件:社会事件 rdf:ID="留学后回国发展">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1881年，唐国安回国，分别在开平煤矿、京奉铁路等地工作，后来到上海梵王渡约翰书院任主讲。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-  </历史事件:社会事件>
-  <历史事件:教育事件 rdf:ID="留居罗马当教授">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1653年，郑玛诺加入耶稣会，并转入罗马公学学习修辞学、逻辑学、物理化学等多门课程。毕业后留居罗马当教授。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑玛诺"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="发表小说_割稻的故事_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1934年冬，阮章竞在南京《大道日报》上发表第一部小说《割稻的故事》</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="编写_国民政府教育方针草案_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1927年1月，韦悫写了《国民政府教育方针草案》。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="捐资建造天津广东会馆">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1908年，郑翼之和唐绍仪等人捐资建造天津广东会馆。郑积极捐资3000两，广东会馆落成后，是当时天津最大的建筑物。它不仅建筑风格独特，还留下了孙中山、黄兴等人的足迹和戏剧名家梅兰芳等人的身影，具有较高的历史文化价值。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑翼之"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐绍仪"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="现任好莱坞电影艺术科学学会奥斯卡金像奖纪录片及外语片评审委员">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >卢燕现为好莱坞电影艺术科学学会奥斯卡金像奖纪录片及外语片评审委员。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="任文华大学哲学教授">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1920年9月，韦卓民回国，任文华大学哲学教授。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="连任四届参政员和国民政府经济部长_国大代表_行政陆军副院长_政务委员兼财政部长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#王云五"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1938年至1946年，王云五连任四届参政员和国民政府经济部长、国大代表、行政陆军副院长、政务委员兼财政部长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="因病去世">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1944年，马应彪因病去世。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:军事事件 rdf:ID="担任_援闽粤军飞机队_总指挥">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，杨仙逸受孙中山电召回国，共商国是。担任“援闽粤军飞机队”总指挥，率飞机轰炸叛军莫荣新部，为打败莫荣新部立下卓越功劳。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-  </历史事件:军事事件>
-  <历史事件:经济事件 rdf:ID="将资金抽回香港">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1947年，蔡昌携全家定居香港，沪行委托蔡惠民管理，制定“多销货，少进货”方针，逐步将资金抽回香港。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="发起并投资建立中国玻璃公司">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >唐廷植</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:军事事件 rdf:ID="率三舰北上会操"/>
-  <历史事件:文化事件 rdf:ID="创作_五四纪念爱国歌_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年，萧友梅为纪念“五四运动”5周年而作的《五四纪念爱国歌》，是我国最早讴歌这场伟大运动的曲作。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="被任为外务部考工司主事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1910年，唐国安被清政府正式任命为外务部考工司主事。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-  </历史事件:政治事件>
-  <历史事件:军事事件 rdf:ID="担任航空局局长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，孙中山在广州成立大元帅府，杨仙逸担任航空局局长。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:教育事件 rdf:ID="清华学堂更名为清华学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1912年，经唐国安呈报外务部批准，清华学堂更名为清华学校，唐国安为第一任校长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-  </历史事件:教育事件>
-  <历史事件:军事事件 rdf:ID="组建我国第一支空军队伍">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >杨仙逸轰炸叛军莫荣新部之后，去日本、美国等地向华侨募捐，其父也捐出大量资金，购回飞机12架，组建了我国第一支空军队伍。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨仙逸"/>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="组织中华民国正式政府">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1921年，在孙中山领导下，非常国会于广州议定组织中华民国正式政府。孙中山就任大总统，再举护法旗帜。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="受雇于上海怡和洋行">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1861年，唐廷枢受雇于上海怡和洋行。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="拍摄_楚河血泪史_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1934年，张慧冲拍摄爱国影片《楚河血泪史》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:教育事件 rdf:ID="捐款创办沙涌妇女学校和幼儿园">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#马应彪"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1929年，马应彪在任中山模范县训政委员兼财务组主任时所为。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="捐建岭南大学荣光堂">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1924年落成的岭南大学荣光堂，是莫干生等校友为纪念第一位华人校长钟荣光捐建的。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="任上海教育局局长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1928年4月，韦悫任上海教育局局长。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:教育事件 rdf:ID="任华南文艺学院教授">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方人定"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >方人定</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="被封武显将军">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1802年，黄标被封武显将军。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄标"/>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="转赴檀香山定居">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1949年，杨官宇先到澳门，转赴檀香山定居。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-  </历史事件:社会事件>
-  <历史事件:科技事件 rdf:ID="提出生元说">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >在《孙文学说》中提出了“生元说”。认为“生元”是生成和构造人类和万物最原始的东西，并提出了“生元之知”与“生元之能”的观点。他认为，“生元”既构造了人，又“依人身而生活”。生元于人存在双向互动的关系。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:科技事件>
-  <历史事件:政治事件 rdf:ID="中英签订_续订印藏条约_"/>
-  <历史事件:政治事件 rdf:ID="应_太平洋报_之聘">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1911年，武昌起义爆发，苏曼殊正在南洋爪哇岛，闻讯异常兴奋。辗转到上海，应《太平洋报》之聘，主笔攻，与柳亚子等共事。为南社社员。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#苏曼殊"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="任_香港星岛日报_校对室主任和编辑">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘逸生"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >刘逸生担任过《香港星岛日报》校对室主任、编辑。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="太平洋战争"/>
-  <历史事件:教育事件 rdf:ID="转入香港慈幼学校">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1948年，容国团转入香港慈幼学校。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:教育事件>
-  <历史事件:文化事件 rdf:ID="创作组诗_大军之路_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1981年，阮章竞创作了组诗《大军之路》。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="与人组织_巴黎中国留法音乐家学会_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >在巴黎音乐学院指挥班期间，郑志声与冼星海等组织了“巴黎中国留法音乐家学会”</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:政治事件 rdf:ID="结伴到教堂接收洗礼">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐雄"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1883年，唐雄与孙中山等结伴到教堂接收洗礼，在香港加入基督教。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="任孙中山航空局飞机队第一队队长">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，张惠长任孙中山航空局下设两个飞机队中，第一队的队长。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张惠长"/>
-  </历史事件:政治事件>
-  <历史事件:经济事件 rdf:ID="任檀香山华美银行总经理和升昌公司司理">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐雄"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1915年，唐雄任檀香山华美银行总经理，同时担任升昌公司司理，是当地中华总商会董事及商业发展部部长。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="在华北和东北解放区参加土改和艺术工作"/>
-  <历史事件:经济事件 rdf:ID="创办上海江南制造局">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳投身洋务运动，第一个主张发展民用工业并获清廷支持，第一次大规模引进美国先进机器设备，创办上海江南制造局</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:教育事件 rdf:ID="毕业于广东法官学校高等研究部">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方人定"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1926年，方人定毕业于广东法官学校高等研究部。</rdfs:comment>
-  </历史事件:教育事件>
-  <历史事件:政治事件 rdf:ID="组织民军收复雷州半岛各地"/>
-  <历史事件:经济事件 rdf:ID="被邀请出任先施公司董事">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1913年，同乡马应彪邀请黄焕南出任先施公司董事。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="病逝">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1942年12月24日，郑志声病逝。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#郑志声"/>
-  </历史事件:社会事件>
-  <历史事件:文化事件 rdf:ID="夺得我国乒乓球历史第一个世界冠军">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1959年4月，在联邦德国多特蒙德举办的第二十五届兵乓球锦标赛上，容国团代表中国出战，夺得我国历史上第一个世界冠军。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:文化事件>
-  <历史事件:文化事件 rdf:ID="被调到国家队集训">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1958年4月，容国团为备战第二十五届世界兵乓球锦标赛，他被调到国家队集训。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="创办了轮船招商总局">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >容闳</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="捐助革命活动经费">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1922年，杨著昆倾家变卖田产购买四架飞机，支持孙中山扩充粤军飞行队。还经常捐款给孙中山作革命活动经费。为此，孙中山曾以陆海军大元帅名义给他颁发奖章奖牌，以表彰其对革命的贡献。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:社会事件 rdf:ID="接办惠爱医馆">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#黄宽"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1858年，黄宽赴广州，接办合信氏（B.Hobson）在金利埠创设的惠爱医馆。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="收购道格拉斯轮船公司"/>
-  <历史事件:文化事件 rdf:ID="建立我国第一个管弦乐队">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >萧友梅建立了我国第一个管弦乐队。1922年底到1927年，共开过40余次音乐会。为北京群众介绍了不少西方音乐。这是第一个由中国乐师演奏，由中国人指挥的乐队，在当时很受欢迎。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="创办永生果行"/>
-  <历史事件:政治事件 rdf:ID="任同盟会南方支部副部长"/>
-  <历史事件:政治事件 rdf:ID="成立陆海军大元帅大本营">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，孙中山第三次在广州建立政权，成立陆海军大元帅大本营，复任大元帅。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </历史事件:政治事件>
-  <历史事件:文化事件 rdf:ID="参与并指挥抗日救亡歌咏活动"/>
-  <历史事件:社会事件 rdf:ID="在北京逝世">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#古元"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#唐国安"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1913年8月22日，唐国安在北京与世长辞。
-1968年6月28日，容国团不幸在北京逝世。
-1996年8月10日，古元在北京逝世。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:政治事件 rdf:ID="在香港组织_支那暗杀团_">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#刘师复"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1910年2月，刘师复在香港组织“支那暗杀团”，组织数次暗杀活动。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="成立中国同盟会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1905年7月，成立中国同盟会。
-    政治纲领：“驱除鞑虏，恢复中华，创立民国，平均地权”。
-在《明报》发刊词上归纳为民族、民权、民生三大主义。系统地提出其三民主义思想，并与保皇派进行了激烈的论战。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="担任中央航空学校校长兼教育长">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#陈庆云"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1936年以后，陈庆云担任过担任中央航空学校校长兼教育长。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:政治事件 rdf:ID="成立抗日救国会">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1931年“九一八”事变后，萧友梅主持的国立音乐专科学校就成立了抗日救国会。为抗日义勇军募捐了1000多元。还为义勇军作了一首《从军歌》，传唱一时。</rdfs:comment>
-  </历史事件:政治事件>
-  <历史事件:社会事件 rdf:ID="出生于北京">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1918年，方成出生于北京。
-1925年，卢燕出生于北京。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#方成"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卢燕"/>
-  </历史事件:社会事件>
-  <历史事件:经济事件 rdf:ID="投资外商企业">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1881-1882年，唐廷植投资上海容泰驳船行、外商控制的中国第一家电力企业上海申光电灯公司及中英合资中国玻璃公司等外商企业。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="参加乡试_但落第"/>
-  <历史事件:社会事件 rdf:ID="逝世">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#阮章竞"/>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#韦悫"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1976年，韦悫逝世。
-2000年2月11日，阮章竞逝世。</rdfs:comment>
-  </历史事件:社会事件>
-  <历史事件:军事事件 rdf:ID="抢运飞机">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#杨官宇"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1923年，杨官宇经过周密安排，将放在澳门的飞机抢运回广州，及时应用于打击陈炯明叛军的紧迫战事上。</rdfs:comment>
-  </历史事件:军事事件>
-  <历史事件:政治事件 rdf:ID="农民运动"/>
-  <历史事件:文化事件 rdf:ID="创作_国难歌_和_国耻_等爱国乐曲">
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#萧友梅"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1925年，五卅惨案发生后，萧友梅创作了《国难歌》和《国耻》等爱国乐曲。</rdfs:comment>
-  </历史事件:文化事件>
-  <历史事件:经济事件 rdf:ID="在现香山石岐设立营业部">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1910年，永安在现香山石岐设立营业部，专门负责吸收侨汇，为永安公司及其集团的发展获取了大量侨资的支持。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:经济事件 rdf:ID="被誉为_商界王子_和_蔗糖王子_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >70年代，陈芳的资产超过100万美元，在当地华侨中名列第一，被誉为“商界王子”和“蔗糖王子”。</rdfs:comment>
-  </历史事件:经济事件>
-  <历史事件:文化事件 rdf:ID="被称为_东区小霸王_">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1952年期间，容国团虽然不幸染上肺结核，仍然坚持兵乓球的训练。由于技艺超群，被称为“东区小霸王”。</rdfs:comment>
-    <历史事件:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#容国团"/>
-  </历史事件:文化事件>
+﻿<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Event.owl"
+     xml:base="http://www.owl-ontologies.com/Event.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Event="http://www.owl-ontologies.com/Event.owl#"
+     xmlns:Relics="http://www.owl-ontologies.com/Relics.owl#"
+       xmlns:Individual="http://www.owl-ontologies.com/Individual.owl#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Event.owl">
+        <owl:imports rdf:resource="http://www.owl-ontologies.com/Relics.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#数据来源 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Event.owl#数据来源"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#来源 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Event.owl#来源"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#发生时间 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Event.owl#发生时间"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#子事件 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Event.owl#子事件">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Event.owl#父事件"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#开始时间 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Event.owl#开始时间"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#父事件 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Event.owl#父事件">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#结束时间 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Event.owl#结束时间"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#别名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Event.owl#别名"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#结束时间 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Event.owl#结束时间"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#起始时间 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Event.owl#起始时间"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#军事事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#军事事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#历史事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#历史事件">
+        <rdfs:label>历史事件</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#政治事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#政治事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#教育事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#教育事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#文化事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#文化事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#社会事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#社会事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#科技事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#科技事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#经济事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#经济事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#自然事件 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Event.owl#自然事件">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Event.owl#历史事件"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#三一八运动 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#三一八运动">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1926年3月，李大钊在极端危险和困难的情况下，积极领导并亲自参加了北京反对帝国主义和北洋军阀的三一八运动，号召人们用五四的精神、五卅的热血，不分界限地联合起来，反抗帝国主义的联合进攻，反对军阀的卖国行为。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#上海举行国民大会 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海举行国民大会">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月7日，上海60多个团体举行国民大会。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#上海各学校全部罢课 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海各学校全部罢课">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月9日，蔡元培出走。上海各学校全部罢课。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#上海学生联合会成立 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海学生联合会成立">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月11日，上海学生联合会成立。北京各大专学校教职联合会成立。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#中国共产党第一次全国代表大会 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中国共产党第一次全国代表大会">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1921年7月，中国共产党第一次全国代表大会召开，宣告中国共产党成立，从此中国革命的面貌为之一新。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#举行大规模街头演讲 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#举行大规模街头演讲">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年6月3日，北京学生因政府为曹汝霖、章宗祥、陆宗舆辩护，举行大规模街头演讲，当日170多名学生被捕。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#五四运动 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#五四运动">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:发生地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#北京市"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#上海举行国民大会"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#上海各学校全部罢课"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#上海学生联合会成立"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#举行大规模街头演讲"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#出动比昨日多一倍的人数上街演讲"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#北京25000名学生再次总罢课"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#北京各大专学校总罢课"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#北京各大专学校教职联合会成立"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#北京各大专校长递交辞呈"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#学生大规模游行"/>
+        <Event:子事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#政府查禁联合会"/>
+        <Event:别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">五四风雷</Event:别名>
+        <Event:数据来源 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://baike.baidu.com/item/%E4%BA%94%E5%9B%9B%E8%BF%90%E5%8A%A8/291670</Event:数据来源>
+        <Event:数据来源 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《广州志》第三册P84</Event:数据来源>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">五四运动，是1919年5月4日发生在北京的一场以青年学生为主，广大群众、市民、工商人士等阶层共同参与的，通过示威游行、请愿、罢工、暴力对抗政府等多种形式进行的爱国运动，是中国人民彻底的反对帝国主义、封建主义的爱国运动，又称“五四风雷”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#出动比昨日多一倍的人数上街演讲 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#出动比昨日多一倍的人数上街演讲">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年6月4日，北京学生出动比昨日多一倍的人数上街演讲，当日700多名学生被捕。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#出席国共合作的国民党第一次全国代表大会 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#出席国共合作的国民党第一次全国代表大会">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1924年1月，李大钊作为大会主席团五位成员之一，出席了国共合作的国民党第一次全国代表大会，被孙中山指定为大会主席团成员之一，参加大会宣言的起草等，为实现国共合作做出了重要贡献，当选为国民党中央执委会委员。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#北京25000名学生再次总罢课 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#北京25000名学生再次总罢课">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月19日，北京25000名学生再次总罢课，之后开展演讲、抵制日货、发行爱国日刊等活动，组织“护鲁义勇队”</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#北京各大专学校总罢课 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#北京各大专学校总罢课">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月5日，北京各大专学校总罢课。清华学生宣布“从今日起与各校一致行动”。蔡元培为首的校长团斡旋，被捕学生返校，学生复课。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#北京各大专学校教职联合会成立 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#北京各大专学校教职联合会成立">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月11日，上海学生联合会成立。北京各大专学校教职联合会成立。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#北京各大专校长递交辞呈 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#北京各大专校长递交辞呈">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月13日，北京各大专校长递交辞呈。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#占据四方炮台 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#占据四方炮台">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#军事事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#卧乌古"/>
+        <Individual:相关地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#广州市"/>
+        <Event:来源 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">邓炳权编写. 广州革命胜迹史话[M]. 广州：广东人民出版社, 1984:2</Event:来源>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">一八四一年五月二十四日，英军司令官卧乌古和舰队司令佛兰明·辛好士率领侵略军在广州城西面的泥城登陆，守卫的清兵拔脚就跑，英军长驱直入，爬上了广州城北面的几个高地，占据了四方炮台作司令部，居高临下，架炮轰城。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#反动军阀绞杀李大钊 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#反动军阀绞杀李大钊">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年4月28日，北洋军阀政府不顾社会舆论的强烈反对和谴责，将李大钊等20位革命者绞杀在西交民巷京师看守所内。临刑前，李大钊慷慨激昂：“不能因为反动派今天绞死了我，就绞死了伟大的共产主义，共产主义在中国必然得到光辉的胜利”。他高呼“共产党万岁！”英勇就义，时年38岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#在北京组织5万余人的示威 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#在北京组织5万余人的示威">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年五卅运动爆发后，李大钊与赵世炎等人在北京组织5万余人的示威，有力地支持了上海人民的反帝斗争。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#孙中山上学 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#孙中山上学">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+        <Event:开始时间 rdf:resource="http://www.owl-ontologies.com/ChangZheng.owl#1872年"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#孙中山出生 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#孙中山出生">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+        <Event:开始时间 rdf:resource="http://www.owl-ontologies.com/ChangZheng.owl#1866年"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#孙中山读毕重要经书 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#孙中山读毕重要经书">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+        <Event:开始时间 rdf:resource="http://www.owl-ontologies.com/ChangZheng.owl#1878年"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#学生大规模游行 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#学生大规模游行">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年5月4日上午10时，各校学生召开碰头会，商定游行路线。下午1时，北京学生3000余人从汇集天安门，现场悬挂北大学生“还我青岛”血书。队伍向使馆区进发，受到巡捕阻拦，学生代表求会见四国公使，仅美国使馆人员接受了学生的陈词书，英法意使馆均拒绝接受。随后发生学生大规模游行。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#总同盟罢工 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#总同盟罢工">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+        <Event:来源 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">邓炳权编写. 广州革命胜迹史话[M]. 广州：广东人民出版社, 1984:40</Event:来源>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">一九二二年三月一日，全港各业十万工人举行总同盟罢工，全港震动。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#成为我国最早传播马克思主义的人 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#成为我国最早传播马克思主义的人">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#文化事件"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1916年李大钊回国后，到北京大学任图书馆主任兼经济学教授，积极投身于正在兴起的新文化运动，成为新文化运动的一员主将。 十月革命一声炮响，给中国送来了马克思列宁主义。俄国社会主义革命的胜利极大地鼓舞和启发了李大钊，他以《新青年》和《每周评论》等为阵地，相继发表了《法俄革命之比较观》、《庶民的胜利》、《布尔什维主义的胜利》、《我的马克思主义观》、《再论问题与主义》等大量宣传十月革命和马克思列宁主义的著名文章和演说，阐述十月革命的意义，讴歌十月革命的胜利，旗帜鲜明地批判改良主义，积极领导和推动五四爱国运动的发展，成为中国共产主义的先驱、我国最早传播马克思主义的人。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#政府查禁联合会 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#政府查禁联合会">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#教育事件"/>
+        <Event:父事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#五四运动"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1919年6月1日，政府查禁联合会。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#沙田惨案 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#沙田惨案">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#组织中国第一个马克思学说研究会 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#组织中国第一个马克思学说研究会">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1920年3月，李大钊在北京大学组织中国第一个马克思学说研究会，聚集了邓中夏、高君宇、张国焘、黄日葵、何孟雄、罗章龙等一批具有共产主义思想的青年知识分子，为建党作准备。李大钊还在北京多次会见共产国际代表，商讨筹建中国共产党。同年秋，他又领导建立了北京的共产党早期组织和北京社会主义青年团，并与在上海的陈独秀遥相呼应，积极活动，扩大宣传，发展组织，积极推动建立全国范围的共产党组织。“南陈北李，相约建党”，成为中国革命史上的一段佳话。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#起草_警告全国父老书_ -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#起草_警告全国父老书_">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年，日本帝国主义提出灭亡中国的“二十一条”，李大钊积极参加留日学生的抗议斗争。他起草的通电《警告全国父老书》传遍全国，他也因此成为著名爱国志士。“铁肩担道义，妙手著文章”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#逮捕李大钊等80余人 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#逮捕李大钊等80余人">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#政治事件"/>
+        <Event:相关人物 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李大钊"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年4月6日，奉系军阀张作霖勾结帝国主义。在北京逮捕李大钊等80余人。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#香港海员大罢工 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#香港海员大罢工">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#社会事件"/>
+        <Event:来源 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">邓炳权编写. 广州革命胜迹史话[M]. 广州：广东人民出版社, 1984:35-41</Event:来源>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">这次罢工大灭了帝国主义的威风，大长了中国工人的志气，被赞誉为“反对强权的胜利”，它有力地推动了全国工人运动的发展，成为中国共产党成立后中国工人第一次罢工运动高潮的开端。</rdfs:comment>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

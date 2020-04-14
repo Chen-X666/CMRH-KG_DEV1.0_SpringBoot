@@ -1,780 +1,191 @@
-<?xml version="1.0"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:职务和称号="http://www.owl-ontologies.com/Duty_Title.owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://www.owl-ontologies.com/Duty_Title.owl">
-  <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.owl-ontologies.com/Individual.owl"/>
-  </owl:Ontology>
-  <owl:Class rdf:ID="职业">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="职务和称号"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >职业</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="荣誉">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >荣誉</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#职务和称号"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#职务和称号">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >职务和称号</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="头衔">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >头衔</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#职务和称号"/>
-  </owl:Class>
-  <owl:Class rdf:ID="称号">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >称号</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#职务和称号"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:ID="相关人">
-    <rdfs:domain rdf:resource="#职务和称号"/>
-    <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#香山人物"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:ID="定义">
-    <rdfs:domain rdf:resource="#职务和称号"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="中文名">
-    <rdfs:domain rdf:resource="#职务和称号"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="外文名">
-    <rdfs:domain rdf:resource="#职务和称号"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="别称">
-    <rdfs:domain rdf:resource="#职务和称号"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <职务和称号:职业 rdf:ID="吏部主事"/>
-  <职务和称号:职业 rdf:ID="江西兴国知县"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第七届文艺百花奖一等奖"/>
-  <职务和称号:职业 rdf:ID="援闽粤军飞机队总指挥"/>
-  <职务和称号:荣誉 rdf:ID="省业余文艺一等奖"/>
-  <职务和称号:职业 rdf:ID="中央空军中队长"/>
-  <职务和称号:职业 rdf:ID="太常寺少卿"/>
-  <职务和称号:职业 rdf:ID="中央航空委员会空军第二十队飞行员"/>
-  <职务和称号:职业 rdf:ID="加拿大空军飞行员"/>
-  <职务和称号:职业 rdf:ID="中央航委会空军第三大队第八队飞行员"/>
-  <职务和称号:职业 rdf:ID="中山会馆顾问"/>
-  <职务和称号:职业 rdf:ID="航空站长"/>
-  <职务和称号:职业 rdf:ID="陕西巡抚"/>
-  <职务和称号:职业 rdf:ID="广东空军总司令部飞行员"/>
-  <职务和称号:职业 rdf:ID="地面攻击飞机第三九大队副大队长"/>
-  <职务和称号:职业 rdf:ID="汉阳铁厂总办"/>
-  <职务和称号:职业 rdf:ID="广东航校教官"/>
-  <职务和称号:职业 rdf:ID="珠江纵队白马中队战士"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第八届文艺百花奖优秀奖"/>
-  <职务和称号:职业 rdf:ID="宝安县西乡共乐音响电子厂副厂长"/>
-  <职务和称号:职业 rdf:ID="太古轮船公司总买办"/>
-  <职务和称号:职业 rdf:ID="珠纵一支队炊事员"/>
-  <职务和称号:职业 rdf:ID="中山游击队二中队队员"/>
-  <职务和称号:职业 rdf:ID="国民政府立法院副院长"/>
-  <职务和称号:职业 rdf:ID="女飞行员"/>
-  <职务和称号:职业 rdf:ID="八区抗先队委"/>
-  <职务和称号:职业 rdf:ID="第二区自卫队中尉小队长"/>
-  <职务和称号:职业 rdf:ID="第一届全国总工会委员长"/>
-  <职务和称号:职业 rdf:ID="延庆州知州"/>
-  <职务和称号:职业 rdf:ID="美国圣荷西埠中国国民党通讯处主任"/>
-  <职务和称号:职业 rdf:ID="中央美术学院院长"/>
-  <职务和称号:职业 rdf:ID="农事试验场场长"/>
-  <职务和称号:职业 rdf:ID="中央航空学校驱逐机队分队长"/>
-  <职务和称号:职业 rdf:ID="广东空军第二队队长"/>
-  <职务和称号:职业 rdf:ID="教育长"/>
-  <职务和称号:职业 rdf:ID="南京航委会空中南京空军总司令训处长"/>
-  <职务和称号:职业 rdf:ID="吉林矿务公司驻沪总董"/>
-  <职务和称号:职业 rdf:ID="平沈铁路局长"/>
-  <职务和称号:职业 rdf:ID="航空局局长"/>
-  <职务和称号:职业 rdf:ID="京沪杭甬铁路局局长"/>
-  <职务和称号:职业 rdf:ID="中央航空委员会主任"/>
-  <职务和称号:职业 rdf:ID="下士班长"/>
-  <职务和称号:荣誉 rdf:ID="首届广东欢乐节演出纪念奖"/>
-  <职务和称号:职业 rdf:ID="威海卫鱼雷舰指挥"/>
-  <职务和称号:职业 rdf:ID="中山县政协副主席"/>
-  <职务和称号:职业 rdf:ID="山东省外事局长"/>
-  <职务和称号:荣誉 rdf:ID="全国军民学雷锋硬笔书法大奖赛三等奖"/>
-  <职务和称号:职业 rdf:ID="广州航空总站站务股股长"/>
-  <职务和称号:荣誉 rdf:ID="公元杯全国儿童人像摄影大赛优秀奖"/>
-  <职务和称号:职业 rdf:ID="国民党海外部部长"/>
-  <职务和称号:荣誉 rdf:ID="富士杯全国十杰年赛季选优异奖"/>
-  <职务和称号:职业 rdf:ID="中华商会慈善公益委员会会长"/>
-  <职务和称号:荣誉 rdf:ID="南方杯全国彩色摄影比赛三等奖"/>
-  <职务和称号:职业 rdf:ID="军需处处长"/>
-  <职务和称号:职业 rdf:ID="空军供应处副处长"/>
-  <职务和称号:职业 rdf:ID="中山县县长"/>
-  <职务和称号:职业 rdf:ID="甘肃甘州府知府"/>
-  <职务和称号:职业 rdf:ID="安徽庐江知县"/>
-  <职务和称号:职业 rdf:ID="广州市市长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第二届影展铜牌奖"/>
-  <职务和称号:荣誉 rdf:ID="省南粤风采摄影比赛集体鼓励奖"/>
-  <职务和称号:职业 rdf:ID="外交总长"/>
-  <职务和称号:职业 rdf:ID="国民参政会第二届参政员"/>
-  <职务和称号:职业 rdf:ID="临时大总统庶务司司长"/>
-  <职务和称号:荣誉 rdf:ID="广东省第一届职工业余美术比赛一等奖"/>
-  <职务和称号:荣誉 rdf:ID="金利来全国摄影比赛二等奖"/>
-  <职务和称号:职业 rdf:ID="省文史研究馆副馆长"/>
-  <职务和称号:职业 rdf:ID="珠江纵队一支队战士"/>
-  <职务和称号:荣誉 rdf:ID="广东省岭南儿童影展三等奖"/>
-  <职务和称号:称号 rdf:ID="香山立县首倡者"/>
-  <职务和称号:职业 rdf:ID="少校督战官"/>
-  <职务和称号:职业 rdf:ID="大涌镇任卓山学校校长"/>
-  <职务和称号:职业 rdf:ID="大军营参军长"/>
-  <职务和称号:称号 rdf:ID="国父">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >国父（英语：Father of the Nation），对更朝换代先驱者，新政权推翻前政权当政的领导人称谓。也称为国家之父、祖国之父、建国之父、国民之父、民族之父、独立之父、未来之父，是给予当前国家政权奠基者的称谓，相当于中国古代开国皇帝。</rdfs:comment>
-    <职务和称号:定义 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >对新国家政权奠基者的称谓</职务和称号:定义>
-    <职务和称号:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >国父</职务和称号:中文名>
-    <职务和称号:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Father of the Nation</职务和称号:外文名>
-    <职务和称号:别称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >国家之父、建国之父、民族之父</职务和称号:别称>
-    <职务和称号:相关人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </职务和称号:称号>
-  <职务和称号:荣誉 rdf:ID="佛山市第四届新绿奖优秀奖"/>
-  <职务和称号:职业 rdf:ID="航空处秘书"/>
-  <职务和称号:荣誉 rdf:ID="柯尼卡全国摄影十杰年赛第三季度优异奖"/>
-  <职务和称号:职业 rdf:ID="粤中纵队战士"/>
-  <职务和称号:职业 rdf:ID="飞机修理厂长"/>
-  <职务和称号:职业 rdf:ID="南京国民党政府建设部部长"/>
-  <职务和称号:职业 rdf:ID="夏威夷首都投资公司主席"/>
-  <职务和称号:荣誉 rdf:ID="文艺调演优秀节目奖"/>
-  <职务和称号:职业 rdf:ID="福建龙岩县丞"/>
-  <职务和称号:职业 rdf:ID="粤中纵队司令部文化教员"/>
-  <职务和称号:职业 rdf:ID="广东航空学校高级飞行教官"/>
-  <职务和称号:职业 rdf:ID="山东夏津知县"/>
-  <职务和称号:职业 rdf:ID="越南华侨劝募救国公债主任"/>
-  <职务和称号:职业 rdf:ID="重中游击"/>
-  <职务和称号:职业 rdf:ID="中央航空委员会空军第三大队飞行员"/>
-  <职务和称号:职业 rdf:ID="南京空军第四队队长"/>
-  <职务和称号:职业 rdf:ID="中央航空公司股长"/>
-  <职务和称号:职业 rdf:ID="参加香港海员罢工地下党员"/>
-  <职务和称号:职业 rdf:ID="浙江湖州府归安县学教谕"/>
-  <职务和称号:职业 rdf:ID="福建漳州府南靖县学教谕"/>
-  <职务和称号:职业 rdf:ID="香山首任民选县长"/>
-  <职务和称号:荣誉 rdf:ID="三菱杯全国摄影赛鼓励奖"/>
-  <职务和称号:职业 rdf:ID="全国文联委员"/>
-  <职务和称号:职业 rdf:ID="少校大队队长"/>
-  <职务和称号:职业 rdf:ID="欧亚航空公司机械员"/>
-  <职务和称号:荣誉 rdf:ID="全国业余创作比赛三等奖"/>
-  <职务和称号:荣誉 rdf:ID="在龙的故乡全国影展优秀奖"/>
-  <职务和称号:职业 rdf:ID="寮后乡自卫队队员"/>
-  <职务和称号:职业 rdf:ID="交趾利仁州知州"/>
-  <职务和称号:职业 rdf:ID="广东航空处副处长"/>
-  <职务和称号:职业 rdf:ID="绵州都司"/>
-  <职务和称号:职业 rdf:ID="台州府盐使"/>
-  <职务和称号:职业 rdf:ID="广东空军飞行员"/>
-  <职务和称号:职业 rdf:ID="始兴县教谕"/>
-  <职务和称号:职业 rdf:ID="航空工程学会学员"/>
-  <职务和称号:职业 rdf:ID="中国国民党驻美国总支部特派员兼书记长"/>
-  <职务和称号:职业 rdf:ID="制造总局翻译官"/>
-  <职务和称号:职业 rdf:ID="中山游击队二中队排长"/>
-  <职务和称号:职业 rdf:ID="上士传达员"/>
-  <职务和称号:职业 rdf:ID="少校大队长"/>
-  <职务和称号:职业 rdf:ID="大元帅府航空局长"/>
-  <职务和称号:职业 rdf:ID="寿州知州"/>
-  <职务和称号:职业 rdf:ID="广东画院副校长"/>
-  <职务和称号:职业 rdf:ID="广东航空学校校长"/>
-  <职务和称号:荣誉 rdf:ID="大众摄影月赛二等奖"/>
-  <职务和称号:职业 rdf:ID="中国书法家协会常务理事"/>
-  <职务和称号:职业 rdf:ID="中华全国总工会第二届执委会执行委员"/>
-  <职务和称号:职业 rdf:ID="上海商业储备银行董事"/>
-  <职务和称号:职业 rdf:ID="轮船招商总局帮办"/>
-  <职务和称号:职业 rdf:ID="政警队班长"/>
-  <职务和称号:职业 rdf:ID="织布局总办"/>
-  <职务和称号:职业 rdf:ID="生祥茶栈通事"/>
-  <职务和称号:职业 rdf:ID="中尉队长"/>
-  <职务和称号:职业 rdf:ID="直隶天津镇游击"/>
-  <职务和称号:荣誉 rdf:ID="佛山地区创作奖"/>
-  <职务和称号:职业 rdf:ID="地下工作者"/>
-  <职务和称号:职业 rdf:ID="吏部科给事中"/>
-  <职务和称号:职业 rdf:ID="守备队小队长"/>
-  <职务和称号:职业 rdf:ID="粤中纵队四团手枪组组长"/>
-  <职务和称号:职业 rdf:ID="山西垣曲知县"/>
-  <职务和称号:职业 rdf:ID="全国漫画作家协会战时工委会委员"/>
-  <职务和称号:职业 rdf:ID="南越中华总商会会长"/>
-  <职务和称号:荣誉 rdf:ID="新绿文学一等奖"/>
-  <职务和称号:职业 rdf:ID="广州市参事室参事"/>
-  <职务和称号:荣誉 rdf:ID="省群众文艺调演创作二等奖"/>
-  <职务和称号:职业 rdf:ID="中央第三飞机厂大队长"/>
-  <职务和称号:职业 rdf:ID="中央新闻摄影局美术研究室副主任"/>
-  <职务和称号:职业 rdf:ID="挺进粤中纵队两阳支队战士"/>
-  <职务和称号:职业 rdf:ID="广东空军总司令部机械长"/>
-  <职务和称号:职业 rdf:ID="清驻温哥华领事"/>
-  <职务和称号:职业 rdf:ID="南京航空委员会人事处人员"/>
-  <职务和称号:职业 rdf:ID="十九路军建设空军分队长"/>
-  <职务和称号:职业 rdf:ID="南越华侨救济总会会长"/>
-  <职务和称号:职业 rdf:ID="刑科给事中"/>
-  <职务和称号:职业 rdf:ID="特别中队队员"/>
-  <职务和称号:职业 rdf:ID="上海中央航空司令部司令员"/>
-  <职务和称号:职业 rdf:ID="广东海军副司令"/>
-  <职务和称号:职业 rdf:ID="广西南宁参将"/>
-  <职务和称号:职业 rdf:ID="广西空军驾驶员"/>
-  <职务和称号:职业 rdf:ID="旧金山喜善堂理事"/>
-  <职务和称号:职业 rdf:ID="中美空军混合队飞行员"/>
-  <职务和称号:职业 rdf:ID="石城县训导"/>
-  <职务和称号:职业 rdf:ID="十九路军飞行员"/>
-  <职务和称号:职业 rdf:ID="空军运输大队分队长"/>
-  <职务和称号:荣誉 rdf:ID="省业余作品一等奖"/>
-  <职务和称号:职业 rdf:ID="列兵"/>
-  <职务和称号:职业 rdf:ID="广州世界语学会会长"/>
-  <职务和称号:职业 rdf:ID="广东航校机械科教官"/>
-  <职务和称号:荣誉 rdf:ID="花地佳作奖"/>
-  <职务和称号:荣誉 rdf:ID="广东省柯达杯摄影比赛鼓励奖"/>
-  <职务和称号:职业 rdf:ID="浙江富阳知县"/>
-  <职务和称号:职业 rdf:ID="海南昌化县教谕"/>
-  <职务和称号:职业 rdf:ID="集结第八中队队员"/>
-  <职务和称号:职业 rdf:ID="福建提督中军参将"/>
-  <职务和称号:职业 rdf:ID="广州大学教授"/>
-  <职务和称号:职业 rdf:ID="夏威夷阿罗哈航空公司董事长"/>
-  <职务和称号:职业 rdf:ID="第四航空队飞行员"/>
-  <职务和称号:职业 rdf:ID="徐闻县教谕"/>
-  <职务和称号:职业 rdf:ID="南星体育会会长"/>
-  <职务和称号:职业 rdf:ID="航务处处长"/>
-  <职务和称号:职业 rdf:ID="游击队炊事员"/>
-  <职务和称号:职业 rdf:ID="河南嵩县知县"/>
-  <职务和称号:职业 rdf:ID="岢岚州知州"/>
-  <职务和称号:职业 rdf:ID="北伐军大本营参军兼卫士大队长"/>
-  <职务和称号:职业 rdf:ID="广西航空学校教官"/>
-  <职务和称号:职业 rdf:ID="十九路军建设空军分队"/>
-  <职务和称号:职业 rdf:ID="中国航空运输公司高级顾问"/>
-  <职务和称号:职业 rdf:ID="驻朝鲜汉城领事"/>
-  <职务和称号:职业 rdf:ID="西南空军总司令员"/>
-  <职务和称号:职业 rdf:ID="全国漫画作家协会战时委员会委员"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第八届百花奖优秀奖"/>
-  <职务和称号:职业 rdf:ID="宝安县西乡共乐音响电子厂副处长"/>
-  <职务和称号:职业 rdf:ID="昆明飞机厂空军机械师"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第一届影展三等奖"/>
-  <职务和称号:职业 rdf:ID="太古洋行总买办"/>
-  <职务和称号:职业 rdf:ID="轰炸机队队长"/>
-  <职务和称号:职业 rdf:ID="少校中队长"/>
-  <职务和称号:职业 rdf:ID="清江知县"/>
-  <职务和称号:职业 rdf:ID="桐松营游击"/>
-  <职务和称号:职业 rdf:ID="粤剧编剧家"/>
-  <职务和称号:职业 rdf:ID="西贡法国东方汇理银行华人副经理"/>
-  <职务和称号:职业 rdf:ID="空军队长"/>
-  <职务和称号:职业 rdf:ID="英美烟公司大买办"/>
-  <职务和称号:职业 rdf:ID="陈中坚部战士"/>
-  <职务和称号:职业 rdf:ID="神户广东帮华侨董事"/>
-  <职务和称号:职业 rdf:ID="上海电报局总办"/>
-  <职务和称号:职业 rdf:ID="粤中纵队四团战士"/>
-  <职务和称号:职业 rdf:ID="驻墨西哥条约特使"/>
-  <职务和称号:荣誉 rdf:ID="太极杯中国书法大奖赛篆刻二等奖"/>
-  <职务和称号:职业 rdf:ID="接收威海卫委员会委员长"/>
-  <职务和称号:职业 rdf:ID="警察总监"/>
-  <职务和称号:职业 rdf:ID="虞部主政"/>
-  <职务和称号:职业 rdf:ID="中山抗日游击大队三中队队员"/>
-  <职务和称号:职业 rdf:ID="内阁中书"/>
-  <职务和称号:职业 rdf:ID="中国版画家协会主席"/>
-  <职务和称号:职业 rdf:ID="夏威夷枢密院议员"/>
-  <职务和称号:职业 rdf:ID="国民政府空军运输队大队长"/>
-  <职务和称号:荣誉 rdf:ID="广东省岭南儿童影展一等奖"/>
-  <职务和称号:职业 rdf:ID="影协上海分会常务理事"/>
-  <职务和称号:职业 rdf:ID="中华海员工业联合总会干事"/>
-  <职务和称号:职业 rdf:ID="中国美术家协会理事"/>
-  <职务和称号:职业 rdf:ID="福建安政和县知县"/>
-  <职务和称号:荣誉 rdf:ID="广东省保险杯摄影比赛三等奖"/>
-  <职务和称号:职业 rdf:ID="财政部长"/>
-  <职务和称号:职业 rdf:ID="广东空军总司令部第二大队分队长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第六届文艺百花奖二等奖"/>
-  <职务和称号:职业 rdf:ID="飞机制造厂厂长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市新绿摄影赛银牌奖"/>
-  <职务和称号:职业 rdf:ID="十九路空军军长"/>
-  <职务和称号:职业 rdf:ID="俊英工商总会主席"/>
-  <职务和称号:职业 rdf:ID="武义都尉"/>
-  <职务和称号:职业 rdf:ID="广东商办粤汉铁路购地局总办"/>
-  <职务和称号:荣誉 rdf:ID="佛山美职工摄影展二等奖"/>
-  <职务和称号:职业 rdf:ID="天津海关监督"/>
-  <职务和称号:职业 rdf:ID="广东空军第二十九中队飞行员"/>
-  <职务和称号:职业 rdf:ID="广州市区游击第二支队三中队指挥员"/>
-  <职务和称号:职业 rdf:ID="署奉天左参赞"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第六届文艺百花奖一等奖"/>
-  <职务和称号:职业 rdf:ID="抗日先锋队总队长"/>
-  <职务和称号:职业 rdf:ID="广东空军第二中队分队长"/>
-  <职务和称号:职业 rdf:ID="广州市政督办"/>
-  <职务和称号:职业 rdf:ID="阳和学校校长"/>
-  <职务和称号:职业 rdf:ID="卫生队救护"/>
-  <职务和称号:职业 rdf:ID="顺庆游击"/>
-  <职务和称号:职业 rdf:ID="抗大一分校教导员"/>
-  <职务和称号:荣誉 rdf:ID="佛山市文学创作诗歌一等奖"/>
-  <职务和称号:荣誉 rdf:ID="佛山地区五县市优秀灯谜三等奖"/>
-  <职务和称号:荣誉 rdf:ID="全国业余歌曲创作比赛鼓励奖"/>
-  <职务和称号:职业 rdf:ID="监造军船专员"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第四届新绿赛优秀奖"/>
-  <职务和称号:职业 rdf:ID="中央组织部长"/>
-  <职务和称号:职业 rdf:ID="南京空军科长"/>
-  <职务和称号:职业 rdf:ID="开平煤矿粤局总办"/>
-  <职务和称号:荣誉 rdf:ID="音乐鼓励奖"/>
-  <职务和称号:荣誉 rdf:ID="省业余歌曲创作三等奖"/>
-  <职务和称号:职业 rdf:ID="兵部司务"/>
-  <职务和称号:荣誉 rdf:ID="福达杯全国青年摄影赛亚军"/>
-  <职务和称号:职业 rdf:ID="珠江纵队手枪队战士"/>
-  <职务和称号:职业 rdf:ID="粤中纵队四团排长"/>
-  <职务和称号:职业 rdf:ID="中山游击队小队长"/>
-  <职务和称号:职业 rdf:ID="中央航空公司驾驶员"/>
-  <职务和称号:职业 rdf:ID="总统府参军"/>
-  <职务和称号:职业 rdf:ID="韶关航空站站长"/>
-  <职务和称号:职业 rdf:ID="农政专门学校校长"/>
-  <职务和称号:职业 rdf:ID="作曲家"/>
-  <职务和称号:职业 rdf:ID="中山县第二区联防主任"/>
-  <职务和称号:职业 rdf:ID="空军军士学校教育长"/>
-  <职务和称号:职业 rdf:ID="通政使司参"/>
-  <职务和称号:职业 rdf:ID="广东讲武堂教官"/>
-  <职务和称号:职业 rdf:ID="海军部次长"/>
-  <职务和称号:荣誉 rdf:ID="省中学生文艺汇演二等奖"/>
-  <职务和称号:职业 rdf:ID="上士班长"/>
-  <职务和称号:职业 rdf:ID="国民政府副主席"/>
-  <职务和称号:职业 rdf:ID="铁道部长"/>
-  <职务和称号:荣誉 rdf:ID="第十三届泰国国际影展铜牌奖"/>
-  <职务和称号:职业 rdf:ID="广州市区游击第二支队三中队中队长"/>
-  <职务和称号:职业 rdf:ID="关内外铁路总办"/>
-  <职务和称号:荣誉 rdf:ID="佛山市新绿摄影比赛银牌奖"/>
-  <职务和称号:荣誉 rdf:ID="中华杯全国书法大奖赛三等奖"/>
-  <职务和称号:职业 rdf:ID="连长"/>
-  <职务和称号:职业 rdf:ID="至德三德总公所主席"/>
-  <职务和称号:职业 rdf:ID="广东空军驾驶员"/>
-  <职务和称号:职业 rdf:ID="航空署中将署长"/>
-  <职务和称号:荣誉 rdf:ID="福达青年杯摄影比赛优秀奖"/>
-  <职务和称号:职业 rdf:ID="中士班长"/>
-  <职务和称号:荣誉 rdf:ID="广东省第十四届影展铜牌奖"/>
-  <职务和称号:职业 rdf:ID="山西司朗中"/>
-  <职务和称号:职业 rdf:ID="云南担任航空学校教官"/>
-  <职务和称号:职业 rdf:ID="空中照相测理所所长"/>
-  <职务和称号:职业 rdf:ID="广东航空处飞行教官"/>
-  <职务和称号:职业 rdf:ID="阳和总会馆主席"/>
-  <职务和称号:职业 rdf:ID="空中运输大队副大队长"/>
-  <职务和称号:荣誉 rdf:ID="环境文学鼓励奖"/>
-  <职务和称号:职业 rdf:ID="大元帅府侍从武官"/>
-  <职务和称号:荣誉 rdf:ID="大众摄影月赛优异奖"/>
-  <职务和称号:职业 rdf:ID="广东空军司令部军需处副处长"/>
-  <职务和称号:职业 rdf:ID="航空队队长"/>
-  <职务和称号:职业 rdf:ID="代理内阁总理"/>
-  <职务和称号:职业 rdf:ID="秘鲁中华通惠总局重建筹备会主任"/>
-  <职务和称号:职业 rdf:ID="华南文艺学院教授"/>
-  <职务和称号:职业 rdf:ID="导演"/>
-  <职务和称号:荣誉 rdf:ID="珠海杯海内外书法大赛三等奖"/>
-  <职务和称号:职业 rdf:ID="法部宥恤司外郎"/>
-  <职务和称号:职业 rdf:ID="马玉山糖果饼干总公司经理"/>
-  <职务和称号:职业 rdf:ID="温州府同知"/>
-  <职务和称号:职业 rdf:ID="中华会馆领事"/>
-  <职务和称号:职业 rdf:ID="自卫队队长"/>
-  <职务和称号:职业 rdf:ID="刑部江苏司"/>
-  <职务和称号:职业 rdf:ID="至德三德总会所主席"/>
-  <职务和称号:职业 rdf:ID="广东空军第一队飞行员"/>
-  <职务和称号:职业 rdf:ID="左军都司"/>
-  <职务和称号:职业 rdf:ID="十七中队中队长"/>
-  <职务和称号:职业 rdf:ID="中央航空委员会教官"/>
-  <职务和称号:职业 rdf:ID="非常国会及外交部部长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第七届百花奖三等奖"/>
-  <职务和称号:职业 rdf:ID="智利代办"/>
-  <职务和称号:职业 rdf:ID="美商宝顺银行香港分行总经理"/>
-  <职务和称号:职业 rdf:ID="处长"/>
-  <职务和称号:职业 rdf:ID="南京航空署飞机队驾驶员"/>
-  <职务和称号:职业 rdf:ID="空军第八大队第十九轰炸中队副中队长"/>
-  <职务和称号:职业 rdf:ID="社训分队队长"/>
-  <职务和称号:荣誉 rdf:ID="省业余舞蹈创作二等奖"/>
-  <职务和称号:荣誉 rdf:ID="佛山1987年度业余文艺作品评选二等奖"/>
-  <职务和称号:职业 rdf:ID="珠江人民抗日武装指挥部班长"/>
-  <职务和称号:职业 rdf:ID="战士"/>
-  <职务和称号:称号 rdf:ID="革命先行者">
-    <职务和称号:定义 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >最早觉悟引领大家的革命志士</职务和称号:定义>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >最早觉悟引领大家的革命志士，中国民主革命的先行者是孙中山。</rdfs:comment>
-    <职务和称号:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >革命先行者</职务和称号:中文名>
-    <职务和称号:相关人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-  </职务和称号:称号>
-  <职务和称号:职业 rdf:ID="陆军部首席参事官"/>
-  <职务和称号:职业 rdf:ID="上海海关道"/>
-  <职务和称号:荣誉 rdf:ID="省业余文艺作品三等奖"/>
-  <职务和称号:职业 rdf:ID="肇庆督标后营参将"/>
-  <职务和称号:称号 rdf:ID="铁城之父"/>
-  <职务和称号:职业 rdf:ID="南京政府空军总司令部照相技术队军士长"/>
-  <职务和称号:职业 rdf:ID="戍驯象卫"/>
-  <职务和称号:职业 rdf:ID="内阁邮传部副大臣"/>
-  <职务和称号:职业 rdf:ID="中山县中共地下党支部副书记"/>
-  <职务和称号:职业 rdf:ID="筹备特别关税会议委员会主任"/>
-  <职务和称号:职业 rdf:ID="秉公总堂评议长"/>
-  <职务和称号:职业 rdf:ID="四川总督"/>
-  <职务和称号:职业 rdf:ID="广西航校教官"/>
-  <职务和称号:职业 rdf:ID="台湾国防部中将厅长"/>
-  <职务和称号:职业 rdf:ID="员外郎"/>
-  <职务和称号:职业 rdf:ID="中华航空学校校长"/>
-  <职务和称号:荣誉 rdf:ID="群众文艺汇演二等奖"/>
-  <职务和称号:职业 rdf:ID="市政局委议员"/>
-  <职务和称号:职业 rdf:ID="抗日集结队战士"/>
-  <职务和称号:职业 rdf:ID="广东潮州镇总兵"/>
-  <职务和称号:职业 rdf:ID="中央监察委员"/>
-  <职务和称号:职业 rdf:ID="上尉中队长"/>
-  <职务和称号:荣誉 rdf:ID="文艺调演创作奖"/>
-  <职务和称号:职业 rdf:ID="教育副官"/>
-  <职务和称号:职业 rdf:ID="中国电影工作家协会理事"/>
-  <职务和称号:职业 rdf:ID="广东航空学校教官"/>
-  <职务和称号:职业 rdf:ID="上海机器织布局总办"/>
-  <职务和称号:职业 rdf:ID="中央空军南京分队长"/>
-  <职务和称号:职业 rdf:ID="内阁侍读学士"/>
-  <职务和称号:职业 rdf:ID="凤台知县"/>
-  <职务和称号:职业 rdf:ID="温州府府判"/>
-  <职务和称号:职业 rdf:ID="南京总理陵管理委员会委员"/>
-  <职务和称号:职业 rdf:ID="北京农商部农林传习所所长"/>
-  <职务和称号:职业 rdf:ID="翰林院待诏"/>
-  <职务和称号:职业 rdf:ID="苏松太道兼江海关监督"/>
-  <职务和称号:职业 rdf:ID="中华海员工业联合总会上海支部主任"/>
-  <职务和称号:职业 rdf:ID="农林讲习所监督"/>
-  <职务和称号:职业 rdf:ID="航空处中队长"/>
-  <职务和称号:职业 rdf:ID="幼童出洋肄业局副委员"/>
-  <职务和称号:荣誉 rdf:ID="好新闻乙等奖"/>
-  <职务和称号:职业 rdf:ID="庆远府知府"/>
-  <职务和称号:职业 rdf:ID="中央空军高级参谋"/>
-  <职务和称号:职业 rdf:ID="中华革命军广东全权筹备委员"/>
-  <职务和称号:职业 rdf:ID="司令训参谋长"/>
-  <职务和称号:职业 rdf:ID="航空处副处长"/>
-  <职务和称号:荣誉 rdf:ID="黑陶杯全国书法大奖赛三等奖"/>
-  <职务和称号:职业 rdf:ID="开平县航政局长"/>
-  <职务和称号:职业 rdf:ID="上海先施公司任副司理"/>
-  <职务和称号:职业 rdf:ID="中山游击队队员"/>
-  <职务和称号:职业 rdf:ID="安徽大学农学院代理筹备主任"/>
-  <职务和称号:职业 rdf:ID="中山隆真隆善社社长"/>
-  <职务和称号:职业 rdf:ID="福建福州府光泽县正堂"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第一届影展二等奖"/>
-  <职务和称号:职业 rdf:ID="新南威尔士州华人保商会副主席"/>
-  <职务和称号:职业 rdf:ID="华南汽车工程学校校长"/>
-  <职务和称号:职业 rdf:ID="檀香山华侨国民外交协进会会长"/>
-  <职务和称号:职业 rdf:ID="国民政府立法委员"/>
-  <职务和称号:职业 rdf:ID="儋州书院主讲"/>
-  <职务和称号:职业 rdf:ID="中山游击队三中队队员"/>
-  <职务和称号:职业 rdf:ID="广州市文史馆馆员"/>
-  <职务和称号:职业 rdf:ID="重庆空军教官"/>
-  <职务和称号:荣誉 rdf:ID="全国第十三届摄影展览银牌奖"/>
-  <职务和称号:职业 rdf:ID="化州教逾"/>
-  <职务和称号:职业 rdf:ID="广州市越秀区政协委员"/>
-  <职务和称号:职业 rdf:ID="航校代校长"/>
-  <职务和称号:职业 rdf:ID="檀香山中华总商会董事"/>
-  <职务和称号:荣誉 rdf:ID="佛山地区文学作品评选三等奖"/>
-  <职务和称号:职业 rdf:ID="空军摄影师"/>
-  <职务和称号:职业 rdf:ID="航空署空中摄影师"/>
-  <职务和称号:职业 rdf:ID="纽约领事"/>
-  <职务和称号:职业 rdf:ID="广东军事飞行学校总教官"/>
-  <职务和称号:职业 rdf:ID="中共中央委员"/>
-  <职务和称号:职业 rdf:ID="夏威夷证券交易所亚裔会长"/>
-  <职务和称号:职业 rdf:ID="中山县训政委员会秘书长"/>
-  <职务和称号:职业 rdf:ID="航政总局局长"/>
-  <职务和称号:职业 rdf:ID="广西空军第三中队队长"/>
-  <职务和称号:职业 rdf:ID="中国使馆翻译"/>
-  <职务和称号:职业 rdf:ID="第一任驻巴拿马总领事"/>
-  <职务和称号:职业 rdf:ID="轰炸总队的飞行教官"/>
-  <职务和称号:职业 rdf:ID="侦察团团员"/>
-  <职务和称号:职业 rdf:ID="广东督练所编译员"/>
-  <职务和称号:职业 rdf:ID="江西道监察御史"/>
-  <职务和称号:职业 rdf:ID="闽粤南澳镇总兵"/>
-  <职务和称号:职业 rdf:ID="国民党中央执委"/>
-  <职务和称号:职业 rdf:ID="海军处船政司司长"/>
-  <职务和称号:职业 rdf:ID="山东文登协副将"/>
-  <职务和称号:职业 rdf:ID="谏议大夫"/>
-  <职务和称号:职业 rdf:ID="轮船招商总局董事"/>
-  <职务和称号:职业 rdf:ID="香山协副将"/>
-  <职务和称号:职业 rdf:ID="直隶司"/>
-  <职务和称号:荣誉 rdf:ID="柯尼卡全国摄影十杰年赛第一季度优异奖"/>
-  <职务和称号:荣誉 rdf:ID="南风微型小说征文奖"/>
-  <职务和称号:职业 rdf:ID="国民政府委员"/>
-  <职务和称号:职业 rdf:ID="海军部军制司司长"/>
-  <职务和称号:职业 rdf:ID="音乐人"/>
-  <职务和称号:职业 rdf:ID="空军航运大队专职通讯员"/>
-  <职务和称号:称号 rdf:ID="革命家">
-    <职务和称号:外文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >revolutionist</职务和称号:外文名>
-    <职务和称号:中文名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >革命家</职务和称号:中文名>
-    <职务和称号:相关人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#孙中山"/>
-    <职务和称号:定义 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >具有革命思想，从事革命工作</职务和称号:定义>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >革命家是指具有革命思想，从事革命工作，并做出重大贡献的人。中国近代著名的革命家有孙中山、毛泽东、邓小平等人。
-革命家就是从事革命工作，领导或独自推翻当前不满足人心的现状，向不合理的世界体制发起强势挑战。例如孙中山（或袁世凯，有争论）推翻清朝统治创立中华民国，毛泽东则推翻中华民国创立中华人民共和国。但是思想家顾准曾对“革命家”有过一个精辟的论述：“革命家最初都是民主主义者，可是如果革命家树立了一个终极目标，而且内心里相信这个终极目标的，那么，他就不惜为了达到这个终极目标而牺牲民主，实行专政”。这样极为片面的说法是错误的。革命家对于目前社会的贡献之巨大是我们应该赞扬的。</rdfs:comment>
-  </职务和称号:称号>
-  <职务和称号:职业 rdf:ID="江西省电报局长"/>
-  <职务和称号:职业 rdf:ID="驻古巴公使"/>
-  <职务和称号:职业 rdf:ID="广州市公安局局长"/>
-  <职务和称号:荣誉 rdf:ID="省业余文艺会演出创作奖"/>
-  <职务和称号:职业 rdf:ID="翰林院编修"/>
-  <职务和称号:职业 rdf:ID="副司令"/>
-  <职务和称号:荣誉 rdf:ID="广东省庆祝建国40周年优秀作品三等奖"/>
-  <职务和称号:职业 rdf:ID="中央防空学校教官"/>
-  <职务和称号:职业 rdf:ID="排长"/>
-  <职务和称号:职业 rdf:ID="交通员"/>
-  <职务和称号:职业 rdf:ID="中澳联合会会长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第六届文艺百花奖新花奖"/>
-  <职务和称号:职业 rdf:ID="忻州静和知县"/>
-  <职务和称号:职业 rdf:ID="满洲镶黄旗教习"/>
-  <职务和称号:职业 rdf:ID="粤汉铁路总董"/>
-  <职务和称号:职业 rdf:ID="招商总局帮办"/>
-  <职务和称号:职业 rdf:ID="中华民国政府侨务委员"/>
-  <职务和称号:职业 rdf:ID="中国云南昆明美国十四航空队飞行员"/>
-  <职务和称号:职业 rdf:ID="肇庆军门赞画官"/>
-  <职务和称号:职业 rdf:ID="永年公司董事长"/>
-  <职务和称号:职业 rdf:ID="远东棉纱线辘工厂董事长"/>
-  <职务和称号:职业 rdf:ID="西建昌知府"/>
-  <职务和称号:职业 rdf:ID="护国军政府大元帅府参军"/>
-  <职务和称号:职业 rdf:ID="南京航空署第七飞行队队长"/>
-  <职务和称号:职业 rdf:ID="南京航空总站站长"/>
-  <职务和称号:职业 rdf:ID="汇丰银行日本神户支行买办"/>
-  <职务和称号:职业 rdf:ID="顺天府丞"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第六届百花奖一等奖"/>
-  <职务和称号:荣誉 rdf:ID="省广钢杯职工厂歌大赛三等奖"/>
-  <职务和称号:职业 rdf:ID="铁道部顾问"/>
-  <职务和称号:职业 rdf:ID="大元帅府参军处副官"/>
-  <职务和称号:职业 rdf:ID="护发军政府财政总长"/>
-  <职务和称号:职业 rdf:ID="公言报董事局局长"/>
-  <职务和称号:职业 rdf:ID="国民革命第一集团空军第五队飞行员"/>
-  <职务和称号:职业 rdf:ID="空军高级参谋"/>
-  <职务和称号:荣誉 rdf:ID="中国首届微型文学作品一等奖"/>
-  <职务和称号:职业 rdf:ID="中山纪念图书馆馆长"/>
-  <职务和称号:职业 rdf:ID="广东省代理省长"/>
-  <职务和称号:职业 rdf:ID="西南航空公司驾驶员"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第六届文艺百花奖三等奖"/>
-  <职务和称号:职业 rdf:ID="南京运输大队机械长"/>
-  <职务和称号:荣誉 rdf:ID="广东省群众艺术展览优秀奖"/>
-  <职务和称号:荣誉 rdf:ID="大众摄影月奖鼓励奖"/>
-  <职务和称号:职业 rdf:ID="全国政协委员"/>
-  <职务和称号:职业 rdf:ID="翰林院庶吉士"/>
-  <职务和称号:职业 rdf:ID="巡洋舰队统领海军部第二司司长"/>
-  <职务和称号:职业 rdf:ID="陕西城守协镇"/>
-  <职务和称号:荣誉 rdf:ID="省作品展览三等奖"/>
-  <职务和称号:职业 rdf:ID="浙江安吉州州同"/>
-  <职务和称号:职业 rdf:ID="顺天府尹"/>
-  <职务和称号:职业 rdf:ID="中国航空公司驾驶员"/>
-  <职务和称号:职业 rdf:ID="考试院院长"/>
-  <职务和称号:职业 rdf:ID="抗先队救护队"/>
-  <职务和称号:荣誉 rdf:ID="广东省企业之星文艺大赛独唱三等奖"/>
-  <职务和称号:荣誉 rdf:ID="佛山市科宝杯摄影比赛优异奖"/>
-  <职务和称号:职业 rdf:ID="挺进三纵战士"/>
-  <职务和称号:职业 rdf:ID="太仆寺正卿"/>
-  <职务和称号:职业 rdf:ID="驻西班牙马德里代办"/>
-  <职务和称号:职业 rdf:ID="广游二支队小队长"/>
-  <职务和称号:职业 rdf:ID="舞蹈家协会理事"/>
-  <职务和称号:职业 rdf:ID="广西提学使"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第六届百花奖三等奖"/>
-  <职务和称号:职业 rdf:ID="武汉大学教授"/>
-  <职务和称号:职业 rdf:ID="南京中央空军第八大队第三分队飞行员"/>
-  <职务和称号:职业 rdf:ID="援闽粤军飞行队队员"/>
-  <职务和称号:荣誉 rdf:ID="福达杯全国青年摄影赛优秀奖"/>
-  <职务和称号:职业 rdf:ID="镇远镇总兵"/>
-  <职务和称号:职业 rdf:ID="伦敦药房集团及认有限公司主席"/>
-  <职务和称号:职业 rdf:ID="中央航空飞行员"/>
-  <职务和称号:职业 rdf:ID="广东民众抗日自卫团中士班长"/>
-  <职务和称号:职业 rdf:ID="航空大队长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第七届百花奖一等奖"/>
-  <职务和称号:职业 rdf:ID="孙中山护卫队队长"/>
-  <职务和称号:职业 rdf:ID="津西局兵工厂绘图员"/>
-  <职务和称号:职业 rdf:ID="十九路军航空队队员"/>
-  <职务和称号:职业 rdf:ID="户部河南司主事"/>
-  <职务和称号:职业 rdf:ID="军委会汽车动力技术委员会委员"/>
-  <职务和称号:职业 rdf:ID="夏威夷共和银行总裁"/>
-  <职务和称号:职业 rdf:ID="航空学校校长"/>
-  <职务和称号:职业 rdf:ID="夏威夷国家银行总裁"/>
-  <职务和称号:职业 rdf:ID="国大代表"/>
-  <职务和称号:荣誉 rdf:ID="佛山市第七届文艺百花奖二等奖"/>
-  <职务和称号:职业 rdf:ID="刑部主事"/>
-  <职务和称号:职业 rdf:ID="北宁铁路总办"/>
-  <职务和称号:职业 rdf:ID="小队长"/>
-  <职务和称号:职业 rdf:ID="广东第一中学分队长"/>
-  <职务和称号:职业 rdf:ID="航空局第一飞机队副队长"/>
-  <职务和称号:职业 rdf:ID="广东空军第六驱逐飞行队队长"/>
-  <职务和称号:职业 rdf:ID="空军中将"/>
-  <职务和称号:职业 rdf:ID="南京航空署第六飞行队队长"/>
-  <职务和称号:职业 rdf:ID="武汉空军第五飞行队驾驶员"/>
-  <职务和称号:职业 rdf:ID="广东航空处军务科长"/>
-  <职务和称号:职业 rdf:ID="中国国民党驻美国总支部特派员"/>
-  <职务和称号:职业 rdf:ID="中国驻夏威夷第一任领事"/>
-  <职务和称号:职业 rdf:ID="朗调营参将"/>
-  <职务和称号:职业 rdf:ID="广州光学仪器厂担任技术室主任"/>
-  <职务和称号:职业 rdf:ID="广东青年抗日先锋队中山县队队员"/>
-  <职务和称号:荣誉 rdf:ID="全国第二届报纸副刊好作品评选二等奖"/>
-  <职务和称号:职业 rdf:ID="流涛光学仪器厂任经理兼技师"/>
-  <职务和称号:职业 rdf:ID="筹饷局主任"/>
-  <职务和称号:职业 rdf:ID="民国第一任内阁总理"/>
-  <职务和称号:称号 rdf:ID="茂宜岛王"/>
-  <职务和称号:荣誉 rdf:ID="佛山市科宝杯三等奖"/>
-  <职务和称号:职业 rdf:ID="中山民众抗敌后援会委员"/>
-  <职务和称号:职业 rdf:ID="蓝翎侍卫"/>
-  <职务和称号:荣誉 rdf:ID="省舞剧创作一等奖"/>
-  <职务和称号:职业 rdf:ID="中国社会科技园美术硕士生导师"/>
-  <职务和称号:职业 rdf:ID="第四飞机队飞行员"/>
-  <职务和称号:荣誉 rdf:ID="全国青年长安杯金牌大奖赛优秀奖"/>
-  <职务和称号:职业 rdf:ID="珠纵一支队三中队战士"/>
-  <职务和称号:职业 rdf:ID="中华商务总会代理总领事"/>
-  <职务和称号:职业 rdf:ID="西宁县教谕"/>
-  <职务和称号:职业 rdf:ID="厂长"/>
-  <职务和称号:荣誉 rdf:ID="书圣杯一等奖"/>
-  <职务和称号:荣誉 rdf:ID="首届全国报纸副刊好作品评选三等奖"/>
-  <职务和称号:职业 rdf:ID="中山文献委员会主委"/>
-  <职务和称号:职业 rdf:ID="外务部右参议"/>
-  <职务和称号:职业 rdf:ID="江南机械制造局帮办"/>
-  <职务和称号:职业 rdf:ID="贵州黄平营都司"/>
-  <职务和称号:职业 rdf:ID="南京空军总司令部战斗机飞行员"/>
-  <职务和称号:职业 rdf:ID="守备队队员"/>
-  <职务和称号:职业 rdf:ID="理川东重庆镇事"/>
-  <职务和称号:荣誉 rdf:ID="佛山市美术作品展览二等奖"/>
-  <职务和称号:荣誉 rdf:ID="佛山美职工摄影展三等奖"/>
-  <职务和称号:职业 rdf:ID="班长"/>
-  <职务和称号:职业 rdf:ID="平沈路运输处长"/>
-  <职务和称号:职业 rdf:ID="香山县县长"/>
-  <职务和称号:职业 rdf:ID="北伐军飞机队队长副队长"/>
-  <职务和称号:职业 rdf:ID="长江舰队司令"/>
-  <职务和称号:职业 rdf:ID="立法院长"/>
-  <职务和称号:职业 rdf:ID="中国国民党筹饷局主任"/>
-  <职务和称号:职业 rdf:ID="刑部四川司主事"/>
-  <职务和称号:职业 rdf:ID="行政院长"/>
-  <职务和称号:职业 rdf:ID="航校校长"/>
-  <职务和称号:职业 rdf:ID="南京中央空军分队长"/>
-  <职务和称号:职业 rdf:ID="中国空军副队长"/>
-  <职务和称号:职业 rdf:ID="国民党第四届中央执委"/>
-  <职务和称号:荣誉 rdf:ID="广东风光摄影大奖优异奖"/>
-  <职务和称号:职业 rdf:ID="航校教育长"/>
-  <职务和称号:职业 rdf:ID="空军总司令部署长"/>
-  <职务和称号:职业 rdf:ID="政警班长"/>
-  <职务和称号:职业 rdf:ID="中国驻西雅图领事"/>
-  <职务和称号:荣誉 rdf:ID="第四届佛山青年新绿比赛三等奖"/>
-  <职务和称号:荣誉 rdf:ID="省首届鲁迅文艺三等奖"/>
-  <职务和称号:荣誉 rdf:ID="佛山市科宝杯摄影比赛一等奖"/>
-  <职务和称号:荣誉 rdf:ID="广东省柯达杯摄影比赛一等奖"/>
-  <职务和称号:职业 rdf:ID="中央直辖讨贼军司令"/>
-  <职务和称号:荣誉 rdf:ID="佛山行摄影展览铜牌奖"/>
-  <职务和称号:职业 rdf:ID="侨务委员会委员"/>
-  <职务和称号:职业 rdf:ID="加州军人福利会主席"/>
-  <职务和称号:职业 rdf:ID="琼州澄迈县儒学训导"/>
-  <职务和称号:职业 rdf:ID="中山抗日游击大队二中队队员"/>
-  <职务和称号:职业 rdf:ID="民国海军总长"/>
-  <职务和称号:职业 rdf:ID="空军上校"/>
-  <职务和称号:职业 rdf:ID="普利纱厂华人经理"/>
-  <职务和称号:职业 rdf:ID="山东高唐州州判"/>
-  <职务和称号:职业 rdf:ID="光禄寺少卿"/>
-  <职务和称号:职业 rdf:ID="国民参政会第二届侨务委员"/>
-  <职务和称号:职业 rdf:ID="中书舍人"/>
-  <职务和称号:职业 rdf:ID="广州市公安局长"/>
-  <职务和称号:职业 rdf:ID="署北洋海军鱼雷左一营都司"/>
-  <职务和称号:职业 rdf:ID="广东省建设厅长"/>
-  <职务和称号:职业 rdf:ID="侦察团工作队队员"/>
-  <职务和称号:荣誉 rdf:ID="省通俗歌曲作品评选三等奖"/>
-  <职务和称号:荣誉 rdf:ID="乐凯摄影比赛鼓励奖"/>
-  <职务和称号:职业 rdf:ID="名版画艺术家"/>
-  <职务和称号:职业 rdf:ID="北洋营务处会办"/>
-  <职务和称号:职业 rdf:ID="南安府南康知县"/>
-  <职务和称号:荣誉 rdf:ID="佛山地区散文一等奖"/>
-  <职务和称号:职业 rdf:ID="广东第六地区司令部秘书"/>
-  <职务和称号:荣誉 rdf:ID="合唱作品一等奖"/>
-  <职务和称号:职业 rdf:ID="福建第十九路军航空队飞行员"/>
-  <职务和称号:荣誉 rdf:ID="省业余文艺作品评选二等奖"/>
-  <职务和称号:职业 rdf:ID="国民党中山县第五区党部书记"/>
-  <职务和称号:职业 rdf:ID="关内铁路运输处处长"/>
-  <职务和称号:职业 rdf:ID="二等侍卫"/>
-  <职务和称号:职业 rdf:ID="考试院副院长"/>
-  <职务和称号:职业 rdf:ID="人民党纳闽支部署理主席"/>
-  <职务和称号:职业 rdf:ID="海防司令部副司令兼参谋长"/>
-  <职务和称号:职业 rdf:ID="广东空军第四飞行队飞行员"/>
-  <职务和称号:职业 rdf:ID="中国新闻漫画研究会会长"/>
-  <职务和称号:职业 rdf:ID="华盛顿会议中国代表高等顾问"/>
-  <职务和称号:职业 rdf:ID="都事司郎中"/>
-  <职务和称号:职业 rdf:ID="花翎侍卫"/>
-  <职务和称号:荣誉 rdf:ID="广东省第13届影展二等奖"/>
-  <职务和称号:职业 rdf:ID="游击队班长"/>
-  <职务和称号:职业 rdf:ID="第三师师长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市新绿摄影比赛优秀奖"/>
-  <职务和称号:荣誉 rdf:ID="首届全国归侨侨眷及港澳台同胞亲属业余歌手竞赛三等奖"/>
-  <职务和称号:职业 rdf:ID="小刀会首领"/>
-  <职务和称号:职业 rdf:ID="中山县训政实施委员会主席"/>
-  <职务和称号:荣誉 rdf:ID="文艺创作一等奖"/>
-  <职务和称号:荣誉 rdf:ID="全国棣体书法大奖赛二等奖"/>
-  <职务和称号:职业 rdf:ID="广东人民抗日游击队珠江纵队战士"/>
-  <职务和称号:职业 rdf:ID="驻马尼拉总领事"/>
-  <职务和称号:职业 rdf:ID="中华总商会副主席"/>
-  <职务和称号:职业 rdf:ID="北京农科大学农艺系主任"/>
-  <职务和称号:职业 rdf:ID="航空学校教育长"/>
-  <职务和称号:职业 rdf:ID="空军轰炸机队驾驶员"/>
-  <职务和称号:职业 rdf:ID="山西省建平知县"/>
-  <职务和称号:职业 rdf:ID="南京航空署署长"/>
-  <职务和称号:称号 rdf:ID="东区小霸王"/>
-  <职务和称号:职业 rdf:ID="农协会员农军"/>
-  <职务和称号:荣誉 rdf:ID="省民兵文艺汇演奖"/>
-  <职务和称号:职业 rdf:ID="南番中顺中心县委地下交通站负责人"/>
-  <职务和称号:职业 rdf:ID="台湾桃园机场学校教官"/>
-  <职务和称号:职业 rdf:ID="空军募款委员会主任"/>
-  <职务和称号:职业 rdf:ID="新泰协副将"/>
-  <职务和称号:职业 rdf:ID="上海大众出版社编辑"/>
-  <职务和称号:职业 rdf:ID="西江讨贼总指挥"/>
-  <职务和称号:职业 rdf:ID="游击队战士"/>
-  <职务和称号:职业 rdf:ID="空军第三大队第八队飞行员"/>
-  <职务和称号:职业 rdf:ID="启德机场飞行教官"/>
-  <职务和称号:荣誉 rdf:ID="广东农村十大歌手"/>
-  <职务和称号:职业 rdf:ID="户部主事"/>
-  <职务和称号:职业 rdf:ID="少尉队长"/>
-  <职务和称号:职业 rdf:ID="科长"/>
-  <职务和称号:荣誉 rdf:ID="广东省保险杯摄影比赛鼓励奖"/>
-  <职务和称号:职业 rdf:ID="广东空军驱逐机驾驶员"/>
-  <职务和称号:职业 rdf:ID="长江舰队炮舰舰长"/>
-  <职务和称号:职业 rdf:ID="珠纵一支队班长"/>
-  <职务和称号:职业 rdf:ID="立法委员"/>
-  <职务和称号:职业 rdf:ID="电影摄影师"/>
-  <职务和称号:职业 rdf:ID="广州卫戍司令"/>
-  <职务和称号:职业 rdf:ID="华洋义赈会会长"/>
-  <职务和称号:职业 rdf:ID="轮船招商总局总办"/>
-  <职务和称号:职业 rdf:ID="广东航空学校高级飞行员"/>
-  <职务和称号:职业 rdf:ID="淮安知府"/>
-  <职务和称号:职业 rdf:ID="轮船招商总局会办"/>
-  <职务和称号:职业 rdf:ID="合众兴业公司董事长"/>
-  <职务和称号:职业 rdf:ID="广东兵工厂厂长"/>
-  <职务和称号:荣誉 rdf:ID="佛山行影展三等奖"/>
-  <职务和称号:职业 rdf:ID="肇庆府开平县训导"/>
-  <职务和称号:职业 rdf:ID="中国德籍顾问穆麟德随员"/>
-  <职务和称号:职业 rdf:ID="十九路军飞机队机械长"/>
-  <职务和称号:职业 rdf:ID="革命军航空局局长"/>
-  <职务和称号:职业 rdf:ID="香山县协副将"/>
-  <职务和称号:职业 rdf:ID="兵部职方司主事"/>
-  <职务和称号:职业 rdf:ID="澳门四界服务团工作组组长"/>
-  <职务和称号:职业 rdf:ID="中山县警察局督察"/>
-  <职务和称号:职业 rdf:ID="南番中顺中心县委宣传部长"/>
-  <职务和称号:职业 rdf:ID="福建十九路军飞机队机械长"/>
-  <职务和称号:职业 rdf:ID="中央驻粤空军总指挥"/>
-  <职务和称号:职业 rdf:ID="十九路军飞机队驾驶员"/>
-  <职务和称号:荣誉 rdf:ID="省通俗歌曲作品评选二等奖"/>
-  <职务和称号:荣誉 rdf:ID="柯尼卡全国摄影十杰年赛第四季度优异奖"/>
-  <职务和称号:职业 rdf:ID="第一届中华全国总工会委员长"/>
-  <职务和称号:职业 rdf:ID="广东空军飞机队飞行员"/>
-  <职务和称号:职业 rdf:ID="驻朝鲜总领事"/>
-  <职务和称号:职业 rdf:ID="甘肃肃州挂印总兵"/>
-  <职务和称号:职业 rdf:ID="中央航空学校校长"/>
-  <职务和称号:职业 rdf:ID="中央航空运输驾驶员"/>
-  <职务和称号:职业 rdf:ID="中华会馆商董"/>
-  <职务和称号:职业 rdf:ID="整理国内外债务委员会成员"/>
-  <职务和称号:职业 rdf:ID="中华总会馆总董"/>
-  <职务和称号:职业 rdf:ID="国民党四届中央委员"/>
-  <职务和称号:职业 rdf:ID="集结队班长"/>
-  <职务和称号:荣誉 rdf:ID="佛山市文艺百花奖二等奖"/>
-  <职务和称号:职业 rdf:ID="奉天巡抚"/>
-  <职务和称号:荣誉 rdf:ID="第五届澳门国际影展丝带奖"/>
-  <职务和称号:职业 rdf:ID="诗人"/>
-  <职务和称号:职业 rdf:ID="福建布政使"/>
-  <职务和称号:职业 rdf:ID="南京太仆寺丞"/>
-  <职务和称号:职业 rdf:ID="福建第十九路飞行员"/>
-  <职务和称号:职业 rdf:ID="檀香山中美银行总经理"/>
-  <职务和称号:职业 rdf:ID="守备队员"/>
+﻿<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Duty_Title.owl"
+     xml:base="http://www.owl-ontologies.com/Duty_Title.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Event="http://www.owl-ontologies.com/Event.owl#"
+       xmlns:Duty_Title="http://www.owl-ontologies.com/Duty_Title.owl#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Duty_Title.owl">
+        <owl:imports rdf:resource="http://www.owl-ontologies.com/Individual.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#相关人 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#相关人">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Individual.owl#广州革命历史人物"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#中文名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#中文名">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#别称 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#别称">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#外文名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#外文名">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#定义 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#定义">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#头衔 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#头衔">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#称号 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#称号">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#职业 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#职业">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#职务和称号 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号">
+        <rdfs:label>职务和称号</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#荣誉 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#荣誉">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职务和称号"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#_平民日报_记者 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#_平民日报_记者">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职业"/>
+        <Duty_Title:相关人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#潘达微"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#两广总督 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#两广总督">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职业"/>
+        <Duty_Title:相关人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#张鸣岐"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#中共广东省委书记 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#中共广东省委书记">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职业"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#广州苏维埃秘书长 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#广州苏维埃秘书长">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职业"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Duty_Title.owl#水师提督 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Duty_Title.owl#水师提督">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Duty_Title.owl#职业"/>
+        <Duty_Title:相关人 rdf:resource="http://www.owl-ontologies.com/Individual.owl#李准"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
