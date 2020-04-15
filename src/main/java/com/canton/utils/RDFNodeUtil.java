@@ -27,6 +27,7 @@ public class RDFNodeUtil {
 		if(node.isLiteral()) {
 			
 			localName = node.asLiteral().getString();
+
 			
 			if(!localName.contains(".owl")) return node.asLiteral().getString();
 			

@@ -78,11 +78,17 @@
 	</Ontology_Files>
 
 	<Duty_Title>http://www.owl-ontologies.com/Duty_Title.owl</Duty_Title>
+
 	<Event>http://www.owl-ontologies.com/Event.owl</Event>
+
 	<Individual>http://www.owl-ontologies.com/Individual.owl</Individual>
+
 	<Location>http://www.owl-ontologies.com/Location.owl</Location>
+
 	<Organization>http://www.owl-ontologies.com/Organization.owl</Organization>
+
 	<Relics>http://www.owl-ontologies.com/Relics.owl</Relics>
+
 	<Time>http://www.owl-ontologies.com/Time.owl</Time>
 
 </Ontology_Properties>

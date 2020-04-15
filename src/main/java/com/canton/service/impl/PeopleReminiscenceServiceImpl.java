@@ -26,7 +26,7 @@ public class PeopleReminiscenceServiceImpl extends BaseService implements People
         String time = prefix.setPrefix("Event","开始时间");
 
         String sparqlStr =
-                "SELECT DISTINCT ?object ?time ?rank "
+                "SELECT DISTINCT ?object  ?rank ?time "
                         + "  WHERE {"
                         +    person + "?predicate" +" ?object."
                         + "  ?object " + time +" ?time."

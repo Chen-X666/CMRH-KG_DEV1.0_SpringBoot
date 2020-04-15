@@ -2,7 +2,6 @@ package com.canton.dao.util;
 
 import org.dom4j.Element;
 
-import java.util.Iterator;
 
 /**
  * @Auther ChenX

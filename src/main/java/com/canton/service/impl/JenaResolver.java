@@ -198,11 +198,11 @@ public class JenaResolver implements OntologyResolver {
 		// TODO Auto-generated method stub
 
 		OntModel ontModel = getDefaultOntModel();
-		System.out.println("ont"+ontModel);
+		//System.out.println("ont"+ontModel);
 
 		// 获取顶层类的迭代器
 		ExtendedIterator<OntClass> iter = ontModel.listHierarchyRootClasses();
-		System.out.println("iter"+iter);
+		//System.out.println("iter"+iter);
 
 		// 创建本体类对象集合
 		Collection<OntologyClass> classes = new ArrayList<OntologyClass>();
@@ -251,6 +251,7 @@ public class JenaResolver implements OntologyResolver {
 
 		// 获取类名
 		String className = ontologyClass.getLocalName();
+
 
 		// 获取URI集合
 		Set<String> uris = ontModel.listImportedOntologyURIs(true);
@@ -425,6 +426,7 @@ public class JenaResolver implements OntologyResolver {
 
 			// 尝试通过URI+#+类名获取OntClass对象
 			theClass = ontModel.getOntClass(uri + "#" + className);
+			System.out.println(className);
 
 			// 如果存在该类名对应的OntClass对象，则退出循环
 			if (theClass != null)
