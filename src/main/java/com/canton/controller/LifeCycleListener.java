@@ -43,7 +43,7 @@ public class LifeCycleListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 		/**
 		 * 构建本体模型
-		 */
+
 		System.out.println("开始初始化本体模型数据...");
 		// TODO Auto-generated method stub
        //配置文件根路径
@@ -54,7 +54,7 @@ public class LifeCycleListener implements ServletContextListener {
         OntModel defaultOntModel = JenaUtil.addNamedModel(defaultModelURI);
        DefaultOntModel.getInstance().setOntModel(defaultOntModel);
       System.out.println("初始化本体模型数据完成");
-
+*/
 		/**
 		 * 构建全文索引
 		 */

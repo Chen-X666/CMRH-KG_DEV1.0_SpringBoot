@@ -22,6 +22,8 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.StringReader;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Auther ChenX
@@ -37,7 +39,7 @@ public class LuceneServiceImpl implements LuceneService {
 
 
     @Override
-    public Lucene getKeyword(String keyword) throws Exception {
+    public List<String> getKeyword(String keyword) throws Exception {
         File directory = new File("src/main/resources");
         String path = directory.getCanonicalPath();
 
@@ -79,8 +81,8 @@ public class LuceneServiceImpl implements LuceneService {
         highlighter.setTextFragmenter(fragmenter);
 
         //取出每条查询结果
-        //List<String> list = new ArrayList<>();
-        //list.add("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
+        List<String> list = new ArrayList<>();
+        list.add("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
         Lucene lucene = new Lucene();
         lucene.setNum("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
         for(ScoreDoc scoreDoc : docs.scoreDocs) {
@@ -99,11 +101,11 @@ public class LuceneServiceImpl implements LuceneService {
 
 
                 //list.add("《"+doc.get("fileName").replaceAll(txt,"")+"》");
-               // list.add(summary);
+               list.add(summary);
             }
         }
         reader.close();
-        return lucene;
+        return list;
     }
 
 
