@@ -1,26 +1,32 @@
 package com.canton.controller;
 
+import com.canton.dao.entity.Catalog;
 import com.canton.service.CatalogService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
- * 目录
  * @Auther ChenX
- * @Date 2020.3.20
+ * @Date 2020.5.6
  **/
 @Controller
+@CrossOrigin//允许跨域访问
+@RequestMapping(value = "/Catalog", produces="application/json;charset=utf-8")
 public class CatalogController {
-	@Autowired
-	private CatalogService catalogService;
-
-	@RequestMapping(value = "/catalog-getTopClasses")
-	@ResponseBody
-	public String getTopClasses() {
-		//获取目录头结点
-		return catalogService.getTopClassNodes();
-	}
+    @Autowired
+    private CatalogService testService;
+    @GetMapping("getCatalog")
+    @ApiOperation(value="获取目录", notes="获取目录")
+    @ResponseBody
+    public List<Catalog> getCatalog() {
+        return testService.getTopCatalog();
+    }
 
 }

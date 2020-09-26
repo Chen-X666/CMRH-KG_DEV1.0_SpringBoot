@@ -2,8 +2,12 @@ package com.canton.service.impl;
 
 import com.canton.dao.entity.Lucene;
 import com.canton.service.LuceneService;
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
+import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -36,10 +40,8 @@ public class LuceneServiceImpl implements LuceneService {
      **/
     private static final Logger logger = LoggerFactory.getLogger(LuceneServiceImpl.class);
 
-
-
     @Override
-    public List<String> getKeyword(String keyword) throws Exception {
+    public List<Lucene> getKeyword(String keyword) throws Exception {
         File directory = new File("src/main/resources");
         String path = directory.getCanonicalPath();
 
@@ -50,15 +52,21 @@ public class LuceneServiceImpl implements LuceneService {
         //构建 IndexSearcher
         IndexSearcher searcher = new IndexSearcher(reader);
 
-        //使用中文分词器
-        SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
+        //使用lucene中文分词器
+         SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
+
+        //使用hanLP中文分词器
+        //Analyzer analyzer = new HanLPAnalyzer(true);
+
+        //使用lk分词器
+        //Analyzer analyzer = new IKAnalyzer();
 
         //由中文分词器初始化查询解析器
         QueryParser parser = new QueryParser("contents", analyzer);
 
         //通过解析要查询的 String，获取查询对象
         Query query = parser.parse(keyword);
-
+        logger.info("分词结果{}", query);
         //记录索引开始时间
         long startTime = System.currentTimeMillis();
 
@@ -70,22 +78,24 @@ public class LuceneServiceImpl implements LuceneService {
         logger.info("查询到{}条记录", docs.totalHits);
 
         //如果不指定参数的话，默认是加粗，即 <b><b/>
-        SimpleHTMLFormatter simpleHTMLFormatter = new SimpleHTMLFormatter("<b><font color=red>","</font></b>");
+        SimpleHTMLFormatter simpleHTMLFormatter = new SimpleHTMLFormatter("<b><font color=red style=\"background:yellow\">","</font></b>");
         //根据查询对象计算得分，会初始化一个查询结果最高的得分
         QueryScorer scorer = new QueryScorer(query);
         //根据这个得分计算出一个片段
-        Fragmenter fragmenter = new SimpleSpanFragmenter(scorer);
+        Fragmenter fragmenter = new SimpleSpanFragmenter(scorer,500);
         //将这个片段中的关键字用上面初始化好的高亮格式高亮
         Highlighter highlighter = new Highlighter(simpleHTMLFormatter, scorer);
         //设置一下要显示的片段
         highlighter.setTextFragmenter(fragmenter);
 
+
         //取出每条查询结果
-        List<String> list = new ArrayList<>();
-        list.add("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
-        Lucene lucene = new Lucene();
-        lucene.setNum("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
+        List<Lucene> lucenes = new ArrayList<Lucene>();
+        //list.add("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
         for(ScoreDoc scoreDoc : docs.scoreDocs) {
+            logger.info(String.valueOf(scoreDoc));
+            Lucene lucene = new Lucene();
+            lucene.setNum("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
             //scoreDoc.doc 相当于 docID，根据这个 docID 来获取文档
             Document doc = searcher.doc(scoreDoc.doc);
             logger.info("fileName:{}", doc.get("fileName"));
@@ -95,21 +105,20 @@ public class LuceneServiceImpl implements LuceneService {
             //显示高亮
             if(contents != null) {
                 TokenStream tokenStream = analyzer.tokenStream("contents", new StringReader(contents));
+                //TokenStream token=TokenSources.getAnyTokenStream(searcher.getIndexReader(), sd.doc, filed, new IKAnalyzer(true));//获取tokenstream
+
                 String summary = highlighter.getBestFragment(tokenStream, contents);
                 logger.info("得分最高的的content:{}", summary);
                 String txt =".txt";//去掉文件后缀
-
-
-                //list.add("《"+doc.get("fileName").replaceAll(txt,"")+"》");
-               list.add(summary);
+                lucene.setFileName("《"+doc.get("fileName").replaceAll(txt,"")+"》");
+                lucene.setContent(summary);
+                lucene.setImage("../../statics/Book/"+lucene.getFileName()+".png");
+                lucenes.add(lucene);
             }
         }
         reader.close();
-        return list;
+        return lucenes;
     }
-
-
-
 }
 
 

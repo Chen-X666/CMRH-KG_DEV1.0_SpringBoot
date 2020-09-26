@@ -15,13 +15,13 @@ class LuceneUtilTest {
         String indexDir = path+"/lucene";
         //需要索引的文件数据存放的目录
         String dataDir = path+"/book";
-        LuceneUntil indexer = null;
+        LuceneUtil indexer = null;
         int indexedNum = 0;
         //记录索引开始时间
         long startTime = System.currentTimeMillis();
         try {
             // 开始构建索引
-            indexer = new LuceneUntil(indexDir);
+            indexer = new LuceneUtil(indexDir);
             indexedNum = indexer.indexAll(dataDir);
         } catch (Exception e) {
             e.printStackTrace();

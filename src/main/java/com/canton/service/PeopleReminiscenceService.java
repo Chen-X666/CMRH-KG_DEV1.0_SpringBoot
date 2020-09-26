@@ -1,5 +1,7 @@
 package com.canton.service;
 
+import com.canton.dao.entity.Reminiscence;
+
 public interface PeopleReminiscenceService {
-    String getPeople(String people);
+    Reminiscence getPeople(String people);
 }

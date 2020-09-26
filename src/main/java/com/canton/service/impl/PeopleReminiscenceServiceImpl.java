@@ -1,14 +1,11 @@
 package com.canton.service.impl;
 
-import com.canton.dao.util.PrefixUtil;
-import com.canton.model.data.interfaces.Data;
+import com.canton.dao.entity.Reminiscence;
 import com.canton.model.ontology.Statement;
 import com.canton.service.PeopleReminiscenceService;
-import com.canton.utils.DataUtil;
-import com.canton.utils.JsonUtil;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
+import java.util.*;
 
 /**
  * @Auther ChenX
@@ -16,39 +13,74 @@ import java.util.Collection;
  **/
 @Service
 public class PeopleReminiscenceServiceImpl extends BaseService implements PeopleReminiscenceService {
-    PrefixUtil prefix = new PrefixUtil();
+
 
     @Override
-    public String getPeople(String people) {
-
-        String person = prefix.setPrefix("Individual",people);
-        String rank = prefix.setPrefix("Time","排序时间");
-        String time = prefix.setPrefix("Event","开始时间");
+    public Reminiscence getPeople(String people) {
+        String parentEvent=  "<http://www.owl-ontologies.com/Recall.owl#"+people+"_回溯>";
+        String time =  "<http://www.owl-ontologies.com/Recall.owl#time>";
+        String location =  "<http://www.owl-ontologies.com/Recall.owl#回溯地点>";
+        String comment =  "<http://www.w3.org/2000/01/rdf-schema#comment>";
 
         String sparqlStr =
-                "SELECT DISTINCT ?object  ?rank ?time "
-                        + "  WHERE {"
-                        +    person + "?predicate" +" ?object."
-                        + "  ?object " + time +" ?time."
-                        + "  ?time " + rank +" ?rank.}"
-                        + "  ORDER BY ?rank";
+                "SELECT DISTINCT  ?childEvent ?time ?location " +
+                        "WHERE {" +
+                        "  ?subject ?predicate "+parentEvent+"." +
+                        "  ?subject "+comment+" ?childEvent. " +
+                        "  ?subject "+time+" ?time." +
+                        "  ?subject "+location+" ?location }" +
+                        "  ORDER BY ?subject";
 
 
         Collection<Statement> statements = getOntologyResolver().query(sparqlStr);
 
-        String result = null;
-
         if (statements.size() > 0) {
-
-            Data data = DataUtil.transferStatementsToData(statements);
-
-            result = JsonUtil.formatAsJson(data);
-
+            return peoplereminiscenceData(statements,people);
+        } else {
+            System.out.println("无检索people");
+            return null;
         }
-        else
-        {
-            System.out.println("无检索People");
+    }
+
+
+    public static Reminiscence peoplereminiscenceData(Collection<Statement> statements, String people) {
+
+        Iterator<Statement> iter = statements.iterator();
+        String space = null;
+        String data = "";
+        int i = 0;
+
+        List<List> listtt = new ArrayList();
+        while (iter.hasNext()) {
+            List<List> listt = new ArrayList();
+            Statement statement = iter.next();
+            List list = new ArrayList();
+            //记录一下日期
+            System.out.println(statement.getPredicate());
+            System.out.println(data);
+            if (data.equals(statement.getPredicate()))
+            {
+                listtt.remove(listtt.size()-1);
+                space = space.concat("、"+statement.getObject());
+            }
+            else { space = statement.getObject(); }
+            //记录日期地点
+            data = statement.getPredicate();
+
+            list.add(statement.getPredicate());
+            list.add(space);
+            list.add(people);
+            StringBuffer event = new StringBuffer(statement.getSubject());
+            for(int j=15;j<statement.getSubject().length();j+=16)
+            {   event = event.insert(j,'\n');}
+            list.add(event);
+            listt.add(list);
+            listtt.add(listt);
+            i = i+1;
         }
-        return result;
+        Reminiscence reminiscence = new Reminiscence();
+        reminiscence.setSeries(listtt);
+        reminiscence.setCounties(Collections.singletonList(people));
+        return reminiscence;
     }
 }

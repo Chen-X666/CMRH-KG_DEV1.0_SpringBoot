@@ -12,7 +12,7 @@ class LuceneServiceImplTest {
 
         try {
 LuceneServiceImpl lucene = new LuceneServiceImpl();
-           lucene.getKeyword("黄埔军校");
+           lucene.getKeyword("孙中山");
 
             //addAttribute("list", list);
 

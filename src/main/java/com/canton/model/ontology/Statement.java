@@ -43,7 +43,7 @@ public class Statement implements Serializable{
 	/**
 	 * 三元组宾语所属的类名。
 	 */
-	private String objectClassName;
+	private String objectClassName = "null";
 	
 	/**
 	 * 三元组所属的Graph名称。

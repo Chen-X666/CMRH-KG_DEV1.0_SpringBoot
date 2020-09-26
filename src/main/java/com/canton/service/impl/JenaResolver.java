@@ -1,15 +1,10 @@
 package com.canton.service.impl;
 
-import com.canton.dao.util.ConfigurationUtil;
 import com.canton.dao.util.DefaultOntModel;
-import com.canton.model.ontology.OntologyClass;
-import com.canton.model.ontology.OntologyInstance;
-import com.canton.model.ontology.OntologyResource;
-import com.canton.model.ontology.Statement;
+import com.canton.model.ontology.*;
 import com.canton.service.OntologyResolver;
-import com.canton.utils.NameSpaceClassMapUtil;
+import com.canton.utils.*;
 import com.canton.dao.util.OntDocumentManagerUtil;
-import com.canton.utils.RDFNodeUtil;
 import org.apache.jena.ontology.*;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
@@ -22,7 +17,6 @@ import org.dom4j.Element;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
-
 
 /**
  * 基于Jena的本体解析类。
@@ -40,9 +34,8 @@ public class JenaResolver implements OntologyResolver {
 
 		Dataset dataset = getDataset();
 
-		Element root = ConfigurationUtil.getConfigurationRootElement("ontology-properties.xml");
 
-		String defaultModelURI = root.element("Named_Graph").element("Default_Graph").elementText("URI");
+		String defaultModelURI = InitializedUtil.getMyUri()+InitializedUtil.getMyRoot();
 
 		Model model = dataset.getNamedModel(defaultModelURI);
 		Query query = QueryFactory.create(sparqlStr);
@@ -59,36 +52,103 @@ public class JenaResolver implements OntologyResolver {
 
 			QuerySolution solution = results.nextSolution();
 
-			RDFNode subject = solution.get(vars.get(0));
+            RDFNode subject = solution.get(vars.get(0));
 
-			RDFNode predicate = solution.get(vars.get(1));
+            RDFNode predicate = solution.get(vars.get(1));
+            RDFNode object = solution.get(vars.get(2));
 
-			RDFNode object = solution.get(vars.get(2));
-			if (!subject.isAnon() && !predicate.isAnon() && !object.isAnon()) {
+			if (!subject.isAnon() || !predicate.isAnon() || !object.isAnon()) {
 
 				Statement statement = new Statement();
 
 				statement.setSubject(RDFNodeUtil.getRDFNodeLocalName(subject));
 				statement.setPredicate(RDFNodeUtil.getRDFNodeLocalName(predicate));
 				statement.setObject(RDFNodeUtil.getRDFNodeLocalName(object));
+					if (subject!=null&&subject.isResource())
+						statement.setSubjectClassName(
+								NameSpaceClassMapUtil.getClassName(subject.asResource().getNameSpace()));
 
-				if (subject.isResource())
-					statement.setSubjectClassName(
-							NameSpaceClassMapUtil.getClassName(subject.asResource().getNameSpace()));
-				if (predicate.isResource())
-					statement.setPredicateClassName(
-							NameSpaceClassMapUtil.getClassName(predicate.asResource().getNameSpace()));
-				if (object.isResource())
-					statement
-							.setObjectClassName(NameSpaceClassMapUtil.getClassName(object.asResource().getNameSpace()));
+					if (predicate!=null&&predicate.isResource())
+						statement.setPredicateClassName(
+								NameSpaceClassMapUtil.getClassName(predicate.asResource().getNameSpace()));
 
-				if (statement.getSubject() != null && statement.getObject() != null && !statements.contains(statement))
-					statements.add(statement);
+					if (object!=null&&object.isResource())
+						statement.setObjectClassName(
+								NameSpaceClassMapUtil.getClassName(object.asResource().getNameSpace()));
+
+					if (statement.getSubject() != null || statement.getObject() != null || !statements.contains(statement))
+						statements.add(statement);
+
 			}
 		}
 
 		return statements;
 	}
+
+	@Override
+	public Collection<Clearance> Fquery(String sparqlStr) {
+		System.out.println(sparqlStr);
+
+		// TODO Auto-generated method stub
+
+		Dataset dataset = getDataset();
+
+
+		String defaultModelURI = InitializedUtil.getMyUri()+InitializedUtil.getMyRoot();
+
+		Model model = dataset.getNamedModel(defaultModelURI);
+		Query query = QueryFactory.create(sparqlStr);
+
+		QueryExecution qe = QueryExecutionFactory.create(query, model);
+
+		ResultSet results = qe.execSelect();
+		// ResultSetFormatter.out(System.out, results);
+
+		List<String> vars = query.getResultVars();
+
+		Collection<Clearance> clearances = new ArrayList<Clearance>();
+		while (results.hasNext()) {
+
+			QuerySolution solution = results.nextSolution();
+
+			RDFNode subject = solution.get(vars.get(0));
+			RDFNode predicate = solution.get(vars.get(1));
+			RDFNode object = solution.get(vars.get(2));
+			RDFNode subject2 = solution.get(vars.get(3));
+
+			if (!subject.isAnon() || !predicate.isAnon() || !object.isAnon()|| !subject2.isAnon()) {
+
+				Clearance clearance = new Clearance();
+
+				clearance.setSubject(RDFNodeUtil.getRDFNodeLocalName(subject));
+				clearance.setPredicate(RDFNodeUtil.getRDFNodeLocalName(predicate));
+				clearance.setObject(RDFNodeUtil.getRDFNodeLocalName(object));
+				clearance.setSubject2(RDFNodeUtil.getRDFNodeLocalName(subject2));
+				if (subject!=null&&subject.isResource())
+					clearance.setSubjectClassName(
+							NameSpaceClassMapUtil.getClassName(subject.asResource().getNameSpace()));
+
+				if (predicate!=null&&predicate.isResource())
+					clearance.setPredicateClassName(
+							NameSpaceClassMapUtil.getClassName(predicate.asResource().getNameSpace()));
+
+				if (object!=null&&object.isResource())
+					clearance.setObjectClassName(
+							NameSpaceClassMapUtil.getClassName(object.asResource().getNameSpace()));
+
+				if (subject2!=null&&subject2.isResource())
+					clearance.setObjectClassName(
+							NameSpaceClassMapUtil.getClassName(subject2.asResource().getNameSpace()));
+
+				if (clearance.getSubject() != null || clearance.getObject() != null || !clearances.contains(clearance))
+					clearances.add(clearance);
+
+			}
+		}
+
+		return clearances;
+	}
+
 
 	public Collection<String> getOntologyPredicates() {
 		// TODO Auto-generated method stub
@@ -198,12 +258,8 @@ public class JenaResolver implements OntologyResolver {
 		// TODO Auto-generated method stub
 
 		OntModel ontModel = getDefaultOntModel();
-		//System.out.println("ont"+ontModel);
-
 		// 获取顶层类的迭代器
 		ExtendedIterator<OntClass> iter = ontModel.listHierarchyRootClasses();
-		//System.out.println("iter"+iter);
-
 		// 创建本体类对象集合
 		Collection<OntologyClass> classes = new ArrayList<OntologyClass>();
 
@@ -252,10 +308,8 @@ public class JenaResolver implements OntologyResolver {
 		// 获取类名
 		String className = ontologyClass.getLocalName();
 
-
 		// 获取URI集合
 		Set<String> uris = ontModel.listImportedOntologyURIs(true);
-
 		// 创建子类集合
 		Collection<OntologyClass> subClasses = new ArrayList<OntologyClass>();
 
@@ -426,7 +480,6 @@ public class JenaResolver implements OntologyResolver {
 
 			// 尝试通过URI+#+类名获取OntClass对象
 			theClass = ontModel.getOntClass(uri + "#" + className);
-			System.out.println(className);
 
 			// 如果存在该类名对应的OntClass对象，则退出循环
 			if (theClass != null)
@@ -592,11 +645,8 @@ public class JenaResolver implements OntologyResolver {
 
 	private Dataset getDataset() {
 
-		String classPath = OntDocumentManagerUtil.class.getResource("/").getPath();
-		String applicationPath = OntDocumentManagerUtil.class.getResource("/").getPath();
-		//String applicationPath = "F:/Project/JSPWorkspace/xiangshan/knowledgegraph/knowledgegraph-web/src/main/webapp";
 		//获取Dataset的路径
-		String datasetPath = applicationPath+"/culture_tdb";
+		String datasetPath = ClassPathUtil.getClassPath()+"/canton_culture_tdb";
 
 		Dataset dataset = TDBFactory.createDataset(datasetPath);
 
@@ -604,4 +654,3 @@ public class JenaResolver implements OntologyResolver {
 	}
 
 }
-

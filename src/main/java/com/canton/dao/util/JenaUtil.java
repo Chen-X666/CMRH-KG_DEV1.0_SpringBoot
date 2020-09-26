@@ -1,12 +1,14 @@
 package com.canton.dao.util;
 
+import com.canton.utils.ClassPathUtil;
+import com.canton.utils.InitializedUtil;
 import org.apache.jena.ontology.OntDocumentManager;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.tdb.TDBFactory;
-import org.dom4j.Element;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Jena的工具类。
@@ -15,23 +17,17 @@ import org.dom4j.Element;
  * @version 1.0
  */
 public class JenaUtil {
-
 	/**
 	 * 添加命名Model的方法。
 	 *
 	 * @param namedModelURI 模型的URI。
 	 * @return URI对应的本体模型对象。
 	 */
-	public static OntModel addNamedModel(String namedModelURI) {
+	public  static OntModel addNamedModel(String namedModelURI) {
 
-		//获取本体配置文件的根元素
-		Element root = ConfigurationUtil.getConfigurationRootElement("ontology-properties.xml");
 
-		String applicationPath =  OntDocumentManagerUtil.class.getResource("/").getPath();
-		//System.out.println(applicationPath);
 		//获取Dataset的路径
-		String datasetPath = applicationPath+"/culture_tdb";
-		//System.out.println("datasetPath"+datasetPath);
+		String datasetPath = ClassPathUtil.getClassPath()+"/canton_culture_tdb";
 
 		//在datasetPath创建Dataset
 		Dataset dataset = TDBFactory.createDataset(datasetPath);
@@ -45,7 +41,10 @@ public class JenaUtil {
 		OntDocumentManagerUtil.addAltEntries(dm);
 
 		//获取本体根文件的URI
-		String rootURI = root.elementText("Root_Ontology_URI");
+		String rootURI = InitializedUtil.getMyUri()+InitializedUtil.getMyRoot();
+
+
+
 		System.out.println("rootURI:"+rootURI);
 		//将本体文件的数据写进本体模型
 		ontModel.read(rootURI);

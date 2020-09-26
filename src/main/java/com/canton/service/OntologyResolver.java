@@ -1,9 +1,6 @@
 package com.canton.service;
 
-import com.canton.model.ontology.OntologyClass;
-import com.canton.model.ontology.OntologyInstance;
-import com.canton.model.ontology.OntologyResource;
-import com.canton.model.ontology.Statement;
+import com.canton.model.ontology.*;
 
 import java.util.Collection;
 
@@ -23,6 +20,9 @@ public interface OntologyResolver {
 	 * @return 检索结果的三元组对象集合。
 	 */
 	Collection<Statement> query(String sparqlStr);
+
+	Collection<Clearance> Fquery(String sparqlStr);
+
 	
 
 	/**
@@ -145,5 +145,5 @@ public interface OntologyResolver {
 	 * @return 本地名称所属的类名。
 	 */
 	String getClassName(String localName);
-	
+
 }

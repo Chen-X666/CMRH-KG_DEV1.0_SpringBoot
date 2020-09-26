@@ -23,7 +23,8 @@ public class RDFNodeUtil {
 	public static String getRDFNodeLocalName(RDFNode node) {
 		
 		String localName = null;
-		
+
+		if (node == null){return "未知";}
 		if(node.isLiteral()) {
 			
 			localName = node.asLiteral().getString();
