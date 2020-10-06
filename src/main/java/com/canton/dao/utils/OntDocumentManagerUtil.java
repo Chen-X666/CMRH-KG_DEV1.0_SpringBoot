@@ -1,15 +1,8 @@
-package com.canton.dao.util;
+package com.canton.dao.utils;
 
 import com.canton.CantonApplication;
-import com.canton.utils.ClassPathUtil;
 import com.canton.utils.InitializedUtil;
 import org.apache.jena.ontology.OntDocumentManager;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 /**
  * 本体文档管理器工具。

@@ -171,7 +171,7 @@ public class TimeSpaceServiceImpl extends BaseService implements TimeSpaceServic
                         "    { ?s1 ?s2 ?s3  \n" +
                         "      FILTER (REGEX(STR(?s3), 'Location')).  \n" +
                         "      FILTER (REGEX(STR(?s3), '"+keyword+"')).\n" +
-                        "       FILTER (REGEX(STR(?s1), 'Recall')).\n" +
+                   //     "       FILTER (REGEX(STR(?s1), 'Recall')).\n" +
                         "     ?s1 "+comment+" ?s6.\n" +
                         "    optional\n" +
                         "    {?s1 ?s4 ?s5.  \n" +
@@ -259,7 +259,7 @@ public class TimeSpaceServiceImpl extends BaseService implements TimeSpaceServic
                         "Where {  { ?s1 ?s2 ?s3   \n" +
                         "    FILTER (REGEX(STR(?s3), 'Time')).  \n" +
                         "    FILTER (REGEX(STR(?s3), '"+time+"')). \n" +
-                        "     FILTER (REGEX(STR(?s1), 'Recall')). \n" +
+             //           "     FILTER (REGEX(STR(?s1), 'Recall')). \n" +
                         "    ?s1 "+comment+" ?s7.\n" +
                         "    ?s3 "+rank+" ?s6.\n" +
                         "    ?s1 ?s4 ?s5.  \n" +
@@ -334,7 +334,7 @@ public class TimeSpaceServiceImpl extends BaseService implements TimeSpaceServic
                 "SELECT ?subject  ?composite ?s3 ?c \n" +
                         "WHERE { ?subject ?relation ?composite  \n" +
                         "  FILTER (REGEX(STR(?subject),'/*$')).\n" +
-                        "  FILTER (REGEX(STR(?subject),'Recall')). \n" +
+            //            "  FILTER (REGEX(STR(?subject),'Recall')). \n" +
                         "  ?composite "+rank+" ?s4.\n" +
                         "  ?subject"+comment+" ?c.\n" +
                         "  optional{?subject ?s2 ?s3\n" +

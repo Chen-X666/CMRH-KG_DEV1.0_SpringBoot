@@ -1,4 +1,4 @@
-package com.canton.dao.util;
+package com.canton.dao.utils;
 
 import org.apache.jena.ontology.OntModel;
 

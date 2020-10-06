@@ -1,4 +1,4 @@
-package com.canton.dao.util;
+package com.canton.dao.utils;
 
 import com.canton.utils.ClassPathUtil;
 import com.canton.utils.InitializedUtil;
@@ -8,7 +8,6 @@ import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.tdb.TDBFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Jena的工具类。

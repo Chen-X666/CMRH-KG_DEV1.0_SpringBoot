@@ -2,12 +2,9 @@ package com.canton.service.impl;
 
 import com.canton.dao.entity.Lucene;
 import com.canton.service.LuceneService;
+import com.canton.utils.IKAnalyzerLuceneUtil;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
-import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
-import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -53,13 +50,13 @@ public class LuceneServiceImpl implements LuceneService {
         IndexSearcher searcher = new IndexSearcher(reader);
 
         //使用lucene中文分词器
-         SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
+        // SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
 
         //使用hanLP中文分词器
         //Analyzer analyzer = new HanLPAnalyzer(true);
 
         //使用lk分词器
-        //Analyzer analyzer = new IKAnalyzer();
+        Analyzer analyzer = new IKAnalyzerLuceneUtil(true);
 
         //由中文分词器初始化查询解析器
         QueryParser parser = new QueryParser("contents", analyzer);

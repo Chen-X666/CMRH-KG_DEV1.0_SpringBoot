@@ -1,9 +1,11 @@
-package com.canton.dao.util;
+package com.canton.dao.utils;
 
-//import com.hankcs.lucene.HanLPAnalyzer;
+import com.canton.utils.IKAnalyzerLuceneUtil;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
-import org.apache.lucene.document.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.StringField;
+import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
@@ -65,13 +67,13 @@ public class LuceneUtil {
     public LuceneUtil(String indexDir) throws Exception {
         Directory dir = FSDirectory.open(Paths.get(indexDir));
         //使用中文分词器
-        SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
+        //SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
 
         //使用hanLP分词器
         //Analyzer analyzer = new HanLPAnalyzer(true);
 
         //使用lk分词器
-        //Analyzer analyzer = new IKAnalyzer(true);
+        Analyzer analyzer = new IKAnalyzerLuceneUtil(true);
 
         //将中文分词器配到写索引的配置中
         IndexWriterConfig config = new IndexWriterConfig(analyzer);

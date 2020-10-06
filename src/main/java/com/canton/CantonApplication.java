@@ -1,16 +1,14 @@
 package com.canton;
 
-import com.canton.dao.util.DefaultOntModel;
-import com.canton.dao.util.JenaUtil;
-import com.canton.dao.util.LuceneUtil;
+import com.canton.dao.utils.DefaultOntModel;
+import com.canton.dao.utils.JenaUtil;
+import com.canton.dao.utils.LuceneUtil;
 import com.canton.utils.InitializedUtil;
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.apache.jena.ontology.OntModel;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 import java.io.File;
@@ -26,8 +24,6 @@ import java.io.IOException;
 @EnableSwagger2Doc
 public class CantonApplication {
 
-
-
     public static void main(String[] args) {
         SpringApplication.run(CantonApplication.class, args);
         contextInitialized();
@@ -36,7 +32,7 @@ public class CantonApplication {
 
 
     public  static void contextInitialized() {
-/**
+
     //  构建本体模型
         System.out.println("开始初始化本体模型数据...");
         //获取默认模型的URI
@@ -46,8 +42,11 @@ public class CantonApplication {
         OntModel defaultOntModel = JenaUtil.addNamedModel(defaultModelURI);
        DefaultOntModel.getInstance().setOntModel(defaultOntModel);
         System.out.println("初始化本体模型数据完成");
+        System.out.println("开始载入目录");
 
-**/
+
+
+
 
         /**
          * 构建全文索引

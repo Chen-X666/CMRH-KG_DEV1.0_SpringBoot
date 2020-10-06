@@ -1,6 +1,6 @@
 package com.canton.utils;
 
-import com.canton.dao.util.DefaultOntModel;
+import com.canton.dao.utils.DefaultOntModel;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.util.iterator.ExtendedIterator;

@@ -1,10 +1,9 @@
 package com.canton.service.impl;
 
-import com.canton.dao.util.DefaultOntModel;
+import com.canton.dao.utils.DefaultOntModel;
 import com.canton.model.ontology.*;
 import com.canton.service.OntologyResolver;
 import com.canton.utils.*;
-import com.canton.dao.util.OntDocumentManagerUtil;
 import org.apache.jena.ontology.*;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
@@ -13,7 +12,6 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.util.iterator.ExtendedIterator;
-import org.dom4j.Element;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
