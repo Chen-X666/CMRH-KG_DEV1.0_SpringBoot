@@ -4,8 +4,14 @@ import com.canton.dao.entity.Catalog;
 import com.canton.model.ontology.OntologyClass;
 import com.canton.model.ontology.OntologyInstance;
 import com.canton.service.CatalogService;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -44,13 +50,13 @@ public class CatalogServiceImpl extends BaseService implements CatalogService {
             //如果存在子类,那么该节点不是子节点
             else if (aClass.isHasSubClass())
             {   catalog.setLeaf(false);
-                catalog.setChildren(getChildrenCatalog(aClass.getLocalName()));
+               // catalog.setChildren(getChildrenCatalog(aClass.getLocalName()));
               //  System.out.println(getChildrenCatalog(aClass.getLocalName()).size());
                 catalogs.add(catalog);
             }
             else
             {   catalog.setLeaf(false);
-                catalog.setChildren(getContent(catalog.getTitle()));
+                //catalog.setChildren(getContent(catalog.getTitle()));
                 catalogs.add(catalog);
                 }
             }
@@ -91,12 +97,12 @@ public class CatalogServiceImpl extends BaseService implements CatalogService {
             if(aClass.isHasSubClass())
             {
                 catalog.setLeaf(false);
-                catalog.setChildren(getChildrenCatalog(aClass.getLocalName()));
+                //catalog.setChildren(getChildrenCatalog(aClass.getLocalName()));
             }
             else
             {
                 catalog.setLeaf(false);
-                catalog.setChildren(getContent(catalog.getTitle()));
+               // catalog.setChildren(getContent(catalog.getTitle()));
                 String size = "("+getContent(catalog.getTitle()).size()+")";
                 catalog.setTitle(catalog.getTitle().concat(size));
                 catalog.setKey(catalog.getKey().concat(size));
@@ -148,6 +154,7 @@ public class CatalogServiceImpl extends BaseService implements CatalogService {
 
         return catalogs;
     }
+
 
 
 }

@@ -2,6 +2,7 @@ package com.canton.service;
 
 import com.canton.dao.entity.Catalog;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface CatalogService {

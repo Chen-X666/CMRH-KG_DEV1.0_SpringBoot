@@ -38,7 +38,7 @@ public interface OntologyResolver {
 	 * 
 	 * @return 本体库中所有三元组对象的集合。
 	 */
-	Collection<Statement> getAllStatements();
+	//Collection<Statement> getAllStatements();
 	
 	/**
 	 * 分页检索的方法。
@@ -49,13 +49,7 @@ public interface OntologyResolver {
 	 * @return 检索结果的三元组集合。
 	 */
 	Collection<Statement> queryByPage(int pageNum, int pageSize, String sparqlStr);
-	
-	/**
-	 * 获取本体库中所有三元组数量的方法。
-	 * 
-	 * @return 本体库所有三元组的总数
-	 */
-	int countAllStatements();
+
 	
 	/**
 	 * 获取本体库中的顶层类的方法。

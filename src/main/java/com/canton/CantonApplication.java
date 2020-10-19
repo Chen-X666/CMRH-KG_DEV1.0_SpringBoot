@@ -43,11 +43,6 @@ public class CantonApplication {
        DefaultOntModel.getInstance().setOntModel(defaultOntModel);
         System.out.println("初始化本体模型数据完成");
         System.out.println("开始载入目录");
-
-
-
-
-
         /**
          * 构建全文索引
          */

@@ -5,10 +5,7 @@ import com.canton.service.CatalogService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,10 +20,17 @@ public class CatalogController {
     @Autowired
     private CatalogService testService;
     @GetMapping("getCatalog")
-    @ApiOperation(value="获取目录", notes="获取目录")
+    @ApiOperation(value="获取顶层目录", notes="获取顶层目录")
     @ResponseBody
     public List<Catalog> getCatalog() {
         return testService.getTopCatalog();
     }
+
+//    @GetMapping("getCatalog")
+//    @ApiOperation(value="获取二级目录", notes="获取二级目录")
+//    @ResponseBody
+//    public List<Catalog> getChildrenCatalog(@RequestParam("topClass") String topClass) {
+//        return testService.getChildrenCatalog(topClass);
+//    }
 
 }

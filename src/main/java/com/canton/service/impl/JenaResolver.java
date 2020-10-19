@@ -100,7 +100,7 @@ public class JenaResolver implements OntologyResolver {
 		QueryExecution qe = QueryExecutionFactory.create(query, model);
 
 		ResultSet results = qe.execSelect();
-		// ResultSetFormatter.out(System.out, results);
+		//ResultSetFormatter.out(System.out, results);
 
 		List<String> vars = query.getResultVars();
 

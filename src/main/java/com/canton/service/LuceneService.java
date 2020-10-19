@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface LuceneService {
      List<Lucene> getKeyword(String keyword) throws Exception;
+     List<Lucene> SemanticAnalysis(String keyword) throws Exception;
 
 }

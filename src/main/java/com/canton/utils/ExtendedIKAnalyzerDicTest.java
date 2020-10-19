@@ -1,5 +1,6 @@
 package com.canton.utils;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.apache.lucene.analysis.Analyzer;

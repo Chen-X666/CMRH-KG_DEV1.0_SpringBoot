@@ -27,4 +27,12 @@ public class LuceneController {
     {
         return luceneService.getKeyword(keyword);
     }
+
+    @PostMapping("/getSemanticAnalysisKeyword")
+    @ApiOperation(value="全文检索", notes="通过lucene的全文检索")
+    @ResponseBody
+    public List<Lucene> SemanticAnalysis(@RequestParam("keyword") String keyword) throws Exception
+    {
+        return luceneService.SemanticAnalysis(keyword);
+    }
 }
