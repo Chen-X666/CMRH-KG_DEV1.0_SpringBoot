@@ -32,7 +32,7 @@ public class CantonApplication {
 
 
     public  static void contextInitialized() {
-
+/**
     //  构建本体模型
         System.out.println("开始初始化本体模型数据...");
         //获取默认模型的URI

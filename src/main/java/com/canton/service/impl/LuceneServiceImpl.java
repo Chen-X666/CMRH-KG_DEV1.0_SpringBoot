@@ -81,7 +81,7 @@ public class LuceneServiceImpl implements LuceneService {
         //根据查询对象计算得分，会初始化一个查询结果最高的得分
         QueryScorer scorer = new QueryScorer(query);
         //根据这个得分计算出一个片段
-        Fragmenter fragmenter = new SimpleSpanFragmenter(scorer,800);
+        Fragmenter fragmenter = new SimpleSpanFragmenter(scorer,1500);
         //将这个片段中的关键字用上面初始化好的高亮格式高亮
         Highlighter highlighter = new Highlighter(simpleHTMLFormatter, scorer);
         //设置一下要显示的片段
@@ -111,7 +111,7 @@ public class LuceneServiceImpl implements LuceneService {
                 String txt =".txt";//去掉文件后缀
                 lucene.setFileName(doc.get("fileName").replaceAll(txt,""));
                 lucene.setContent(summary);
-                lucene.setImage("../../statics/Book/"+lucene.getFileName()+".png");
+                lucene.setImage("../../statics/book/"+lucene.getFileName()+".png");
                 lucenes.add(lucene);
             }
         }
@@ -160,7 +160,7 @@ public class LuceneServiceImpl implements LuceneService {
         //根据查询对象计算得分，会初始化一个查询结果最高的得分
         QueryScorer scorer = new QueryScorer(query);
         //根据这个得分计算出一个片段
-        Fragmenter fragmenter = new SimpleSpanFragmenter(scorer,800);
+        Fragmenter fragmenter = new SimpleSpanFragmenter(scorer,1500);
         //将这个片段中的关键字用上面初始化好的高亮格式高亮
         Highlighter highlighter = new Highlighter(simpleHTMLFormatter, scorer);
         //设置一下要显示的片段
