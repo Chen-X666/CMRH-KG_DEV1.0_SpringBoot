@@ -6,10 +6,11 @@
 [![echart](https://img.shields.io/badge/echart-4.7.0-green)](https://github.com/apache/echarts)
 
 ## 🌈简介
-🎉  广州革命历史事件知识图谱系统前端 V1.1.0
+🎉  广州革命历史事件知识图谱系统后端 V2.0
 - 目前该系统已重构至 V2.1.0版本，还未开源（https://www.gzknowledge.cn ）
 - 相对来说V1.1.0版本较为复杂，但部分可视化功能是较为创新的,V2.1.0的功能思路也是基于V1.1.0复现及创新的
 - V1.1.0 版本已不再更新新功能，仅作代码维护和优化，供业界交流
+- 前端Github地址:https://github.com/junchaoIU/Canton-KG-React/
 
 ## ✨功能
 - 知识检索：知识检索提供广州革命历史领域的相关信息检索，同时，提供知识树并支持模糊检索功能。
