@@ -1,5 +1,7 @@
 package com.canton.service.impl;
 
+import com.canton.dao.entity.Book;
+import com.canton.dao.mapper.BookMapper;
 import com.canton.dao.utils.DefaultOntModel;
 import com.canton.service.CountService;
 import com.canton.service.OntologyResolver;
@@ -7,11 +9,13 @@ import org.apache.jena.ontology.*;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @Auther ChenX
@@ -20,54 +24,71 @@ import java.util.Map;
 @Service
 public class CountServiceImpl implements CountService {
 
+
     @Autowired
-    private OntologyResolver ontologyResolver;
+    private BookMapper bookMapper;
 
 
-    @Override
-    public Map<String, Integer> countAll() {
+    @Async("countExecutor")
+    public CompletableFuture<Integer> countBook()  {
+        return CompletableFuture.completedFuture(bookMapper.getCountBook());
+    }
 
+
+    @Async("countExecutor")
+    public CompletableFuture<Integer> countIndividual(){
+
+        int individual = 0;
         OntModel ontModel = DefaultOntModel.getInstance().getOntModel();
+        ExtendedIterator<Individual> individualsIter = ontModel.listIndividuals();
+        while (individualsIter.hasNext()) {
+            individualsIter.next();
+            individual++;
+        }
 
-        int statements = 0;
-        int objectProperty = 0;
+        return CompletableFuture.completedFuture(individual);
+    }
+
+    @Async("countExecutor")
+    public CompletableFuture<Integer> countdataProperty() {
+
         int dataProperty = 0;
-        int individuals = 0;
-        StmtIterator statementsIter = ontModel.listStatements();
-        while (statementsIter.hasNext()) {
-            statementsIter.next();
-            statements++;
-        }
-        ExtendedIterator<ObjectProperty> objectPropertysIter = ontModel.listObjectProperties();
-        while (objectPropertysIter.hasNext()) {
-            objectPropertysIter.next();
-            objectProperty++;
-        }
+        OntModel ontModel = DefaultOntModel.getInstance().getOntModel();
         ExtendedIterator<DatatypeProperty> dataPropertysIter = ontModel.listDatatypeProperties();
         while (dataPropertysIter.hasNext()) {
             dataPropertysIter.next();
             dataProperty++;
         }
-        ExtendedIterator<Individual> individualsIter = ontModel.listIndividuals();
-        while (individualsIter.hasNext()) {
-            individualsIter.next();
-            individuals++;
-        }
-        Map<String, Integer> map = new HashMap<>();
-        map.put("statement",statements);
-        map.put("individual",individuals);
-        map.put("objectProperty",objectProperty);
-        map.put("dataProperty",dataProperty);
-        map.put("books",countAllBooks());
-        return map;
+
+        return CompletableFuture.completedFuture(dataProperty);
     }
 
-    @Override
-    public int countAllBooks() {
-        File file=new File("src/main/resources/book");
-        String files[]=file.list();
-        int num = files.length;
-        return num;
+    @Async("countExecutor")
+    public CompletableFuture<Integer> countobjectProperty() {
+
+        int objectProperty = 0;
+        OntModel ontModel = DefaultOntModel.getInstance().getOntModel();
+        ExtendedIterator<ObjectProperty> objectPropertysIter = ontModel.listObjectProperties();
+        while (objectPropertysIter.hasNext()) {
+            objectPropertysIter.next();
+            objectProperty++;
+        }
+
+        return CompletableFuture.completedFuture(objectProperty);
+    }
+
+    @Async("countExecutor")
+    public CompletableFuture<Integer> countStatement() {
+
+        int statement = 0;
+        OntModel ontModel = DefaultOntModel.getInstance().getOntModel();
+        StmtIterator statementsIter = ontModel.listStatements();
+        while (statementsIter.hasNext()) {
+            statementsIter.next();
+            statement++;
+        }
+
+        return CompletableFuture.completedFuture(statement);
     }
 
 }

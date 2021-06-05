@@ -16,9 +16,9 @@ spring:
 
   #数据源
   datasource:
-    url: jdbc:mysql://localhost:3306/canton?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://cdb-2m6kkrcx.gz.tencentcdb.com:10165/canton?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
-    password: 990407
+    password: 972113786@qq.com
     driver-class-name: com.mysql.jdbc.Driver
 
 #mybatis配置

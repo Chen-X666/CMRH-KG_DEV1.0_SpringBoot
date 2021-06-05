@@ -1,5 +1,7 @@
 package com.canton.dao.utils;
 
+import com.canton.dao.entity.Book;
+import com.canton.dao.mapper.BookMapper;
 import com.canton.utils.IKAnalyzerLuceneUtil;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
@@ -10,14 +12,20 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.*;
 import java.nio.file.Paths;
+import java.util.List;
+
 /**
  * @Auther ChenX
  * @Date 2020.4.7
  * 全文检索的索引
  **/
+@Component
 public class LuceneUtil {
     /**
      * 写索引实例 构造方法，实例化 IndexWriter
@@ -29,42 +37,21 @@ public class LuceneUtil {
      *
      * @throws Exception
      */
-    public int indexAll(String dataDir) throws Exception {
-        // 获取该路径下的所有文件
-        File[] files = new File(dataDir).listFiles();
-        if (null != files) {
-            for (File file : files) {
+    @Autowired
+    private BookMapper bookMapper;
 
-                //调用下面的 indexFile 方法，对每个文件进行索引
-                System.out.println("构建索引文件：" + file.getCanonicalPath());
-                //调用下面的 getDocument 方法，获取该文件的 Document
-                Document doc = new Document();
-                //开始添加字段
+    public static LuceneUtil luceneUtil;
 
-                //添加文本内容
-                BufferedReader reader = new BufferedReader(new InputStreamReader(
-                        new FileInputStream(file.getCanonicalPath()), "GBK"));
-                String line = new String();
-                String temp = new String();
-                while ((line = reader.readLine()) != null) {
-                    temp += line;
-                }
-                Field fieldBody = new Field("contents", temp, Field.Store.YES,
-                        Field.Index.ANALYZED, Field.TermVector.WITH_POSITIONS_OFFSETS);
-                doc.add(fieldBody);
+    @PostConstruct
+    public void init()
+    { luceneUtil = this ;
+    luceneUtil.bookMapper = this.bookMapper;}
 
-                //添加文件名，并把这个字段存到索引文件里
-                doc.add(new StringField("fileName", file.getName(), Field.Store.YES));
-                //添加文件路径
-                doc.add(new TextField("filePath", file.getCanonicalPath(), Field.Store.YES));
-                //将doc添加到索引中
-                writer.addDocument(doc);
-            }
-        }
-        //返回索引的文件数
-        return writer.numDocs();
+    public static List<Book> getBook()
+    {   return luceneUtil.bookMapper.getAllBook();
     }
-    public LuceneUtil(String indexDir) throws Exception {
+
+    public int indexAll(String indexDir) throws Exception {
         Directory dir = FSDirectory.open(Paths.get(indexDir));
         //使用中文分词器
         //SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
@@ -81,7 +68,37 @@ public class LuceneUtil {
         writer = new IndexWriter(dir, config);
 
         writer.deleteAll();//每次启动都重新构建索引，可关闭
+        // 获取该路径下的所有文件
+
+        List<Book> books = getBook();
+        System.out.println(books);
+        for(Book book : books)
+        {   //调用下面的 indexFile 方法，对每个文件进行索引
+            System.out.println("构建索引文件：" + book.getBookId());
+            //调用下面的 getDocument 方法，获取该文件的 Document
+            Document doc = new Document();
+            //开始添加字段
+            //添加文本内容
+            try {
+                Field fieldBody = new Field("contents", book.getBookContent(), Field.Store.YES,
+                        Field.Index.ANALYZED, Field.TermVector.WITH_POSITIONS_OFFSETS);
+                doc.add(fieldBody);
+            } catch (Exception e)
+            {
+
+            }
+                //添加书籍ID，并把这个字段存到索引文件里
+                doc.add(new StringField("bookId", String.valueOf(book.getBookId()), Field.Store.YES));
+                //添加书籍名，并把这个字段存到索引文件里
+                doc.add(new StringField("bookName", book.getBookName(), Field.Store.YES));
+                //添加作者名字
+                doc.add(new TextField("bookAuthor", book.getBookAuthor(), Field.Store.YES));
+                //将doc添加到索引中
+                writer.addDocument(doc);
+        }
+        return writer.numDocs();
     }
+
     public void close() throws IOException {
         if (writer != null) {
             writer.close();

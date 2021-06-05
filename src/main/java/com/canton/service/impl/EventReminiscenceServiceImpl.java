@@ -2,6 +2,7 @@ package com.canton.service.impl;
 
 import com.canton.dao.entity.AllEvent;
 import com.canton.dao.entity.Reminiscence;
+import com.canton.model.ontology.Clearance;
 import com.canton.model.ontology.Statement;
 import com.canton.service.EventReminiscenceService;
 import org.springframework.stereotype.Service;
@@ -66,19 +67,21 @@ public class EventReminiscenceServiceImpl extends BaseService implements EventRe
     public Reminiscence getChildEvent(String event) {
         String parentEvent=  "<http://www.owl-ontologies.com/Recall.owl#"+event+"_回溯>";
         String time =  "<http://www.owl-ontologies.com/Recall.owl#time>";
-        String location =  "<http://www.owl-ontologies.com/Recall.owl#location>";
+        String location =  "<http://www.owl-ontologies.com/Recall.owl#回溯地点>";
+        String LatitudeALongitude =  "<http://www.owl-ontologies.com/Location.owl#经纬度>";
         String comment =  "<http://www.w3.org/2000/01/rdf-schema#comment>";
 
         String sparqlStr =
-                "SELECT DISTINCT  ?childEvent ?time ?location " +
+                "SELECT DISTINCT  ?childEvent ?time ?location ?LatitudeALongitude " +
                         "WHERE {" +
                         "  ?subject ?predicate "+parentEvent+"." +
                         "  ?subject "+comment+" ?childEvent. " +
                         "  ?subject "+time+" ?time." +
-                        "  ?subject "+location+" ?location}" +
+                        "  ?subject "+location+" ?location." +
+                        "  ?location "+LatitudeALongitude+" ?LatitudeALongitude }" +
                         "  ORDER BY ?subject";
 
-        Collection<Statement> statements = getOntologyResolver().query(sparqlStr);
+        Collection<Clearance> statements = getOntologyResolver().Fquery(sparqlStr);
 
 
         if (statements.size() > 0) {
@@ -92,22 +95,20 @@ public class EventReminiscenceServiceImpl extends BaseService implements EventRe
         }
          return null;
     }
-    public static Reminiscence eventreminiscenceData(Collection<Statement> statements,String event)
+    public static Reminiscence eventreminiscenceData(Collection<Clearance> statements, String event)
     {
-        Iterator<Statement> iter = statements.iterator();
+        Iterator<Clearance> iter = statements.iterator();
 
         List<List> listtt = new ArrayList();
         while (iter.hasNext()) {
             List<List> listt = new ArrayList();
-            Statement statement = iter.next();
+            Clearance statement = iter.next();
             List list = new ArrayList();
             list.add(statement.getPredicate());
             list.add(statement.getObject());
+            list.add(statement.getSubject2());
             list.add(event);
-            StringBuffer childEvent = new StringBuffer(statement.getSubject());
-            for(int i=15;i<statement.getSubject().length();i+=16)
-            {   childEvent = childEvent.insert(i,'\n');}
-            list.add(childEvent);
+            list.add(statement.getSubject());
             listt.add(list);
             listtt.add(listt);
         }

@@ -2,25 +2,53 @@ package com.canton.dao.entity;
 
 /**
  * @Auther ChenX
- * @Date 2020.8.9
+ * @Date 2020.11.10
  **/
 public class Book {
-    private int id;
-    private String title;
+    private int bookId;
+    private String bookName;
+    private String bookAuthor;
+    private String bookContent;
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookId=" + bookId +
+                ", bookName='" + bookName + '\'' +
+                ", bookAuthor='" + bookAuthor + '\'' +
+                ", bookContent='" + bookContent + '\'' +
+                '}';
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getBookName() {
+        return bookName;
     }
 
-    public String getTitle() {
-        return title;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public void setBookAuthor(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getBookContent() {
+        return bookContent;
+    }
+
+    public void setBookContent(String bookContent) {
+        this.bookContent = bookContent;
     }
 }

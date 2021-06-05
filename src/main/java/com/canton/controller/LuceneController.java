@@ -1,6 +1,8 @@
 package com.canton.controller;
 
 import com.canton.dao.entity.Lucene;
+import com.canton.dao.entity.Lucene2;
+import com.canton.service.oldLuceneService;
 import com.canton.service.LuceneService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +20,14 @@ import java.util.List;
 @CrossOrigin//允许跨域访问
 public class LuceneController {
     @Autowired
+    private oldLuceneService oldLuceneService;
+    @Autowired
     private LuceneService luceneService;
 
     @PostMapping("/getkeyword")
     @ApiOperation(value="全文检索", notes="通过lucene的全文检索")
     @ResponseBody
-    public List<Lucene> getKeyword(@RequestParam("keyword") String keyword) throws Exception
+    public List<Lucene2> getKeyword(@RequestParam("keyword") String keyword) throws Exception
     {
         return luceneService.getKeyword(keyword);
     }

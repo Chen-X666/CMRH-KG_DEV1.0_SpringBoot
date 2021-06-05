@@ -41,5 +41,10 @@ public class ExtendedIKAnalyzerDicTest {
             System.out.println("IKAnalyzer中文分词器 智能切分，中文分词效果：");
             doToken(ts);
         }
+        Analyzer ik = new IKAnalyzerLuceneUtil(true);
+        TokenStream ts = ik.tokenStream("content", chineseText);
+        System.out.println("IKAnalyzer中文分词器 智能切分，中文分词效果：");
+        System.out.println(ts.getAttributeClassesIterator().toString());
+        doToken(ts);
     }
 }

@@ -24,7 +24,7 @@ public class RelationSearchController {
 	 * @return 检索结果对应的name值。
 	 */
 
-	@PostMapping("/getPeople")
+	@GetMapping("/getPeople")
 	@ApiOperation(value="关系检索", notes="传入两个人物，predicate是关系")
 	@ResponseBody
 	public List<Relation> query(@RequestParam("subject") String subject, @RequestParam("object") String object) {

@@ -631,6 +631,717 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/Personage.owl#于光远 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#于光远">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京华夏管理学院名誉院长</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年7月5日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">郁锺正</别名>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清华大学</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名经济学家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013年9月26日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">于光远，原姓郁，名锺正，入共产党后改名于光远。上海人，中国著名经济学家，中国社会科学院研究员。长期从事经济研究工作，从上世纪八十年代起，致力于哲学、社会科学多学科的研究和推进其发展的组织活动，并积极参加多方面的社会活动。1935年参加一二九学生运动。1936年毕业于清华大学物理系。1937年初抗日战争前，加入中国共产党。1939年兼任延安中山图书馆主任。历任中共中央图书馆主任，北京大学图书馆系教授，中共中央宣传部理论宣传处副处长，中国科学院哲学社会科学部委员、常委，科学规划委员会副秘书长，科学技术委员会副主任。1941年起从事陕甘宁边区经济的研究工作，后在延安大学财经系任教。1948～1975年在中共中央宣传部工作。1955年被推选为中国科学院哲学社会科学学部的学部委员。1964年任国家科学委员会副主任。1975年以后任国家计划委员会经济研究所所长、中国社会科学院副院长兼马列主义毛泽东思想研究所所长、国家科委副主任、中共中央顾问委员会委员、中国社会科学院顾问、《中国大百科全书》总编委会副主任，2000年担任黔南民族师范学院名誉院长等职。于2013年9月26日凌晨3点因病医治无效去世，享年98岁。2018年12月18日，于光远获“致敬改革开放四十周年·中国智库建设40人”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#宋子文 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#宋子文">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#张乐怡"/>
+        <姐姐 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋庆龄"/>
+        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子良"/>
+        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋嘉树"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">遏止日本对华侵略、寻求国际援助出席联合国大会任中国首席代表</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1894年12月4日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.V.Soong</别名>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海圣约翰大学、哈佛大学、哥伦比亚大学</毕业院校>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">海南文昌</籍贯>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">政治家，外交家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1971年4月25日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋子文，民国时期的政治家、外交家、金融家，海南文昌人。宋子文是宋嘉树之子，其兄弟姐妹分别是是宋庆龄、宋美龄、宋霭龄、宋子良、宋子安。宋子文出生于上海，早年毕业上海圣约翰大学。后去美国哈佛大学攻读经济学，获硕士学位，继入哥伦比亚大学，获博士学位。1925年任国民政府财政部长。1928——1930年间通过谈判收回关税自主权，使中国有权确定关税税率和监督税收。1942年担任国民政府外交部长后曾与美国国务卿科德尔·赫尔签订中美抵抗侵略互助协定，次年与外国谈判收回各国在华的治外法权。1945年出席联合国大会任中国首席代表，同年6月去莫斯科与斯大林会谈，1945年8月14日签订不平等的中苏友好同盟条约。1949年去香港，后移居美国纽约。1971年4月25日在旧金山逝世。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#宋庆龄 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#宋庆龄">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <丈夫 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙中山"/>
+        <出生日期 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1893年1月27日"/>
+        <姐姐 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋霭龄"/>
+        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子安"/>
+        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子文"/>
+        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子良"/>
+        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪桂珍"/>
+        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋嘉树"/>
+        <继子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙科"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中华人民共和国名誉主席</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋庆龄（1893年1月27日-1981年5月29日），伟大的爱国主义、民主主义、国际主义和共产主义战士，举世闻名的二十世纪的伟大女性。
+她青年时代追随孙中山，献身革命，在近七十年的革命生涯中，坚强不屈、矢志不移、英勇奋斗，始终坚定地和中国人民、中国共产党站在一起，为中国人民的解放事业，为妇女儿童的卫生保健和文化教育福利事业，为祖国统一以及保卫世界和平、促进人类的进步事业而殚精竭力，鞠躬尽瘁，做出了不可磨灭的贡献，受到中国人民、海外华人华侨的景仰和爱戴，也赢得国际友人的赞誉和热爱，并享有崇高的威望。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#张志平 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张志平">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">教师</职业>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张志平，男，祖籍湖北，生于上海，云南艺术学院教授。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#朱其华 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#朱其华">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《中国资本主义之发展》，《中国农村经济关系及其特质》、、</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1907年</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1945年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">朱其华浙江海宁人。本名朱雅林，字亚领，乳名朱六宝，学名朱骏先，又名朱佩我，著《中国资本主义之发展》、《中国农村经济关系及其特质》、《中国革命与中国社会各阶级》等署名，均出版于1930年。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#蔡和森 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#蔡和森">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡博"/>
+        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡霖"/>
+        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#向警予"/>
+        <外甥女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#刘昂"/>
+        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡妮"/>
+        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡转"/>
+        <妹妹 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡畅"/>
+        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李一纯"/>
+        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#葛健豪"/>
+        <老师 rdf:resource="http://www.owl-ontologies.com/Personage.owl#方维夏"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中共中央委员、政治局委员、常委100位为新中国成立作出突出贡献的英雄模范人物之一</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《蔡和森文集》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1895年3月30日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">蔡林彬</别名>
+        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">泽膺</字号>
+        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">润寰</字号>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南第一师范、湖南高等师范学校</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">政治家、革命家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1931年8月4日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">蔡和森，字润寰，号泽膺，湖南省双峰县永丰镇人。中国共产党早期的重要领导人，杰出的共产主义战士，无产阶级革命家、理论家和宣传家。蔡和森同志是中共第二、三、四、五、六届中央委员，第三、四届中央局委员，第五、六届中央政治局委员、常委，担任过中共中央代理秘书长、中共中央宣传部部长、中共两广省委书记。1895年3月，蔡和森出生于上海，后随母亲回到家乡湖南双峰。1913年进入湖南省立第一师范读书，期间，同毛泽东等人一起组织进步团体新民学会，创办《湘江评论》，参加五四运动。1921年10月，蔡和森从法国归来，在中共三大、四大上当选为中央局委员，参与中央领导工作。并在中共五届一中全会上当选为中央政治局委员、常委，随后又兼任中共中央秘书长。1931年，蔡和森在组织广州地下工人运动时遭叛徒出卖被捕，牺牲在广州军政监狱，终年36岁。2009年9月14日，蔡和森被评为100位为新中国成立作出突出贡献的英雄模范之一。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#金冲及 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#金冲及">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《辛亥革命史稿》《毛泽东传》《周恩来传》《二十世纪中国史纲》《转折年代》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年</出生日期>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">复旦大学</毕业院校>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">金冲及，男，1930年出生，上海人。著名的中国近代史和中共党史研究专家。原中国史学会会长。1948年加入中国共产党。1951年毕业于复旦大学历史学系。历任复旦大学团委书记、教务部副主任、教学科学部副主任，文化部政策研究室研究人员，文物出版社副总编辑，中央文献研究室常务副主任、研究员。第七、八、九届全国政协委员。现任马克思主义理论研究和建设工程咨询委员，北京大学、复旦大学、中国社会科学院教授，博士生导师，俄罗斯科学院外籍院士。2019年12月12日，获全国离退休干部先进个人表彰。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#刘达潮 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#刘达潮">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东莞市</出生地>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">刘达潮(1885—1974)，又名耐，东莞人。1974年1月8日在广州因病逝世，享年89岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#何海霞 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#何海霞">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <学生 rdf:resource="http://www.owl-ontologies.com/Personage.owl#贾又福"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国水墨画、青绿山水</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《看山还看祖国山》《西岳峥嵘何壮哉》《《滕王阁》《陕北清秋》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1908年</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">何福海</别名>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">画家、书法家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998年8月5日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">何海霞，名瀛，字海霞，以字行。北京市人。1956年调入陕西美协从事专业创作，为“长安画派”代表画家之一。1983年任陕西省国画院副院长，不久调北京中国画研究院工作。擅长山水，亦能花卉。其创作往往将青绿工笔与水墨笔意融为一体，立意新奇，笔力雄健，风格浑厚而不失秀丽。代表作有《西岳峥嵘何壮哉》、《陕北清秋》、《看山还看祖国山》等。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#刘德 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#刘德">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">公安战线的优秀领导干部</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1954.02</出生日期>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中共中央党校法学理论专业</毕业院校>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010.08</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">刘德，男，汉族，原籍云南禄丰，出生于北京。中国共产党的优秀党员，党和人民的忠诚卫士，公安战线的优秀领导干部，公安部党委委员、副部长、副总警监。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#张君秋 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张君秋">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名京剧表演艺术家著名京剧旦角四小名旦之一创立张派</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《玉堂春》《西厢记》《望江亭》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1920年10月14日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">滕家鸣，滕玉隐</别名>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名京剧演员</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997年5月27日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张君秋，出生于北京，著名京剧表演艺术家，四小名旦之一，旦角张派创始人，原名滕家鸣，字玉隐，祖籍江苏丹徒。他自幼家贫，父滕联芳，随母张秀琴在各地客串演出，后经李多奎介绍，14岁拜李凌枫为师，专攻青衣。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#李石曾 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李石曾">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <亲家公 rdf:resource="http://www.owl-ontologies.com/Personage.owl#易培基"/>
+        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李鸿藻"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民党四大元老之一私立南通大学（NantungUniversity）首席校董故宫博物院创建人之一</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1881年5月29日</出生日期>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">教育家、文物学家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1973年9月30日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李石曾，男，原名李煜瀛，字石僧，笔名真民、真石增，晚年自号扩武，河北高阳人。中华民国时期著名教育家，故宫博物院创建人之一，国民党四大元老之一，私立南通大学首席校董。早年曾发起和组织赴法勤工俭学运动，为中法文化交流做出了很大贡献。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#陈健 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈健">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东方电影频道收视贡献奖十二届文明建设“五个一工程”奖</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《亮剑》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">导演</职业>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈健，出生于北京，中国内地男导演。2004年，执导的历史战争剧《亮剑》获得第23届中国电视金鹰奖优秀长篇电视剧奖，第26届中国电视剧飞天奖优秀长篇电视剧一等奖。2007年执导抗日剧《仁者无敌》。2009年担任国庆六十周年献礼剧《解放区的天》的导演。2010年执导的战争剧《革命人永远是年轻》开拍。2011年执导的军旅剧《十一级台阶》在山东卫视和河南卫视播出。2012年6月23日执导的谍战历史题材《地火》首播。2013年拍摄的近代革命剧《勇士之城》获得东方电影频道收视贡献奖。2014年执导打捞救援题材电视剧《碧海雄心》。2015年执导纪念彭湃诞辰120周年献礼剧《彭湃》。2016年担任电视剧《地火熊熊》导演。2017年担任电视剧《老字号传奇》导演。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#郭超 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#郭超">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中央电视台年度电视剧最佳新人奖</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">红色摇篮、第三种幸福、屯戍西疆、陈云、百万巨鳄</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5月</出生日期>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中央戏剧学院</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">主持人、演员、导演</职业>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">郭超，男，出生于北京市，中国内地主持人、演员、导演，毕业于中央戏剧学院。1999年—2002年在北京人民广播电视台《空中游乐园》栏目的制作人及主持，因工作优秀，一年后选送到中央人民广播电视台FM90.0作《茹梦俱乐部》的主持人。2015年参演革命题材电视剧《红色摇篮》剧中角色公秉藩。2015年参演电视剧《生死兄弟情》剧中饰演反一号王大志。2015年参与3D电影《大轰炸》的拍摄。2016年02月担任电视剧《主妇也要拼》的剧组演员导演。2016年7月26日担任文艺电影《择日救赎》制片人、演员。2019年，担任电视剧《你永远在我身边》主演。并为电视剧《你永远在我身边》全国海选演员。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#柯子鸿 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#柯子鸿">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">厦门市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1893</出生日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">柯子鸿又名柯成，福建省晋江县人，生于厦门市太平妈街。原以镶牙行医为业。1926年3月加入中国共产党，他利用治病机会对工人进行宣传，领导工人掀起反压迫、反剥削的斗争。是厦门党组织的早期领导人之一。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#萧马 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#萧马">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#严歌苓"/>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《铁梨花》</代表作品>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年11月18日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">严敦勋</别名>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">厦门市</籍贯>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">作家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011年10月10日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">萧马，中国著名作家，著名作家严歌苓的父亲，著有长篇小说《破壁记》、电影文学剧本《巨澜》、《柳暗花明》等。晚年他的小说《铁梨花》被搬上荧屏。2011年10月10日在北京病逝，享年81周岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#冯敬尧 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#冯敬尧">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <下属 rdf:resource="http://www.owl-ontologies.com/Personage.owl#丁力"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1868年</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1953年6月20日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">冯敬尧是在电视剧《上海滩》中登场的虚拟人物，先后由刘丹、潘志文、吴兴国、李雪健等人饰演，上海滩老大。其原型是旧上海青帮老大、“流氓三大亨”之一的黄金荣，其门徒达1000余人。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#曹锟 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#曹锟">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#曹锳"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">参加过甲午战争，英勇作战等</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1862年12月12日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">曹仲珊</别名>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津武备学堂</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军人、民国总统</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1938年5月17日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">曹锟，字仲珊，出生于天津大沽口，第五任中华民国大总统，国民革命军陆军一级上将，中华民国直系军阀的首领。驻军保定，被称为“保定王”。1890年，于天津武备学堂毕业后任毅军哨官；1919年被拥为直系军阀首领。1923年6月，曹锟将黎元洪逐走天津；1923年10月5日，重金收买议员，贿选而被选举为第五任中华民国大总统。1927年移居天津。1931年“九·一八”事变爆发后，拒绝日本出面组织新政府的要求。1938年5月17日，曹锟病逝于天津。1939年12月，曹锟被国民政府追封为陆军一级上将军衔。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#陈松年 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈松年">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈长琦"/>
+        <哥哥 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈乔年"/>
+        <哥哥 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈延年"/>
+        <妹妹 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈子美"/>
+        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#潘兰珍"/>
+        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈独秀"/>
+        <继母 rdf:resource="http://www.owl-ontologies.com/Personage.owl#高君曼"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">安庆市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈松年，陈独秀的第三子。与哥哥延年、乔年为一母所生。他一生经历太多太多的苦难和不幸。刚出生父母离异，17岁时哥哥延年被害。解放后又因父亲的身份而受牵连，直到粉碎“四人帮”后才过上了平凡的安顿日子。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#吴倚沧 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#吴倚沧">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1886年</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#林雅杰 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#林雅杰">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">全国政协授予“优秀政协文史工作者”2013年3月《广州赋》被广州市国家档案馆收藏</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《广东历代书法图录》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1943年</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">林亚杰</别名>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中山大学</毕业院校>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">林雅杰，著名文史学者、书法家，历史学研究员。历任广东省政协常委、广东省政协原副秘书长、广东省政协书画会副会长兼秘书长，现为中国书法家协会会员、民进中央开明画院常务理事、广东开明画院常务副院长、广东省政协文史研究专员、广东文史学会副会长、广东人文艺术研究会执行会长、广州市书法协会副会长、广州市人民政府文史研究馆书画院副院长、广东省政协书画会顾问、广州市人民政府文史研究馆馆员。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#谭天度 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#谭天度">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名的三谭（谭平山、谭天度、谭植棠）之一</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东高明</出生地>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省</籍贯>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国共产党员优秀党员</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999-05-30</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">谭天度，广东高明人，著名的三谭之一。中共“一大”时党员，广州共产主义小组成员之一，广东省最老资格、党龄最长的中共党员，坚定的马克思主义者，久经考验的共产主义战士，杰出的统一战线工作者。1999年5月30日，谭天度同志逝世，终年107岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#黎显衡 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黎显衡">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1935年2月</出生日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">文物博物专家。1935年2月出生，广东广州人。1960年8月华南师范学院历史系本科毕业，研究馆员。广东革命历史博物馆馆长。先后在广东师范学院历史系、广州农民运动讲习所旧址纪念馆和广东革命历史博物馆工作。现兼任广州秦汉造船遗址发掘和博物馆筹建办公室主任、广州市文物管理委员会委员。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#罗志群 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#罗志群">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910年</出生日期>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省</籍贯>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">罗志群，女，广东省人，出生于1910年，海员家庭，广州劳动童子团员。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#梁尚贤 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#梁尚贤">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1936年12月</出生日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1936年12月出生于广州。1956年就读于中国人民大学历史系，1960年毕业留校长期任教。1984年调入中国社会科学院《近代史研究》所，在《《近代史研究》》编辑部先后担任编辑、副编审、编审，1989－1994年任副主编。1996年12月退休。熟悉中国近代史，专攻1921－1937年中共党史，孙中山大元帅大本营时期广东政局，及1924－1927年国民党与广东农民运动。曾用笔名：司马文韬、古贤、周小鹏等。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#石达开 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#石达开">
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#金田起义"/>        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">对湘军：湖口大捷，樟树镇大捷对楚勇（江忠源）:攻克庐州对绿营；水陆洲大捷，破江南大营</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">翼王石达开告涪州城内四民训谕、驻军大定与苗胞欢聚即席赋诗</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西贵港市港北区奇石乡达开村</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1831年（辛卯年）3月</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">亚达、石敢当</别名>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西壮族自治区</籍贯>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军事家、政治家、武学家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1863年（癸亥年）6月27日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">石达开，小名亚达，绰号石敢当，广西贵县，祖籍地广东省和平县。太平天国名将，中国近代军事家，民族英雄。曾封为“圣神电通军主将翼王”，被尊为“义王”。道光二十七年，石达开追随洪秀全，入拜上帝教，咸丰元年12月，永安建制，石达开晋封“翼王五千岁”。咸丰五年2月，在九江、湖口重创湘军水师，乘胜西征，三克武昌。11月，进军江西，攻占皖、赣、鄂三省大片疆土。咸丰七年，天京事变时封“左军主将翼王”，6月2日，再度从天京出走。10月，驱安庆将士进入江西，东西转战，试图救出被湘军围困的瑞州、临江、吉安的翼殿诸军，失利之后放弃江西，经略浙闽，流动转战于南方各省，同治二年5月，率众深入越西山，直抵大渡河南岸，最后全军覆没，石达开被俘。6月27日，就义于成都，享年32岁。石达开是太平天国最具传奇色彩的人物之一，他体恤百姓民生，生平事迹为后世所传颂，被认为是“中国历代农民起义中最完美的形象”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#黄荣 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄荣">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西党委常委自治区人大常委会主任自治区人大常委会党组书记</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西壮族自治区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1911年4月</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012年9月6日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄荣同志，男，壮族，1911年4月生，广西河池市巴马人，1928年6月参加革命工作，1929年4月加入中国共产党。1985年7月离职休养。2012年9月6日10时46分因病医治无效，在南宁逝世，享年102岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#冯轶裴 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#冯轶裴">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">一等宝鼎章</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东新会</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1891</出生日期>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">保定陆军军官学校</毕业院校>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">新会区</籍贯>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">冯轶裴1891年在广东新会出生，民国初年，在保定陆军军官学校和陆军大学毕业。曾在国民党内担任要职，如团长，师长等。一名优秀的军人，也曾是蒋介石的得力助手。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#伍廷芳 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#伍廷芳">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#伍朝枢"/>
+        <妻弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#何启"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国近代第一个法学博士香港立法局第一位华人议员签订平等条约《中墨通商条约》</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">无锡新加坡工业园</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1842年7月30日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">本名叙，又名伍才</别名>
+        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字文爵，号秩庸</字号>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">伦敦大学学院（UCL)</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">外交家、法学家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1922年6月23日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">伍廷芳，本名叙，字文爵，又名伍才，号秩庸，后改名廷芳。汉族，广东新会西墩人，清末民初杰出的外交家、法学家，出生于新加坡，3岁随父回广州芳村定居，早年入香港圣保罗书院，1874年自费留学英国，入伦敦大学学院攻读法学，获博士学位及大律师资格，成为中国近代第一个法学博士，后回香港任律师，成为香港立法局第一位华人议员。洋务运动开始后，1882年进入李鸿章幕府，出任法律顾问，筑铁路、办交涉，改法制、争国权。参与甲午中日议和、中法谈判、马关谈判等，1896年被清政府任命为驻美国、西班牙、秘鲁公使，签订近代中国第一个平等条约《中墨通商条约》。他力主废除“凌迟”、“枭首”、“戮尸”、“缘坐”、“刺字”等酷刑，使流传中国数千年的野蛮重刑律法得以废除。他还先后主持起草了《大清商律》、《大清印刷物件专律》、《商会简明章程二十六条》、《铁路简明章程二十四条》、《各级审判厅试办章程》以及《大清刑事民事诉讼法》等新法。创办中国第一所近代法律学堂，培养了近万名法律人才。辛亥革命爆发后，伍廷芳为帝制的覆灭、司法制度的改革、国权的维护作出巨大贡献。他任中华民国军政府外交总长，主持南北议和，达成迫清室退位。南京临时政府成立后，出任司法总长。1917年赴广州参加护法运动，任护法军政府外交总长、财政总长、广东省长。1922年，陈炯明叛变时，因惊愤成疾，逝世于广州。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#张永福 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张永福">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">无锡新加坡工业园</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1872</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字祝华</别名>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东饶平县樟溪镇青岚村杨梅坑人</籍贯>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张永福，字祝华，广东省饶平县樟溪镇青岚村杨梅坑人，生于新加坡。孙中山辛亥革命在海外的主要助手。早年旅居新加坡，思想进步，义侠肝肠，为人忠厚，至今在新加坡还留下不少善举的传说。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#田心 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#田心">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">河北区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1908</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">原名齐贤、齐见思，化名田心、龙云、龙海航等</别名>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989年4月</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">田心，原名齐贤、齐见思，化名田心、龙云、龙海航等，玉田县高马头村人，1929年加入中国共产主义青年团，同年加入中国共产党。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#罗扬 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#罗扬">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国京剧院负责人</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《白洋淀的春天》、《说唱西游记》、《新曲艺文稿》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">河北区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1929年</出生日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">罗扬，曲艺评论家，河北威县人，中共党员，毕业于冀南威县师范。现任中国曲艺家协会名誉主席、中国说唱文艺学会会长。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#李楠 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李楠">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">康熙王朝、还珠格格、新聊斋志异、87版红楼梦、一年又一年</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">河北省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1965年1月6日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">龙儿、玄烨、小卓子、楠哥、萌叔</别名>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京舞蹈学院</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">演员</职业>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李楠，1965年1月6日出生于河北省，成长于北京，毕业于北京舞蹈学院民族舞系，中国内地男演员。2012年12月7日，一条微博将他重新带到了观众的视线中，天生“娃娃脸”的他被称为“逆生长”的典范。首次进入电视剧领域的是《87版红楼梦》，被导演选中扮演贾宝玉的书童茗烟。代表作有电视剧《康熙王朝》、《还珠格格》第一部、《新聊斋志异》等。早期参演的电影有《二子开店》、《傻冒经理》、《那年的冬天》等。他优秀的演技获得了观众的一致认可与赞同，走红后被网友称为“逆生长大叔”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#许济 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#许济">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">济南市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1887</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">原名许崇济</别名>
+        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">佛航</字号>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1962</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">许济(1887－1962),原名许崇济，号佛航。广州高第街许氏家族许应荣之孙，出生于济南。晚清时，年青的许济投军习武，考入南京弁目养成所。毕业后派赴新军当骑兵见习士官，不久分派到绿营防军徐淮巡防马步全军统领胡令宣部任第一营哨长，后来成了胡令宣的心腹。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#陈章甫 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈章甫">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">参加了“八一”南昌起义</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">浏阳市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1894年7月14日</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年2月23日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈章甫，又名陈昌，浏阳人，新民学会会员，早期中共党员，湖南早期工运、党务负责人之一。1894年7月14日生于广西梧州市。8岁时随父母迁返故里，10岁启蒙，1908年考入浏阳金江高小，1911年就读长沙中路师范学堂，参加了参加了“八一”南昌起义，1930年2月23日牺牲，时年36岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#沈青 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#沈青">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">浙江省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1903年</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1928年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">沈青，名厚？。祖籍浙江，出生广州。父亲曾任国民党政府监察院秘书长，是国民党左派人士。1903年出生在广州，属清代番禺部属人。父沈申曾任国民政府监察院秘书长，是国民党左派人士。沈青排行第二。大哥厚培，又名春雨，是广东社会主义青年团早期的审查委员和中共党员。三妹学修、四妹学德，均是青年团员。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#布鲁 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#布鲁">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">海南区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1909年</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈泊、卢茂焕</别名>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1972年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">布鲁，又名陈泊，原名卢茂焕，海南琼海博鳌人，中共情报保卫人员，抗日战争至国共内战期间，边区保卫部部长陈泊与中共中央社会部二室治安科科长陈龙、总政锄奸部侦察科长钱益民是延安情报界、保卫界的三大侦察专才，被毛泽东称赞为“延安的福尔摩斯”。新中国成立后后任广州市第一任公安局局长。1951年被罗瑞卿打成英国特务被捕，1972年2月25日，陈泊终因长期的折磨，含冤去世，终年63岁。改革开放以后，经过拨乱反正，陈泊蒙受的冤屈得以平反昭雪，并恢复了名誉。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#李沛群 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李沛群">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">四海山林场</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1908</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李沛群，出生于海山的一个贫农家庭。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#李基鸿 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李基鸿">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《圣揆录》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖北省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1882年</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1973年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李基鸿，湖北应城盛家滩人。清光绪二十九年以府尹考选资送留学日本，入东京法政学校。1905年8月，在日本加入孙中山领导的同盟会。1973年9月病逝于台北。曾编纂出版《圣揆录》一书。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#余韶 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#余韶">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#国民党人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南省政府参事室参事</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1891年</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">余韶</别名>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">云南讲武堂韶州分校、北京陆军大学</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军人</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1962年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">余韶，原名斐生，号述虞，湖南平江县三市镇人。清光绪三十四年入四十九标当兵，参加辛亥革命武昌起义及护国、护法诸役。1924年加入国民党，任国民革命军程潜部团长，参加东征陈炯明之役。1926年参加北伐，后历任第五师参谋长、第三十六军少将参谋长、第九十六师师长。参加广西昆仑山及缅甸密支那之战。1942年任杜聿明集团军中将副军长，1945年2月，免职闲居。后被任命为国防部部员。中华人民共和国成立后，参加中国国民党革命委员会，任湖南省政府参事室参事。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#游步瀛 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#游步瀛">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南省</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1903</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">游步瀛，又名步仁，出生于湖南宝庆。父从农商，有地产40亩。本县国民学校高级班、省立农业专门学校农本科肄业。曾任宝属农业劝建会编辑、主任，青年互助社会总务主任．兼青年社会服务社副主任。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#曾仲鸣 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#曾仲鸣">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#方君璧"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">福州市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1896年</出生日期>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1939年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">曾仲鸣，福建闽县人。1912年留学法国，后获文学博士学位，1925年回国后，历任国民政府秘书、汪精卫秘书、国民党中央候补执行委员、中央政治会议副秘书长、铁道部次长兼交通部次长等职。1938年12月，追随汪精卫离开重庆经昆明到河内，叛国投敌，从事卖国活动。1939年3月21日凌晨，在河内汪精卫寓所中，被前来刺杀汪精卫的军统特务误刺身死。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#沈峻 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#沈峻">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <丈夫 rdf:resource="http://www.owl-ontologies.com/Personage.owl#丁聪"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">福建省</出生地>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京大学</毕业院校>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014年12月11日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">沈崇，北京大学先修班女生。1946年12月24日圣诞夜八时左右，沈崇离开八面槽她表姐的家，准备到平安影院去看电影。当她由王府井走到东长安街时，突然被美国海军陆战队伍长威廉斯·皮尔逊和下士普利查德绑架到东单广场施行强奸。路过的北平工人孟昭杰两次救助未成，便跑到北平警察局内七分局报案，主犯威廉斯·皮尔逊当场被逮获，下士普利乍得逃跑。消息传出，立刻引起了人们的愤怒。并由此引发了随后全国各地学生的抗议美军暴行的示威活动。此事成为中共领导反美运动导火线。后来，沈崇改名为沈峻，于1957年和丁聪结为伉俪。沈崇因肺癌于2014年12月11日晚去世，享年87岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#黄涛 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄涛">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">重庆市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1935年</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄顺邡</别名>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄涛，原名黄顺邡，1935年出生于重庆一名门世家，后定居成都。著名书画家，世界华人杰出艺术家，专业研究方向油画、数字影响艺术，擅长油画、水彩画，多次在国内外举办个人油画作品展览。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#廖梦醒 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#廖梦醒">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
+        <丈夫 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李少石"/>
+        <侄子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖晖"/>
+        <外甥女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈香梅"/>
+        <弟媳 rdf:resource="http://www.owl-ontologies.com/Personage.owl#经普椿"/>
+        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖承志"/>
+        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#何香凝"/>
+        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖仲恺"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">对“四人帮”进行了坚决抵制</主要成就>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港特别行政区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1904年（甲辰年）2月</出生日期>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州岭南大学，后留学法国</毕业院校>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东惠州</籍贯>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988年（戊辰年）1月7日</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">廖梦醒，女，广东归善人。廖仲恺、何香凝的长女，是廖承志同志的姐姐。早年追随孙中山投身反帝反封建运动。1924年加入国民党，1931加入中国共产党。抗战时参加中国妇女抗敌后援会及保卫中国同盟，任宋庆龄秘书，负责宋庆龄与中共方面周恩来的联络工作。1949年后，历任全国人大代表、政协委员、全国妇联执委等要职。为中国妇女解放事业作出了贡献。1988年1月7日在北京逝世，享年84岁。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#李纪堂 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李纪堂">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港特别行政区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1874年</出生日期>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命家</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1943年</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李纪堂，香港富商，家财千万。虽出身富家，但全无纨绔子弟习气，性任侠好义。1895年结识孙中山，1900年，李纪堂加入兴中会，投身革命，支持陈少白创办《中国日报》，每月资助银数百元。夏，孙中山由日本来港，策划惠州起义，任李纪堂为财政主任，保管帐目款项。李纪堂即捐3万元作起义经费。起义失败，遗散、抚恤等费用十六七万元亦由李纪堂承担。1902年为起义独力负担经费50万元。1905年加入中国同盟会，继续为革命出钱出力，捐两万元支持采南歌剧社作费用，排演革命戏。为兴办教育，斥资10万元创办李升格致学堂。1907年，潮州黄冈起义失败，革命党人余既成逃港被拘。李纪堂聘律师护救脱险，负担费用2万余元；惠州七女湖起义失败，逃港的革命党人藏身青山农牧场，均由李纪堂安置或供养。这期间，还负责革命同志的联络居留点。1908年，因负债破产，但革命意志并不泯灭。之后，他对庚戌新军起义、黄花岗起义为革命党人购运武器，穿针引线，不遗余力。武昌起义后，对于策划广东水师提督李准反正，亦有劳绩。中华民国成立后，历任广东军政政府交通司司长、广东地方交通管理处长。1921年任大本营庶务局长。1923年，孙中山在广州重组大元帅府，任大本营兵工局筹备委员。1941年5月，赴重庆任国民政府侨务委员会委员。1943年病逝。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#黄大炜 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄大炜">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995年香港新城电台劲歌金曲最佳爵士男歌手2000年台湾金曲奖最佳编曲奖2002华语流行乐传媒年度最佳华语歌曲</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">你把我灌醉、让每个人都心碎、秋天1944</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港特别行政区</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1964年9月17日</出生日期>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">夏威夷大学旅馆管理系</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">歌手、音乐人</职业>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄大炜，1964年9月17日出生于中国香港，华语流行乐男歌手、音乐人，国民革命军将领张学良的外孙。1988年发行个人首张专辑《David黄》正式出道。1990年发行专辑《让每个人都心碎》，从而为听众所熟知。1994年发行专辑《手下留情》，主打歌曲《你把我灌醉》成为其代表作之一。1995年发行专辑《鑀元素》，获香港新城电台劲歌金曲最佳爵士男歌手奖。2000年发行专辑《秋天1944》，同名歌曲《秋天1944》获金曲奖最佳编曲奖。2003年发行专辑《Time1894-2003》，入选中华音乐人交流协会年度十大专辑，并入围华语流行乐传媒最佳男艺人。2007年发行专辑《Passion》，同名歌曲《Passion》入选中华音乐人交流协会年度十大单曲。2012年担任《公司好声音》评委。2014年担任《唱出爱火花》节目导师。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#张泊泉 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张泊泉">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">高阳县</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年1月</出生日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张泊泉，直隶高阳人。1929年加入中国共产主义青年团。次年转入中国共产党。曾任河北高蠡独立师营教导员，晋察冀二分区教导大队政委、独立团政委，晋中独立旅团政委。建国后，历任中共湛江市委第一书记、湛江地委第二书记、广东省委统战部部长、广东省第四届政协副主席。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#木青 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#木青">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《幼林里的墓碑》、《匪患世界》</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">齐齐哈尔市</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1938年农历12月15日</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">邢莱廷</别名>
+        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">山东莱阳</籍贯>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">木青，原名邢莱廷，1980年起任沈阳市作家协会主席，后任沈阳市文联副主席、辽宁省人大代表、中国作协会员、国家一级作家。被授予第二批辽宁省优秀专家和沈阳市劳动模范等称号。享受国务院政府特殊津贴。其代表作有《幼林里的墓碑》、《匪患世界》等。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/Personage.owl#丁力 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#丁力">
@@ -656,7 +1367,8 @@
     <!-- http://www.owl-ontologies.com/Personage.owl#丁汝昌 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#丁汝昌">
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中日甲午战争"/>        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中日甲午战争"/>        
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
     </owl:NamedIndividual>
     
 
@@ -850,22 +1562,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#于光远 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#于光远">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京华夏管理学院名誉院长</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年7月5日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">郁锺正</别名>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清华大学</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名经济学家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013年9月26日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">于光远，原姓郁，名锺正，入共产党后改名于光远。上海人，中国著名经济学家，中国社会科学院研究员。长期从事经济研究工作，从上世纪八十年代起，致力于哲学、社会科学多学科的研究和推进其发展的组织活动，并积极参加多方面的社会活动。1935年参加一二九学生运动。1936年毕业于清华大学物理系。1937年初抗日战争前，加入中国共产党。1939年兼任延安中山图书馆主任。历任中共中央图书馆主任，北京大学图书馆系教授，中共中央宣传部理论宣传处副处长，中国科学院哲学社会科学部委员、常委，科学规划委员会副秘书长，科学技术委员会副主任。1941年起从事陕甘宁边区经济的研究工作，后在延安大学财经系任教。1948～1975年在中共中央宣传部工作。1955年被推选为中国科学院哲学社会科学学部的学部委员。1964年任国家科学委员会副主任。1975年以后任国家计划委员会经济研究所所长、中国社会科学院副院长兼马列主义毛泽东思想研究所所长、国家科委副主任、中共中央顾问委员会委员、中国社会科学院顾问、《中国大百科全书》总编委会副主任，2000年担任黔南民族师范学院名誉院长等职。于2013年9月26日凌晨3点因病医治无效去世，享年98岁。2018年12月18日，于光远获“致敬改革开放四十周年·中国智库建设40人”。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#于凤至 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#于凤至">
@@ -973,25 +1669,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#任锐">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#伍廷芳 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#伍廷芳">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#伍朝枢"/>
-        <妻弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#何启"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国近代第一个法学博士香港立法局第一位华人议员签订平等条约《中墨通商条约》</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">新加坡</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1842年7月30日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">本名叙，又名伍才</别名>
-        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字文爵，号秩庸</字号>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">伦敦大学学院（UCL)</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">外交家、法学家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1922年6月23日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">伍廷芳，本名叙，字文爵，又名伍才，号秩庸，后改名廷芳。汉族，广东新会西墩人，清末民初杰出的外交家、法学家，出生于新加坡，3岁随父回广州芳村定居，早年入香港圣保罗书院，1874年自费留学英国，入伦敦大学学院攻读法学，获博士学位及大律师资格，成为中国近代第一个法学博士，后回香港任律师，成为香港立法局第一位华人议员。洋务运动开始后，1882年进入李鸿章幕府，出任法律顾问，筑铁路、办交涉，改法制、争国权。参与甲午中日议和、中法谈判、马关谈判等，1896年被清政府任命为驻美国、西班牙、秘鲁公使，签订近代中国第一个平等条约《中墨通商条约》。他力主废除“凌迟”、“枭首”、“戮尸”、“缘坐”、“刺字”等酷刑，使流传中国数千年的野蛮重刑律法得以废除。他还先后主持起草了《大清商律》、《大清印刷物件专律》、《商会简明章程二十六条》、《铁路简明章程二十四条》、《各级审判厅试办章程》以及《大清刑事民事诉讼法》等新法。创办中国第一所近代法律学堂，培养了近万名法律人才。辛亥革命爆发后，伍廷芳为帝制的覆灭、司法制度的改革、国权的维护作出巨大贡献。他任中华民国军政府外交总长，主持南北议和，达成迫清室退位。南京临时政府成立后，出任司法总长。1917年赴广州参加护法运动，任护法军政府外交总长、财政总长、广东省长。1922年，陈炯明叛变时，因惊愤成疾，逝世于广州。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1235,23 +1912,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#何海霞 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#何海霞">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <学生 rdf:resource="http://www.owl-ontologies.com/Personage.owl#贾又福"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国水墨画、青绿山水</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《看山还看祖国山》《西岳峥嵘何壮哉》《《滕王阁》《陕北清秋》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1908年</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">何福海</别名>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">画家、书法家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998年8月5日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">何海霞，名瀛，字海霞，以字行。北京市人。1956年调入陕西美协从事专业创作，为“长安画派”代表画家之一。1983年任陕西省国画院副院长，不久调北京中国画研究院工作。擅长山水，亦能花卉。其创作往往将青绿工笔与水墨笔意融为一体，立意新奇，笔力雄健，风格浑厚而不失秀丽。代表作有《西岳峥嵘何壮哉》、《陕北清秋》、《看山还看祖国山》等。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#何潮高 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#何潮高">
@@ -1382,22 +2042,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#余汉谋">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#国民党人物"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#余韶 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#余韶">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#国民党人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南省政府参事室参事</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1891年</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">余韶</别名>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">云南讲武堂韶州分校、北京陆军大学</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军人</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1962年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">余韶，原名斐生，号述虞，湖南平江县三市镇人。清光绪三十四年入四十九标当兵，参加辛亥革命武昌起义及护国、护法诸役。1924年加入国民党，任国民革命军程潜部团长，参加东征陈炯明之役。1926年参加北伐，后历任第五师参谋长、第三十六军少将参谋长、第九十六师师长。参加广西昆仑山及缅甸密支那之战。1942年任杜聿明集团军中将副军长，1945年2月，免职闲居。后被任命为国防部部员。中华人民共和国成立后，参加中国国民党革命委员会，任湖南省政府参事室参事。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1591,19 +2235,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#冯敬尧 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#冯敬尧">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <下属 rdf:resource="http://www.owl-ontologies.com/Personage.owl#丁力"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1868年</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1953年6月20日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">冯敬尧是在电视剧《上海滩》中登场的虚拟人物，先后由刘丹、潘志文、吴兴国、李雪健等人饰演，上海滩老大。其原型是旧上海青帮老大、“流氓三大亨”之一的黄金荣，其门徒达1000余人。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#冯明光 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#冯明光">
@@ -1715,20 +2346,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命党人</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1911年4月24日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">冯超骧，初名敬，字雨苍，一作郁庄，汉族，福建侯官人。义和团运动后至南京，入南洋水师学堂，学习海军，因病中辍。后至长门，入要塞炮术学校。毕业后至北京，经部试，名列第四，得协军校。旋回福建，任职闽江口炮台。1911年春，得悉广州将有大举，乃赴香港，继抵广州。4月27日起义发动后，参加攻打督署，奋勇当先，受伤十余处，于东辕门壮烈牺牲。葬于广州黄花岗，为黄花岗七十二烈士之一。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#冯轶裴 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#冯轶裴">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">一等宝鼎章</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东新会</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1891</出生日期>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">保定陆军军官学校</毕业院校>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">新会</籍贯>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">冯轶裴1891年在广东新会出生，民国初年，在保定陆军军官学校和陆军大学毕业。曾在国民党内担任要职，如团长，师长等。一名优秀的军人，也曾是蒋介石的得力助手。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2089,20 +2706,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#刘德 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#刘德">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">公安战线的优秀领导干部</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1954.02</出生日期>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中共中央党校法学理论专业</毕业院校>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010.08</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">刘德，男，汉族，原籍云南禄丰，出生于北京。中国共产党的优秀党员，党和人民的忠诚卫士，公安战线的优秀领导干部，公安部党委委员、副部长、副总警监。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#刘德贞 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#刘德贞">
@@ -2427,16 +3030,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#刘觉民">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#刘达潮 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#刘达潮">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东莞</出生地>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">刘达潮(1885—1974)，又名耐，东莞人。1974年1月8日在广州因病逝世，享年89岁。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3085,18 +3678,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#吴佩琪">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#吴倚沧 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#吴倚沧">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1886年</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3826,59 +4407,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#孙中山 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#孙中山">             
-		<rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#国民党人物"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中国国民党第一次全国代表大会"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#二次革命"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#惠州起义"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#护法运动"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#河口起义"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#潮州黄冈起义"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#镇南关起义"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#黄花岗起义"/>
-        <儿媳 rdf:resource="http://www.owl-ontologies.com/Personage.owl#严蔼娟"/>
-        <儿媳 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蓝妮"/>
-        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙科"/>
-        <出生日期 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1866年11月12日"/>
-        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#卢慕贞"/>
-        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#大月薰"/>
-        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈粹芬"/>
-        <助理 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖仲恺"/>
-        <同事 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蒋介石"/>
-        <哥哥 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙眉"/>
-        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙娫"/>
-        <女婿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#戴恩赛"/>
-        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋庆龄"/>
-        <孙女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙穗芬"/>
-        <孙女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙穗芳"/>
-        <孙女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙穗英"/>
-        <岳母 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪桂珍"/>
-        <岳父 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋嘉树"/>
-        <战友 rdf:resource="http://www.owl-ontologies.com/Personage.owl#熊克武"/>
-        <战友 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陆皓东"/>
-        <战友 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈少白"/>
-        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙达成"/>
-        <相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#二次革命"/>
-        <相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#辛亥革命"/>
-        <相关遗存 rdf:resource="http://www.owl-ontologies.com/Relic.owl#中山纪念堂"/>
-        <连襟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孔祥熙"/>
-        <逝世日期 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1925年3月12日"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">创立兴中会、中国同盟会建立共和体制、建立中国国民党开创中华民国、创建黄埔军校、中山大学领导二次革命和护法运动</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《民权初步》、《孙文学说》、《三民主义》、《实业计划》等</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省香山县翠亨村（今中山市南朗镇翠亨村）</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1866年11月12日（同治五年）</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中山、中山樵、帝象、德明（谱名）</别名>
-        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字载之，号日新，又号逸仙</字号>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港西医书院（今香港大学）</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">政治家、革命家、思想家、临时大总统</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年3月12日（民国十四年）</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">孙中山，名文，字载之，号日新，又号逸仙，又名帝象，化名中山樵，伟大的民族英雄、伟大的爱国主义者、中国民主革命的伟大先驱，中华民国和中国国民党的缔造者，三民主义的倡导者，创立了《五权宪法》。他首举彻底反帝反封建的旗帜，“起共和而终两千年封建帝制”。是伟大的民族英雄、伟大的爱国主义者。孙中山1866年11月12日生于广东省广州府香山县翠亨村，广府人。孙中山原在香港学医，并成为西医医师。鸦片战争后，孙中山目睹中华民族有被西方列强瓜分的危险，决定抛弃“医人生涯”，进行“医国事业”。孙中山早期受郑观应的改良思想影响，后看清了清政府的腐败，决心推翻清王朝，建立民主共和国。1894年11月24日，孙中山在檀香山创立兴中会。1905年成立中国同盟会。1911年10月10日新军中的革命党人暗中联络，决定当天晚上起义。辛亥革命后被推举为中华民国临时大总统。1925年3月12日，孙中山因癌症在北京逝世。1929年6月1日，根据其生前遗愿，葬于南京紫金山中山陵。1940年，国民政府通令全国，尊称其为“中华民国国父”。孙中山著有《建国方略》、《建国大纲》、《三民主义》等。其著述在逝世后多次被结集出版，有中华书局1986年出版的十一卷本《孙中山全集》，台北1969、1973、1985年出版的《国父全集》等。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#孙传芳 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#孙传芳">
@@ -4104,27 +4632,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#宋子文 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#宋子文">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#张乐怡"/>
-        <姐姐 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋庆龄"/>
-        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子良"/>
-        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋嘉树"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">遏止日本对华侵略、寻求国际援助出席联合国大会任中国首席代表</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1894年12月4日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.V.Soong</别名>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海圣约翰大学、哈佛大学、哥伦比亚大学</毕业院校>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">海南文昌</籍贯>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">政治家，外交家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1971年4月25日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋子文，民国时期的政治家、外交家、金融家，海南文昌人。宋子文是宋嘉树之子，其兄弟姐妹分别是是宋庆龄、宋美龄、宋霭龄、宋子良、宋子安。宋子文出生于上海，早年毕业上海圣约翰大学。后去美国哈佛大学攻读经济学，获硕士学位，继入哥伦比亚大学，获博士学位。1925年任国民政府财政部长。1928——1930年间通过谈判收回关税自主权，使中国有权确定关税税率和监督税收。1942年担任国民政府外交部长后曾与美国国务卿科德尔·赫尔签订中美抵抗侵略互助协定，次年与外国谈判收回各国在华的治外法权。1945年出席联合国大会任中国首席代表，同年6月去莫斯科与斯大林会谈，1945年8月14日签订不平等的中苏友好同盟条约。1949年去香港，后移居美国纽约。1971年4月25日在旧金山逝世。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#宋子良 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#宋子良">
@@ -4145,27 +4652,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军人</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1993年2月13日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋希濂，字荫国，汉族，湖南湘乡人。自东征、北伐、抗日到解放战争时被俘，宋希濂历经重要战役数十次，曾获青天白日勋章，有“鹰犬将军”之称。黄埔军校第一期步兵科、日本千叶陆军步兵学校中国将校班、陆军大学将官讲习班第一期、陆军大学将官班甲级第一期毕业。曾任国民革命军第71军军长、第11集团军总司令、新疆省警备司令、华中“剿匪”副总司令兼第14兵团司令。1949年被中国人民解放军俘虏，后作为战犯接受改造，1959年12月特赦。1980年赴美探亲，后定居美国。1982年8月任纽约“中国和平统一促进会”首席顾问。1984年参与发起成立黄埔军校同学会，任副会长。1993年2月13日因患严重肾衰竭在纽约逝世，享年86岁。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#宋庆龄 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#宋庆龄">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <丈夫 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙中山"/>
-        <出生日期 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1893年1月27日"/>
-        <姐姐 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋霭龄"/>
-        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子安"/>
-        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子文"/>
-        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋子良"/>
-        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪桂珍"/>
-        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋嘉树"/>
-        <继子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙科"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中华人民共和国名誉主席</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋庆龄（1893年1月27日-1981年5月29日），伟大的爱国主义、民主主义、国际主义和共产主义战士，举世闻名的二十世纪的伟大女性。
-她青年时代追随孙中山，献身革命，在近七十年的革命生涯中，坚强不屈、矢志不移、英勇奋斗，始终坚定地和中国人民、中国共产党站在一起，为中国人民的解放事业，为妇女儿童的卫生保健和文化教育福利事业，为祖国统一以及保卫世界和平、促进人类的进步事业而殚精竭力，鞠躬尽瘁，做出了不可磨灭的贡献，受到中国人民、海外华人华侨的景仰和爱戴，也赢得国际友人的赞誉和热爱，并享有崇高的威望。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4316,19 +4802,6 @@
         <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">四川成都</籍贯>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005年10月17日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">巴金，本名李尧棠，字芾甘，笔名王文慧、欧阳镜蓉、黄树辉、余一等，1904年11月25日出生于四川省成都市。1921年于成都外语专门学校肄业，出版家，翻译家。是享誉海内外的文学大师，杰出的社会活动家，著名的无党派爱国民主人士，中国共产党的亲密朋友。曾任第六届、七届、八届、九届、十届全国政协副主席，中国作家协会主席。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#布鲁 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#布鲁">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">海南</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1909年</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈泊、卢茂焕</别名>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1972年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">布鲁，又名陈泊，原名卢茂焕，海南琼海博鳌人，中共情报保卫人员，抗日战争至国共内战期间，边区保卫部部长陈泊与中共中央社会部二室治安科科长陈龙、总政锄奸部侦察科长钱益民是延安情报界、保卫界的三大侦察专才，被毛泽东称赞为“延安的福尔摩斯”。新中国成立后后任广州市第一任公安局局长。1951年被罗瑞卿打成英国特务被捕，1972年2月25日，陈泊终因长期的折磨，含冤去世，终年63岁。改革开放以后，经过拨乱反正，陈泊蒙受的冤屈得以平反昭雪，并恢复了名誉。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4485,28 +4958,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#廖晖">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#廖梦醒 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#廖梦醒">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <丈夫 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李少石"/>
-        <侄子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖晖"/>
-        <外甥女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈香梅"/>
-        <弟媳 rdf:resource="http://www.owl-ontologies.com/Personage.owl#经普椿"/>
-        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖承志"/>
-        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#何香凝"/>
-        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖仲恺"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">对“四人帮”进行了坚决抵制</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1904年（甲辰年）2月</出生日期>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州岭南大学，后留学法国</毕业院校>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东惠州</籍贯>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988年（戊辰年）1月7日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">廖梦醒，女，广东归善人。廖仲恺、何香凝的长女，是廖承志同志的姐姐。早年追随孙中山投身反帝反封建运动。1924年加入国民党，1931加入中国共产党。抗战时参加中国妇女抗敌后援会及保卫中国同盟，任宋庆龄秘书，负责宋庆龄与中共方面周恩来的联络工作。1949年后，历任全国人大代表、政协委员、全国妇联执委等要职。为中国妇女解放事业作出了贡献。1988年1月7日在北京逝世，享年84岁。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4736,22 +5187,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#张君秋 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张君秋">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名京剧表演艺术家著名京剧旦角四小名旦之一创立张派</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《玉堂春》《西厢记》《望江亭》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1920年10月14日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">滕家鸣，滕玉隐</别名>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名京剧演员</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997年5月27日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张君秋，出生于北京，著名京剧表演艺术家，四小名旦之一，旦角张派创始人，原名滕家鸣，字玉隐，祖籍江苏丹徒。他自幼家贫，父滕联芳，随母张秀琴在各地客串演出，后经李多奎介绍，14岁拜李凌枫为师，专攻青衣。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#张善铭 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张善铭">
@@ -4922,17 +5357,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#张志平 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张志平">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">教师</职业>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张志平，男，祖籍湖北，生于上海，云南艺术学院教授。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#张敬尧 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张敬尧">
@@ -4958,30 +5382,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命家</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年4月5日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张民达，广东梅县人，马来西亚华侨，中国近代民主革命家。辛亥革命前夕，张民达通过邓泽如介绍结识孙中山，后加入中国同盟会，在南洋联络华侨积极筹饷支持革命。回国后，投身于孙中山发动的讨伐袁世凯的“二次革命”，进行护国反袁斗争。经过十多年的政治和军事斗争的磨炼，成为孙中山领导下的一员出色的军事将领。张民达1920年后在粤军中历任营长、团长、旅长、师长等职，多次参加孙中山领导指挥的重大战役，身经百战，所向披靡。1925年4月25日，张民达从蕉岭返汕头商议平乱，不幸在潮州覆舟殉难，终年40岁。1926年8月，国民政府追赠张民达为陆军上将。1953年，中共中央人民政府追认张民达为烈士。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#张永福 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张永福">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">新加坡</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1872</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字祝华</别名>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东饶平县樟溪镇青岚村杨梅坑人</籍贯>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张永福，字祝华，广东省饶平县樟溪镇青岚村杨梅坑人，生于新加坡。孙中山辛亥革命在海外的主要助手。早年旅居新加坡，思想进步，义侠肝肠，为人忠厚，至今在新加坡还留下不少善举的传说。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#张泊泉 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#张泊泉">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">高阳</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年1月</出生日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张泊泉，直隶高阳人。1929年加入中国共产主义青年团。次年转入中国共产党。曾任河北高蠡独立师营教导员，晋察冀二分区教导大队政委、独立团政委，晋中独立旅团政委。建国后，历任中共湛江市委第一书记、湛江地委第二书记、广东省委统战部部长、广东省第四届政协副主席。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6153,40 +6553,10 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#曹锟 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#曹锟">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <弟弟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#曹锳"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">参加过甲午战争，英勇作战等</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1862年12月12日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">曹仲珊</别名>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津武备学堂</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军人、民国总统</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1938年5月17日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">曹锟，字仲珊，出生于天津大沽口，第五任中华民国大总统，国民革命军陆军一级上将，中华民国直系军阀的首领。驻军保定，被称为“保定王”。1890年，于天津武备学堂毕业后任毅军哨官；1919年被拥为直系军阀首领。1923年6月，曹锟将黎元洪逐走天津；1923年10月5日，重金收买议员，贿选而被选举为第五任中华民国大总统。1927年移居天津。1931年“九·一八”事变爆发后，拒绝日本出面组织新政府的要求。1938年5月17日，曹锟病逝于天津。1939年12月，曹锟被国民政府追封为陆军一级上将军衔。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#曹锳 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#曹锳">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#曾仲鸣 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#曾仲鸣">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#方君璧"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">福州</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1896年</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1939年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">曾仲鸣，福建闽县人。1912年留学法国，后获文学博士学位，1925年回国后，历任国民政府秘书、汪精卫秘书、国民党中央候补执行委员、中央政治会议副秘书长、铁道部次长兼交通部次长等职。1938年12月，追随汪精卫离开重庆经昆明到河内，叛国投敌，从事卖国活动。1939年3月21日凌晨，在河内汪精卫寓所中，被前来刺杀汪精卫的军统特务误刺身死。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6284,20 +6654,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#木青 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#木青">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《幼林里的墓碑》、《匪患世界》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">齐齐哈尔市</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1938年农历12月15日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">邢莱廷</别名>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">山东莱阳</籍贯>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">木青，原名邢莱廷，1980年起任沈阳市作家协会主席，后任沈阳市文联副主席、辽宁省人大代表、中国作协会员、国家一级作家。被授予第二批辽宁省优秀专家和沈阳市劳动模范等称号。享受国务院政府特殊津贴。其代表作有《幼林里的墓碑》、《匪患世界》等。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#朱光 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#朱光">
@@ -6350,19 +6706,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#朱全华">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#朱其华 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#朱其华">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《中国资本主义之发展》，《中国农村经济关系及其特质》、、</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1907年</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1945年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">朱其华浙江海宁人。本名朱雅林，字亚领，乳名朱六宝，学名朱骏先，又名朱佩我，著《中国资本主义之发展》、《中国农村经济关系及其特质》、《中国革命与中国社会各阶级》等署名，均出版于1930年。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6832,19 +7175,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#李基鸿 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李基鸿">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《圣揆录》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖北</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1882年</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1973年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李基鸿，湖北应城盛家滩人。清光绪二十九年以府尹考选资送留学日本，入东京法政学校。1905年8月，在日本加入孙中山领导的同盟会。1973年9月病逝于台北。曾编纂出版《圣揆录》一书。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#李大林 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李大林">
@@ -7198,21 +7528,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#李楠 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李楠">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">康熙王朝、还珠格格、新聊斋志异、87版红楼梦、一年又一年</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">河北省</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1965年1月6日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">龙儿、玄烨、小卓子、楠哥、萌叔</别名>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京舞蹈学院</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">演员</职业>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李楠，1965年1月6日出生于河北省，成长于北京，毕业于北京舞蹈学院民族舞系，中国内地男演员。2012年12月7日，一条微博将他重新带到了观众的视线中，天生“娃娃脸”的他被称为“逆生长”的典范。首次进入电视剧领域的是《87版红楼梦》，被导演选中扮演贾宝玉的书童茗烟。代表作有电视剧《康熙王朝》、《还珠格格》第一部、《新聊斋志异》等。早期参演的电影有《二子开店》、《傻冒经理》、《那年的冬天》等。他优秀的演技获得了观众的一致认可与赞同，走红后被网友称为“逆生长大叔”。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#李毓秀 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李毓秀">
@@ -7268,18 +7583,6 @@
         <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东恩平</出生地>
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命党人</职业>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李沛基，广东恩平人，中国近代民主革命家，中国同盟会会员。1911年10月25日，在辛亥三二九起义失败后，革命党人的暗杀行动浮出水面，当天暗杀团团员朱述堂接到电报，迅即从河南过江赶到成记洋货店，将清廷广州将军凤山即将抵达天字码头消息转告周之桢。周之桢立刻令暗杀团成员李沛基在楼上执行任务，布置好炸弹，其他人员迅速离开店铺。凤山登岸后，故意避开长堤、归德六、四牌楼等大路，走稍为偏僻的仓前街。李沛基见众多护卫簇拥着凤山的大轿来到洋货店门口，立即拉动绳索，三颗炸弹正好落在队伍中间，凤山被当场炸死。李沛基从容逸去。中华民国成立后，政府以有功于民国的名义，派李沛基赴美留学。后李沛基在美国病逝。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#李沛群 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李沛群">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">海山</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1908</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李沛群，出生于海山的一个贫农家庭。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7379,22 +7682,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#李石曾 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李石曾">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <亲家公 rdf:resource="http://www.owl-ontologies.com/Personage.owl#易培基"/>
-        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李鸿藻"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民党四大元老之一私立南通大学（NantungUniversity）首席校董故宫博物院创建人之一</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1881年5月29日</出生日期>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">教育家、文物学家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1973年9月30日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李石曾，男，原名李煜瀛，字石僧，笔名真民、真石增，晚年自号扩武，河北高阳人。中华民国时期著名教育家，故宫博物院创建人之一，国民党四大元老之一，私立南通大学首席校董。早年曾发起和组织赴法勤工俭学运动，为中法文化交流做出了很大贡献。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#李福林 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李福林">
@@ -7443,19 +7730,6 @@
         <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1890年</出生日期>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1953年</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李章达，广东东莞人，中国近代民主革命家。早年加入中国同盟会。1911年参加武昌起义。后又参加讨袁运动，历任孙中山警卫团团长、大元帅府参军等。1924年中国国民党改组后，随廖仲恺办理党务。1933年参加福建事变，卢沟桥事变前参加民族革命大同盟，组织全国各界救国会华南区总部，从事抗日救亡活动。全面抗战爆发后，任国民革命军第四战区军法执行总监。1941年后参与筹备组织中国民主政团同盟。1948年任中国国民党革命委员会常务委员。1949年新中国成立后，历任中华人民共和国中央人民政府委员、广东省人民政府副主席、广东省政协副主席、广州市副市长、中国民主同盟中央常务委员、南方总支部主任委员等职。1953年因病逝世。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#李纪堂 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#李纪堂">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1874年</出生日期>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1943年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">李纪堂，香港富商，家财千万。虽出身富家，但全无纨绔子弟习气，性任侠好义。1895年结识孙中山，1900年，李纪堂加入兴中会，投身革命，支持陈少白创办《中国日报》，每月资助银数百元。夏，孙中山由日本来港，策划惠州起义，任李纪堂为财政主任，保管帐目款项。李纪堂即捐3万元作起义经费。起义失败，遗散、抚恤等费用十六七万元亦由李纪堂承担。1902年为起义独力负担经费50万元。1905年加入中国同盟会，继续为革命出钱出力，捐两万元支持采南歌剧社作费用，排演革命戏。为兴办教育，斥资10万元创办李升格致学堂。1907年，潮州黄冈起义失败，革命党人余既成逃港被拘。李纪堂聘律师护救脱险，负担费用2万余元；惠州七女湖起义失败，逃港的革命党人藏身青山农牧场，均由李纪堂安置或供养。这期间，还负责革命同志的联络居留点。1908年，因负债破产，但革命意志并不泯灭。之后，他对庚戌新军起义、黄花岗起义为革命党人购运武器，穿针引线，不遗余力。武昌起义后，对于策划广东水师提督李准反正，亦有劳绩。中华民国成立后，历任广东军政政府交通司司长、广东地方交通管理处长。1921年任大本营庶务局长。1923年，孙中山在广州重组大元帅府，任大本营兵工局筹备委员。1941年5月，赴重庆任国民政府侨务委员会委员。1943年病逝。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8299,36 +8573,10 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#林雅杰 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#林雅杰">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">全国政协授予“优秀政协文史工作者”2013年3月《广州赋》被广州市国家档案馆收藏</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《广东历代书法图录》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1943年</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">林亚杰</别名>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中山大学</毕业院校>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">林雅杰，著名文史学者、书法家，历史学研究员。历任广东省政协常委、广东省政协原副秘书长、广东省政协书画会副会长兼秘书长，现为中国书法家协会会员、民进中央开明画院常务理事、广东开明画院常务副院长、广东省政协文史研究专员、广东文史学会副会长、广东人文艺术研究会执行会长、广州市书法协会副会长、广州市人民政府文史研究馆书画院副院长、广东省政协书画会顾问、广州市人民政府文史研究馆馆员。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#林黛 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#林黛">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#柯子鸿 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#柯子鸿">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">厦门</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1893</出生日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">柯子鸿又名柯成，福建省晋江县人，生于厦门市太平妈街。原以镶牙行医为业。1926年3月加入中国共产党，他利用治病机会对工人进行宣传，领导工人掀起反压迫、反剥削的斗争。是厦门党组织的早期领导人之一。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8504,17 +8752,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">党政干部</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008年</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">梁威林，中国共产党的优秀党员，久经考验的忠诚的共产主义战士，广东省第五届政协主席、广东省原副省长、新华社香港分社原社长。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#梁尚贤 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#梁尚贤">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1936年12月</出生日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1936年12月出生于广州。1956年就读于中国人民大学历史系，1960年毕业留校长期任教。1984年调入中国社会科学院《近代史研究》所，在《《近代史研究》》编辑部先后担任编辑、副编审、编审，1989－1994年任副主编。1996年12月退休。熟悉中国近代史，专攻1921－1937年中共党史，孙中山大元帅大本营时期广东政局，及1924－1927年国民党与广东农民运动。曾用笔名：司马文韬、古贤、周小鹏等。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8953,19 +9190,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#沈峻 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#沈峻">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <丈夫 rdf:resource="http://www.owl-ontologies.com/Personage.owl#丁聪"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">福建</出生地>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京大学</毕业院校>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014年12月11日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">沈崇，北京大学先修班女生。1946年12月24日圣诞夜八时左右，沈崇离开八面槽她表姐的家，准备到平安影院去看电影。当她由王府井走到东长安街时，突然被美国海军陆战队伍长威廉斯·皮尔逊和下士普利查德绑架到东单广场施行强奸。路过的北平工人孟昭杰两次救助未成，便跑到北平警察局内七分局报案，主犯威廉斯·皮尔逊当场被逮获，下士普利乍得逃跑。消息传出，立刻引起了人们的愤怒。并由此引发了随后全国各地学生的抗议美军暴行的示威活动。此事成为中共领导反美运动导火线。后来，沈崇改名为沈峻，于1957年和丁聪结为伉俪。沈崇因肺癌于2014年12月11日晚去世，享年87岁。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#沈泽民 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#沈泽民">
@@ -9000,18 +9224,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#沈粹缜">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#沈青 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#沈青">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">浙江</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1903年</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1928年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">沈青，名厚？。祖籍浙江，出生广州。父亲曾任国民党政府监察院秘书长，是国民党左派人士。1903年出生在广州，属清代番禺部属人。父沈申曾任国民政府监察院秘书长，是国民党左派人士。沈青排行第二。大哥厚培，又名春雨，是广东社会主义青年团早期的审查委员和中共党员。三妹学修、四妹学德，均是青年团员。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9118,18 +9330,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军人</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年12月13日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">游曦，女，革命烈士；原名游传玉，四川省巴县嘉陵江畔大阳沟人，1922年入四川省立第二女子师范学校学习，改名游曦，1925年加入中国共产主义青年团；1926年投身妇女解放运动，发起筹备重庆各界妇女联合会；1927年入中央军事政治学校武汉分校学习，四一二政变爆发后，她参加西征军并加入中国共产党；后随叶挺领导的教导团南下广州，参加广州起义，任教导团支部委员，在战斗中，游曦奉命率领女兵班在珠江北岸长堤执行阻击敌人的任务，由于敌众我寡，起义失败，最后英勇牺牲，年仅19岁。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#游步瀛 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#游步瀛">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1903</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">游步瀛，又名步仁，出生于湖南宝庆。父从农商，有地产40亩。本县国民学校高级班、省立农业专门学校农本科肄业。曾任宝属农业劝建会编辑、主任，青年互助社会总务主任．兼青年社会服务社副主任。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9820,19 +10020,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#田心 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#田心">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">河北</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1908</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">原名齐贤、齐见思，化名田心、龙云、龙海航等</别名>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989年4月</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">田心，原名齐贤、齐见思，化名田心、龙云、龙海航等，玉田县高马头村人，1929年加入中国共产主义青年团，同年加入中国共产党。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#田恩民 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#田恩民">
@@ -9990,23 +10177,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#石评梅">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#石达开 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#石达开">
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#金田起义"/>        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">对湘军：湖口大捷，樟树镇大捷对楚勇（江忠源）:攻克庐州对绿营；水陆洲大捷，破江南大营</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">翼王石达开告涪州城内四民训谕、驻军大定与苗胞欢聚即席赋诗</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西贵港市港北区奇石乡达开村</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1831年（辛卯年）3月</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">亚达、石敢当</别名>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西</籍贯>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">军事家、政治家、武学家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1863年（癸亥年）6月27日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">石达开，小名亚达，绰号石敢当，广西贵县，祖籍地广东省和平县。太平天国名将，中国近代军事家，民族英雄。曾封为“圣神电通军主将翼王”，被尊为“义王”。道光二十七年，石达开追随洪秀全，入拜上帝教，咸丰元年12月，永安建制，石达开晋封“翼王五千岁”。咸丰五年2月，在九江、湖口重创湘军水师，乘胜西征，三克武昌。11月，进军江西，攻占皖、赣、鄂三省大片疆土。咸丰七年，天京事变时封“左军主将翼王”，6月2日，再度从天京出走。10月，驱安庆将士进入江西，东西转战，试图救出被湘军围困的瑞州、临江、吉安的翼殿诸军，失利之后放弃江西，经略浙闽，流动转战于南方各省，同治二年5月，率众深入越西山，直抵大渡河南岸，最后全军覆没，石达开被俘。6月27日，就义于成都，享年32岁。石达开是太平天国最具传奇色彩的人物之一，他体恤百姓民生，生平事迹为后世所传颂，被认为是“中国历代农民起义中最完美的形象”。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10303,31 +10473,6 @@
         <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1909年</出生日期>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年04月23日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">罗大妹，女，汉族，广东番禺人。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#罗志群 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#罗志群">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910年</出生日期>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省</籍贯>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">罗志群，女，广东省人，出生于1910年，海员家庭，广州劳动童子团员。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#罗扬 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#罗扬">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国京剧院负责人</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《白洋淀的春天》、《说唱西游记》、《新曲艺文稿》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">河北</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1929年</出生日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">罗扬，曲艺评论家，河北威县人，中共党员，毕业于冀南威县师范。现任中国曲艺家协会名誉主席、中国说唱文艺学会会长。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11000,22 +11145,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#萧马 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#萧马">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#严歌苓"/>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《铁梨花》</代表作品>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年11月18日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">严敦勋</别名>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">厦门</籍贯>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">作家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011年10月10日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">萧马，中国著名作家，著名作家严歌苓的父亲，著有长篇小说《破壁记》、电影文学剧本《巨澜》、《柳暗花明》等。晚年他的小说《铁梨花》被搬上荧屏。2011年10月10日在北京病逝，享年81周岁。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#葛健豪 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#葛健豪">
@@ -11215,35 +11344,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#蔡博">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#未分类"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#蔡和森 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#蔡和森">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡博"/>
-        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡霖"/>
-        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#向警予"/>
-        <外甥女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#刘昂"/>
-        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡妮"/>
-        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡转"/>
-        <妹妹 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蔡畅"/>
-        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李一纯"/>
-        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#葛健豪"/>
-        <老师 rdf:resource="http://www.owl-ontologies.com/Personage.owl#方维夏"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中共中央委员、政治局委员、常委100位为新中国成立作出突出贡献的英雄模范人物之一</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《蔡和森文集》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1895年3月30日</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">蔡林彬</别名>
-        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">泽膺</字号>
-        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">润寰</字号>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湖南第一师范、湖南高等师范学校</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">政治家、革命家</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1931年8月4日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">蔡和森，字润寰，号泽膺，湖南省双峰县永丰镇人。中国共产党早期的重要领导人，杰出的共产主义战士，无产阶级革命家、理论家和宣传家。蔡和森同志是中共第二、三、四、五、六届中央委员，第三、四届中央局委员，第五、六届中央政治局委员、常委，担任过中共中央代理秘书长、中共中央宣传部部长、中共两广省委书记。1895年3月，蔡和森出生于上海，后随母亲回到家乡湖南双峰。1913年进入湖南省立第一师范读书，期间，同毛泽东等人一起组织进步团体新民学会，创办《湘江评论》，参加五四运动。1921年10月，蔡和森从法国归来，在中共三大、四大上当选为中央局委员，参与中央领导工作。并在中共五届一中全会上当选为中央政治局委员、常委，随后又兼任中共中央秘书长。1931年，蔡和森在组织广州地下工人运动时遭叛徒出卖被捕，牺牲在广州军政监狱，终年36岁。2009年9月14日，蔡和森被评为100位为新中国成立作出突出贡献的英雄模范之一。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11645,20 +11745,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#许济 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#许济">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">济南</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1887</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">原名许崇济</别名>
-        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">佛航</字号>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1962</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">许济(1887－1962),原名许崇济，号佛航。广州高第街许氏家族许应荣之孙，出生于济南。晚清时，年青的许济投军习武，考入南京弁目养成所。毕业后派赴新军当骑兵见习士官，不久分派到绿营防军徐淮巡防马步全军统领胡令宣部任第一营哨长，后来成了胡令宣的心腹。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#许涤新 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#许涤新">
@@ -11859,20 +11945,6 @@
         <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">壮飞、复生、东海赛冥氏、廖天一阁主</别名>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1898年9月28日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">谭嗣同，字复生，号壮飞，湖南浏阳人，中国近代著名政治家、思想家，维新派人士。其所著的《仁学》，是维新派的第一部哲学著作，也是中国近代思想史中的重要著作。谭嗣同早年曾在家乡湖南倡办时务学堂、南学会等，主办《湘报》，又倡导开矿山、修铁路，宣传变法维新，推行新政。1898年，谭嗣同参加领导戊戌变法，失败后被杀，年仅33岁，为“戊戌六君子”之一。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#谭天度 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#谭天度">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">著名的三谭（谭平山、谭天度、谭植棠）之一</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东高明</出生地>
-        <籍贯 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东</籍贯>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国共产党员优秀党员</职业>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999-05-30</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">谭天度，广东高明人，著名的三谭之一。中共“一大”时党员，广州共产主义小组成员之一，广东省最老资格、党龄最长的中共党员，坚定的马克思主义者，久经考验的共产主义战士，杰出的统一战线工作者。1999年5月30日，谭天度同志逝世，终年107岁。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13144,21 +13216,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#郭超 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#郭超">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中央电视台年度电视剧最佳新人奖</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">红色摇篮、第三种幸福、屯戍西疆、陈云、百万巨鳄</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5月</出生日期>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中央戏剧学院</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">主持人、演员、导演</职业>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">郭超，男，出生于北京市，中国内地主持人、演员、导演，毕业于中央戏剧学院。1999年—2002年在北京人民广播电视台《空中游乐园》栏目的制作人及主持，因工作优秀，一年后选送到中央人民广播电视台FM90.0作《茹梦俱乐部》的主持人。2015年参演革命题材电视剧《红色摇篮》剧中角色公秉藩。2015年参演电视剧《生死兄弟情》剧中饰演反一号王大志。2015年参与3D电影《大轰炸》的拍摄。2016年02月担任电视剧《主妇也要拼》的剧组演员导演。2016年7月26日担任文艺电影《择日救赎》制片人、演员。2019年，担任电视剧《你永远在我身边》主演。并为电视剧《你永远在我身边》全国海选演员。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#郭鉴冰 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#郭鉴冰">
@@ -13169,19 +13226,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">校长</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977年</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">郭鉴冰广东南海县人。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#金冲及 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#金冲及">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《辛亥革命史稿》《毛泽东传》《周恩来传》《二十世纪中国史纲》《转折年代》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年</出生日期>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">复旦大学</毕业院校>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">金冲及，男，1930年出生，上海人。著名的中国近代史和中共党史研究专家。原中国史学会会长。1948年加入中国共产党。1951年毕业于复旦大学历史学系。历任复旦大学团委书记、教务部副主任、教学科学部副主任，文化部政策研究室研究人员，文物出版社副总编辑，中央文献研究室常务副主任、研究员。第七、八、九届全国政协委员。现任马克思主义理论研究和建设工程咨询委员，北京大学、复旦大学、中国社会科学院教授，博士生导师，俄罗斯科学院外籍院士。2019年12月12日，获全国离退休干部先进个人表彰。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13727,19 +13771,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#陈健 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈健">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东方电影频道收视贡献奖十二届文明建设“五个一工程”奖</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《亮剑》</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</出生地>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">导演</职业>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈健，出生于北京，中国内地男导演。2004年，执导的历史战争剧《亮剑》获得第23届中国电视金鹰奖优秀长篇电视剧奖，第26届中国电视剧飞天奖优秀长篇电视剧一等奖。2007年执导抗日剧《仁者无敌》。2009年担任国庆六十周年献礼剧《解放区的天》的导演。2010年执导的战争剧《革命人永远是年轻》开拍。2011年执导的军旅剧《十一级台阶》在山东卫视和河南卫视播出。2012年6月23日执导的谍战历史题材《地火》首播。2013年拍摄的近代革命剧《勇士之城》获得东方电影频道收视贡献奖。2014年执导打捞救援题材电视剧《碧海雄心》。2015年执导纪念彭湃诞辰120周年献礼剧《彭湃》。2016年担任电视剧《地火熊熊》导演。2017年担任电视剧《老字号传奇》导演。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#陈克强 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈克强">
@@ -14043,6 +14074,59 @@
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1934年12月23日</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈少白：原名闻韶，号夔石，1869年出生于江门市外海镇南华里一个基督教牧师家庭。陈少白天资聪敏，勤奋好学，习字、念书、学写诗文均是同窗中的佼佼者。21岁入香港西医书院。与孙中山、尤列和杨鹤龄被清政府称为“四大寇”。1895年入兴中会，1897年赴台湾设立兴中会台北分会。1900年奉孙中山命回香港办《中国日报》，宣传革命。为了宣传革命，他还成立了“采南歌”、“振天声”、“振天声白话剧”等剧社。遗作有《兴中会革命史要》、《兴中会革命史要别录》等文献。</rdfs:comment>
     </owl:NamedIndividual>
+        
+
+
+    <!-- http://www.owl-ontologies.com/Personage.owl#孙中山 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#孙中山">             
+		<rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#国民党人物"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中国国民党第一次全国代表大会"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#二次革命"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#惠州起义"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#护法运动"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#河口起义"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#潮州黄冈起义"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#镇南关起义"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#黄花岗起义"/>
+        <儿媳 rdf:resource="http://www.owl-ontologies.com/Personage.owl#严蔼娟"/>
+        <儿媳 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蓝妮"/>
+        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙科"/>
+        <出生日期 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1866年11月12日"/>
+        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#卢慕贞"/>
+        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#大月薰"/>
+        <前妻 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈粹芬"/>
+        <助理 rdf:resource="http://www.owl-ontologies.com/Personage.owl#廖仲恺"/>
+        <同事 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蒋介石"/>
+        <哥哥 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙眉"/>
+        <女儿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙娫"/>
+        <女婿 rdf:resource="http://www.owl-ontologies.com/Personage.owl#戴恩赛"/>
+        <妻子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋庆龄"/>
+        <孙女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙穗芬"/>
+        <孙女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙穗芳"/>
+        <孙女 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙穗英"/>
+        <岳母 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪桂珍"/>
+        <岳父 rdf:resource="http://www.owl-ontologies.com/Personage.owl#宋嘉树"/>
+        <战友 rdf:resource="http://www.owl-ontologies.com/Personage.owl#熊克武"/>
+        <战友 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陆皓东"/>
+        <战友 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈少白"/>
+        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙达成"/>
+        <相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#二次革命"/>
+        <相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#辛亥革命"/>
+        <相关遗存 rdf:resource="http://www.owl-ontologies.com/Relic.owl#中山纪念堂"/>
+        <连襟 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孔祥熙"/>
+        <逝世日期 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1925年3月12日"/>
+        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">创立兴中会、中国同盟会建立共和体制、建立中国国民党开创中华民国、创建黄埔军校、中山大学领导二次革命和护法运动</主要成就>
+        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《民权初步》、《孙文学说》、《三民主义》、《实业计划》等</代表作品>
+        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东省香山县翠亨村（今中山市南朗镇翠亨村）</出生地>
+        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1866年11月12日（同治五年）</出生日期>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中山、中山樵、帝象、德明（谱名）</别名>
+        <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字载之，号日新，又号逸仙</字号>
+        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港西医书院（今香港大学）</毕业院校>
+        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">政治家、革命家、思想家、临时大总统</职业>
+        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年3月12日（民国十四年）</逝世日期>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">孙中山，名文，字载之，号日新，又号逸仙，又名帝象，化名中山樵，伟大的民族英雄、伟大的爱国主义者、中国民主革命的伟大先驱，中华民国和中国国民党的缔造者，三民主义的倡导者，创立了《五权宪法》。他首举彻底反帝反封建的旗帜，“起共和而终两千年封建帝制”。是伟大的民族英雄、伟大的爱国主义者。孙中山1866年11月12日生于广东省广州府香山县翠亨村，广府人。孙中山原在香港学医，并成为西医医师。鸦片战争后，孙中山目睹中华民族有被西方列强瓜分的危险，决定抛弃“医人生涯”，进行“医国事业”。孙中山早期受郑观应的改良思想影响，后看清了清政府的腐败，决心推翻清王朝，建立民主共和国。1894年11月24日，孙中山在檀香山创立兴中会。1905年成立中国同盟会。1911年10月10日新军中的革命党人暗中联络，决定当天晚上起义。辛亥革命后被推举为中华民国临时大总统。1925年3月12日，孙中山因癌症在北京逝世。1929年6月1日，根据其生前遗愿，葬于南京紫金山中山陵。1940年，国民政府通令全国，尊称其为“中华民国国父”。孙中山著有《建国方略》、《建国大纲》、《三民主义》等。其著述在逝世后多次被结集出版，有中华书局1986年出版的十一卷本《孙中山全集》，台北1969、1973、1985年出版的《国父全集》等。</rdfs:comment>
+    </owl:NamedIndividual>
     
 
 
@@ -14333,25 +14417,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#陈松年 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈松年">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <儿子 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈长琦"/>
-        <哥哥 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈乔年"/>
-        <哥哥 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈延年"/>
-        <妹妹 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈子美"/>
-        <母亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#潘兰珍"/>
-        <父亲 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈独秀"/>
-        <继母 rdf:resource="http://www.owl-ontologies.com/Personage.owl#高君曼"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">安庆</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈松年，陈独秀的第三子。与哥哥延年、乔年为一母所生。他一生经历太多太多的苦难和不幸。刚出生父母离异，17岁时哥哥延年被害。解放后又因父亲的身份而受牵连，直到粉碎“四人帮”后才过上了平凡的安顿日子。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#陈枫 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈枫">
@@ -14556,19 +14621,6 @@
         <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民革命军陆军上将</职业>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1948年</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈章(1902～1948年)，著名国民革命军陆军上将。字戎光，广东罗定县围底区杨村人。1936年2月1日授陆军少将军衔，1936年7月晋升为陆军中将军衔。1948年11月11日在与人民解放军对阵的淮海战役中兵败自杀，时任第六十三军军长。1949年1月19日被民国政府军事委员会追赠陆军上将军衔。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#陈章甫 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#陈章甫">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">参加了“八一”南昌起义</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">浏阳</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1894年7月14日</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年2月23日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">陈章甫，又名陈昌，浏阳人，新民学会会员，早期中共党员，湖南早期工运、党务负责人之一。1894年7月14日生于广西梧州市。8岁时随父母迁返故里，10岁启蒙，1908年考入浏阳金江高小，1911年就读长沙中路师范学堂，参加了参加了“八一”南昌起义，1930年2月23日牺牲，时年36岁。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -15564,21 +15616,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#黄大炜 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄大炜">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995年香港新城电台劲歌金曲最佳爵士男歌手2000年台湾金曲奖最佳编曲奖2002华语流行乐传媒年度最佳华语歌曲</主要成就>
-        <代表作品 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">你把我灌醉、让每个人都心碎、秋天1944</代表作品>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1964年9月17日</出生日期>
-        <毕业院校 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">夏威夷大学旅馆管理系</毕业院校>
-        <职业 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">歌手、音乐人</职业>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄大炜，1964年9月17日出生于中国香港，华语流行乐男歌手、音乐人，国民革命军将领张学良的外孙。1988年发行个人首张专辑《David黄》正式出道。1990年发行专辑《让每个人都心碎》，从而为听众所熟知。1994年发行专辑《手下留情》，主打歌曲《你把我灌醉》成为其代表作之一。1995年发行专辑《鑀元素》，获香港新城电台劲歌金曲最佳爵士男歌手奖。2000年发行专辑《秋天1944》，同名歌曲《秋天1944》获金曲奖最佳编曲奖。2003年发行专辑《Time1894-2003》，入选中华音乐人交流协会年度十大专辑，并入围华语流行乐传媒最佳男艺人。2007年发行专辑《Passion》，同名歌曲《Passion》入选中华音乐人交流协会年度十大单曲。2012年担任《公司好声音》评委。2014年担任《唱出爱火花》节目导师。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#黄存立 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄存立">
@@ -15715,18 +15752,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Personage.owl#黄涛 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄涛">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">重庆</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1935年</出生日期>
-        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄顺邡</别名>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄涛，原名黄顺邡，1935年出生于重庆一名门世家，后定居成都。著名书画家，世界华人杰出艺术家，专业研究方向油画、数字影响艺术，擅长油画、水彩画，多次在国内外举办个人油画作品展览。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Personage.owl#黄焕秋 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄焕秋">
@@ -15774,19 +15799,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄百韬">
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#淮海战役"/>        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#国民党人物"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#黄荣 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黄荣">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#共产党人物"/>
-        <主要成就 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西党委常委自治区人大常委会主任自治区人大常委会党组书记</主要成就>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1911年4月</出生日期>
-        <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012年9月6日</逝世日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黄荣同志，男，壮族，1911年4月生，广西河池市巴马人，1928年6月参加革命工作，1929年4月加入中国共产党。1985年7月离职休养。2012年9月6日10时46分因病医治无效，在南宁逝世，享年102岁。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -15902,17 +15914,6 @@
         <字号 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">字季裴，号六禾</字号>
         <逝世日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1940</逝世日期>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">黎国廉，字季裴，号六禾。广东顺德人。清末民初谜家。有谜中亚圣”“之称。少颖悟，喜读书。及长，初从政。已矣潜心灯谜，谜作甚丰，后集结并出版《玉繠楼春灯录》。其作品颇属“南派灯谜”一脉，手法以大拢意为主，喜运典扣合；讲究谜面文采，多用前人成句；整体风格华美严饬，含蓄蕴藉；醉心大慧，不屑小巧，于浓郁的书卷气中，复又透出一种苍莽涵浑之气。时人谓之“谜中亚圣”。黎国廉风姿清伟，态度雍容，接待文士推心置腹，推己及人，对中国近现代灯谜的传承和发展有很大的贡献。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Personage.owl#黎显衡 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Personage.owl#黎显衡">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Personage.owl#无党派人物"/>
-        <出生地 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广东</出生地>
-        <出生日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1935年2月</出生日期>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">文物博物专家。1935年2月出生，广东广州人。1960年8月华南师范学院历史系本科毕业，研究馆员。广东革命历史博物馆馆长。先后在广东师范学院历史系、广州农民运动讲习所旧址纪念馆和广东革命历史博物馆工作。现兼任广州秦汉造船遗址发掘和博物馆筹建办公室主任、广州市文物管理委员会委员。</rdfs:comment>
     </owl:NamedIndividual>
     
 

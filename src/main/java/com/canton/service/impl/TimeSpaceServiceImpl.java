@@ -396,7 +396,7 @@ public class TimeSpaceServiceImpl extends BaseService implements TimeSpaceServic
             link.setTarget(statement.getObject());
             link.setCategory(statement.getPredicate());
             link.setLabel(statement.getPredicate());
-            link.setSymbol("http://39.98.116.14:2222/"+statement.getObject()+".jpg");
+            link.setSymbol("http://localhost:2222/"+statement.getObject()+".jpg");
             nodes.add(node);
             nodes.add(node2);
             links.add(link);

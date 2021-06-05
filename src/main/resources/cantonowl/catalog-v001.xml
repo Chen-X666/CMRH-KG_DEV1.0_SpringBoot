@@ -14,14 +14,14 @@
     <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Event.owl" uri="Event.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/Personage.owl" uri="Personage.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="duplicate:http://www.owl-ontologies.com/Comment.owl" uri="Document.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="duplicate:http://www.owl-ontologies.com/Comment.owl" uri="Location.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="http://www.owl-ontologies.com/Event.owl" uri="Event.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="duplicate:http://www.owl-ontologies.com/GuangZhouRevolution.owl" uri="GuangZhouRevolution.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="duplicate:http://www.owl-ontologies.com/GuangZhouRevolution.owl" uri="Recall.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="http://www.owl-ontologies.com/Literature.owl" uri="Literature.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="http://www.owl-ontologies.com/Personage.owl" uri="Personage.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="http://www.owl-ontologies.com/Relic.owl" uri="Relic.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1600617794280" name="http://www.owl-ontologies.com/Time.owl" uri="Time.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="duplicate:http://www.owl-ontologies.com/Comment.owl" uri="Document.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="duplicate:http://www.owl-ontologies.com/Comment.owl" uri="Location.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="http://www.owl-ontologies.com/Event.owl" uri="Event.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="duplicate:http://www.owl-ontologies.com/GuangZhouRevolution.owl" uri="GuangZhouRevolution.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="duplicate:http://www.owl-ontologies.com/GuangZhouRevolution.owl" uri="Recall.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="http://www.owl-ontologies.com/Literature.owl" uri="Literature.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="http://www.owl-ontologies.com/Personage.owl" uri="Personage.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="http://www.owl-ontologies.com/Relic.owl" uri="Relic.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1616059182057" name="http://www.owl-ontologies.com/Time.owl" uri="Time.owl"/>
     </group>
 </catalog>

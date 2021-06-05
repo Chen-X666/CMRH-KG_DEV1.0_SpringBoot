@@ -19,8 +19,6 @@ import java.util.*;
 /**
  * 基于Jena的本体解析类。
  *
- * @author Rosahen
- * @version 1.0
  */
 @Component(value="ontologyResolver")
 public class JenaResolver implements OntologyResolver {

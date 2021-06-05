@@ -193,6 +193,31 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/Document.owl#塘沽停战协定 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Document.owl#塘沽停战协定">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Document.owl#条约协定"/>
+        <Document:签订时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1933年"/>
+        <Document:签订地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东北塘街道</Document:签订地点>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1933年初，已侵占中国东北三省的日军又向华北进犯，中国军队在热河、长城一线奋起反击。除非嫡系的国民革命军第29军等部队外，部分中央军部队亦开赴长城关口御敌，予日军以很大杀伤。但长城抗战进行至5月中旬时，一心忙于内战和消灭共产党领导的红军的南京国 民政府决定妥协，急派黄郛赴北平与日军谈判，最终签定了「塘沽停战协定」。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Document.owl#天津条约 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Document.owl#天津条约">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Document.owl#条约协定"/>
+        <Document:签订时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1858年6月"/>
+        <Document:条约影响 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国半殖民地半封建程度加深</Document:条约影响>
+        <Document:条约类型 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">不平等条约</Document:条约类型>
+        <Document:签订国家 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清、俄、美、英、法</Document:签订国家>
+        <Document:签订地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津市</Document:签订地点>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《天津条约》是清咸丰八年（1858年）第二次鸦片战争中英国、法国、俄国、美国强迫清政府在天津分别签订的不平等条约。主要包括《中俄天津条约》、《中美天津条约》、《中英天津条约》和《中法天津条约》。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/Document.owl#中华民国临时约法 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Document.owl#中华民国临时约法">
@@ -235,31 +260,6 @@
 《南京条约》共十三款，其中要求中国：（1）割让香港岛；（2）向英国赔偿鸦片烟价、商欠、军费共二千一百万银元；（3）五口通商 ，开放广州、福州、厦门、宁波、上海五处为通商口岸，允许英人居住并设派领事；（4）协定关税，英商应纳进出口货税、饷费，中国 海关无权自主；（5）废除公行制度，准许英商在华自由贸易等。此外，也规定双方官吏平等往来、释放对方军民以及英国撤军等事宜。
 1843年（道光二十三年）7月22日、10月8日，耆英与璞鼎查又先后签订中英《五口通商章程》和《虎门条约》，作为《南京条约》的补充和细则，将协定关税和租界制度予以落实，并使英国取得领事裁判权、片面最惠国待遇等权益。
 《南京条约》破坏了中国的领土完整和关税主权，便利了英国对华的商品输出，使中国开始沦为半殖民地半封建社会。《南京条约》签订后，西方列强趁火打劫，相继强迫清政府签订了一系列不平等条约，进一步侵犯了中国的主权，破坏了中国的自然经济，并加速了清王朝的衰亡。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Document.owl#塘沽停战协定 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Document.owl#塘沽停战协定">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Document.owl#条约协定"/>
-        <Document:签订时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1933年"/>
-        <Document:签订地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东北</Document:签订地点>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1933年初，已侵占中国东北三省的日军又向华北进犯，中国军队在热河、长城一线奋起反击。除非嫡系的国民革命军第29军等部队外，部分中央军部队亦开赴长城关口御敌，予日军以很大杀伤。但长城抗战进行至5月中旬时，一心忙于内战和消灭共产党领导的红军的南京国 民政府决定妥协，急派黄郛赴北平与日军谈判，最终签定了「塘沽停战协定」。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Document.owl#天津条约 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Document.owl#天津条约">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Document.owl#条约协定"/>
-        <Document:签订时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1858年6月"/>
-        <Document:条约影响 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国半殖民地半封建程度加深</Document:条约影响>
-        <Document:条约类型 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">不平等条约</Document:条约类型>
-        <Document:签订国家 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清、俄、美、英、法</Document:签订国家>
-        <Document:签订地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">天津</Document:签订地点>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《天津条约》是清咸丰八年（1858年）第二次鸦片战争中英国、法国、俄国、美国强迫清政府在天津分别签订的不平等条约。主要包括《中俄天津条约》、《中美天津条约》、《中英天津条约》和《中法天津条约》。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -377,72 +377,6 @@
         <Document:签订地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国广州</Document:签订地点>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">《黄埔条约》（Treaty of Whampoa）又称《中法五口贸易章程：海关税则》，是在1844年（道光二十四年）10月24日清朝与法国在广州黄埔签订的不平等条约，也是法国侵略中国的第一个不平等条约。</rdfs:comment>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1842年8月29日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1842年8月29日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1843年10月8日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1843年10月8日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1844年10月24日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1844年10月24日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1844年7月3日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1844年7月3日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1858年5月28日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1858年5月28日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1858年6月 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1858年6月"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1860年10月24日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1860年10月24日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1860年11月14日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1860年11月14日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1912年3月11日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1912年3月11日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1923年1月26日 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1923年1月26日"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Time.owl#y1933年 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Time.owl#y1933年"/>
 </rdf:RDF>
 
 

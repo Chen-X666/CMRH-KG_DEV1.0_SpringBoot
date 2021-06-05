@@ -1,13 +1,15 @@
 package com.canton.service.impl;
 
 import com.canton.dao.entity.Lucene;
+import com.canton.dao.entity.Lucene2;
 import com.canton.service.LuceneService;
+import com.canton.utils.ClassPathUtil;
 import com.canton.utils.IKAnalyzerLuceneUtil;
 import com.canton.utils.SemanticAnalysisUtil;
 import com.canton.utils.TextHighlight;
-import com.hankcs.hanlp.seg.common.Term;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -24,9 +26,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @Auther ChenX
@@ -40,12 +45,11 @@ public class LuceneServiceImpl implements LuceneService {
     private static final Logger logger = LoggerFactory.getLogger(LuceneServiceImpl.class);
 
     @Override
-    public List<Lucene> getKeyword(String keyword) throws Exception {
-        File directory = new File("src/main/resources");
-        String path = directory.getCanonicalPath();
+    public List<Lucene2> getKeyword(String keyword) throws Exception {
+        String path = ClassPathUtil.getClassPath();
 
         //获取要查询的路径，也就是索引所在的位置
-        Directory  dir = FSDirectory.open(Paths.get(path+"/lucene"));
+        Directory  dir = FSDirectory.open(Paths.get(path+"/canton/cantonLucene"));
         IndexReader reader = DirectoryReader.open(dir);
 
         //构建 IndexSearcher
@@ -89,12 +93,12 @@ public class LuceneServiceImpl implements LuceneService {
 
 
         //取出每条查询结果
-        List<Lucene> lucenes = new ArrayList<Lucene>();
+        List<Lucene2> lucenes = new ArrayList<Lucene2>();
         //list.add("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
         for(ScoreDoc scoreDoc : docs.scoreDocs) {
             logger.info(String.valueOf(scoreDoc));
-            Lucene lucene = new Lucene();
-            lucene.setNum("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
+            Lucene2 lucene2 = new Lucene2();
+            lucene2.setNum("查询到" + docs.totalHits + "条记录，耗时"+(endTime - startTime)+"毫秒");
             //scoreDoc.doc 相当于 docID，根据这个 docID 来获取文档
             Document doc = searcher.doc(scoreDoc.doc);
             logger.info("fileName:{}", doc.get("fileName"));
@@ -105,20 +109,23 @@ public class LuceneServiceImpl implements LuceneService {
             if(contents != null) {
                 TokenStream tokenStream = analyzer.tokenStream("contents", new StringReader(contents));
                 //TokenStream token=TokenSources.getAnyTokenStream(searcher.getIndexReader(), sd.doc, filed, new IKAnalyzer(true));//获取tokenstream
-
                 String summary = highlighter.getBestFragment(tokenStream, contents);
                 logger.info("得分最高的的content:{}", summary);
-                String txt =".txt";//去掉文件后缀
-                lucene.setFileName(doc.get("fileName").replaceAll(txt,""));
-                lucene.setContent(summary);
-                lucene.setImage("../../statics/book/"+lucene.getFileName()+".png");
-                lucenes.add(lucene);
+                TokenStream ts = analyzer.tokenStream("content", keyword);
+                System.out.println("IKAnalyzer中文分词器 智能切分，中文分词效果：");
+                System.out.println(ts.getAttributeClassesIterator().toString());
+                lucene2.setKeywords(doToken(ts));
+                lucene2.setBookId(doc.get("bookId"));
+                lucene2.setBookName(doc.get("bookName"));
+                lucene2.setBookAuthor(doc.get("bookAuthor"));
+                lucene2.setBookContent(summary);
+                lucene2.setBookImage("../../statics/book/"+lucene2.getBookName()+lucene2.getBookAuthor()+".png");
+                lucenes.add(lucene2);
             }
         }
         reader.close();
         return lucenes;
     }
-
     @Override
     public List<Lucene> SemanticAnalysis(String keyword) throws Exception {
         File directory = new File("src/main/resources");
@@ -204,6 +211,20 @@ public class LuceneServiceImpl implements LuceneService {
         reader.close();
         return lucenes;
     }
+
+    private static List doToken(TokenStream ts) throws IOException {
+        ts.reset();
+        CharTermAttribute cta = ts.getAttribute(CharTermAttribute.class);
+        List keywords = new ArrayList();
+        while (ts.incrementToken()) {
+            keywords.add(cta.toString());
+        }
+        System.out.println();
+        ts.end();
+        ts.close();
+        return keywords;
+    }
+
 }
 
 

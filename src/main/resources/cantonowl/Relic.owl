@@ -130,14 +130,17 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Relic.owl#一二·一运动纪念馆 -->
+    <!-- http://www.owl-ontologies.com/Relic.owl#中国共产党第一次全国代表大会会址 -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#一二·一运动纪念馆">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#纪念馆"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#一二·一运动"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">云南省昆明市环城北路58号</地理位置>
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#中国共产党第一次全国代表大会会址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中国共产党第一次全国代表大会"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</地理位置>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-“一二·一”运动，是在中国共产党领导下，由昆明青年学生发起并得到全国各地响应的反内战、争民主的爱国民主运动。运动揭露了国民党反动派发动内战的阴谋，是国民党统治区当时正在发展的民主运动的标志，在中国青年运动史和中国新民主主义革命史上写下了光辉一页。
+中国共产党第一次全国代表大会会址，简称中共一大会址，是中国共产党的诞生地。会址位于上海市兴业路76号（原望志路106号），是一幢沿街砖木结构一底一楼旧式石库门住宅建筑，坐北朝南。中国共产党第一次全国代表大会于1921年7月23日至7月30日在楼下客厅举行。中共一大会址在1952年后成为纪念馆，1959年5月26日公布为上海市文物保护单位。1961年被国务院列为第一批全国重点文物保护单位。1997年6月成为全国爱国主义教育示范基地。2016年9月入选“首批中国20世纪建筑遗产”名录。
+概述图片来源：
+2017年全年纪念馆参观人次达83.5万，刷新了参观人次纪录。
+
 </rdfs:comment>
     </owl:NamedIndividual>
     
@@ -148,9 +151,101 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#一二·九运动纪念日">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#纪念馆"/>
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#一二·九运动"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</地理位置>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</地理位置>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 一二·九运动纪念日是为了纪念1935年12月9日在北京（当时的北平）发生的由中国共产党组织的北京学生要求对日作战的示威游行活动。一二·九运动发生在日本侵占我国东三省后向华北挺进，陆续侵占了华北数省，中国共产国际发表抗日宣言之后。一二·九运动由黄敬等共产党人组织及外围组织者组成，促进了中日战争的爆发，停止内战。一二·九运动起先由陆璀在西直门外进行抗日演讲，受到了全国各地学生、爱国团体等的强烈响应，造成了全国性的影响。一二·九运动在一定程度上促成了国民党当局联共抗日，在北平辅仁大学留有一座纪念碑。
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#八一南昌起义南下部队总指挥部旧址 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#八一南昌起义南下部队总指挥部旧址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#八一南昌起义"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">南昌市</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+八一南昌起义南下部队总指挥部旧址位于汕头市民权路95号。旧址原是大埔会馆，始建于1926年，为三层钢筋混凝土结构楼房，每层面积424平方米，总面积1271平方米。各层四面都有走廊相通。曾为汕头市教师进修学校，原貌基本完好。
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#宜章县湘南暴动指挥部旧址 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#宜章县湘南暴动指挥部旧址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#湘南起义"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宜章县</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+湘南暴动指挥部湖南省南部宜章县城关镇，旧址是四栋两层建筑物的四合院，1979年被全面维修，按原貌作了复制陈列。其中包含湘南起义史料陈列、复原陈列、珍贵藏品等陈列。2001年6月，该址被中宣部公布为第二批全国爱国主义教育基地。2016年12月，宜章县湘南暴动指挥部旧址被列入《全国红色旅游经典景区名录》。
+
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#辛亥革命遗址 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#辛亥革命遗址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#辛亥革命"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+新中国成立后，广州市对辛亥革命遗址进行了保护和管理，有的还建立了纪念馆。广州留下了辛亥“三·二九”起义指挥部旧址、起义旧址、广东咨议局旧址等大大小小35处辛亥革命遗址。目前除了黄花岗七十二烈士墓、大元帅府等少数广为人知外，一些史迹仍然是“养在深闺无人知”。
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#中共“三大”会址 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#中共“三大”会址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中国共产党第三次全国代表大会"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+1923年6月12―20日，中共三大在广州恤孤院后街31号房子（现恤孤院路3号）召开，这里原是一幢两层砖木结构金字瓦顶的普通房子，坐西向东，门临大街。建筑呈正方形，长阔各约20米左右，高6米多，第一层约3米，二楼也有3米。底层南边是会议室，北边作饭厅。二楼两间是宿舍，而间墙只有半截，上有金字架承顶横梁和桁桷，顶上没有天花板，仰视就能看见瓦底。一总分代表就住在这里。在楼下的会议室中央，摆放着一张西式长方台子，两边是一列的长条凳，前后两端摆着小方凳，中国共产党第三次全国代表大会就是这样简陋的环境下召开的。
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#渡江战役中线指挥部旧址 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#渡江战役中线指挥部旧址">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#渡江战役"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">枞阳县</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+位于枞阳县城的陈氏宗祠内。宗祠为前、中、后三进的清代建筑。1978年，枞阳县文物管理所按照原貌将宗祠修葺一新。
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#虎门销烟博物馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#虎门销烟博物馆">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#博物馆"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#鸦片战争"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">虎门港管委会</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+虎门销烟博物馆也称为鸦片战争博物馆、虎门林则徐纪念馆，位于东莞市虎门镇解放路113号，是中国重要的鸦片战争文物史料展馆和爱国主义教育示范基地。它以“虎门销烟”的历史背景为参照，馆本部在东莞虎门镇建成。
+</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Relic.owl#一二·一运动纪念馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#一二·一运动纪念馆">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#纪念馆"/>
+        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#一二·一运动"/>
+        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">云南省昆明市环城北路58号</地理位置>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+“一二·一”运动，是在中国共产党领导下，由昆明青年学生发起并得到全国各地响应的反内战、争民主的爱国民主运动。运动揭露了国民党反动派发动内战的阴谋，是国民党统治区当时正在发展的民主运动的标志，在中国青年运动史和中国新民主主义革命史上写下了光辉一页。
 </rdfs:comment>
     </owl:NamedIndividual>
     
@@ -302,22 +397,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Relic.owl#中国共产党第一次全国代表大会会址 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#中国共产党第一次全国代表大会会址">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中国共产党第一次全国代表大会"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-中国共产党第一次全国代表大会会址，简称中共一大会址，是中国共产党的诞生地。会址位于上海市兴业路76号（原望志路106号），是一幢沿街砖木结构一底一楼旧式石库门住宅建筑，坐北朝南。中国共产党第一次全国代表大会于1921年7月23日至7月30日在楼下客厅举行。中共一大会址在1952年后成为纪念馆，1959年5月26日公布为上海市文物保护单位。1961年被国务院列为第一批全国重点文物保护单位。1997年6月成为全国爱国主义教育示范基地。2016年9月入选“首批中国20世纪建筑遗产”名录。
-概述图片来源：
-2017年全年纪念馆参观人次达83.5万，刷新了参观人次纪录。
-
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Relic.owl#中国共产党第一次全国代表大会宿舍旧址 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#中国共产党第一次全国代表大会宿舍旧址">
@@ -457,19 +536,6 @@
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#八一南昌起义"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 八一南昌起义军三河坝战役遗址是一处革命纪念景点，位于广东大埔县西部三河镇汀江、梅江、梅潭河汇合处的韩江源头东岸。
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Relic.owl#八一南昌起义南下部队总指挥部旧址 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#八一南昌起义南下部队总指挥部旧址">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#八一南昌起义"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">南昌</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-八一南昌起义南下部队总指挥部旧址位于汕头市民权路95号。旧址原是大埔会馆，始建于1926年，为三层钢筋混凝土结构楼房，每层面积424平方米，总面积1271平方米。各层四面都有走廊相通。曾为汕头市教师进修学校，原貌基本完好。
 </rdfs:comment>
     </owl:NamedIndividual>
     
@@ -752,20 +818,6 @@
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#安源路矿工人大罢工"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 谈判处旧址位于江西省萍乡市安源区安源镇八方井。俗称谈判大楼。1922年9月，安源路矿工人大罢工，9月16日刘少奇代表路矿工人在此与路矿当局谈判。迫使对方与工人俱乐部代表李立三于18日晨签订协定，大罢工取得胜利。旧址原是萍乡煤矿公事房，建于清光绪三十二年（1906年），占地600平方米，砖木结构轿顶式两层楼房，前后均为拱通廊，后廊有螺旋式铁梯。
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Relic.owl#宜章县湘南暴动指挥部旧址 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#宜章县湘南暴动指挥部旧址">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#湘南起义"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宜章县</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-湘南暴动指挥部湖南省南部宜章县城关镇，旧址是四栋两层建筑物的四合院，1979年被全面维修，按原貌作了复制陈列。其中包含湘南起义史料陈列、复原陈列、珍贵藏品等陈列。2001年6月，该址被中宣部公布为第二批全国爱国主义教育基地。2016年12月，宜章县湘南暴动指挥部旧址被列入《全国红色旅游经典景区名录》。
-
 </rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1174,19 +1226,6 @@
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#淮海战役"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 淮海战役陵园，为纪念淮海战役的胜利而建，位于中国徐州市南部，占地77万平方千米，内有烈士纪念塔、战役纪念馆、总前委群雕、徐州国防园和碑林等主体建筑，及青年湖、青年广场、中心花坛等景点。淮海战役烈士纪念塔
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Relic.owl#渡江战役中线指挥部旧址 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#渡江战役中线指挥部旧址">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#渡江战役"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">枞阳县</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-位于枞阳县城的陈氏宗祠内。宗祠为前、中、后三进的清代建筑。1978年，枞阳县文物管理所按照原貌将宗祠修葺一新。
 </rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1621,19 +1660,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Relic.owl#虎门销烟博物馆 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#虎门销烟博物馆">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#博物馆"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#鸦片战争"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">虎门</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-虎门销烟博物馆也称为鸦片战争博物馆、虎门林则徐纪念馆，位于东莞市虎门镇解放路113号，是中国重要的鸦片战争文物史料展馆和爱国主义教育示范基地。它以“虎门销烟”的历史背景为参照，馆本部在东莞虎门镇建成。
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Relic.owl#虎门销烟池遗址 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#虎门销烟池遗址">
@@ -1824,19 +1850,6 @@
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#辛亥革命"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 辛亥革命起义领导机关旧址位于恩平市恩城镇南埠街（今中山西路23号），原名为温利益号店铺。坐南向北，为砖木结构的两层建筑，宽3.8米、深14.5米，面积55.1米。
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Relic.owl#辛亥革命遗址 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#辛亥革命遗址">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#辛亥革命"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-新中国成立后，广州市对辛亥革命遗址进行了保护和管理，有的还建立了纪念馆。广州留下了辛亥“三·二九”起义指挥部旧址、起义旧址、广东咨议局旧址等大大小小35处辛亥革命遗址。目前除了黄花岗七十二烈士墓、大元帅府等少数广为人知外，一些史迹仍然是“养在深闺无人知”。
 </rdfs:comment>
     </owl:NamedIndividual>
     
@@ -2109,19 +2122,6 @@
         <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#百团大战"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 1940年8月20日－12月5日，为了粉碎日本侵略军的“囚笼政策”，八路军出动105个团约40万兵力，在华北战场的主要交通线上，向日军发动了大规模的破击战，史称“百团大战”。
-</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Relic.owl#中共“三大”会址 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Relic.owl#中共“三大”会址">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Relic.owl#旧址"/>
-        <Event:相关事件 rdf:resource="http://www.owl-ontologies.com/Event.owl#中国共产党第三次全国代表大会"/>
-        <地理位置 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</地理位置>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-1923年6月12―20日，中共三大在广州恤孤院后街31号房子（现恤孤院路3号）召开，这里原是一幢两层砖木结构金字瓦顶的普通房子，坐西向东，门临大街。建筑呈正方形，长阔各约20米左右，高6米多，第一层约3米，二楼也有3米。底层南边是会议室，北边作饭厅。二楼两间是宿舍，而间墙只有半截，上有金字架承顶横梁和桁桷，顶上没有天花板，仰视就能看见瓦底。一总分代表就住在这里。在楼下的会议室中央，摆放着一张西式长方台子，两边是一列的长条凳，前后两端摆着小方凳，中国共产党第三次全国代表大会就是这样简陋的环境下召开的。
 </rdfs:comment>
     </owl:NamedIndividual>
     

@@ -222,13 +222,67 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#一二·一运动 -->
+    <!-- http://www.owl-ontologies.com/Event.owl#上海工人武装起义 -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#一二·一运动">
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海工人武装起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1926年10月23日"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</事件地点>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北伐战争期间﹐上海工人阶级为配合北伐进军﹐推翻北洋军阀的反动统治﹐在中国共产党领导下举行的三次武装起义。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#上海工人第三次武装起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海工人第三次武装起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</事件地点>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">占领上海，取得胜利</结果>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海工人第三次武装起义，是由中央军委书记兼特别军委书记周恩来担任总指挥，带领上海工人发动的起义，1927年3月21日中午12时，上海总工会发布总同盟罢工令，全市80万工人实现了总罢工并立即转入武装起义，租界里的中国工人也集合到华界参加起义，工人武装经过30个小时的浴血奋战，于22日6时许攻克了敌人的全部据点，占领了上海，取得第三次工人武装起义的胜利。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#香港大罢工 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#香港大罢工">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1945年12月1日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">昆明</事件地点>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“一二·一”运动，是在中国共产党领导下，由昆明青年学生发起并得到全国各地响应的反内战、争民主的爱国民主运动。运动揭露了国民党反动派发动内战的阴谋。昆明是近现代著名的“民主堡垒”。1945年12月1日，昆明爆发了“反对内战，争取民主”的“一二·一”民主运动，成为国统区内民主运动的标志。</rdfs:comment>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海市</事件地点>
+        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年5月</事件时间>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年5月中，上海发生工潮，工人领袖顾正红被杀。学生示威声援，被租界的英籍巡捕开枪射杀，十三人死，数十人重伤，是为五卅惨案。事件引起全中国出现反抗外国在华势力的运动，各地直接参加声援运动的人数估计有一千二百万人。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#北伐战争 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#北伐战争">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1926年7月9日"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#吴佩孚"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙传芳"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#张作霖"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李宗仁"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#白崇禧"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蒋介石"/>
+        <结束时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1928年12月29日"/>
+        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">蒋介石、李宗仁、白崇禧；吴佩孚、孙传芳、张作霖</主要指挥官>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中华人民共和国</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民政府，北洋政府</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">基本消灭了北洋军阀</结果>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北伐战争，是由中国国民党领导下的国民政府以国民革命军为主力，蒋介石为总司令于1926年至1928年间发动的统一战争。1926年7月9日，国民政府成立国民革命军从广东起兵，在连克长沙、武汉、南京、上海等地以后，国民政府内部因对中国共产党的不同态度而一度分裂，汪精卫和蒋介石决裂，北伐陷于停顿。宁汉合流后，国民革命军继续北伐，并在西北的冯玉祥和山西的阎锡山加入下，于1928年攻克北京，致使北洋奉系军阀张作霖撤往东北途中被日本刺杀于皇姑屯，其子张学良宣布东北易帜。至此北伐完成，中国实现了形式上的统一。北伐结束后，南京国民政府正式统治全中国，成为中国在国际上唯一代表政权。但实际上，国民政府内外仍有不同势力割据，造成日后发生中原大战等一连串内斗冲突。北伐期间，中国共产党与国民政府决裂，第一次国共内战爆发。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#首都革命 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#首都革命">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京市</事件地点>
+        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年11月</事件时间>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年11月北京学生、工人武装推翻段祺瑞政府的一次尝试。1924年10月北京政变后，段张联合执掌了北京政权，推行反动的内外政策，镇压各地群众的革命运动，成为国民革命发展的首要敌人。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -238,8 +292,242 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#一二·九运动">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
         <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1935年12月9日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北平</事件地点>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北平镇</事件地点>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">一二·九运动又称为一二·九抗日救亡运动。1935年12月9日，北平大中学生数千人举行了抗日救国示威游行，反对华北自治，反抗日本帝国主义，要求保全中国领土的完整，掀起全国抗日救国新高潮。12月12日，北平学生举行第5次示威游行，高呼&quot;援助绥远抗战&quot;、&quot;各党派联合起来&quot;等口号。这是中国共产党领导的一次大规模学生爱国运动。在“冀察政务委员会”计划成立的12月16日，北平学生和各界群众1万余人又举行示威游行，迫使冀察政务委员会延期成立。之后，天津学生又组成南下扩大宣传团，深入人民中间宣传抗日救国。杭州、广州、武汉、天津、南京、上海等地相继举行游行示威。北平学生的爱国行动，得到了全国学生的响应和全国人民的支持，形成了全国人民抗日民主运动的新高潮，推动了抗日民族统一战线的建立。一二·九运动公开揭露了日本帝国主义侵略中国，并吞华北的阴谋，打击了国民党政府的妥协投降政策，大大地促进了中国人民的觉醒。它配合了红军北上抗日，促进了国内和平和对日抗战。它标志着中国人民抗日民主运动新高潮的来到。正如毛泽东同志所指出的，一二·九运动“是抗战动员的运动，是准备思想和干部的运动，是动员全民族的运动”，“有着重大的历史意义”。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#湘南起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#湘南起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1928年1月12日"/>
+        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">朱德、陈毅（中国共产党）</主要指挥官>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宜章县</事件地点>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">组建了湘南第一支农军</结果>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">土地革命战争时期，南昌起义军余部在中共湘南特委领导和湖南省南部地区工农群众配合下举行的武装起义。湘南起义发生在1928年1月12日下午4时的宜章县城。朱德、陈毅在中共宜章县委的紧密配合下，智取宜章县城成功，发动了宜章年关暴动，打响了湘南起义第一枪。宜章，成为湘南起义的策源地。在这里，揭开了湘南起义的序幕；在这里，成立了中国工农革命军第一师；在这里，成立了湘南第一个红色政权——宜章县苏维埃政府；在这里，组建了湘南第一支农军——工农革命军独立第三师。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#三·二九起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#三·二九起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911年4月27日"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</事件地点>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1911年4月27日，同盟会在广州举行武装起义，史称辛亥“三二九”起义，又称黄花岗起义。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#中山舰事件 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中山舰事件">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1926年"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李之龙"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蒋介石"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</事件地点>
+        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1926年（民国15年）</事件时间>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中山舰事件也叫“三二〇事件”。1926年3月20日，蒋介石调动军队宣布戒严，断绝广州内外交通；逮捕李之龙，扣留中山舰及其他舰只；包围省港罢工委员会，收缴其卫队枪械；包围广州东山的苏联顾问所；驱逐了黄埔军校中及国民革命军中以周恩来为首的共产党员。中山舰事件是蒋介石为破坏国共合作，夺取革命领导权，蓄意打击和排斥中国共产党的政治事件。对于这次事件有两种猜测。有人认为是蒋中正故意将中山舰调动又矢口否认以制造借口打击中国共产党。也有人认为这是和“西山会议”派关系密切的“孙文主义学会”成员欧阳格等故意向李之龙假传蒋中正的指令，两边离间中国国民党和中国共产党。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#广州新军起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#广州新军起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1910年2月12日"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪映典"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#吴宗禹"/>
+        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">倪映典、吴宗禹</主要指挥官>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会、清军</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清军获胜、同盟会战败</结果>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州新军起义又称庚戌广州新军之役，是清宣统二年正月初三(1910年2月12日)同盟会在广州依靠新军发动的反清武装起义。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#广州起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#广州起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927年12月11日"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#叶剑英"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#叶挺"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#张太雷"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#恽代英"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#聂荣臻"/>
+        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张太雷、叶挺、叶剑英、聂荣臻、恽代英</主要指挥官>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民党，共产党</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">起义失败</结果>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州起义是指1927年12月11日中国共产党在广州领导工人、农民和革命士兵举行的反抗国民党反动派的武装起义，是中国共产党和中国人民继南昌起义、湘赣边界秋收起义之后，对国民党反动派的又一次英勇反击，是在城市建立苏维埃政权的大胆尝试，在国内外都引起了很大的震动。面对强大敌人向广州发起围攻，叶挺、叶剑英主张起义军主动撤离广州，但却遭到共产国际顾问的否决。经三天浴血奋战，因敌我力量悬殊，起义失败。这次起义虽然失败了，但起义军民无比英勇的战斗精神，给了中国人民以新的鼓舞。起义的许多领导人和保留下来的武装力量，继续为中国革命事业而顽强战斗，成为中国人民解放军的重要组成部分和革命火种。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#庚戌广州新军武装起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#庚戌广州新军武装起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1910年2月12日"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪映典"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#朱执信"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#胡毅生"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#莫纪彭"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#赵声"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈炯明"/>
+        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">倪映典、朱执信、赵声、胡毅生、陈炯明、莫纪彭</主要指挥官>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会广州新军满清广州新军</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">起义失败</结果>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910年2月12日，革命党人倪映典在位于广州东北郊的燕塘新军军营内率三千新军齐声高呼:“愿为革命战死！”随即兵分三路向广州城进发。这就是以孙中山为首的中国同盟会发动的第九次反清武装起义。1910年的庚戌广州新军起义，标志着革命党把革命基本依靠力量由会党转向新军。在这次起义中，新军首次作为同盟会的主要力量出现在中国的政治舞台上。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#黄花岗起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#黄花岗起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911年4月27日"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙中山"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#胡汉民"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#黄兴"/>
+        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">孙中山、黄兴、胡汉民等</主要指挥官>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州市</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命军、清军</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">起义被镇压</结果>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#大成国起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#大成国起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西壮族自治区</事件地点>
+        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1854年6月—1864年5月</事件时间>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清王朝，广东天地会</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">被清军镇压</结果>
+        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">大成国起义战争由广东天地会首领陈开、李文茂等倡议于广东佛山并建都于广西桂平的大成国起义，是十九世纪中期继太平天国金田起义后在南方爆发的规模最大、时间最长的一次农民起义，义军横扫粤桂两省，在长达10年的时间里与反动腐朽的清王朝进行了殊死的斗争，在我国农民革命斗争史上写下了绚丽而悲壮的篇章。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#一二·一运动 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#一二·一运动">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1945年12月1日"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">昆明市</事件地点>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“一二·一”运动，是在中国共产党领导下，由昆明青年学生发起并得到全国各地响应的反内战、争民主的爱国民主运动。运动揭露了国民党反动派发动内战的阴谋。昆明是近现代著名的“民主堡垒”。1945年12月1日，昆明爆发了“反对内战，争取民主”的“一二·一”民主运动，成为国统区内民主运动的标志。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#中兴煤矿工人大罢工 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中兴煤矿工人大罢工">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">枣庄市</事件地点>
+        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年</事件时间>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中兴煤矿工人</参战方>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">枣庄，是山东近代工业发端的三个基地之一，是山东实现机械生产最早的地区，也是山东第一批产业工人最集中的地区。早在100年前，峄县中兴矿局就由官僚、地主和商人集资办矿，购买了机器，最先采用了先进机械设备。大机器生产，使这里的工人最易接受先进思想，富有斗争精神，革命性最强，斗争最坚决。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#福州起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#福州起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911年11月8日"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">福州市</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会满洲八旗官兵</参战方>
+        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会胜利</结果>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">武昌起义后，各省纷纷响应。福州革命力量不断发展，清新军第10镇统制孙道仁、第20协协统许崇智等高级军官先后参加同盟会同意参加反清起义，福州起义爆发。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#乐民起义 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#乐民起义">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927年4月12日"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">遂溪县</事件地点>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年4月12日，蒋介石在上海发动了“四·一二”反革命政变后，广东的国民党反动派也在广州逮捕和屠杀共产党人，在这种环境中，在遂溪的共产党人发动农民群众进行武装斗争。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#大隧道惨案 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#大隧道惨案">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1941年6月5日"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">重庆市</事件地点>
+        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">日军国民革命军</参战方>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">大隧道惨案发生于1941年6月5日，抗日战争时期，日军为了动摇重庆国民政府的抗战决心，迫使其屈服投降，出动大量飞机对重庆进行的轰炸事件。1941年6月5日晚9点左右，日军出动24架飞机分三批轮番轰炸重庆，空袭时长达5个小时，因为当时未及时对市民进行疏散，所以大量民众拥向公共防空隧道中造成洞内人数接近饱和，由于管理隧道口的宪兵及防护人员紧锁栅门，不准隧道内的市民在空袭期间出入隧道，在长达10小时的高温和严重缺氧的情况下，上万左右避难民众因通风不畅导致窒息，同时又发生推挤践踏，造成了骇人听闻的防空隧道惨案，史称“大隧道惨案”。大隧道惨案是中国抗日战争期间发生在大后方最惨痛的事件，它与1938年6月9日的黄河花园口决堤、1938年11月13日的长沙大火，并称为抗战时期的中国三大惨案。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#沙田惨案 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#沙田惨案">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
+        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港特别行政区</事件地点>
+        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1922年1月，3月</事件时间>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1922年1月，香港海员举行大罢工，遭到香港英国当局的武力镇压。3月，大批工人被迫愤怒离开香港，徒步回广州。3月4日，当工人行至九龙沙田时，又遭到英国军警开枪射击，打死六人，伤数百人，造成“沙田惨案”</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#五卅惨案 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#五卅惨案">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1925年5月30日"/>
+        <Location:事件地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">五卅惨案因发生于1925年5月30日而得名，是反帝国主义爱国运动五卅运动的导火线。5月30日，上海学生两千余人在租界内散发传单，发表演说，抗议日本纱厂资本家镇压工人大罢工、打死工人顾正红，声援工人，并号召收回租界，被英国巡捕逮捕一百余人。下午万余群众聚集在英租界南京路老闸巡捕房门首，要求释放被捕学生，高呼“打倒帝国主义”等口号。英国巡捕竟开枪射击，当场打死十三人，重伤数十人，逮捕一百五十余人，造成震惊中外的五卅惨案。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#四一二反革命政变 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#四一二反革命政变">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927年4月12日"/>
+        <Location:事件地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海市"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年4月12日，以蒋介石为首的国民党新右派在上海发动反对国民党左派和共产党的武装政变，大肆屠杀共产党员、国民党左派及革命群众。这就是历史上著名的“四一二”反革命政变。使中国大革命受到严重的摧残，标志着大革命的部分失败，是大革命从胜利走向失败的转折点。同时也宣告国共两党第一次合作失败。经过四一二政变，国民党基层组织基本瘫痪，共产党在群众中的影响迅速扩大，经历了深刻的锻炼和严峻的考验，共产党初步积累了反正两方面的经验，为领导中国人民把斗争推向新的更高的阶段准备了条件。</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Event.owl#二次革命 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#二次革命">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
+        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1913年5月"/>
+        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙中山"/>
+        <结束时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1913年9月1日"/>
+        <Location:事件地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#中华人民共和国"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">二次革命即称讨袁之役、癸丑之役、赣宁之役。1913年3月20日，国会开会前夕，国民党代理理事长宋教仁被杀。4月，袁世凯又非法签订善后大借款，准备发动内战，消灭南方革命力量。孙中山看清袁世凯的反动面目，从日本回国，力主武装讨袁。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -260,18 +548,6 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
         <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1937年7月7日"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">七七事变，又称卢沟桥事变，发生于1937年7月7日。1937年7月7日夜，卢沟桥的日本驻军在未通知中国地方当局的情况下，径自在中国驻军阵地附近举行所谓军事演习，并诡称有一名日军士兵失踪，要求进入北平西南的宛平县城(今卢沟桥镇)搜查，被中国驻军严词拒绝，日军随即向宛平城和卢沟桥发动进攻。中国驻军第29军37师219团奋起还击，进行了顽强的抵抗。“七七事变”揭开了全国抗日战争的序幕。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#三·二九起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#三·二九起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911年4月27日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</事件地点>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1911年4月27日，同盟会在广州举行武装起义，史称辛亥“三二九”起义，又称黄花岗起义。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -321,40 +597,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#上海工人武装起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海工人武装起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1926年10月23日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</事件地点>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北伐战争期间﹐上海工人阶级为配合北伐进军﹐推翻北洋军阀的反动统治﹐在中国共产党领导下举行的三次武装起义。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#上海工人第三次武装起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#上海工人第三次武装起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</事件地点>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">占领上海，取得胜利</结果>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海工人第三次武装起义，是由中央军委书记兼特别军委书记周恩来担任总指挥，带领上海工人发动的起义，1927年3月21日中午12时，上海总工会发布总同盟罢工令，全市80万工人实现了总罢工并立即转入武装起义，租界里的中国工人也集合到华界参加起义，工人武装经过30个小时的浴血奋战，于22日6时许攻克了敌人的全部据点，占领了上海，取得第三次工人武装起义的胜利。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#中兴煤矿工人大罢工 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中兴煤矿工人大罢工">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">枣庄</事件地点>
-        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915年</事件时间>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中兴煤矿工人</参战方>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">枣庄，是山东近代工业发端的三个基地之一，是山东实现机械生产最早的地区，也是山东第一批产业工人最集中的地区。早在100年前，峄县中兴矿局就由官僚、地主和商人集资办矿，购买了机器，最先采用了先进机械设备。大机器生产，使这里的工人最易接受先进思想，富有斗争精神，革命性最强，斗争最坚决。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#中国共产党第一次全国代表大会 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中国共产党第一次全国代表大会">
@@ -394,21 +636,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#中山舰事件 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中山舰事件">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1926年"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李之龙"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蒋介石"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</事件地点>
-        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1926年（民国15年）</事件时间>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中山舰事件也叫“三二〇事件”。1926年3月20日，蒋介石调动军队宣布戒严，断绝广州内外交通；逮捕李之龙，扣留中山舰及其他舰只；包围省港罢工委员会，收缴其卫队枪械；包围广州东山的苏联顾问所；驱逐了黄埔军校中及国民革命军中以周恩来为首的共产党员。中山舰事件是蒋介石为破坏国共合作，夺取革命领导权，蓄意打击和排斥中国共产党的政治事件。对于这次事件有两种猜测。有人认为是蒋中正故意将中山舰调动又矢口否认以制造借口打击中国共产党。也有人认为这是和“西山会议”派关系密切的“孙文主义学会”成员欧阳格等故意向李之龙假传蒋中正的指令，两边离间中国国民党和中国共产党。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#中日甲午战争 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#中日甲午战争">
@@ -437,17 +664,6 @@
         <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">八国联军、清政府、义和团</参战方>
         <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">八国联军胜利</结果>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">义和团又称义和拳、义和团事件、庚子事变，拳匪、拳乱、庚子拳乱等，是19世纪末中国发生的一场以“扶清灭洋”为口号的农民运动。这一运动粉碎了帝国主义列强瓜分中国的狂妄计划，沉重打击了清政府的反动统治，加速了它的灭亡。义和团本来是长期流行在山东、直隶一带的民间秘密会社，有人认为与白莲教等传统民间秘密团体有关；然而也有部分人认为义和团源于一种勤王的民团组织。他们利用设立神坛、画符请神等方法秘密聚众，称为“义和拳”，其中掺杂有大量教授信众“刀枪不入”的愚昧成分。最初义和拳同当时清朝大部分秘密团体一样，反对满族统治，以“反清复明”为口号，遭到镇压。随着中国近代史形势的发展，以帝国主义侵略为先导的西方势力的冲突代替华夷之辩满汉之争成为主要历史矛盾，义和团开始支持清朝抵抗西方，改名为“虎神营”，口号也改为“扶清灭洋”。西方列强划分在华势力范围、华北频繁发生教案、天灾频仍及宫廷权力争斗激化的情况下，1900年春季直隶，成千上万习练义和拳并号称“义和团”的农民动纵火烧毁了教堂和教徒房屋，同年6月，慈禧太后允许义和团进驻北京，义和团又先于清军进攻天津租界。1901年，清政府被迫同八国及比利时、荷兰、西班牙等11国签订了丧权辱国的《辛丑条约》。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#乐民起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#乐民起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927年4月12日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">遂溪</事件地点>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年4月12日，蒋介石在上海发动了“四·一二”反革命政变后，广东的国民党反动派也在广州逮捕和屠杀共产党人，在这种环境中，在遂溪的共产党人发动农民群众进行武装斗争。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -490,36 +706,12 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#二次革命 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#二次革命">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1913年5月"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙中山"/>
-        <结束时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1913年9月1日"/>
-        <Location:事件地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#中国"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">二次革命即称讨袁之役、癸丑之役、赣宁之役。1913年3月20日，国会开会前夕，国民党代理理事长宋教仁被杀。4月，袁世凯又非法签订善后大借款，准备发动内战，消灭南方革命力量。孙中山看清袁世凯的反动面目，从日本回国，力主武装讨袁。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#五·卅运动 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#五·卅运动">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
         <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1925年5月30日"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">五卅运动是一次伟大的群众性的反帝爱国运动，它大大提高了全国人民的觉悟程度和组织力量，在全国范围内为北伐战争准备了群众基础，并将国民革命推向高潮，从而揭开了1925-1927年中国大革命的序幕。正如著名工人运动领袖邓中夏所说：“五卅运动以后，革命高潮，一泻汪洋，于是构成一九二五至一九二七年的中国大革命”。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#五卅惨案 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#五卅惨案">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1925年5月30日"/>
-        <Location:事件地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">五卅惨案因发生于1925年5月30日而得名，是反帝国主义爱国运动五卅运动的导火线。5月30日，上海学生两千余人在租界内散发传单，发表演说，抗议日本纱厂资本家镇压工人大罢工、打死工人顾正红，声援工人，并号召收回租界，被英国巡捕逮捕一百余人。下午万余群众聚集在英租界南京路老闸巡捕房门首，要求释放被捕学生，高呼“打倒帝国主义”等口号。英国巡捕竟开枪射击，当场打死十三人，重伤数十人，逮捕一百五十余人，造成震惊中外的五卅惨案。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -619,27 +811,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#北伐战争 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#北伐战争">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1926年7月9日"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#吴佩孚"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙传芳"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#张作霖"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#李宗仁"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#白崇禧"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#蒋介石"/>
-        <结束时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1928年12月29日"/>
-        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">蒋介石、李宗仁、白崇禧；吴佩孚、孙传芳、张作霖</主要指挥官>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">中国</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民政府，北洋政府</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">基本消灭了北洋军阀</结果>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北伐战争，是由中国国民党领导下的国民政府以国民革命军为主力，蒋介石为总司令于1926年至1928年间发动的统一战争。1926年7月9日，国民政府成立国民革命军从广东起兵，在连克长沙、武汉、南京、上海等地以后，国民政府内部因对中国共产党的不同态度而一度分裂，汪精卫和蒋介石决裂，北伐陷于停顿。宁汉合流后，国民革命军继续北伐，并在西北的冯玉祥和山西的阎锡山加入下，于1928年攻克北京，致使北洋奉系军阀张作霖撤往东北途中被日本刺杀于皇姑屯，其子张学良宣布东北易帜。至此北伐完成，中国实现了形式上的统一。北伐结束后，南京国民政府正式统治全中国，成为中国在国际上唯一代表政权。但实际上，国民政府内外仍有不同势力割据，造成日后发生中原大战等一连串内斗冲突。北伐期间，中国共产党与国民政府决裂，第一次国共内战爆发。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#华北事变 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#华北事变">
@@ -681,49 +852,12 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#四一二反革命政变 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#四一二反革命政变">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927年4月12日"/>
-        <Location:事件地点 rdf:resource="http://www.owl-ontologies.com/Location.owl#上海"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1927年4月12日，以蒋介石为首的国民党新右派在上海发动反对国民党左派和共产党的武装政变，大肆屠杀共产党员、国民党左派及革命群众。这就是历史上著名的“四一二”反革命政变。使中国大革命受到严重的摧残，标志着大革命的部分失败，是大革命从胜利走向失败的转折点。同时也宣告国共两党第一次合作失败。经过四一二政变，国民党基层组织基本瘫痪，共产党在群众中的影响迅速扩大，经历了深刻的锻炼和严峻的考验，共产党初步积累了反正两方面的经验，为领导中国人民把斗争推向新的更高的阶段准备了条件。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#外坑起义 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#外坑起义">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
         <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1930年11月25日"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1930年11月25日，在中共福建省总行委和中共莆田特委领导下，莆田第2支队于外坑举行了武装起义。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#大成国起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#大成国起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广西</事件地点>
-        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1854年6月—1864年5月</事件时间>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清王朝，广东天地会</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">被清军镇压</结果>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">大成国起义战争由广东天地会首领陈开、李文茂等倡议于广东佛山并建都于广西桂平的大成国起义，是十九世纪中期继太平天国金田起义后在南方爆发的规模最大、时间最长的一次农民起义，义军横扫粤桂两省，在长达10年的时间里与反动腐朽的清王朝进行了殊死的斗争，在我国农民革命斗争史上写下了绚丽而悲壮的篇章。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#大隧道惨案 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#大隧道惨案">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1941年6月5日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">重庆</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">日军国民革命军</参战方>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">大隧道惨案发生于1941年6月5日，抗日战争时期，日军为了动摇重庆国民政府的抗战决心，迫使其屈服投降，出动大量飞机对重庆进行的轰炸事件。1941年6月5日晚9点左右，日军出动24架飞机分三批轮番轰炸重庆，空袭时长达5个小时，因为当时未及时对市民进行疏散，所以大量民众拥向公共防空隧道中造成洞内人数接近饱和，由于管理隧道口的宪兵及防护人员紧锁栅门，不准隧道内的市民在空袭期间出入隧道，在长达10小时的高温和严重缺氧的情况下，上万左右避难民众因通风不畅导致窒息，同时又发生推挤践踏，造成了骇人听闻的防空隧道惨案，史称“大隧道惨案”。大隧道惨案是中国抗日战争期间发生在大后方最惨痛的事件，它与1938年6月9日的黄河花园口决堤、1938年11月13日的长沙大火，并称为抗战时期的中国三大惨案。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -792,23 +926,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#广州新军起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#广州新军起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1910年2月12日"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪映典"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#吴宗禹"/>
-        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">倪映典、吴宗禹</主要指挥官>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会、清军</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清军获胜、同盟会战败</结果>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州新军起义又称庚戌广州新军之役，是清宣统二年正月初三(1910年2月12日)同盟会在广州依靠新军发动的反清武装起义。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#广州暴动 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#广州暴动">
@@ -822,26 +939,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#广州起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#广州起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1927年12月11日"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#叶剑英"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#叶挺"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#张太雷"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#恽代英"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#聂荣臻"/>
-        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张太雷、叶挺、叶剑英、聂荣臻、恽代英</主要指挥官>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">国民党，共产党</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">起义失败</结果>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州起义是指1927年12月11日中国共产党在广州领导工人、农民和革命士兵举行的反抗国民党反动派的武装起义，是中国共产党和中国人民继南昌起义、湘赣边界秋收起义之后，对国民党反动派的又一次英勇反击，是在城市建立苏维埃政权的大胆尝试，在国内外都引起了很大的震动。面对强大敌人向广州发起围攻，叶挺、叶剑英主张起义军主动撤离广州，但却遭到共产国际顾问的否决。经三天浴血奋战，因敌我力量悬殊，起义失败。这次起义虽然失败了，但起义军民无比英勇的战斗精神，给了中国人民以新的鼓舞。起义的许多领导人和保留下来的武装力量，继续为中国革命事业而顽强战斗，成为中国人民解放军的重要组成部分和革命火种。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#广州钦州三那起义 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#广州钦州三那起义">
@@ -849,27 +946,6 @@
         <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1907年</事件时间>
         <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1907年，广东钦州三那人民掀起起义，反对清政府增收糖捐。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#庚戌广州新军武装起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#庚戌广州新军武装起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1910年2月12日"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#倪映典"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#朱执信"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#胡毅生"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#莫纪彭"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#赵声"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#陈炯明"/>
-        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">倪映典、朱执信、赵声、胡毅生、陈炯明、莫纪彭</主要指挥官>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会广州新军满清广州新军</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">起义失败</结果>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910年2月12日，革命党人倪映典在位于广州东北郊的燕塘新军军营内率三千新军齐声高呼:“愿为革命战死！”随即兵分三路向广州城进发。这就是以孙中山为首的中国同盟会发动的第九次反清武装起义。1910年的庚戌广州新军起义，标志着革命党把革命基本依靠力量由会党转向新军。在这次起义中，新军首次作为同盟会的主要力量出现在中国的政治舞台上。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1015,17 +1091,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#沙田惨案 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#沙田惨案">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#其他事件"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">香港</事件地点>
-        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1922年1月，3月</事件时间>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1922年1月，香港海员举行大罢工，遭到香港英国当局的武力镇压。3月，大批工人被迫愤怒离开香港，徒步回广州。3月4日，当工人行至九龙沙田时，又遭到英国军警开枪射击，打死六人，伤数百人，造成“沙田惨案”</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#沙面工人罢工 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#沙面工人罢工">
@@ -1106,19 +1171,6 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
         <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清咸丰七年十一月(1857年12月)</事件时间>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“港澳罢工”发生在清咸丰七年十一月(1857年12月)，时间起因是英法联军攻陷广州后，实行军事占领，对当地人民进行更加野蛮的烧杀抢劫，从而激起人民群众的更大愤怒和坚决反抗。港澳罢工是外国在华企业中中国工人、雇员反对侵略者的第一次大罢工。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#湘南起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#湘南起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1928年1月12日"/>
-        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">朱德、陈毅（中国共产党）</主要指挥官>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宜章县</事件地点>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">组建了湘南第一支农军</结果>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">土地革命战争时期，南昌起义军余部在中共湘南特委领导和湖南省南部地区工农群众配合下举行的武装起义。湘南起义发生在1928年1月12日下午4时的宜章县城。朱德、陈毅在中共宜章县委的紧密配合下，智取宜章县城成功，发动了宜章年关暴动，打响了湘南起义第一枪。宜章，成为湘南起义的策源地。在这里，揭开了湘南起义的序幕；在这里，成立了中国工农革命军第一师；在这里，成立了湘南第一个红色政权——宜章县苏维埃政府；在这里，组建了湘南第一支农军——工农革命军独立第三师。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1206,19 +1258,6 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
         <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">省港大罢工，1925年6月19日为了支援上海人民五卅反帝爱国运动，广州和香港爆发了规模宏大的省港大罢工，此次罢工由共产党人邓中夏及苏兆征领导，历时1年零4个月，是上个世纪80年代以前世界工运史上时间最长的一次大罢工。省港大罢工，有效地打击了英帝国主义在香港经济的统治，并且让广州的金融得到了保障。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#福州起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#福州起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911年11月8日"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">福州</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会满洲八旗官兵</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">同盟会胜利</结果>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">武昌起义后，各省纷纷响应。福州革命力量不断发展，清新军第10镇统制孙道仁、第20协协统许崇智等高级军官先后参加同盟会同意参加反清起义，福州起义爆发。</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1434,28 +1473,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Event.owl#首都革命 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#首都革命">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">北京</事件地点>
-        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年11月</事件时间>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年11月北京学生、工人武装推翻段祺瑞政府的一次尝试。1924年10月北京政变后，段张联合执掌了北京政权，推行反动的内外政策，镇压各地群众的革命运动，成为国民革命发展的首要敌人。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Event.owl#香港大罢工 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#香港大罢工">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#罢工游行"/>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</事件地点>
-        <事件时间 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年5月</事件时间>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1925年5月中，上海发生工潮，工人领袖顾正红被杀。学生示威声援，被租界的英籍巡捕开枪射杀，十三人死，数十人重伤，是为五卅惨案。事件引起全中国出现反抗外国在华势力的运动，各地直接参加声援运动的人数估计有一千二百万人。</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/Event.owl#香港海员大罢工 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#香港海员大罢工">
@@ -1479,33 +1496,7 @@
         <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">英军获胜，签订《南京条约》</结果>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">鸦片战争，即第一次鸦片战争。英国经常称其为第一次中英战争或“通商战争”，是1840年至1842年英国对中国发动的一场侵略战争，也是中国近代史的开端。1840年，英国政府以林则徐的虎门销烟等为借口，决定派出远征军侵华。1840年6月，英军舰船47艘、陆军4000人在海军少将乔治·懿律、驻华商务监督义律率领下，陆续抵达广东珠江口外，封锁海口，鸦片战争开始。鸦片战争以中国失败并赔款割地告终。中英双方签订了中国历史上第一个不平等条约《南京条约》。中国开始向外国割地、赔款、商定关税，严重危害中国主权，开始沦为半殖民地半封建社会，丧失独立自主的地位，并促进了小农经济的解体。同时，鸦片战争也揭开了近代中国人民反抗外来侵略的历史新篇章。</rdfs:comment>
     </owl:NamedIndividual>
-    
 
-
-    <!-- http://www.owl-ontologies.com/Event.owl#黄花岗起义 -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Event.owl#黄花岗起义">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/Event.owl#武装斗争"/>
-        <开始时间 rdf:resource="http://www.owl-ontologies.com/Time.owl#y1911年4月27日"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#孙中山"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#胡汉民"/>
-        <相关人物 rdf:resource="http://www.owl-ontologies.com/Personage.owl#黄兴"/>
-        <主要指挥官 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">孙中山、黄兴、胡汉民等</主要指挥官>
-        <事件地点 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州</事件地点>
-        <参战方 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">革命军、清军</参战方>
-        <结果 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">起义被镇压</结果>
-        <事件标识 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">广州事件</事件标识>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
     <rdf:Description rdf:about="http://www.owl-ontologies.com/Event.owl#主要指挥官">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">主要指挥官</rdfs:label>
