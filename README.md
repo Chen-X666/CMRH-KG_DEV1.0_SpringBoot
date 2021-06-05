@@ -1,7 +1,7 @@
 ![](https://www.wujunchao.top/wp-content/uploads/2021/05/图片1.png)
 [![license](https://img.shields.io/badge/author-WuJunchao-purple)](https://github.com/junchaoIU/Canton-KG-React/blob/main/LICENSE)
 [![license](https://img.shields.io/crates/l/rustc-serialize)](https://github.com/junchaoIU/Canton-KG-React/blob/main/LICENSE)
-[![react](https://img.shields.io/badge/react-16.13.1-yellowgreen)](https://github.com/facebook/react)
+[![react](https://img.shields.io/badge/Springboot2.2.5-yellowgreen)](https://github.com/facebook/springboot)
 [![antd](https://img.shields.io/badge/antd-3.17.0-orange)](https://github.com/ant-design/ant-design)
 [![echart](https://img.shields.io/badge/echart-4.7.0-green)](https://github.com/apache/echarts)
 
@@ -31,61 +31,21 @@
 
 
 ## ⚙目录结构
-```bash
-├─ public                     # 静态资源
-│   ├─ logo.ico               # logo图标
-│   └─ index.html             # html模板
-├─ src                        # 项目源代码
-│   ├─ api                    # 所有请求
-│   ├─ assets                 # 图片 字体等静态资源
-│   ├─ components             # 全局公用组件
-│   ├─ config                 # 全局配置
-│   │   ├─ menuConfig.js      # 导航菜单配置
-│   │   └─ routeMap.js        # 路由配置
-│   ├─ lib                    # 第三方库按需加载
-│   ├─ mock                   # 项目mock 模拟数据
-│   ├─ store                  # 全局 store管理
-│   ├─ styles                 # 全局样式
-│   ├─ utils                  # 全局公用方法
-│   ├─ views                  # views 所有页面
-│   ├─ App.js                 # 入口页面
-│   ├─ defaultSettings.js     # 全局默认配置
-│   └─index.js                # 源码入口
-├── .env.development          # 开发环境变量配置
-├── .env.production           # 生产环境变量配置
-├── config-overrides.js       # 对cra的webpack自定义配置
-├── deploy.sh                 # CI部署脚本
-├── .travis.yml               # 自动化CI配置
-└── package.json              # package.json
+```
+有空了再写
 ```
 
 ## 📦 安装
 
-```shell
-# 克隆项目
-git clone https://github.com/junchaoIU/Canton-KG-React.git
-
-# 进入项目目录
-cd Canton-KG-React
-
-# 安装依赖（不要用cnpm）
-npm install
-
-# 切换淘宝源，解决 npm 下载速度慢的问题
-npm install --registry=https://registry.npm.taobao.org
-
-# 启动服务
-npm start
+```
+有空了再写
 ```
 
 # 🌸关于作者
-🍧 Wu, Junchao 
+🍧 Chen, Xin
 
-> 有什么问题请致邮：wujunchaoIU@outlook.com,我会第一时间为你解答
+> 有什么问题请致邮：ChenXinV@outlook.com,我会第一时间为你解答
 
-- 个人博客：[🌸 春天与爱情の樱花](https://www.wujunchao.top)
-- 博客园：[🌸 梦淑の博客园](http://cnblogs.wujunchao.top)
-- 语雀：[🌸 CCの知识库](https://www.yuque.com/wujunchao)
 
 > 项目的开发和维护需要花费较多的时间，如果我的项目对你有帮助，如果你对我的项目感兴趣,请帮我点个小星星star，感激！🍉
 
