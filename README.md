@@ -1,7 +1,7 @@
 ![](https://www.wujunchao.top/wp-content/uploads/2021/05/图片1.png)
-[![license](https://img.shields.io/badge/author-WuJunchao-purple)](https://github.com/junchaoIU/Canton-KG-React/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/author-ChenXin-purple)](https://github.com/junchaoIU/Canton-KG-React/blob/main/LICENSE)
 [![license](https://img.shields.io/crates/l/rustc-serialize)](https://github.com/junchaoIU/Canton-KG-React/blob/main/LICENSE)
-[![react](https://img.shields.io/badge/Springboot2.2.5-yellowgreen)](https://github.com/facebook/springboot)
+[![react](https://img.shields.io/badge/Springboot-2.2.5-yellowgreen)](https://github.com/facebook/springboot)
 [![antd](https://img.shields.io/badge/antd-3.17.0-orange)](https://github.com/ant-design/ant-design)
 [![echart](https://img.shields.io/badge/echart-4.7.0-green)](https://github.com/apache/echarts)
 
