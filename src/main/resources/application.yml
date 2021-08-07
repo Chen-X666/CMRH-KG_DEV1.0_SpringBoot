@@ -16,9 +16,9 @@ spring:
 
   #数据源
   datasource:
-    url: jdbc:mysql://cdb-2m6kkrcx.gz.tencentcdb.com:10165/canton?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/canton?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
-    password: 972113786@qq.com
+    password: 12345678
     driver-class-name: com.mysql.jdbc.Driver
 
 #mybatis配置
@@ -41,7 +41,6 @@ ontology:
   root : GuangZhouRevolution.owl
   allowl:
     GuangZhouRevolution.owl,Document.owl,Event.owl,Literature.owl,Location.owl,Personage.owl,Recall.owl,Relic.owl,Time.owl
-
 
 #lucene配置
 lucene:
