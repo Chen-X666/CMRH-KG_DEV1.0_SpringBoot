@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,7 +19,7 @@
          <jena.version>3.8.0</jena.version>
          <log4j.version>2.6.2</log4j.version>
          <lunece.version>4.10.2</lunece.version>
-         <mysql-connector>5.1.39</mysql-connector>
+         <mysql-connector>8.0.28</mysql-connector>
      </properties>
          <dependencies>
              <!-- Spring Boot Web 依赖 -->
