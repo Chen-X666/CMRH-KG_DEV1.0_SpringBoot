@@ -12,7 +12,7 @@
 
 ## 🌈 Introduction（简介）
 
-**<big>CMRH-KG： 中国近代革命历史知识图谱信息系统前端 DEV2.0_React</big>**
+**<big>CMRH-KG： 中国近代革命历史知识图谱信息系统后端 DEV1.0_SpringBoot</big>**
 
 Since entering the 21st century, the state has made great efforts in the protection of revolutionary historical documents and the restoration of documents in the Republic of China. Substantial achievements have been gradually achieved in the protection of existing precious historical documents. On this basis, how to effectively The development of such a huge historical archives resource is the next problem to be solved urgently.
 
