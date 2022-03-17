@@ -36,23 +36,28 @@ This system is implemented by the SpringBoot + React technology stack with the f
 - 知识抽取（Knowledge Extraction）
 - 知识问答（Knowledge Base Question Answering）
 
-## 🖥 Compatible Environment（兼容环境）
 
-- Modern browsers and IE11（现代浏览器和 IE11）
-- Support server-side visual rendering（支持服务端可视化渲染）
+## 🌸 About Author（关于作者）
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Electron |
-| --- | --- | --- | --- | --- |
-| IE11, Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+- [WU, JUNCHAO](https://github.com/junchaoIU)
+- [CHEN, JIAXUAN](https://github.com/00Jane)
 
+如遇到问题，请致邮（Email）：wujunchaoIU@outlook.com
 
-## 🌸关于作者
-🍧 Chen, Xin
+## 📕 Paper Citation（论文引用）
 
-> 有什么问题请致邮：ChenXinV@outlook.com,我会第一时间为你解答
+If you reference or use the results of this project in your research, please cite in the following format:
 
+如果你在研究过程中参考或用到了本项目的成果，请按以下格式引用:
 
-> 项目的开发和维护需要花费较多的时间，如果我的项目对你有帮助，如果你对我的项目感兴趣,请帮我点个小星星star，感激！🍉
+```
+J. Wu, Y. Jiang, X. Chen, et al. "The Canton Canon" Digital Library Based on Knowledge Graph - Taking the Revolutionary Archives of Canton in the Republic of China as an Example. [C]// 2021 10th International Conference on Educational and Information Technology (ICEIT), IEEE, 2021: 171-179.
+```
+
+## ❗ Statement（声明）
+
+- 本系统已登记软著，可供参考及实验借鉴，或者自己部署玩玩
+- 本项目不可做商业用途，或者直接套用系统作为课题科研成果
 
 
 
