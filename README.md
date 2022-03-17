@@ -39,10 +39,9 @@ This system is implemented by the SpringBoot + React technology stack with the f
 
 ## 🌸 About Author（关于作者）
 
-- [WU, JUNCHAO](https://github.com/junchaoIU)
-- [CHEN, JIAXUAN](https://github.com/00Jane)
+- [CHEN, Xin](https://github.com/Chen-X666)
 
-如遇到问题，请致邮（Email）：wujunchaoIU@outlook.com
+如遇到问题，请致邮（Email）：ChenXinV@outlook.com
 
 ## 📕 Paper Citation（论文引用）
 
