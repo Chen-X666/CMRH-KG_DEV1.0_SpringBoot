@@ -34,8 +34,8 @@ public class CantonApplication {
 
     public  static void ontologyInitialized() {
 
-    //  构建本体模型
-     System.out.println("开始初始化本体模型数据...");
+    //构建本体模型
+    System.out.println("开始初始化本体模型数据...");
     //获取默认模型的URI
     String defaultModelURI = InitializedUtil.getMyUri()+InitializedUtil.getMyRoot();
     System.out.println(defaultModelURI);
@@ -47,7 +47,7 @@ public class CantonApplication {
     }
     public  static void lucene2Initialized() {
         /**
-         * 构建全文索引
+         * 构建全文检索索引
          */
         //索引保存到的路径
         System.out.println("开始初始化全文索引...");
@@ -78,11 +78,9 @@ public class CantonApplication {
         long endTime = System.currentTimeMillis();
         System.out.println("索引耗时" + (endTime - startTime) + "毫秒");
         System.out.println("共索引了" + indexedNum + "个文件");
-
-
-
-
     }
+
+
 //    public  static void luceneInitialized() {
 //        /**
 //         * 构建全文索引
